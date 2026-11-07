@@ -1,0 +1,14 @@
+{
+  "redboygoright": {
+    "decoded_video_frames": 150,
+    "diagnostic_records": 40
+  },
+  "leftuphand": {
+    "decoded_video_frames": 300,
+    "diagnostic_records": 40
+  },
+  "blackboy": {
+    "decoded_video_frames": 300,
+    "diagnostic_records": 40
+  }
+}

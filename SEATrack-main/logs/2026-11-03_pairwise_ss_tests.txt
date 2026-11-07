@@ -1,0 +1,14 @@
+test_actor_adds_loss_and_reports_validation (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_backbone_peft_and_eval_parity (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_configs_and_guards (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_full_size_matrices_and_autocast (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_hand_calculated_pairs_and_region_isolation (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_legacy_anchor_config_is_rejected (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_pairwise_formula_and_gradients (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_relations_not_direct_cross_modal_feature_matching (test_semantic_alignment.SemanticAlignmentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.181s
+
+OK
+Total: 29.323148 M, Trainable: 0.212108 M

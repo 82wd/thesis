@@ -1,0 +1,20 @@
+{
+  "reference/lib/config/seatrack/config.py": "47f1b062c62dd48c7629731b1d70032c023a7c14e8317186ee5162d52bc9b9c9",
+  "reference/lib/models/layers/patch_embed.py": "9af4e938e06ccc75616311d919b5d062cbdd5db1621d5b70c462de56a021bb53",
+  "reference/lib/models/seatrack/vit_ci.py": "1c6b964fd461c971879771040a890a35bd6cfe37902866078a6150fb1cc91a29",
+  "reference/lib/models/seatrack/seatrack.py": "aa98829ad5c4c63b7958722357d4349d1da99768a8dc5ff1f5366efd2f62d5b4",
+  "reference/lib/train/actors/seatrack.py": "21b9ec45c724d1353bf87e85af79a8a9a52edb161adbfa08f3855a2543588c9b",
+  "payload/README_SS.md": "d55d96dc68ac18fe4706c055a5546144363870dc35b73357a21ced6dfc9fce8c",
+  "payload/experiments/seatrack/rgbd_ss.yaml": "31cde98d1cba889e3972324b1b92d97434a6bc61186ee5b46858a87e92d3cd31",
+  "payload/experiments/seatrack/rgbe_ss.yaml": "d3deadd01401be162ceea64be43b4d5808ca4f4fe06308035d3db559d131d5a3",
+  "payload/tests/test_semantic_alignment.py": "3f1554d273eb86bc22cd861fa050b839e178cdc282798f0bae1ef81f2b2f5867",
+  "payload/logs/2026-11-03_pairwise_ss_tests.txt": "dc1423a8e92d651b26134d07722de2cb7ee9faf61843d63a804130094360658b",
+  "payload/logs/2026-11-03_pairwise_ss.md": "ad32fde53ac6398d85b1be1f50b61d71ea47b5d6d4e2a369dc465972e708a9a9",
+  "payload/logs/2026-11-03_pairwise_ss_tests_initial.txt": "0098bb01322e95aa885b01c841c50c08a0d53710795561e9ac9a040d5fd14afc",
+  "payload/lib/config/seatrack/config.py": "3e83bfc8e4d271f5c3c7dc5ef4867d19165636dfd4fce9e128c4c0e69fc56800",
+  "payload/lib/models/layers/semantic_alignment.py": "9a041b572f93704f5efdbcfdb14b29db70680563ac83b30e5404c1c4afdc731e",
+  "payload/lib/models/layers/patch_embed.py": "900956f1a7ca75539b73a067bd365d3aae272ccd02d68fc34a5c38a640301294",
+  "payload/lib/models/seatrack/vit_ci.py": "2ce5e16a5354a6e5d9c96842485015ff4655d77ef48b2e97d61813bbbd6d1bf1",
+  "payload/lib/models/seatrack/seatrack.py": "a28b3768e3a1052dceeb293c29763678e2124dfd7ee1a000e88ee3eda6b1a1c7",
+  "payload/lib/train/actors/seatrack.py": "4915d51876e6a2e7089a187c19f7983522edbf7516733a40e73eb72d8a2a3e70"
+}

@@ -1,0 +1,29 @@
+{
+  "epoch": 20,
+  "gpu": 5,
+  "sequences": [
+    "redboygoright",
+    "leftuphand",
+    "blackboy"
+  ],
+  "max_frames": 300,
+  "selection": "seed20261104 sample of sorted test folders",
+  "diagnostic": "GT-centered fixed search crops; NOT tracking predictions",
+  "lora": "epoch20 saved after validation; merged checkpoint convention",
+  "code": "/nas/liziyan103/seatrack/training_runs/20261103_pairwise_ss/code",
+  "script_sha256": "4cd67760fd2f0b99a2987950b7d79bfd9a907eed6bbb746e6def4cac10714f9e",
+  "checkpoints": {
+    "Baseline": {
+      "path": "/nas/liziyan103/seatrack/training_runs/20261011_remaining/rgbt/models/checkpoints/rgbt/SEATrack_ep0020.pth.tar",
+      "sha256": "a9345adc03a3b373f8fa4c4877e0e76bf56420018f18220dd7cbcf2672553455",
+      "config": "/nas/liziyan103/seatrack/training_runs/20261103_pairwise_ss/code/experiments/seatrack/rgbt_ss_baseline.yaml",
+      "config_sha256": "f2458cf2346bf589a6b2669a51cd854cc2cde2d6bc1533141eba7bb9d789096c"
+    },
+    "SS": {
+      "path": "/nas/liziyan103/seatrack/training_runs/20261103_pairwise_ss/full_zCqHZl/checkpoints/rgbt_ss/SEATrack_ep0020.pth.tar",
+      "sha256": "d1c5005abd495aed1f64bcf84376ea77f9b0cdfb6b3a6811481f050b8169f088",
+      "config": "/nas/liziyan103/seatrack/training_runs/20261103_pairwise_ss/code/experiments/seatrack/rgbt_ss.yaml",
+      "config_sha256": "13e7c790fca3266e5cb7ede57106be03a7ce0f2a05fb1143d0f434a926654529"
+    }
+  }
+}

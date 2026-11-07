@@ -1,0 +1,6 @@
+import path from 'node:path';
+import {finalizePresentation} from '/Users/lzy/.codex/plugins/cache/openai-primary-runtime/presentations/26.1026.10807/skills/presentations/container_tools/artifact_tool_utils.mjs';
+const root='/Users/lzy/Desktop/毕设', b=path.join(root,'汇报/.ppt_build'),sk='/Users/lzy/.codex/plugins/cache/openai-primary-runtime/presentations/26.1026.10807/skills/presentations';
+const tables=[3,4,5,6,7,8,14];
+const r=await finalizePresentation({workspaceDir:root,candidatePath:path.join(b,'candidate.pptx'),finalPath:path.join(root,'汇报/PPT/2026-11-05_组会汇报_SEATrack空间自相似性.pptx'),pythonExecutable:'/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:path.join(sk,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(sk,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit',...tables.flatMap(n=>['--require-native-table-slide',String(n)])],requiredNativeTableOwnerSlides:tables,requiredNativeChartOwnerSlides:[12],materializeLiteralChartWorkbooks:true,fontPolicy:{basis:'design',families:['Hiragino Sans GB']},verifyArtifactToolImport:true,receiptPath:path.join(b,'validation.json')});
+console.log(JSON.stringify(r));

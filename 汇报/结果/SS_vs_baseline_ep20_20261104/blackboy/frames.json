@@ -1,0 +1,17 @@
+{
+  "total_sequence_frames": 432,
+  "processed": 300,
+  "display_frames": [
+    1,
+    60,
+    120,
+    180,
+    240,
+    300
+  ],
+  "diagnostic_frames": [
+    2,
+    300
+  ],
+  "gt_sha256": "c88e0186dbf36de22ee366463f288a81f1031b0bf83df2d6c33057bc787c8ab1"
+}

@@ -1,0 +1,12 @@
+test_auto_selection_excludes_smoke_and_rejects_ambiguity (test_progress.DashboardTests) ... ok
+test_config_epoch_and_gpu_timeout (test_progress.DashboardTests) ... ok
+test_failures_and_nonfinite_values (test_progress.DashboardTests) ... ok
+test_initialization_and_empty_exitcode (test_progress.DashboardTests) ... ok
+test_parse_metrics_and_validation_phase (test_progress.DashboardTests) ... ok
+test_progress_100_is_not_completion (test_progress.DashboardTests) ... ok
+test_read_only_and_stale_logs (test_progress.DashboardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.008s
+
+OK

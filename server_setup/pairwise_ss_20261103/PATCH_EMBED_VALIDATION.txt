@@ -1,0 +1,57 @@
+Configured isolated code: /var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/training_runs/20261011_remaining/code
+SINGLE GPU SNAPSHOT READY /var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/training_runs/20261011_remaining/code_single
+2026-11-03T22:58:31+08:00 SOURCE /private/var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/training_runs/20261011_remaining/code_single
+2026-11-03T22:58:31+08:00 Copy lib/experiments/tracking; preserve data-loader fixes and accumulation=16
+2026-11-03T22:58:31+08:00 Install full pairwise SS module, backbone/Actor integration, config and tests
+2026-11-03T22:58:31+08:00 Isolate workspace/TensorBoard paths; retain existing dataset paths
+2026-11-03T22:58:31+08:00 Full SS and baseline share batch4 x accumulation16, 60 epochs and all other settings
+2026-11-03T22:58:31+08:00 Smoke: 128 train samples/32 microbatches/2 optimizer updates; 16 val samples; 1 epoch
+2026-11-03T22:58:31+08:00 PREPARE_OK; original code unchanged; training has NOT started
+CODE=/private/var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/pairwise/code
+NEXT: cd /private/var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/pairwise/code
+NEXT: /private/tmp/seatrack-pairwise-venv/bin/python -m unittest discover -s tests -p test_semantic_alignment.py -v
+test_actor_adds_loss_and_reports_validation (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_backbone_peft_and_eval_parity (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_configs_and_guards (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_full_size_matrices_and_autocast (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_hand_calculated_pairs_and_region_isolation (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_legacy_anchor_config_is_rejected (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_pairwise_formula_and_gradients (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_relations_not_direct_cross_modal_feature_matching (test_semantic_alignment.SemanticAlignmentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.257s
+
+OK
+Total: 29.323148 M, Trainable: 0.212108 M
+PASS: original source byte-for-byte unchanged, preserved loader/accumulation/trainer; installed code passes 8 tests
+PASS: existing run is refused
+PASS: unknown server code changes rejected before destination creation
+2026-11-03T22:58:39+08:00 SOURCE /private/var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/training_runs/20261011_remaining/code_single
+2026-11-03T22:58:39+08:00 Copy lib/experiments/tracking; preserve data-loader fixes and accumulation=16
+2026-11-03T22:58:39+08:00 Preserve verified existing fix byte-for-byte: lib/models/layers/patch_embed.py
+2026-11-03T22:58:39+08:00 Install full pairwise SS module, backbone/Actor integration, config and tests
+2026-11-03T22:58:39+08:00 Isolate workspace/TensorBoard paths; retain existing dataset paths
+2026-11-03T22:58:39+08:00 Full SS and baseline share batch4 x accumulation16, 60 epochs and all other settings
+2026-11-03T22:58:39+08:00 Smoke: 128 train samples/32 microbatches/2 optimizer updates; 16 val samples; 1 epoch
+2026-11-03T22:58:39+08:00 PREPARE_OK; original code unchanged; training has NOT started
+CODE=/private/var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/pairwise_server_variant/code
+NEXT: cd /private/var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i/pairwise_server_variant/code
+NEXT: /private/tmp/seatrack-pairwise-venv/bin/python -m unittest discover -s tests -p test_semantic_alignment.py -v
+test_actor_adds_loss_and_reports_validation (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_backbone_peft_and_eval_parity (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_configs_and_guards (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_full_size_matrices_and_autocast (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_hand_calculated_pairs_and_region_isolation (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_legacy_anchor_config_is_rejected (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_pairwise_formula_and_gradients (test_semantic_alignment.SemanticAlignmentTests) ... ok
+test_relations_not_direct_cross_modal_feature_matching (test_semantic_alignment.SemanticAlignmentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.164s
+
+OK
+Total: 29.323148 M, Trainable: 0.212108 M
+Fixture directory: /var/folders/rk/ts2mn_w16zzc51gg_y6d5tgh0000gn/T/ss-setup-test-pyieg04i
+PASS: user-confirmed assignment placement accepted, file preserved byte-for-byte, installed 8 tests pass
+PASS: unknown PatchEmbed behavior change still rejected before writing

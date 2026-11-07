@@ -1,0 +1,17 @@
+{
+  "redboygoright": {
+    "frames": 150,
+    "seconds": 7.5,
+    "codec": "H.264 / yuv420p"
+  },
+  "leftuphand": {
+    "frames": 300,
+    "seconds": 15.0,
+    "codec": "H.264 / yuv420p"
+  },
+  "blackboy": {
+    "frames": 300,
+    "seconds": 15.0,
+    "codec": "H.264 / yuv420p"
+  }
+}

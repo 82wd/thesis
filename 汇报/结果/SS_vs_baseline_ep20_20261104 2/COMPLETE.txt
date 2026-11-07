@@ -1,0 +1,1 @@
+Qualitative subset only; not a full benchmark. Playback 20 FPS is not measured inference speed.

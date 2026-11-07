@@ -1,0 +1,15 @@
+{
+  "report": "lasher_metrics_20261104.json",
+  "report_sha256": "2cd8ab9fb4bec2c2309e9f4ee8a2d4a099359842c65a0cd28deae347341801d1",
+  "sequences": 245,
+  "frames": 220703,
+  "percent": {
+    "PR": 71.57106882970659,
+    "NPR": 67.83122162575299,
+    "SR": 57.512471978032586
+  },
+  "unique_sequence_names": 245,
+  "invalid_gt_frames": 1260,
+  "carried_forward_predictions": 0,
+  "scope": "Parsed downloaded report and checked internal totals; raw remote trajectories and annotations were not rehashed locally."
+}

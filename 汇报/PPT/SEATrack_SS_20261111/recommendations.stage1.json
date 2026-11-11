@@ -1,0 +1,36 @@
+{
+  "stage": "stage1",
+  "lang": "zh",
+  "primary_language": "zh-CN",
+  "recommend": {
+    "canvas": "ppt169"
+  },
+  "template_options": {
+    "schema_version": 1,
+    "phase": "template",
+    "lang": "zh",
+    "default_mode": "free_design",
+    "explicit_workspace_roots": []
+  },
+  "audience": {
+    "value": "导师、师兄及组内同学"
+  },
+  "communication_intent": {
+    "value": "汇报三种模态实验并讨论失分原因"
+  },
+  "audience_outcome": {
+    "value": "理解已验证的失败模式并选择下一组控制实验"
+  },
+  "core_message": {
+    "value": "SS 在 RGBT234 上有收益，LasHeR 和 VisEvent 的部分回退集中于持续跟丢；DepthTrack 的退步原因尚待定位。"
+  },
+  "delivery_context": {
+    "value": "约10分钟中文组会现场汇报"
+  },
+  "artifact_afterlife": {
+    "value": "保留可编辑结果表与案例，供组内复查"
+  },
+  "content_divergence": {
+    "value": "以实际评测与逐帧复核为依据，标明机制假设"
+  }
+}

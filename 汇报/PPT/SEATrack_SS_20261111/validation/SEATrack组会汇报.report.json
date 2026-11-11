@@ -1,0 +1,315 @@
+{
+  "schema": "ppt-master.pptx-postflight-report.v1",
+  "status": "passed-with-warnings",
+  "output": {
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS_20261111/exports/SEATrack组会汇报.pptx",
+    "bytes": 229604
+  },
+  "source": {
+    "svg_slide_count": 9,
+    "layout_definition_count": 0,
+    "fingerprint": {
+      "algorithm": "sha256",
+      "digest": "564ca4b4e134b60c12615fcd6bad4684ea7c0d0c7c3b739de37676fa1e061226",
+      "file_count": 9,
+      "files": [
+        {
+          "file": "01.svg",
+          "sha256": "b115ae712a86ae8f702b7ffc62075482c608931d61dff9dfe138b31edf697724"
+        },
+        {
+          "file": "02.svg",
+          "sha256": "2c81249360d6f6f20f90772e5b18be9df4024b54e63807e9bd305b070b588712"
+        },
+        {
+          "file": "03.svg",
+          "sha256": "821872cc7f30dea76fd52ab5f9d88bdf9c3c18a31ec5412c916cd3961e1469bd"
+        },
+        {
+          "file": "04.svg",
+          "sha256": "eb3b5128ca8acecde00c62713557b4193de673e6b1678d1453f88111f7b08de9"
+        },
+        {
+          "file": "05.svg",
+          "sha256": "33abfb12d18dd0cd30932e2bf0bc36e35ba9611a0ccc27c689c77b8c2909a49d"
+        },
+        {
+          "file": "06.svg",
+          "sha256": "889f47be8e45306f507a4ae7709f503550abb74e63a417d79cf57f2fb2615415"
+        },
+        {
+          "file": "07.svg",
+          "sha256": "6f0f21bd4322663d1675c01d78da18014675391dc7d6efae4b54689cba4c4114"
+        },
+        {
+          "file": "08.svg",
+          "sha256": "b247c5dd697c714ce85cf6b03dfc4f5a34ba090854080925115f767612c818c3"
+        },
+        {
+          "file": "09.svg",
+          "sha256": "efe4a977d2705f4ec42e4ca5140e2d4eadc4e3f32b97cae3ad497453dbee2633"
+        }
+      ]
+    },
+    "authoring_roundtrip": null
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "slides": 9,
+    "notes": 9,
+    "masters": 1,
+    "layouts": 1
+  },
+  "checks": {
+    "zip_integrity": "passed",
+    "slide_count": "passed",
+    "internal_relationships": "enforced-at-build",
+    "structured_package": "not-applicable",
+    "transitions": "enforced-at-build",
+    "animations": "enforced-at-build",
+    "project_svg_contract": "enforced-at-build",
+    "compatibility_normalization": "not-applicable",
+    "authoring_roundtrip": "not-applicable",
+    "quality_gate": "passed",
+    "quality_warnings": "warning",
+    "template_tokens": "passed",
+    "external_images": "passed",
+    "font_portability": "passed"
+  },
+  "quality": {
+    "status": "loaded",
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS_20261111/validation/svg_quality_report.json",
+    "schema": "ppt-master.svg-quality-report.v1",
+    "stage": "final",
+    "source_match": "passed",
+    "source_fingerprint": {
+      "algorithm": "sha256",
+      "digest": "564ca4b4e134b60c12615fcd6bad4684ea7c0d0c7c3b739de37676fa1e061226",
+      "file_count": 9,
+      "files": [
+        {
+          "file": "01.svg",
+          "sha256": "b115ae712a86ae8f702b7ffc62075482c608931d61dff9dfe138b31edf697724"
+        },
+        {
+          "file": "02.svg",
+          "sha256": "2c81249360d6f6f20f90772e5b18be9df4024b54e63807e9bd305b070b588712"
+        },
+        {
+          "file": "03.svg",
+          "sha256": "821872cc7f30dea76fd52ab5f9d88bdf9c3c18a31ec5412c916cd3961e1469bd"
+        },
+        {
+          "file": "04.svg",
+          "sha256": "eb3b5128ca8acecde00c62713557b4193de673e6b1678d1453f88111f7b08de9"
+        },
+        {
+          "file": "05.svg",
+          "sha256": "33abfb12d18dd0cd30932e2bf0bc36e35ba9611a0ccc27c689c77b8c2909a49d"
+        },
+        {
+          "file": "06.svg",
+          "sha256": "889f47be8e45306f507a4ae7709f503550abb74e63a417d79cf57f2fb2615415"
+        },
+        {
+          "file": "07.svg",
+          "sha256": "6f0f21bd4322663d1675c01d78da18014675391dc7d6efae4b54689cba4c4114"
+        },
+        {
+          "file": "08.svg",
+          "sha256": "b247c5dd697c714ce85cf6b03dfc4f5a34ba090854080925115f767612c818c3"
+        },
+        {
+          "file": "09.svg",
+          "sha256": "efe4a977d2705f4ec42e4ca5140e2d4eadc4e3f32b97cae3ad497453dbee2633"
+        }
+      ]
+    },
+    "summary": {
+      "total": 9,
+      "passed": 0,
+      "warnings": 9,
+      "errors": 0
+    },
+    "categories": {
+      "blocking": {
+        "count": 0,
+        "issues": []
+      },
+      "introduced": {
+        "count": 27,
+        "issues": [
+          {
+            "file": "01.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "01.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (9 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "01.svg",
+            "message": "11 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "02.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "02.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (24 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "02.svg",
+            "message": "28 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "03.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "03.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (35 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "03.svg",
+            "message": "41 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "04.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "04.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (27 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "04.svg",
+            "message": "32 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "05.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "05.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (6 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "05.svg",
+            "message": "8 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "06.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "06.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (11 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "06.svg",
+            "message": "13 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "07.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "07.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (11 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "07.svg",
+            "message": "12 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "08.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "08.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (30 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "08.svg",
+            "message": "36 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          },
+          {
+            "file": "09.svg",
+            "message": "Noncanonical compact authoring: Visible text requires one direct root font-family default; semantic groups and text elements keep only real overrides (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "09.svg",
+            "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (10 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): svg[1]:font-family None -> 'PingFang SC'; text[4]:font-family 'PingFang SC' -> None; text[5]:font-family 'PingFang SC' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+          },
+          {
+            "file": "09.svg",
+            "message": "11 ungrouped top-level Slide-local element(s) in svg_output (<rect> #2, <text> #3, <text> #4, ...); group only logical content units in a top-level <g id=\"...\">. Keep genuine static page framing as a root primitive and declare a supported data-pptx-role such as \"background\" or \"decoration\""
+          }
+        ]
+      },
+      "inherited": {
+        "count": 0,
+        "issues": []
+      },
+      "source-import": {
+        "count": 0,
+        "summary": {
+          "warning_count": 0,
+          "by_code": {}
+        }
+      }
+    }
+  },
+  "resources": {
+    "unresolved_template_tokens": [],
+    "fonts": {
+      "stacks": [
+        "PingFang SC"
+      ],
+      "generic_only_stacks": [],
+      "unsafe_exported_faces": []
+    },
+    "images": {
+      "data_uri": 0,
+      "local": 3,
+      "external": 0,
+      "external_references": []
+    }
+  },
+  "export_policy": {
+    "project_svg_contract": "strict",
+    "dangerous_normalization_count": 0
+  },
+  "deck_motion": {
+    "transition": {
+      "effect": null,
+      "effect_options": {},
+      "duration": 0.4,
+      "auto_advance": null,
+      "sound": null
+    },
+    "animation": {
+      "effect": "none",
+      "effect_request": null,
+      "duration": 0.4,
+      "stagger": 0.5,
+      "trigger": "after-previous"
+    },
+    "cli_overrides": {
+      "transition": true,
+      "transition_duration": false,
+      "auto_advance": false,
+      "transition_sound": false,
+      "animation": false,
+      "animation_duration": false,
+      "animation_stagger": false,
+      "animation_trigger": false
+    },
+    "narration_timings": false
+  },
+  "backup_path": null,
+  "conversion_trace_path": null
+}

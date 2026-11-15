@@ -269,6 +269,10 @@ class VisionTransformerCE(VisionTransformer):
         if ss_losses:
             for key in ss_losses[0]:
                 aux_dict[key] = torch.stack([item[key] for item in ss_losses]).mean()
+            # Execution order is ascending, even for an unsorted LAYERS config.
+            for layer, losses in zip(sorted(self.ss_layers), ss_losses):
+                for key, value in losses.items():
+                    aux_dict[f"{key}_layer_{layer}"] = value
 
         return x_fusion, aux_dict
 

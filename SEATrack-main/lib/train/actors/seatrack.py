@@ -160,6 +160,9 @@ class SEATrackActor(BaseActor):
                     #   "Loss/ce_loss": ce_loss.item(),
                       "IoU": mean_iou.item()}
             if ss_loss is not None:
+                for key, value in pred_dict.items():
+                    if key.startswith(("ss_loss_layer_", "ss_template_layer_", "ss_search_layer_")):
+                        status[f"Loss/{key}"] = value.detach().mean().item()
                 status.update({"Loss/ss": ss_loss.item(),
                                "Loss/ss_template": pred_dict["ss_template"].mean().item(),
                                "Loss/ss_search": pred_dict["ss_search"].mean().item(),

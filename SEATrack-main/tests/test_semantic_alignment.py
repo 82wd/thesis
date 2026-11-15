@@ -68,6 +68,22 @@ class SemanticAlignmentTests(unittest.TestCase):
         zero_loss.backward()
         self.assertTrue(torch.isfinite(zeros.grad).all())
 
+    def test_search_only_skips_template_and_has_no_template_gradient(self):
+        module = SpatialSelfSimilarityAlignment(8, 0., .5)
+        rgb = torch.randn(2, 10, 8, requires_grad=True)
+        auxiliary = torch.randn(2, 10, 8, requires_grad=True)
+        result = module(rgb, auxiliary, 4)
+        expected = .5 * F.mse_loss(module.similarity(rgb[:, 4:]),
+                                   module.similarity(auxiliary[:, 4:]))
+        torch.testing.assert_close(result['ss_loss'], expected)
+        result['ss_loss'].backward()
+        for tensor in (rgb, auxiliary):
+            self.assertEqual(tensor.grad[:, :4].abs().sum().item(), 0.)
+            self.assertGreater(tensor.grad[:, 4:].abs().sum().item(), 0.)
+        changed = rgb.detach().clone()
+        changed[:, :4] = float('nan')
+        torch.testing.assert_close(module(changed, auxiliary.detach(), 4)['ss_loss'], expected)
+
     def test_hand_calculated_pairs_and_region_isolation(self):
         module = SpatialSelfSimilarityAlignment(2)
         # Template: [[1,0],[0,1]] versus [[1,1],[1,1]], MSE = 1/2.
@@ -130,6 +146,7 @@ class SemanticAlignmentTests(unittest.TestCase):
             aligned_output, val_aux = net(z, x, compute_ss=True)
         self.assertNotIn('ss_loss', aux)
         self.assertIn('ss_loss', val_aux)
+        torch.testing.assert_close(val_aux['ss_loss_layer_3'], val_aux['ss_loss'])
         torch.testing.assert_close(baseline_output, aligned_output, rtol=0, atol=0)
         self.assertEqual(tuple(baseline_output.shape), (2, 16, 768))
         config.MODEL.SS.ENABLED = False

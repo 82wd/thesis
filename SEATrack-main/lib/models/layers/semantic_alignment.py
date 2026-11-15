@@ -35,9 +35,13 @@ class SpatialSelfSimilarityAlignment(nn.Module):
         if not 0 < template_length < rgb.shape[1]:
             raise ValueError("SS needs nonempty template and search regions")
         with torch.autocast(device_type=rgb.device.type, enabled=False):
-            loss_z = F.mse_loss(self.similarity(rgb[:, :template_length]),
-                               self.similarity(auxiliary[:, :template_length]))
-            loss_s = F.mse_loss(self.similarity(rgb[:, template_length:]),
-                               self.similarity(auxiliary[:, template_length:]))
+            # A disabled region is not evaluated (nor attached to the graph).
+            zero = rgb.new_zeros((), dtype=torch.float32)
+            loss_z = (F.mse_loss(self.similarity(rgb[:, :template_length]),
+                                 self.similarity(auxiliary[:, :template_length]))
+                      if self.template_weight > 0 else zero)
+            loss_s = (F.mse_loss(self.similarity(rgb[:, template_length:]),
+                                 self.similarity(auxiliary[:, template_length:]))
+                      if self.search_weight > 0 else zero)
         return {"ss_loss": self.template_weight * loss_z + self.search_weight * loss_s,
                 "ss_template": loss_z, "ss_search": loss_s}

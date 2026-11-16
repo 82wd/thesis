@@ -52,3 +52,18 @@ python tracking/train.py --script seatrack --config rgbt_ss_search --mode single
 `lib/train/data/loader.py` 对多进程加载显式使用 `spawn`，并设置至少 180 秒的取批超时；`num_workers=0` 保持单进程及原 timeout。服务器和本地实现同步。9 项既有测试通过；真实 LasHeR 两轮短测使用 batch 32、10 workers，每轮 4 个训练批次和 2 个验证批次，成功跨轮，保存并重新加载第 2 轮权重，参数有限。短测只验证流程，不代表完整 60 轮完成或精度提升。
 
 旧进程已定向停止，旧日志、输出及修改前 loader 保存在服务器实验目录的 `repair_20261116_173339/`（目录时间为 UTC）。旧运行没有 checkpoint，正式训练重新从原初始化权重、seed 0 开始；未加载短测权重。原正式配置仍为 batch 32、每轮 60000 样本、60 轮、每 5 轮验证一次。tmux 会话仍为 `ss_search_20261116`，正式训练窗口为 `train-repaired`；监控增加日志超过 300 秒未更新的提示，提示不等于自动诊断。
+
+
+### 进度监控
+
+通用只读面板：[training_monitor.py](../server_setup/training_monitor.py)。仅使用 Python 标准库，每 10 秒显示轮次/批次、训练和验证损失、GPU、权重文件数量及训练阶段 ETA。超过 300 秒无日志更新会提示疑似停滞并隐藏 ETA；告警仅显示在终端，不发送外部通知，不自动重启。完成状态需同时有退出码 0、结束日志和非空末轮权重文件，未加载权重校验内容。
+
+已部署至服务器实验目录，运行在 `ss_search_20261116:1.0` 的 watch 窗口。连接服务器后执行 `tmux attach -t ss_search_20261116`，按 `Ctrl+B` 再按 `1` 查看。按 `Ctrl+B` 再按 `D` 可离开并保持后台刷新。
+
+```bash
+# 在服务器运行；默认指向本次 search-only 实验
+/nas/liziyan103/anaconda3/envs/seatrack/bin/python /nas/liziyan103/seatrack/training_runs/20261116_ss_search/training_monitor.py --once
+# 其他实验可指定 --root /path/to/run --config CONFIG --gpu GPU_ID
+```
+
+监控测试：`python3 -m unittest discover -s server_setup/tests -v`（从仓库根目录运行）。2026-11-17 共 12 项测试通过，包括旧面板测试和新增的字段解析、停更、完成证据及异常结束检查。

@@ -1,45 +1,57 @@
-# 毕设：基于 SEATrack 的跨模态表征约束
+# SEATrack 频段融合实验（不使用 SS）
 
-本仓库包含 SEATrack 源码、SS 改动、实验记录和汇报材料。源码位于 `SEATrack-main/`，已包含本项目改动；下表按用途提供文档入口。详细实现和实验指标保留在对应文档中。
+分支：`experiment/frequency-fusion`。
 
-## 从这里开始
+本分支验证师兄的第二个想法：**在未加 SS 的 SEATrack 基线上，用 RGB 与红外的不同频段组合替代最终特征相加，观察是否改善跟踪。** 第一步采用固定权重、无需训练的即插即用融合。
 
-| 想了解什么 | 阅读入口 |
+**完整实现、公式、配置参数与运行说明：[README_FREQUENCY_FUSION.md](SEATrack-main/README_FREQUENCY_FUSION.md)。**
+
+## 本分支做了什么
+
+- 在两路最后的搜索特征上做二维 FFT，按径向频率分为低频和高频，组合后逆变换回空间域，再送入原预测头。
+- 新增四组频段实验配置，均设置 `MODEL.SS.ENABLED: false` 和 `TRAIN.SS_WEIGHT: 0`。
+- 保留原始相加及等权对照，支持两种相反的模态频段组合。
+- 无新增可学习参数，默认截止频率为 0.25 周期/token；频段组合的输出倍率为 2，幅值影响需单独分析。
+- 评测时显式指定 checkpoint，避免默认加载其他实验权重。
+
+旧 SS 代码和配置保留用于历史追溯；本分支的四组频段配置不启用 SS。关闭 SS 配置并不能消除已训练权重中的 SS 影响，**必须使用确认未加 SS 的基线权重**。
+
+## 实验分组
+
+| 配置 | 用途 |
 |---|---|
-| 安装环境、准备数据、了解原项目训练评测流程 | [SEATrack 项目 README](SEATrack-main/README.md) |
-| 师兄的三个研究想法 | [师兄想法](师兄想法.md) |
-| 最初对表征约束的理解 | [理解笔记（早期思路）](理解.md) |
-| 实验做到了哪一步、结果如何 | [实验日志（整合入口）](seatrack/实验日志.md) |
-| SS 具体怎么实现、如何做消融 | 下方“代码改动说明” |
+| `rgbt_freq_baseline` | 原始 SEATrack 特征相加，基线 |
+| `rgbt_freq_equal` | 等权对照，与原始相加精确一致 |
+| `rgbt_freq_rgb_low` | RGB 低频＋红外高频 |
+| `rgbt_freq_ir_low` | 红外低频＋RGB 高频 |
 
-`理解.md` 中的 anchor 等设想不等于当前实现；以代码改动说明为准。SS 消融是 SS 方向的深化，频段融合是另一条实验方向，历史观察结果见下方索引。
+四组应先使用同一份无 SS 权重、相同数据及计分协议评测。先核验 baseline/equal 的轨迹一致性，再比较两种频段组合。
 
-## 代码改动说明
+## 开始运行
 
-按改动阶段查阅对应 README：
+环境安装见 [原项目说明](SEATrack-main/README.md)。先配置本机项目路径和评测器中的数据集路径，然后从仓库根目录执行：
 
-| 阶段 | 改动内容 | 详细说明 |
-|---|---|---|
-| SS 初版 | 在 SEATrack 上增加 template/search 空间自相似性约束 | [README_SS.md](SEATrack-main/README_SS.md) |
-| SS 消融 | search-only、单层与多层对照、逐层损失日志 | [README_SS_ABLATION.md](SEATrack-main/README_SS_ABLATION.md) |
-| 频段融合（无 SS） | 搜索特征频域融合、原始相加及等权对照 | [README_FREQUENCY_FUSION.md](SEATrack-main/README_FREQUENCY_FUSION.md) |
+```bash
+cd SEATrack-main
+export SEATRACK_CHECKPOINT=/absolute/path/to/non_ss/SEATrack_ep0060.pth.tar
+CUDA_VISIBLE_DEVICES=0 python RGBT_workspace/test_rgbt_mgpus.py \
+  --script_name seatrack --yaml_name rgbt_freq_baseline \
+  --dataset_name LasHeR --mode sequential --num_gpus 1 \
+  --variants freq_baseline
+```
 
-本分支新增频段融合入口，四组频段实验配置均关闭 SS；原 SS 配置保留供独立实验使用。后续每次新增改动说明 README 时，在此表追加链接和简要描述。
+其他组同时更换 `--yaml_name` 与 `--variants`，使用独立的新输出目录。该命令生成跟踪轨迹，指标还需按统一协议计分。参数说明、训练入口与注意事项见 [频段融合实验 README](SEATrack-main/README_FREQUENCY_FUSION.md)。
 
-## 实验进展
+## 验证状态
 
-| 时间 | 做了什么 | 结果概况 |
-|---|---|---|
-| 2026-10-10～10-23 | 打通基线训练与多模态评测流程 | 报告完成归档核验，部分权重来源仍需追溯 |
-| 2026-11-03～11-05 | 接入 SS、确认基线并制作中期可视化 | 短测通过；中期相似度改善不代表最终精度提升 |
-| 2026-11-07～11-11 | 完成 SS 初版三模态、五测试集评测 | RGBT234 提升，其余四项下降 |
-| 2026-11-12 | 探索频段互换和决策图融合 | 局部案例有改善，尚无总体收益结论；实验代码已移除 |
-| 2026-11-12～11-16 | 完成 template-only / target-aware 消融 | 恢复部分 LasHeR 表现，但仍略低于基线；半权重结果待核验 |
-| 2026-11-15～11-16 | 新增 search-only、逐层配置并部署服务器 | 9 项测试通过；最近核验为等待 GPU，暂无精度结果 |
+2026-11-16：15 项 CPU 测试通过，覆盖频段选择、FFT 梯度、等权一致性、骨干权重兼容及原 SS 回归。**尚未进行本分支的 CUDA 试跑和完整 benchmark 评测，暂无精度提升结论。**
 
-详细设置、指标、证据链接和后续状态统一见 [实验日志](seatrack/实验日志.md)。以上为记录时的状态，不是服务器实时进度。
+```bash
+# 在 SEATrack-main 目录执行
+python -m unittest discover -s tests -v
+```
 
-## 实验过程与结果索引
+## 代码与文档入口
 
 | 文档 | 用途 |
 |---|---|
@@ -126,3 +138,10 @@ nvidia-smi
 - [git.md](git.md)：目前为空，尚无 Git 操作说明。
 
 后续新增实验或代码改动时，将说明链接补入对应表格；总 README 只保留导航和简要结果，细节写入专项 README 或实验日志。
+- [频段融合模块](SEATrack-main/lib/models/layers/frequency_fusion.py)
+- [模型接入位置](SEATrack-main/lib/models/seatrack/vit_ci.py)
+- [实验配置目录](SEATrack-main/experiments/seatrack/)
+- [频段融合测试](SEATrack-main/tests/test_frequency_fusion.py)
+- [项目文档与历史实验导航](PROJECT_GUIDE.md)：原总 README 的文档索引与历史进展。
+- [实验日志](seatrack/实验日志.md)：历史实验记录；此前频段观察不等于本分支新实现的评测结果。
+

@@ -16,6 +16,7 @@ from .utils import combine_tokens, recover_tokens
 from .vit import VisionTransformer
 from ..layers.attn_blocks import CEBlock_AP
 from ..layers.semantic_alignment import SpatialSelfSimilarityAlignment
+from ..layers.frequency_fusion import FrequencyFusion
 _logger = logging.getLogger(__name__)
 
 class VisionTransformerCE(VisionTransformer):
@@ -32,7 +33,7 @@ class VisionTransformerCE(VisionTransformer):
                  num_heads=12, mlp_ratio=4., qkv_bias=True, representation_size=None, distilled=False,
                  drop_rate=0., attn_drop_rate=0., drop_path_rate=0., embed_layer=PatchEmbed, norm_layer=None,
                  act_layer=None, weight_init='', ce_loc=None, ce_keep_ratio=None, search_size=None, template_size=None,
-                 new_patch_size=None, amglora_rank=None, hmoe_rank=None, ss_cfg=None):
+                 new_patch_size=None, amglora_rank=None, hmoe_rank=None, ss_cfg=None, frequency_cfg=None):
         """
         Args:
             img_size (int, tuple): input image size
@@ -110,6 +111,13 @@ class VisionTransformerCE(VisionTransformer):
         # self.add_cls_token = True   
         self.init_weights(weight_init)
 
+        self.frequency_fusion = None
+        if frequency_cfg is not None and frequency_cfg.ENABLED:
+            if any(r != 1.0 for r in (ce_keep_ratio or [])):
+                raise ValueError("Frequency fusion requires CE_KEEP_RATIO=1")
+            self.frequency_fusion = FrequencyFusion(
+                frequency_cfg.CUTOFF, frequency_cfg.LOW_RGB_WEIGHT,
+                frequency_cfg.HIGH_RGB_WEIGHT, frequency_cfg.GAIN)
         self.ss_alignment = None
         self.ss_layers = ()
         if ss_cfg is not None and ss_cfg.ENABLED:
@@ -128,6 +136,13 @@ class VisionTransformerCE(VisionTransformer):
                          return_last_attn=False, compute_ss=None):
 
         B, H, W = x.shape[0], x.shape[2], x.shape[3]
+        if self.frequency_fusion is not None:
+            if self.cat_mode != "direct" or self.add_cls_token:
+                raise ValueError("Frequency fusion requires direct tokens without CLS")
+            if ce_keep_rate is not None and ce_keep_rate != 1:
+                raise ValueError("Frequency fusion requires ce_keep_rate=1")
+            if H % self.patch_size or W % self.patch_size:
+                raise ValueError("Search dimensions must be divisible by patch stride")
         # rgb_img
         # 【code.md §4.1】沿通道拆模态，不沿空间拆图。
         # x 是搜索图，z 是模板；dte 只是 depth/thermal/event 的通用变量名，
@@ -261,7 +276,8 @@ class VisionTransformerCE(VisionTransformer):
         # 这里不是 cat：若改拼接会使通道变为 1536，预测头及预训练权重也要相应适配。
 
         # RGB和DTE两种模态的最终特征融合
-        x_fusion = x_rgb + x_dte
+        x_fusion = (x_rgb + x_dte if self.frequency_fusion is None else
+                    self.frequency_fusion(x_rgb, x_dte, (H // self.patch_size, W // self.patch_size)))
         aux_dict = {
             'attns': attns
                     }

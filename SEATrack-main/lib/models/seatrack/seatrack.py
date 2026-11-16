@@ -126,7 +126,8 @@ def build_seatrack(cfg, training=True):
                                            new_patch_size=cfg.MODEL.BACKBONE.STRIDE,
                                            amglora_rank = cfg.MODEL.AMGLORA_RANK,
                                            hmoe_rank = cfg.MODEL.HMOE_RANK,
-                                           ss_cfg=cfg.MODEL.SS
+                                           ss_cfg=cfg.MODEL.SS,
+                                           frequency_cfg=cfg.MODEL.FREQUENCY
                                            )
         hidden_dim = backbone.embed_dim
 

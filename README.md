@@ -22,8 +22,9 @@
 |---|---|---|
 | SS 初版 | 在 SEATrack 上增加 template/search 空间自相似性约束 | [README_SS.md](SEATrack-main/README_SS.md) |
 | SS 消融 | search-only、单层与多层对照、逐层损失日志 | [README_SS_ABLATION.md](SEATrack-main/README_SS_ABLATION.md) |
+| 频段融合（无 SS） | 搜索特征频域融合、原始相加及等权对照 | [README_FREQUENCY_FUSION.md](SEATrack-main/README_FREQUENCY_FUSION.md) |
 
-当前新增实验入口为 SS 消融说明；原 SS 配置保留作为对照。后续每次新增改动说明 README 时，在此表追加链接和简要描述。
+本分支新增频段融合入口，四组频段实验配置均关闭 SS；原 SS 配置保留供独立实验使用。后续每次新增改动说明 README 时，在此表追加链接和简要描述。
 
 ## 实验进展
 

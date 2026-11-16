@@ -22,6 +22,14 @@ cfg.MODEL.SS.LAYERS = [3, 5, 7, 9, 11]  # zero-based block INPUTS
 cfg.MODEL.SS.TEMPLATE_WEIGHT = 0.5
 cfg.MODEL.SS.SEARCH_WEIGHT = 0.5
 
+# Parameter-free search-feature frequency fusion. Original sum remains default.
+cfg.MODEL.FREQUENCY = edict()
+cfg.MODEL.FREQUENCY.ENABLED = False
+cfg.MODEL.FREQUENCY.CUTOFF = 0.25
+cfg.MODEL.FREQUENCY.LOW_RGB_WEIGHT = 1.0
+cfg.MODEL.FREQUENCY.HIGH_RGB_WEIGHT = 0.0
+cfg.MODEL.FREQUENCY.GAIN = 2.0
+
 # MODEL.BACKBONE
 cfg.MODEL.BACKBONE = edict()
 cfg.MODEL.BACKBONE.TYPE = "vit_base_patch16_224"

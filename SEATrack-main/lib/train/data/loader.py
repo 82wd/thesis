@@ -193,7 +193,8 @@ class LTRLoader(torch.utils.data.dataloader.DataLoader):
 
         super(LTRLoader, self).__init__(dataset, batch_size, shuffle, sampler, batch_sampler,
                  num_workers, collate_fn, pin_memory, drop_last,
-                 timeout, worker_init_fn)
+                 timeout if num_workers == 0 else max(timeout, 180), worker_init_fn,
+                 multiprocessing_context="spawn" if num_workers > 0 else None)
 
         self.name = name
         self.training = training

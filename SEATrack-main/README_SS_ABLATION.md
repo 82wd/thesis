@@ -43,3 +43,12 @@ python tracking/train.py --script seatrack --config rgbt_ss_search --mode single
 现有日志中的 `Loss/ss`、`Loss/ss_search`、`Loss/ss_template`、`Loss/ss_weighted` 保留。新增 `Loss/ss_loss_layer_3`、`Loss/ss_search_layer_3`、`Loss/ss_template_layer_3` 等指标；具体层号随配置变化。使用训练器现有 TensorBoard 目录观察训练与验证曲线，同时比较跟踪损失及最终跟踪指标，不能仅凭 SS 下降判定有效。
 
 本地 Python 语法检查通过；运行 unittest 时因当前环境缺少 torch 而未能执行。尚未进行 GPU 训练或 benchmark 评测，不能据此声称精度提升。推理仍使用原特征相加及预测头，新增逐层输出仅在计算 SS 时产生。
+
+
+## 2026-11-17：服务器跨轮停滞修复
+
+服务器 `training_runs/20261116_ss_search` 首轮 1875 批训练结束后，日志近两小时未更新，GPU 5 利用率为 0%，主进程等待数据，下一轮 worker 处于锁等待。现象符合默认 fork 在已初始化线程环境中创建 worker 后的等待问题；未取得调用栈，根因仍属推断。
+
+`lib/train/data/loader.py` 对多进程加载显式使用 `spawn`，并设置至少 180 秒的取批超时；`num_workers=0` 保持单进程及原 timeout。服务器和本地实现同步。9 项既有测试通过；真实 LasHeR 两轮短测使用 batch 32、10 workers，每轮 4 个训练批次和 2 个验证批次，成功跨轮，保存并重新加载第 2 轮权重，参数有限。短测只验证流程，不代表完整 60 轮完成或精度提升。
+
+旧进程已定向停止，旧日志、输出及修改前 loader 保存在服务器实验目录的 `repair_20261116_173339/`（目录时间为 UTC）。旧运行没有 checkpoint，正式训练重新从原初始化权重、seed 0 开始；未加载短测权重。原正式配置仍为 batch 32、每轮 60000 样本、60 轮、每 5 轮验证一次。tmux 会话仍为 `ss_search_20261116`，正式训练窗口为 `train-repaired`；监控增加日志超过 300 秒未更新的提示，提示不等于自动诊断。

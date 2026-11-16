@@ -54,6 +54,48 @@
 
 ## 部署、数据与验证说明
 
+### 服务器环境与连接
+
+以下信息整理于 2026-11-17，来源为 [复现日志](seatrack/复现日志.md)中的环境摸底、目录确认、环境验证和连接记录，以及 [实验日记](diary.md)中的后续实验目录。**这是已有记录的汇总，本次未连接服务器核验；GPU 占用、剩余空间和连接端口需使用前确认。**
+
+| 项目 | 已有记录 |
+|---|---|
+| SSH 地址与用户 | `liziyan103@10.68.240.49` |
+| SSH 端口 | 早期传输记录为 `10358`；2026-11-03 准备记录改用 `10343`，该条未实际连接验证 |
+| 本地 SSH 密钥路径 | `~/.ssh/id_ed25519_82wd`（仅记录路径） |
+| GPU | 7 张 NVIDIA GeForce RTX 4090，每张约 24 GB 显存；共享服务器 |
+| 驱动 | 2026-10-10 记录为 `580.126.09`，驱动报告 CUDA `13.0`；此数值不代表 PyTorch 使用的 CUDA 运行时版本 |
+| 用户家目录 | `/nas/liziyan103` |
+| 项目根目录 | `/nas/liziyan103/seatrack` |
+| 原始主代码目录 | `/nas/liziyan103/seatrack/SEATrack`；其内部 `SEATrack-main/` 被记录为重复旧副本，不作为运行入口 |
+| 数据集根目录 | `/nas/liziyan103/seatrack/datasets`，早期记录含 `lasher/`、`depthtrack/`、`visevent/` |
+| Conda 环境 | `/nas/liziyan103/anaconda3/envs/seatrack` |
+| 实验环境版本 | Python `3.8.20`、PyTorch `2.2.2`，历史验证 CUDA 可用；最初摸底的 Python `3.12.2` 不是这里确认的实验环境 |
+| 独立训练实验 | `/nas/liziyan103/seatrack/training_runs/`，各实验保存独立代码、配置、日志和 checkpoint |
+| 独立评测实验 | `/nas/liziyan103/seatrack/evaluation_runs/`，具体运行目录见实验日记 |
+
+确认当前端口后连接（以下采用较晚记录中的 `10343`）：
+
+```bash
+ssh -i ~/.ssh/id_ed25519_82wd -p 10343 liziyan103@10.68.240.49
+```
+
+在服务器使用已确认的实验解释器检查环境：
+
+```bash
+nvidia-smi
+/nas/liziyan103/anaconda3/envs/seatrack/bin/python -c 'import sys, torch; print(sys.version); print(torch.__version__, torch.version.cuda, torch.cuda.is_available())'
+```
+
+运行约定与历史问题：
+
+- 长任务使用 `tmux`；每次启动前重新检查 GPU，按实际空闲情况设置 `CUDA_VISIBLE_DEVICES`，不沿用日志中的旧 GPU 分配。
+- Conda 曾出现 `conda-libmamba-solver` / `QueryFormat` 插件错误，日志使用 `CONDA_NO_PLUGINS=true` 绕过；已有环境中的 Python、PyTorch 和 CUDA 验证正常。
+- 后续训练使用 `training_runs/` 下的独立代码副本，其中包含服务器适配和梯度累积等修改；仅检出历史 Git 标签不足以复现实训，具体差异见实验日记 2026-11-12 条目。
+- 权重需按实验配置和来源清单选择。早期日志中对“官方权重”的称呼后来有来源疑问，不能仅凭目录名判断，也不能将经过 SS 训练的权重当作无 SS 基线。
+
+### 部署与验证资料
+
 | 文档 | 用途与适用范围 |
 |---|---|
 | [SS 初版部署包 README](server_setup/pairwise_ss_20261103/README.md) | 2026-11-03 历史安装包、独立实验副本及监控工具说明；不是当前 search-only 的部署快照 |

@@ -1,0 +1,3915 @@
+{
+  "dataset": "/nas/liziyan103/seatrack/datasets/rgbt234",
+  "results": "/nas/liziyan103/seatrack/training_runs/20261112_ss_template-only/full/eval_ep0060/RGBT_workspace/ss/RGBT234",
+  "reference": "https://github.com/opacity-black/RGBT_toolkit",
+  "qualification": "NumPy protocol port; not cross-validated with official MATLAB",
+  "protocol": "float32 input; nearest-even prediction rounding; per-frame min center error / max IoU over modalities; <=20px; IoU > thresholds 0:0.05:1; equal sequence mean; all frames retained",
+  "sequences": {
+    "afterrain": {
+      "frames": 123,
+      "sha256": {
+        "prediction": "5c294c58ce7dbce0d8133ec118823165914cae3c25a891743f87f1ab51b3d97c",
+        "visible": "d57d8478baa37976c283327815730d53e6c61b0db93b4bb1af54b6f41bcb0790",
+        "infrared": "d150d9b7dbbd03ff1eba7d683aa13d75eb421c24bd6834ddf2e5969c005525ab"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 67.05381339527679
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 66.82152535811072
+      }
+    },
+    "aftertree": {
+      "frames": 313,
+      "sha256": {
+        "prediction": "26b71160511f249ba43821b46ba9532603e23e4c9bf3f084ab18537687dfe08f",
+        "visible": "b6eaac0d9e19db64bf1ac7eb5c820fe4c9961718c93ad33308d60a96baf47e18",
+        "infrared": "61244aff6b0ef624f9de78010441bae26e64b0e85c988e3dc07207282747e2f2"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.35493686292406
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.26365434352655
+      }
+    },
+    "baby": {
+      "frames": 659,
+      "sha256": {
+        "prediction": "7ea4e2010917f159cc8d94d45f338b636d8eba9133d187e24636a4da61c39d9f",
+        "visible": "728018b1708ee96340379680a12fb57585bd8735423ebd913efded0e125cbb12",
+        "infrared": "6617147158c21527b508cc5fd19233652a62efabed83ee813562602ded3ab423"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 43.39908952959029,
+        "MSR_percent": 26.09292578943565
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 43.39908952959029,
+        "MSR_percent": 26.013440277476697
+      }
+    },
+    "baginhand": {
+      "frames": 280,
+      "sha256": {
+        "prediction": "daa5372ba0ace604a139586de458fa0318e341fd9d1e87975400583dbf62660a",
+        "visible": "8f8ce6e71f8e54a3aa7a25c445adf92657489ac2964374e2736463b80386179f",
+        "infrared": "ecc2bd155b766a92647387620b74547e1273dc9fee1cb9c14bcae9be5ee5bb9a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 67.70408163265307
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 67.75510204081633
+      }
+    },
+    "baketballwaliking": {
+      "frames": 222,
+      "sha256": {
+        "prediction": "7f9fa8bec27cc4227081f0e2bdd0dd23ffe0ee2e1f3bc9c49aaa025c9028769c",
+        "visible": "d5048cab759e0a755ae7a9907bcf99a8c2bd27853e99400250d9fe01011f03c9",
+        "infrared": "5faa0cd8b476895126eb17ad3576226e5e331e8228a83778fca9e19e5ec2249c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 64.41441441441441,
+        "MSR_percent": 49.16344916344916
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 64.41441441441441,
+        "MSR_percent": 49.0990990990991
+      }
+    },
+    "balancebike": {
+      "frames": 225,
+      "sha256": {
+        "prediction": "146b2b822509452af5a7abee94f3460b199a9a6527de38f049ee8fb0734b2b72",
+        "visible": "f13ebde7bab0edd9eb547cd20fbe222d76805794bd4f20a106674594e48f47cd",
+        "infrared": "aac957798bd2cc0e7b025ad7e34eec139255bc31cbffc3b3dd05c4744658eafb"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 86.22222222222223,
+        "MSR_percent": 65.75661375661375
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 86.66666666666667,
+        "MSR_percent": 65.84126984126983
+      }
+    },
+    "basketball2": {
+      "frames": 75,
+      "sha256": {
+        "prediction": "b311ffb8ef4ab1e8740143dd104724424e5be4352dc49abd77d3868a96cc4d46",
+        "visible": "2c17077d5245f11730a905fcf4f8bc72bd7e6da499cd556e63d66a151a83b600",
+        "infrared": "43e86e0fd1818410da0b5c5932248d04503ecc638f435f92a4eae736a6f6d325"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.66666666666667,
+        "MSR_percent": 71.23809523809524
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.66666666666667,
+        "MSR_percent": 71.55555555555556
+      }
+    },
+    "bicyclecity": {
+      "frames": 282,
+      "sha256": {
+        "prediction": "220ae249f3e426c4f30a829dcf16842f56efbcd548c633b3795e6b3ded2b882d",
+        "visible": "886ff5e187feacce0be34012257b5ad187acb4ab767a4ac187c29a0acba70bc1",
+        "infrared": "b453858bc80d37bd509f9beadbcc88f7158bae54851d8858940fe0e021f3c7ad"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 89.24349881796691
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 88.6693684566025
+      }
+    },
+    "bike": {
+      "frames": 333,
+      "sha256": {
+        "prediction": "a99cfc7cda34b93910641926e6b4cf4526a3ae7e136bb9ff865efd705699390c",
+        "visible": "0c680ba1564d940beb3f082cc6f2c467f36443b329ffac70ceb26a7c86c86809",
+        "infrared": "9eba4e361e54cbb047e427587abd96ff5315825d1fbaa79625d21f0e4eab6cce"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.3993993993994,
+        "MSR_percent": 75.08937508937508
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.3993993993994,
+        "MSR_percent": 75.06077506077506
+      }
+    },
+    "bikeman": {
+      "frames": 177,
+      "sha256": {
+        "prediction": "df3283dfaa4e8c57ca65fb64b0c9dd94097ef1f5022efe34de2da4afb892d992",
+        "visible": "1f9ba34d8a3ea11791f539b2144afd6e6823b89370e38dba467167054426efa8",
+        "infrared": "7c38f66a8c184f1dcac53b31ad68c0fd8ca678a704d204290a604e2959218c11"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 69.19558783965564
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 69.14178100618778
+      }
+    },
+    "bikemove1": {
+      "frames": 175,
+      "sha256": {
+        "prediction": "860247cc38617852ec7c6d0ed5eced02eb55a0a3e701c62a881af8a5f0000973",
+        "visible": "412d118b0ad70d97329898e9b26c5faff6784151a254615191866ad5ebbaef87",
+        "infrared": "853516564bed2e820668745205def2eb0f3aa9844749229d04c97cc95331d0b1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 73.36054421768708
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 73.14285714285715
+      }
+    },
+    "biketwo": {
+      "frames": 333,
+      "sha256": {
+        "prediction": "b806705f4e118066d94596ecaf645348ab80fb6246dfb5797d5fa23107591750",
+        "visible": "b8cbbdeef63fe0a76de1d901b14ce1c125443ea57e2515b4aec063523097b6bf",
+        "infrared": "bba4ed760bdf946208f60926f6469ffd0c3fd206697b14766f9be06c67fafa4b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 82.28228228228228,
+        "MSR_percent": 24.2957242957243
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 82.28228228228228,
+        "MSR_percent": 24.267124267124267
+      }
+    },
+    "blackwoman": {
+      "frames": 498,
+      "sha256": {
+        "prediction": "6ee6f6d1ddd2cc102b01caeb3868676a5cb069f6ea5157b6fa659e925df43205",
+        "visible": "002bc58e0e341ed0365b0b4bd724df42fc0903cb6170c9a6e0470678794e8771",
+        "infrared": "510b66a023e1f7eee71f837e49ab7a6b5c513cf9eed4179d2b24c15c2b1ca09c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.30770701855039
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.96347293937657
+      }
+    },
+    "blueCar": {
+      "frames": 299,
+      "sha256": {
+        "prediction": "4a98da7a63eee1764eff42f0ed23e685385c8401a8009d0f05257373bf9740e5",
+        "visible": "91bbccb48ec7ea1d4910cd2d2f75f801abc01c65b66ce056e06abbaeeaaece42",
+        "infrared": "ac480c65d25ded17cd6253b07fc25f4d19cc8bb2990aa56872265586a3038e79"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.73944895684028
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.59611403089664
+      }
+    },
+    "bluebike": {
+      "frames": 261,
+      "sha256": {
+        "prediction": "76fd053bd30fc7961b22448f597e7f5d3d6c39e9c3028ce1d1e9fb15cf45b913",
+        "visible": "b58935cec8c9de80b5f537850f9cd64bd22ae00aa2ab9eab337a865221ec776e",
+        "infrared": "3947b416a3865689154083ebf1e626c7bc7104d65cb272f4935faa5753b6749c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.3364349571246
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 75.88031381134829
+      }
+    },
+    "boundaryandfast": {
+      "frames": 190,
+      "sha256": {
+        "prediction": "f03e12adff8ff3194e98d83ea473a797a2566041a29eed8e18a64cc9952e75b5",
+        "visible": "cd1227b83b25a996b4c0f775e94b24b0731e65bdef5bf5b58ebce062f53f1035",
+        "infrared": "6d505d1c37351a0df8a8264201e2d810e8b62347bd612030632a4bf80180ed5c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 76.31578947368422,
+        "MSR_percent": 27.669172932330827
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 76.31578947368422,
+        "MSR_percent": 27.593984962406008
+      }
+    },
+    "bus6": {
+      "frames": 89,
+      "sha256": {
+        "prediction": "257beba20087ffae9a108b0030a242d761746cac99134b88d85a8201019b55d4",
+        "visible": "cc7067721e98523c295e4056742a6f2bba2360f888ff7377bc2885b6cabda3c4",
+        "infrared": "c2a4f8d27b5b337fcf707c7160c14d1cf753ff7f38d4a01272d4821282c8849f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.09256286784374
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.9855537720706
+      }
+    },
+    "call": {
+      "frames": 219,
+      "sha256": {
+        "prediction": "a0a7232894e1e379e32cb3310e9e43221dbb6f7feb906de15501db38ddfd763a",
+        "visible": "33b3616d61afce9006dd18af27b44273acdf23fd605428f4d1fc87572e240316",
+        "infrared": "4e3d32367a36d7b51b67fbcc9dbce07c9bb0bc8b4334599924ec5dcbda4ba5a7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.8904109589041,
+        "MSR_percent": 40.92193955207652
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 95.8904109589041,
+        "MSR_percent": 40.92193955207653
+      }
+    },
+    "car": {
+      "frames": 415,
+      "sha256": {
+        "prediction": "a044b9086715eafc7fd1d3d08813fbad9f204dd7973f49e8dd82d2bdb87b0ea2",
+        "visible": "d5eb4245002e594be8a39425aae8add1ff09ced111a60cf36f30b4ace4abbb88",
+        "infrared": "685fbbac10819775ceffbe3e21f148a2a240d27d1f6cbf92b01d23085c3b093c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 53.73493975903615,
+        "MSR_percent": 48.19277108433735
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 53.73493975903615,
+        "MSR_percent": 48.123924268502584
+      }
+    },
+    "car10": {
+      "frames": 212,
+      "sha256": {
+        "prediction": "8645b66ff8a3318125e0261d52df2d0e75c652ec799298e401b69ebced581827",
+        "visible": "06732c2113b1bc38cc02a2e3b0a730c224819fd36664f111fa52996242be7154",
+        "infrared": "1e12669198857f12562ab9fa85845503ffa73393a246de68781968d8d09ad924"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.52830188679245,
+        "MSR_percent": 84.18688230008983
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.52830188679245,
+        "MSR_percent": 84.0071877807727
+      }
+    },
+    "car20": {
+      "frames": 161,
+      "sha256": {
+        "prediction": "dc6432d28e32c48ef58ad28d9bf94672b931dd56732dbf3b84b7b89a9a8a6cde",
+        "visible": "c06f8fcefa959e70ff88781b4f81c0e290bfe3d23a6a736e33850ef227b678ac",
+        "infrared": "258fcdcb01508b83bf133e6953de6f2ea08a0d85642fe250421df1752714ed91"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.40993788819875,
+        "MSR_percent": 71.31026323572907
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.40993788819875,
+        "MSR_percent": 71.2215320910973
+      }
+    },
+    "car3": {
+      "frames": 501,
+      "sha256": {
+        "prediction": "d2c9390b7196a5eb755e924aeba81ca7cfe792cc9930604eeb23884c6ba506d3",
+        "visible": "d72b131ef01ca64d84678b0ece6766922011054591e08ca5fce2e63380505a00",
+        "infrared": "221f4107152c499b0b478d375a621f0dfc2f3093a66cdab9acf815ae9d67e4d8"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 90.61876247504989,
+        "MSR_percent": 70.16443303868452
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 90.8183632734531,
+        "MSR_percent": 70.26898583784812
+      }
+    },
+    "car37": {
+      "frames": 604,
+      "sha256": {
+        "prediction": "08773864b34a072df2b0bf951c177f930fbb133227c02c2a3840a7edc24f95f1",
+        "visible": "f05f6ae7cdeb070466eefcf29f064956b62ebea9ad443323229ff54e6b95481b",
+        "infrared": "cb345d98c716df8a6276861d04a88311297118c4c26cf182ab40051b6a979c47"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.00662251655629,
+        "MSR_percent": 74.49542730999684
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.00662251655629,
+        "MSR_percent": 74.38505203405865
+      }
+    },
+    "car4": {
+      "frames": 147,
+      "sha256": {
+        "prediction": "6fd623e2d121ba18bd25a98ae436a305b21bbaee0ddad71a229a79138a6c64f4",
+        "visible": "f35915c3dabacd1cde76453b3ef4fde5a41c039c37ca4ce175633c12d1ff28ce",
+        "infrared": "d5cb6efdec74a136dcaaff1c3e840ebd1d68c16207342f31835231a9b378adce"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 66.66666666666666,
+        "MSR_percent": 64.88500161969549
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 66.66666666666666,
+        "MSR_percent": 64.72303206997084
+      }
+    },
+    "car41": {
+      "frames": 254,
+      "sha256": {
+        "prediction": "aa6cc3cb27cbb0799a553d676633e8e42ad46131a26e34bed2aa0c997a9ab8a2",
+        "visible": "6b40f0424fed2c2403c11df430cfc5b817ea21949d63df2b430497d576f327a1",
+        "infrared": "732db308ec97c7c956fd662125163581c593d3b877301189a5ca7a4994bba29f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.43344581927259
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.35845519310087
+      }
+    },
+    "car66": {
+      "frames": 210,
+      "sha256": {
+        "prediction": "39cc595779053db5d32a71390e992dc355f5a8f1f4f67ae2cd146cd36d41e1fb",
+        "visible": "33df824d151367056f264c1fbfd1cb876e0cb2ef93852c79cc10ebcf5273370e",
+        "infrared": "bf24930a4dc5de5a0b0df1034f89a592d7e9cc4d35a05fa343fbbfbec8506bdb"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 84.21768707482994
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 84.26303854875285
+      }
+    },
+    "carLight": {
+      "frames": 267,
+      "sha256": {
+        "prediction": "6e170da81a9ce71f48a00eddfad4ea54912a71d095db099ecd59fbb3d3197e83",
+        "visible": "388b9937ea87b545940765285a3178fe936d34c60484d948bc2584b2182b76fa",
+        "infrared": "2510101c68a925bf1e72547c33340bcc6299035b5bb53df49bca63b74ff52239"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.625468164794,
+        "MSR_percent": 78.09880506509718
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.625468164794,
+        "MSR_percent": 77.99179596932406
+      }
+    },
+    "caraftertree": {
+      "frames": 230,
+      "sha256": {
+        "prediction": "f8d0d5ce9f33755d6a79b1576d74369705d188117dba3b7220e12952ab39d31d",
+        "visible": "9c8607fd309f920b31467e85a1f4442374b928843f79ef99a50561aedfcb37f5",
+        "infrared": "276cda708fd6d490d61e87c4c9b626511aed2394ad29a2042347b49ef3fc0c17"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.3913043478261,
+        "MSR_percent": 85.21739130434783
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.82608695652173,
+        "MSR_percent": 85.30020703933747
+      }
+    },
+    "carnotfar": {
+      "frames": 418,
+      "sha256": {
+        "prediction": "304ae13f2932c9fa481cc8fe551f3ac3a4c6bbc5d3f8bbb98308f0351b4e45c7",
+        "visible": "cb06c024aeb008b9a572b00ad0b1ebb1a69694d28b54abb135fe4cc7b448a693",
+        "infrared": "0ac58dd205d11d49407c422a1f684b5a9bfb769ce977f3ceefbed32647471009"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.28229665071771,
+        "MSR_percent": 90.21417179311916
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.76076555023924,
+        "MSR_percent": 90.31670084301663
+      }
+    },
+    "carnotmove": {
+      "frames": 417,
+      "sha256": {
+        "prediction": "1ae7d4c6597820ad2427da6487656862bc257bca76d327ad5c56cb4e718527d9",
+        "visible": "e7df25623de0b3cc832d645b98d39942822ff4bda2b9a4af5a5cce9f0242a507",
+        "infrared": "e7df25623de0b3cc832d645b98d39942822ff4bda2b9a4af5a5cce9f0242a507"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.32134292565947,
+        "MSR_percent": 62.007536827680724
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.32134292565947,
+        "MSR_percent": 62.03037569944046
+      }
+    },
+    "carred": {
+      "frames": 180,
+      "sha256": {
+        "prediction": "d9938dcf89c56e0f99040694d427239d2b1f229cc204c1a1321bd613ffd685c0",
+        "visible": "2861115d886ef94a44b4df374b93abd485b3267b0b050051dd0e67da20ad3bb2",
+        "infrared": "a18eb7b1b8b277ceb24fbe63ba91d2a10a66fc819d7f0212b733466d214ca301"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 93.88888888888889,
+        "MSR_percent": 64.17989417989419
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 93.88888888888889,
+        "MSR_percent": 64.12698412698413
+      }
+    },
+    "child": {
+      "frames": 140,
+      "sha256": {
+        "prediction": "a2ddf184f107160b3751f6556c01e9bf4410a64562b8ccf987aa21777ef898b9",
+        "visible": "a5fc22935416b0ba018e8ec0a9ea12a9ef80f5961786ff12f4bd5c849627d7cb",
+        "infrared": "dc95d7c4b8afea4032f16b68abfea0926aa7394100cde8089ad593460c6a882d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 87.14285714285714,
+        "MSR_percent": 37.10884353741496
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 87.14285714285714,
+        "MSR_percent": 37.04081632653061
+      }
+    },
+    "child1": {
+      "frames": 319,
+      "sha256": {
+        "prediction": "647489caa785ac239b967c10026f90d4f70804a2ee268cd37ac0c8a81cba5af1",
+        "visible": "b82aa2b341ee52affa8b88714b9278e231322964a40d9a4507c534560097521d",
+        "infrared": "c06dd11a2e297cca10a0af643d736acb14e47161f7fc7bbf6bab4398cea68eb6"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 91.53605015673982,
+        "MSR_percent": 71.29422301836095
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 91.53605015673982,
+        "MSR_percent": 71.39871622630244
+      }
+    },
+    "child3": {
+      "frames": 621,
+      "sha256": {
+        "prediction": "ba0e9196f33ee18fdf5a621ac21fb9376290b921c443d5d5b0516ef06b21984e",
+        "visible": "bf794ec4dd733471f27ce18ea2a00460c27bd8e30a57216bee08a307acded2f3",
+        "infrared": "54fceb5fd5f22e629ca51fc76054b8f55927f7ef13dfd9abc0fbdafbd2758f8c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 56.68276972624798,
+        "MSR_percent": 35.518748562226826
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 56.52173913043478,
+        "MSR_percent": 35.61076604554866
+      }
+    },
+    "child4": {
+      "frames": 524,
+      "sha256": {
+        "prediction": "738f8c0027cf32b27265496b32995053d84f0c127754b0d0998d263fc426578b",
+        "visible": "05ac8c41cd9c365273d0e90f6a9145885460e2638cce6595cf73cf91d7bd12d3",
+        "infrared": "804c0d38804e91be2e869c1ded44051105050590ccf587746f090c2bac11542c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 87.78625954198473,
+        "MSR_percent": 67.69356597600871
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 88.35877862595419,
+        "MSR_percent": 67.5481643038895
+      }
+    },
+    "children2": {
+      "frames": 239,
+      "sha256": {
+        "prediction": "0e923098092bbf1fadf6299ac138efb3fff9f9639d6116c4abeb33908fb95c2e",
+        "visible": "64c0850098fd0edd1962da477d5f8ff97cc1030278964bfad2f849997a7b3a9b",
+        "infrared": "39cde517f018a2a21f2fbd17446070ecbba87c9b60c03af84c5e8d7b035ff37e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 10.87866108786611,
+        "MSR_percent": 4.741980474198047
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 10.87866108786611,
+        "MSR_percent": 4.741980474198047
+      }
+    },
+    "children3": {
+      "frames": 136,
+      "sha256": {
+        "prediction": "5ddb2a9b0d9030ea78198dfd00232d9027005ff57a4e7e2aca369e2bd6afbcb1",
+        "visible": "d2b387d77d30fa0017d225014cfea379c3fe295164e2843d8f8a7ec6425f196f",
+        "infrared": "3b62629bb56ad6c9e12ddaf1616c0be1bec2edcfac380f9a0e7249c01c2ec336"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 65.44117647058823,
+        "MSR_percent": 35.88935574229693
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 65.44117647058823,
+        "MSR_percent": 35.819327731092436
+      }
+    },
+    "children4": {
+      "frames": 103,
+      "sha256": {
+        "prediction": "29512f64e2bc3f723ee9793470244aa72e455cf4ee1ea26d3b32cb11ee73ea21",
+        "visible": "88c117db0b9f99ea57b2372aadec703a5ca990454ddf7c8fcfa5a7e9c2c69147",
+        "infrared": "62041ea03c8c554e47c03ea2fb5024979e8bcf33804a85d0175daead7f4a963a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 58.252427184466015,
+        "MSR_percent": 25.011558021266765
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 58.252427184466015,
+        "MSR_percent": 24.96532593619973
+      }
+    },
+    "crossroad": {
+      "frames": 768,
+      "sha256": {
+        "prediction": "916712634ad3f5fc200075029d072297719f03e429dd3db0c5a4a31272de3c19",
+        "visible": "e6750056bf0308f9abb97e690ee9593d69f7bf135daf106797d3071c07bf262d",
+        "infrared": "fb8a5dc6529a36d918475777b188b3c16d023adf25d4cb429fd9020caa791537"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 57.90550595238094
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 57.87450396825397
+      }
+    },
+    "crouch": {
+      "frames": 1041,
+      "sha256": {
+        "prediction": "73d9eaa98a7a558d3424d0ede70b8853944d65f5c3de05162a7a10d4aa474c96",
+        "visible": "896c60259f3ac4b02a0294bb5e7efa1b92da679a08c5f46571fcb678ffe12643",
+        "infrared": "b4b35ec393b41f8fe775f55ba652112c714d3bf55b53db5b4b89a3c506846f3f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 43.131604226705086,
+        "MSR_percent": 32.50537486848725
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 43.41978866474543,
+        "MSR_percent": 32.45963130689355
+      }
+    },
+    "cycle1": {
+      "frames": 187,
+      "sha256": {
+        "prediction": "f12ed746e2a531c25f50cd829eb68987536971f90ed9615f5e3006cc641a9cc1",
+        "visible": "dbe918c2e15d5516ad4785cf93afa2d0bf0d21596f4aac76642088cefc99d582",
+        "infrared": "71c43471edbf4ee95ef690180e087f2ed7affe21510c13bc02f3e35946a5a744"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.2566844919786,
+        "MSR_percent": 49.60529666412019
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.2566844919786,
+        "MSR_percent": 49.40157881334352
+      }
+    },
+    "cycle2": {
+      "frames": 403,
+      "sha256": {
+        "prediction": "59dfb9bc970f48b596cc1e19826fe15ff7519f1ff382ab9081c1fb0fe1ffd95f",
+        "visible": "47a4a329b1398dfac7c3e0888e66838b2d75c9c5c514d897842e8b1bf867658a",
+        "infrared": "bdf08a6311ce69e1364c305c034e55be685d7d3f6fe4d57adbe7596f3ea0e803"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.50372208436724,
+        "MSR_percent": 58.15904525581944
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.50372208436724,
+        "MSR_percent": 58.30083894600023
+      }
+    },
+    "cycle3": {
+      "frames": 436,
+      "sha256": {
+        "prediction": "4bee68e1a771b4aae26fe2ad0386fa74fb9a1fe17e7fa5ac3fc49a3dd02b28eb",
+        "visible": "461de2d17e51eb397a2e48cd4f2589c6460f1a1068377b37e931944aa920b329",
+        "infrared": "e87bb6f4a3bd9f769580837089e44acee6c101223a6d7eae621ad2e30dd59b3d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 87.5819134993447
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 87.46177370030581
+      }
+    },
+    "cycle4": {
+      "frames": 336,
+      "sha256": {
+        "prediction": "572fb9e5b57c72391b857a53e3af5180f104d6676684edda16af085d444078d5",
+        "visible": "dbb44491b49017378ad62b2c46dcd5b839d8c8516ffcf8117b523bd425f2bdf4",
+        "infrared": "785adc96dc3e1b518a827092e71cf98261cec5a244bc9c6f1f21b9545343ee6f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.34523809523809,
+        "MSR_percent": 75.63775510204081
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.34523809523809,
+        "MSR_percent": 75.45351473922902
+      }
+    },
+    "cycle5": {
+      "frames": 114,
+      "sha256": {
+        "prediction": "bd8caa7196c15ae492dc5278a5f861b90eeef6a5d0db9dd03ce3ea3087794900",
+        "visible": "4aa41002be0cbcde85af71ffc38a71d151c45e3e92fd7e8ffc00a64f957a9748",
+        "infrared": "742a1a67fd30449aa4e79479361c10d7a3c974564e02df60730e8e940dce2f28"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.82456140350878
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.9498746867168
+      }
+    },
+    "diamond": {
+      "frames": 454,
+      "sha256": {
+        "prediction": "ee4128c5f3c3eb97f36a7617eea792df5e1484e44de47d405cf5056e32bb2fa2",
+        "visible": "2ed390939b7ab022e6bdc34e1f372bcf21fffdbbb4f5907f684f6ea45e153ec1",
+        "infrared": "54abab40128d79c7c97b977445e61046ca1da1006ed2c800eb90b17aa9052409"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.11894273127754,
+        "MSR_percent": 62.61799874134676
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.11894273127754,
+        "MSR_percent": 62.53408852527795
+      }
+    },
+    "dog": {
+      "frames": 45,
+      "sha256": {
+        "prediction": "c2fbda39b3713586757952f89e899166fd9f7b7161df23157f68f11814335117",
+        "visible": "3e84e5ed7c8372e291d95a0ab2232f2e937b88e157daa678ee2f36fd43325a5a",
+        "infrared": "fef8f1d36e522a818ebdb978903d5a6130164c6fdd55ea85ad4a3d46abca157c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 61.69312169312169
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 61.904761904761905
+      }
+    },
+    "dog1": {
+      "frames": 983,
+      "sha256": {
+        "prediction": "a43725086f70249e3065952052eb2674dde4404626120fd5e10861d525975508",
+        "visible": "1f1ee46ffb6c7a8038892b57aa0c8f978ec02b0ff3d41edb008801477da92254",
+        "infrared": "890999c1c4bd3cebd1a47a3350017750a4e21fdcea616bd01b1715d9b542bc35"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 66.02238046795524,
+        "MSR_percent": 44.203846340163736
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 65.92065106815869,
+        "MSR_percent": 44.23291188296274
+      }
+    },
+    "dog10": {
+      "frames": 347,
+      "sha256": {
+        "prediction": "7b73f25ade2e1ef9e69cc03dca21d9638c174b6fa46fe67215e4148aefc8ffe1",
+        "visible": "cc176c214eaae4005474d3731dcd71808e71adffcd7a2e71ed586275d05209de",
+        "infrared": "7a5e74da24fc983083bfff2e241a7e2a15b4143d2fd6a3b7b83cb1ea7a5df67f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.61945931110196
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.45478248936463
+      }
+    },
+    "dog11": {
+      "frames": 87,
+      "sha256": {
+        "prediction": "ad89e05d5391673deb1f92b604332b7a18bc5b686dcfc7292a4c4b818a3a11b1",
+        "visible": "92fcdcc9020bc9ac55ffbb450385ee0751d08966da7afb82067e2141749e9d5d",
+        "infrared": "da032aef1ec610234787ed4dc7a45ee31f2af68bd2ad845f55e758c53a81e4ce"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 80.45977011494253,
+        "MSR_percent": 59.44170771756979
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 80.45977011494253,
+        "MSR_percent": 59.441707717569784
+      }
+    },
+    "elecbike": {
+      "frames": 126,
+      "sha256": {
+        "prediction": "0ff19074116d7e781975f872e7d189f2e9845f4d592638156839e3a7c679d192",
+        "visible": "8b50cc55e52133942f03ac5a2a689546f89e188d5dfc4c4edbfb2527fda7e88f",
+        "infrared": "8b6719c1bccb984877e5d2a0d95cb106638f65b4bc2fe8de961c78c028fa96e4"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.9493575207861
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.02494331065762
+      }
+    },
+    "elecbike10": {
+      "frames": 463,
+      "sha256": {
+        "prediction": "1b6c9c446bdf250b7feec81dca2c4d35c5fb5fc33249e2da7a1faea704d3a292",
+        "visible": "b07afcbb1eaeae7002477bfddbed94336152e305618f551a8a238fb1461747a5",
+        "infrared": "cca5d973cbf44c49b11838ad985aa823130397b7cd85ca98f660ee3ff88fa953"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.8401727861771,
+        "MSR_percent": 68.60022626761287
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.8401727861771,
+        "MSR_percent": 68.62079605060167
+      }
+    },
+    "elecbike2": {
+      "frames": 582,
+      "sha256": {
+        "prediction": "13864a52a6126378733af3bebae1da5a112d1d67763a7cce5eb1c771799b789f",
+        "visible": "e9e87a450a5a50421f4010a037e7d48bdadc3570e82805ef1c09d64146dc1305",
+        "infrared": "7f5dd2896d9647b48e29ee305082cc6b1103b5aa1279939f3b913da342cfd814"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 79.55326460481099,
+        "MSR_percent": 49.74635902470954
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 79.55326460481099,
+        "MSR_percent": 49.71363115693013
+      }
+    },
+    "elecbike3": {
+      "frames": 144,
+      "sha256": {
+        "prediction": "251a8e93bee86460ac80049f35f134b055ce89e08fc0bfe35f0977fc1dac7291",
+        "visible": "c015e0bd582ae0b58f9324ecc848bcdb386a7f3bbb3448238d27b3a475d47878",
+        "infrared": "f36b465e42e792328062ef460773e2e414040d5f90e828e58f15b2c14ef75d47"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 64.58333333333334,
+        "MSR_percent": 36.706349206349216
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 64.58333333333334,
+        "MSR_percent": 36.77248677248677
+      }
+    },
+    "elecbikechange2": {
+      "frames": 211,
+      "sha256": {
+        "prediction": "3d3ad2a86e5104b640f18b7056d7a33e2db25e2e54e948a33efdb97e82a69f8d",
+        "visible": "df0576ec2a55a944675d2693cec8e4bde2e45be2e2b6f077aea23f1d61b12fa5",
+        "infrared": "9a6678ab3d7ef8c4827723850d6fdc7bd606a17594c42d477c4fb3c999532bfa"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.93680884676147
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.981945384789
+      }
+    },
+    "elecbikeinfrontcar": {
+      "frames": 208,
+      "sha256": {
+        "prediction": "d0bbd34508a7d4a6e130c09b112ffd2b7c82319614bcf342458fb22266592183",
+        "visible": "bd7028e923007457aac5e9bbb38d59c3b86dc0a1b046e95e437d7f7e8e71955c",
+        "infrared": "f76b46c8f2e6eed1ff97242b30c25c334a911c06f2d04c67ed26870e0febdc15"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.51923076923077,
+        "MSR_percent": 81.47893772893772
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.51923076923077,
+        "MSR_percent": 81.31868131868131
+      }
+    },
+    "elecbikewithhat": {
+      "frames": 95,
+      "sha256": {
+        "prediction": "1b6486843f1588ec96e1baa37efba51d117b870c3ea015c9ecceb6ce52cc1ad9",
+        "visible": "ec14826f4de0319d60e335afd2b30f3b370933948fad8f94450a9f0ada0463f6",
+        "infrared": "af99300d5e9dd91ae6a20058e0d050049c261ff694d12e10cb351400eac55f90"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.73684210526315,
+        "MSR_percent": 80.90225563909773
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.73684210526315,
+        "MSR_percent": 80.6015037593985
+      }
+    },
+    "elecbikewithlight": {
+      "frames": 137,
+      "sha256": {
+        "prediction": "5f508d3ede80e18819e4c76281432c37a4712ea5c685f21511cc9f3f11d5ac05",
+        "visible": "0f5dab049dd92e087a6dbbd19455a59886612ecced75d656fa724bad48114407",
+        "infrared": "eccb92d61746260b546f72b2d06b20e700aeca4ae9291b16949c3a2b8db6e303"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 59.74973931178311
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 59.64546402502607
+      }
+    },
+    "elecbikewithlight1": {
+      "frames": 185,
+      "sha256": {
+        "prediction": "d04d98dfc6cd30b34de037632c6068f7dcbaa7f8787a1893a91f1bc33a0db8fa",
+        "visible": "49c0521619de15645b202e3b8ae3ae1914111d4d13c4c9707744b4ce18a9e90f",
+        "infrared": "034ac1acdbee232d76ed9e3cbf2d29d4ce9c708c629f7642e088365f38eb847f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.91891891891892,
+        "MSR_percent": 75.39253539253541
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.91891891891892,
+        "MSR_percent": 74.92921492921494
+      }
+    },
+    "face1": {
+      "frames": 1335,
+      "sha256": {
+        "prediction": "f1d5b15104f1eba001d97cb88a2b0a539c466e46ceae5c79392a08273100b2e5",
+        "visible": "8f358a5f826b3a832f3da5deb13034a640a7412abcb910761ff745006c510790",
+        "infrared": "5ff80a5e011f7c5b87bbf498f4c27b5975e547b7b9980800ee10a0d5605d5a6a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.8501872659176,
+        "MSR_percent": 66.07454967005528
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.8501872659176,
+        "MSR_percent": 66.0923845193508
+      }
+    },
+    "floor-1": {
+      "frames": 128,
+      "sha256": {
+        "prediction": "895df6472e249b30cfcd1f758da1a5b61df4e599eb47e191445bec2a306088fb",
+        "visible": "b0f2d71d02836ef68470fedbb70639822d01fe3369143e85807e7a5985a9bd37",
+        "infrared": "525ac10451d05e7022e34671e383a3a1cbbd800deb8597901957991b578df20d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 67.1875,
+        "MSR_percent": 46.61458333333333
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 67.1875,
+        "MSR_percent": 46.35416666666667
+      }
+    },
+    "flower1": {
+      "frames": 596,
+      "sha256": {
+        "prediction": "29469cb9c2f6d1ac60c3e8e5b3224f6c9ebbe168392f354e16451b30b286e1ce",
+        "visible": "2d3c0bfafeb8780a959d3a72d6f0ae2a3f9541e6b6e3ebc9bfb8393b3edc3dc7",
+        "infrared": "89e7e4329d3f3191c8400050e521a51dccadcb0e479601edc1adf6b4263bba2f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 67.61744966442953,
+        "MSR_percent": 43.33652924256952
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 67.78523489932886,
+        "MSR_percent": 43.400447427293074
+      }
+    },
+    "flower2": {
+      "frames": 422,
+      "sha256": {
+        "prediction": "c2ebfa3d6283a22ce708730f74b0e0f383a720c07e6b3612e42665d4532d03cf",
+        "visible": "5b9e28a64858e3fa0071d0b93a30b6073c9bcb45f0027da5b3a4f4bf282d5129",
+        "infrared": "5b9e28a64858e3fa0071d0b93a30b6073c9bcb45f0027da5b3a4f4bf282d5129"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.2162040171519
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.18235161363123
+      }
+    },
+    "fog": {
+      "frames": 672,
+      "sha256": {
+        "prediction": "90dc7b916842bf06e301aa0d596881726e002f2e3968bba585422c9380cd5091",
+        "visible": "13c4b2958b2c3e1e5dd1f556a6c9c515d4a3af7a05ce243bab8803a55de188aa",
+        "infrared": "c1ee7b685ee4a859e5509e6531b46fc5a9d869b30c1ded2aeefbbd85e6d93e01"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 93.45238095238095,
+        "MSR_percent": 75.45351473922902
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 93.45238095238095,
+        "MSR_percent": 75.55272108843538
+      }
+    },
+    "fog6": {
+      "frames": 303,
+      "sha256": {
+        "prediction": "6b5e55b9251de6896ef1a8d07b3b42fb667a9245b6eb6df88082d7abb2a5e6f8",
+        "visible": "5fc2bd39abede1a1a6a71be2237d75e918e0a615e6ac27d57968663d28e06e12",
+        "infrared": "e29d1b06c52891f081f89b436223b21f6237ed67bd74c89a67fc8c68a246bb70"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.12116925978313
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.08973754518308
+      }
+    },
+    "glass": {
+      "frames": 453,
+      "sha256": {
+        "prediction": "cbec4c6b8d334ba9f81670a9a550911c94e0e7a9b04340301276f50bb87f6d97",
+        "visible": "dcd58c705004b605ab95de2b7ce9a4a37eb67a92ca01f3ba351e65e5cc3cf884",
+        "infrared": "2eae1522e217240072c30167d2cf6ae449c8434ef100a2d6177125160e99de1e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 67.99116997792495,
+        "MSR_percent": 50.13139913802165
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 67.99116997792495,
+        "MSR_percent": 50.047303689687794
+      }
+    },
+    "glass2": {
+      "frames": 266,
+      "sha256": {
+        "prediction": "8fa501f7ffc23e79bfc25e7810c310525a4c13614833a4d75bbd3802cfd07ef9",
+        "visible": "89a7cfeaf998b8818ca93a44309c13b61b24af0a5c01074ba014734c1c7067fb",
+        "infrared": "89a7cfeaf998b8818ca93a44309c13b61b24af0a5c01074ba014734c1c7067fb"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 93.23308270676691,
+        "MSR_percent": 67.61546723952738
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 93.23308270676691,
+        "MSR_percent": 67.45435016111709
+      }
+    },
+    "graycar2": {
+      "frames": 345,
+      "sha256": {
+        "prediction": "dfcb0fbde69c74aa7e04adb8281990b417564647d56b4c8c4b72bf37b8f7b550",
+        "visible": "d756ec3cc5c4cb3b090e93420b372b2bb9113c24e1c8d92a88bde1a0e87a3e49",
+        "infrared": "25aedc5281ea826757d15a7b3249c4031bfcd52a33bfe61214b45c2adaa6864f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.1304347826087,
+        "MSR_percent": 64.48585231193927
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.42028985507247,
+        "MSR_percent": 64.44444444444444
+      }
+    },
+    "green": {
+      "frames": 491,
+      "sha256": {
+        "prediction": "f823e42a0d549002d9b73fd1170606666efb7e9fd6ac8d8fb17e18a6c8c8e680",
+        "visible": "d970a2bfd1638346c2579def3cda9feab7a1bc9ee61bc3c63e5d1fce73edc1c6",
+        "infrared": "7e1c651a8e5b7fa51415a0e93c0d704f8105cdd6c6bdff04ad14bc157f8c47cf"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.57433808553971,
+        "MSR_percent": 82.30045582387743
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.57433808553971,
+        "MSR_percent": 82.31985258461837
+      }
+    },
+    "greentruck": {
+      "frames": 129,
+      "sha256": {
+        "prediction": "bdfdca608cc09e39e5b747c01f6a80970ed25e24fc4fd4fd1d06d926e905e9cb",
+        "visible": "0bb87cf82f5201268b4f9f1d2b8a0341463432c2f3a6eaa2842ce38596a48656",
+        "infrared": "67970e727037a94013a9964c09930a69d8f9a48aaf16f43e274e63e4501fb26b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 86.30490956072352
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 86.23108157991881
+      }
+    },
+    "greyman": {
+      "frames": 282,
+      "sha256": {
+        "prediction": "bdab857b848691d448e95cb642a99cbb2eac72f57fbaba48f4fe1c99ec674d40",
+        "visible": "b0d99ffe5e7c7d088a186937b8aebef788091b1078273697674a66ee85fd8295",
+        "infrared": "5e478df5c28017494f88a3b0497bcb9c44886db405145f8e001c61f3eef248b7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.0354609929078,
+        "MSR_percent": 63.35697399527187
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 95.0354609929078,
+        "MSR_percent": 63.323201621073956
+      }
+    },
+    "greywoman": {
+      "frames": 154,
+      "sha256": {
+        "prediction": "ee9176b66a58b14912cf463186d60b736edce9a6253589559a6a57dedbf811d0",
+        "visible": "275e3d125b7f059ef698be27312c0ff47b5fc478dd20c1444535e51941edb6b6",
+        "infrared": "1e442d3c6392983e5a88fbad6b9a6e6f67f6b8b40e4c77fc471b0ed859f547d0"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 70.25355596784168
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 70.12987012987013
+      }
+    },
+    "guidepost": {
+      "frames": 441,
+      "sha256": {
+        "prediction": "cdebe4f14e99d101fd90aef3146112ff2fccc7108fe3f6fd097bb8c514003e21",
+        "visible": "95491b3024f1039ab78fc1eedd920cef43097e9130d9dc4a9d3e25207721c3eb",
+        "infrared": "95491b3024f1039ab78fc1eedd920cef43097e9130d9dc4a9d3e25207721c3eb"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 33.10657596371882,
+        "MSR_percent": 19.004427167692473
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 33.33333333333333,
+        "MSR_percent": 19.004427167692473
+      }
+    },
+    "hotglass": {
+      "frames": 417,
+      "sha256": {
+        "prediction": "b4911a91883676f587b4888c1e0a5b3fd4fa1ffb4935d3d0dc974b960ab7c43d",
+        "visible": "f7871f432a33c3d7ccb8f37d6fdb9520d7596245ee97d0e627c5e23fcee666fb",
+        "infrared": "e16682ded8f2b65fb3349438667ccad1b79c508da61d7acd5d03626250557942"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 29.256594724220626,
+        "MSR_percent": 19.196071714057325
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 29.256594724220626,
+        "MSR_percent": 18.967682996459974
+      }
+    },
+    "hotkettle": {
+      "frames": 1080,
+      "sha256": {
+        "prediction": "8fe4b23ea6228d07eccf4d7849a900c22a7cfa68398a9d3b67405309aab74fde",
+        "visible": "e657a75a74ee5aa928b1d65b56f2163eebe9b329855b56567119472f649f85c4",
+        "infrared": "e5c89513c1baea929ccc2d0efd73851efcbb0487899218f5094b11353ac900fd"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.16137566137566
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.13051146384478
+      }
+    },
+    "inglassandmobile": {
+      "frames": 630,
+      "sha256": {
+        "prediction": "c69d8ba073eaf39dd0632332974c5ff71f148e83980b6889465ed6181e2a0fe9",
+        "visible": "32e3bc36d5c6b617f60ec46d05c0b9409110a2553cbb978c3e00c63a2ba2e849",
+        "infrared": "11dfc3b7ad0c3e1ed13eec91741452bb37f45eb34954470c2991fdcc45c780b7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 81.08843537414965
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 81.07331821617537
+      }
+    },
+    "jump": {
+      "frames": 444,
+      "sha256": {
+        "prediction": "b07f881eb98617d449ac5cb894c5661100f84a689392fd44ec4d3cc320e019fc",
+        "visible": "6e946a7ca208eec64506aa2573f552229be7e6fdc70dbe8601f154ff727f2e28",
+        "infrared": "397004d0138750796df4382bd60e985bd1af87f3dffc8d6f17bfe7bcbd57852e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 74.68897468897468
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 74.54954954954955
+      }
+    },
+    "kettle": {
+      "frames": 1424,
+      "sha256": {
+        "prediction": "22947408e1b8695c00e161a27609dac2567607c13c868c910115c66b0bd75ccd",
+        "visible": "2ea98790676bb7133c83f350d7a3b7cb3ce6c01ee67cad70ac12eeba449d55ac",
+        "infrared": "da3440036ef299d70cd5c18dfae4bb56c964abde46e3c98ca7a23d4bae1859c2"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 92.13483146067416,
+        "MSR_percent": 68.29186730872124
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 92.13483146067416,
+        "MSR_percent": 68.20492241840557
+      }
+    },
+    "kite2": {
+      "frames": 1623,
+      "sha256": {
+        "prediction": "5fa9487be598a5972396569e881469f0c0054e5b05696a35336a7b523ca480a6",
+        "visible": "8b0ef467433d38fc299cf7340c2814ab8f9c39194c9eb055f1df19efa650cbfc",
+        "infrared": "eca1589a7c433daa2ca5face5ab84a80e972891fe126c44cf5c547d55345f4bc"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 9.057301293900185,
+        "MSR_percent": 4.891001378986591
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 9.057301293900185,
+        "MSR_percent": 4.902737435084941
+      }
+    },
+    "kite4": {
+      "frames": 1400,
+      "sha256": {
+        "prediction": "bff6ae51f3acc164efd6993731920c03dfcc42d9d56b569fe681d109dc11bdcc",
+        "visible": "b928d4a82f4ccf24b3f174c98417110d453250b1bc7207b28bcebde254eb16fa",
+        "infrared": "bab3695b1476f2c50919f2703e8a76d8de43e30825e1ea6497003bb8ca9717c0"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 87.85714285714286,
+        "MSR_percent": 60.911564625850346
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 87.85714285714286,
+        "MSR_percent": 60.867346938775505
+      }
+    },
+    "luggage": {
+      "frames": 733,
+      "sha256": {
+        "prediction": "f1fb418381344e14b126fb8a3fd0cc9b97e6181789b4ad2e5371cbcb1d5ec609",
+        "visible": "d58cd652d5363977ff25f2fa04998b8f6b1aa1547968e7af4e35dd95e1e7c838",
+        "infrared": "38f632554248064313da2048ca3b3b83f465bf60a19f507dfd044f42668eccd7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.86221009549796,
+        "MSR_percent": 74.18307022672643
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.86221009549796,
+        "MSR_percent": 74.09211979471189
+      }
+    },
+    "man2": {
+      "frames": 746,
+      "sha256": {
+        "prediction": "bb7c670591f8968d9deb817e4c7c3b9d088077f4f9daf1d92b27f1fc2ecd8329",
+        "visible": "9af5019ef235cb359a56946591dc292561bc4b172768db5e31e35595f016f214",
+        "infrared": "7343a04b228005065636fb35cbc2cbdfb0fca9d8f98437a5ebf413cdef513294"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.88625047874376
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.79688497382867
+      }
+    },
+    "man22": {
+      "frames": 329,
+      "sha256": {
+        "prediction": "d6907988893561c4910c92bd80e13fc8929e4cdac6b861dcb5ee4b54e83d9517",
+        "visible": "1ef36ffa5353768b8ec7ea0a1db5bad006ea9679062de877b2772792851da46c",
+        "infrared": "057fbcda49db69013028fd2241c91819508072b09e44f942a84c0459904524b0"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 82.37082066869301,
+        "MSR_percent": 63.22188449848024
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 82.37082066869301,
+        "MSR_percent": 62.99030250398031
+      }
+    },
+    "man23": {
+      "frames": 403,
+      "sha256": {
+        "prediction": "5363e2a4ad641c25899f575012146f44d69457ebd06f3f7eeb4faa93da8d798e",
+        "visible": "ead732a6f5bb74fbfa298ef79e76f63983700cae30067c4fb7ff52c0ccb11011",
+        "infrared": "637996931c8df7c4b7123f4da18e3adc95b71e4856112181e625722ccf8745fc"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 33.49875930521092,
+        "MSR_percent": 31.79723502304147
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 33.7468982630273,
+        "MSR_percent": 31.80905116388988
+      }
+    },
+    "man24": {
+      "frames": 558,
+      "sha256": {
+        "prediction": "5daa9d446f72a798266e6b64c0038bf2269b7b6799489c1985f25edaa103e663",
+        "visible": "b273986f3bbd9799f34f193a14b808b7b27c7863e50201f908a9ed8e8d9ee75d",
+        "infrared": "afcb5c0706bba89fc78267fb7a67a7b5d3ea0221c1ac2427ef9d00819025150b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 86.20071684587813,
+        "MSR_percent": 62.27171872333162
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 86.20071684587813,
+        "MSR_percent": 62.15224441030893
+      }
+    },
+    "man26": {
+      "frames": 449,
+      "sha256": {
+        "prediction": "0428e4063e97c1d68cbbc54150671512ee544780e28d22f3251d0a88f2b8804a",
+        "visible": "05cf22f93f1a2395f38f531fe72a18fdd8d83715dce958e0e4bdd1969dff176b",
+        "infrared": "eb6d283887e92197796a7b610d08da1c4bfaae2c9f4ff86511584183dd238eb8"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.88195991091314,
+        "MSR_percent": 72.61639622441405
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.88195991091314,
+        "MSR_percent": 72.24520097571323
+      }
+    },
+    "man28": {
+      "frames": 479,
+      "sha256": {
+        "prediction": "ec2923df89b6a1836124a904a46f7bdb15a2c22e49d6de0380a1da3d3f22f135",
+        "visible": "cb0c303439955d2a051bdd2a05bb4ca9c2ae6b91a9aa7c084c03fce8ca74322b",
+        "infrared": "5c71b44a659d9399f73ed7408a0a320afe0923842fd93c4349d2f8d1591cd69f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 78.28810020876827,
+        "MSR_percent": 40.4612784571031
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 78.28810020876827,
+        "MSR_percent": 40.67998807038474
+      }
+    },
+    "man29": {
+      "frames": 269,
+      "sha256": {
+        "prediction": "0948a179cb57b8bd6e26a0ba2ad18f7f9ead524f87b4b3f1448cbb74242b3f73",
+        "visible": "302a42013ddb38e5cea1dcc15a4528694de2fb167c84cee5bad9132069bb508f",
+        "infrared": "3f8694f83378b9c7473cc5ef1fafa891b8385efbb8c4e39ef6121db4183c49bb"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 62.45353159851301,
+        "MSR_percent": 41.60028323597097
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 62.45353159851301,
+        "MSR_percent": 41.511771995043375
+      }
+    },
+    "man3": {
+      "frames": 3627,
+      "sha256": {
+        "prediction": "660251546b2176cd74fdfd7811f2520e8d1f2e1deaa4733c02f4d22fb475de5d",
+        "visible": "146412a56c9f7808e89f0a5a62a78e01142542d074553f7fbb8831cb0812e7ee",
+        "infrared": "08880bfb68eac898378af0fad1ce3e3c3802a03ef399da5487db1e5d4523e90a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.18031430934657,
+        "MSR_percent": 88.3532238370948
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.12517231872071,
+        "MSR_percent": 88.27576246931085
+      }
+    },
+    "man4": {
+      "frames": 589,
+      "sha256": {
+        "prediction": "65b9530c5f0a92f6ddd720a59fe672953b21e7f173e1832e6f94fb63a9df67aa",
+        "visible": "485c21eb9393b4b7f0c971e9e26c76d195b14dd3ea2161c8a730eced340723e0",
+        "infrared": "122d4894f83c6a2361fb76943590ac38cb6bb5bded653982ba8c49f71dfc014d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 92.02037351443124,
+        "MSR_percent": 68.55849300671032
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 91.85059422750425,
+        "MSR_percent": 68.45339154337458
+      }
+    },
+    "man45": {
+      "frames": 265,
+      "sha256": {
+        "prediction": "5018b2325de03b2dbf6e2d3009063308aabf70e11e68a20fa300a2cc439d7ce7",
+        "visible": "279ef0e5ec3b5999e74660d7345afd64e41585335c0a3c58256d9c33c1189761",
+        "infrared": "670614a86f0621d07b1e1feaf046e057d19a721f1199b6c67f65fce01ccd1be8"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 61.13207547169811,
+        "MSR_percent": 34.8607367475292
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 61.13207547169811,
+        "MSR_percent": 34.84276729559748
+      }
+    },
+    "man5": {
+      "frames": 598,
+      "sha256": {
+        "prediction": "73395d79551a2706b5ad5f509cc359a4cb7e86d18dab6a45d60718a40f99afa7",
+        "visible": "cff167fc4254f8e8322a25af5fef6e84c9a228fcbc970cd46dc68635ff41dfed",
+        "infrared": "327e6e404ac008b5531764cdbb91dbaf8e12ff98057119e2a5b5f8a11008e1ed"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 88.79598662207357,
+        "MSR_percent": 70.07485268354834
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 88.79598662207357,
+        "MSR_percent": 70.06688963210702
+      }
+    },
+    "man55": {
+      "frames": 552,
+      "sha256": {
+        "prediction": "dd671120e34a15ba99fc13f2e68af906738a2eebc1e553b6bd875ce9c6297df4",
+        "visible": "544050a93687c47fb079ff78595028b56fe0a502161ad539c25bb40bf7fa5ded",
+        "infrared": "f56ad4940bfca89e59f3f0d603c19294922f2de8562747e3c1eda17b12e971da"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 92.21014492753623,
+        "MSR_percent": 67.33091787439614
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 92.21014492753623,
+        "MSR_percent": 67.38267770876467
+      }
+    },
+    "man68": {
+      "frames": 393,
+      "sha256": {
+        "prediction": "7edb8bf9894fdd9ef946ce3b3b416e44d5a79d0d544e217dc55aff05f5cb7ba5",
+        "visible": "c65191089591ab2363759325424752945abfba730e1c322dcc18f8495932491b",
+        "infrared": "ec1955a67425b80ddbc1afc02a5c713b43be77171228b2223eb87ce660c8cae0"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 66.89688598085544
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 66.89688598085544
+      }
+    },
+    "man69": {
+      "frames": 120,
+      "sha256": {
+        "prediction": "50c21575a107d4383b5d779a5743f6c845fb4c5ef4173131391b149cbc8b6155",
+        "visible": "62d67a459034bd1363205450f62581fc1bb2ffb514e4caa0f9cd8f5369cdd4ed",
+        "infrared": "c133cbeff06f0afc7a48e44dc0eb8993b0f4da8258467ad13b90e884f7478725"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 57.22222222222222
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 57.53968253968254
+      }
+    },
+    "man7": {
+      "frames": 4140,
+      "sha256": {
+        "prediction": "70ed4425396ab0e7499e991608493215ed918075529b147198aeea40d7e9aa6b",
+        "visible": "0eceea5c654453662da790d8120c6a80260010a299c1f28a6294163b5ad1fc06",
+        "infrared": "510b74bec3996c30d6bbae373de5200f57e870cb1b4e1163f930a90bf29b2cb1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 49.15458937198068,
+        "MSR_percent": 38.212560386473434
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 49.20289855072464,
+        "MSR_percent": 38.20910973084886
+      }
+    },
+    "man8": {
+      "frames": 2584,
+      "sha256": {
+        "prediction": "a38790498b5b293b7cf8847981d77a3746206b4f0ceaae72fbb6baaefc2d479f",
+        "visible": "ccecfc2c801e8fdad2d64ee811a65f1813a8adb90fc9016701bb1dba36f8e298",
+        "infrared": "47722ea2efaac8a20224f9c1d7efbab19f0a75e8929dee4e456c6e69a12b564b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 77.39938080495357,
+        "MSR_percent": 58.52867462774584
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 77.39938080495357,
+        "MSR_percent": 58.43284682293969
+      }
+    },
+    "man88": {
+      "frames": 212,
+      "sha256": {
+        "prediction": "34db88abec45ea7f58fafd27961fd54f875e54a624c57d37ef59b3a7f2cc021a",
+        "visible": "67afd0ba82d823dabf649584331b5cbd75ff7ac629c9e757ce0b43e1b20e2f26",
+        "infrared": "97154396793a8406d01fa322a430631febae2f8d0d10c4872d3a96e01a801363"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.02156334231806
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.97663971248878
+      }
+    },
+    "man9": {
+      "frames": 502,
+      "sha256": {
+        "prediction": "59447c693849e4629cba2877cc74ce2ab6d13ae0133734aacd93528077292486",
+        "visible": "f5cba6ae1824763022f294cf47105ad9a6c6d7bb623e0f7b4b9f9f2fec3a68db",
+        "infrared": "f0ff3c83746b14116e2c0a7ce9bc4915a9a7bf4772a932faccdbe1517f396b81"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 64.36160121419086
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 64.33314361601215
+      }
+    },
+    "manafterrain": {
+      "frames": 492,
+      "sha256": {
+        "prediction": "63d630547e6bca00f1f22601818e73831534eecdf2fcceb57f6b6abdf082a8f4",
+        "visible": "cb321fd609d317caae01fd197b18c637d2c9d5ced4cd978e861921d2fe3fec1e",
+        "infrared": "50833507ddb8906e63c28f0f808b2424f33583c1bfad06c40fc4b28000157065"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 67.00542005420054
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 67.00542005420054
+      }
+    },
+    "mancross": {
+      "frames": 117,
+      "sha256": {
+        "prediction": "b1e7c5a400d0e3f40a69010d79c1d632686e4e7b200ba87f70ecc70cf588c47a",
+        "visible": "b96f8cb8ae5568ff732b118616d65a1113e73e28a376b9514137f634d2db343a",
+        "infrared": "52c6aff317a95daa38c0d5ac8b3fc6b021c0d68e6148975ab04bf79e719d4f16"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 0.8547008547008548,
+        "MSR_percent": 0.8140008140008139
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 0.8547008547008548,
+        "MSR_percent": 0.8140008140008139
+      }
+    },
+    "mancross1": {
+      "frames": 222,
+      "sha256": {
+        "prediction": "863df3d53c11779919432f1b562850efd71bc37b2d1afbe77965e3afbfe769d4",
+        "visible": "a2d3df733faef27932b729ffa509c3b4bfaaf8195290ded2f410a1f14770a977",
+        "infrared": "73c026210bf93bad4f28e588426fbf2d59682ae390c53244b5c016637d63b2a9"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 83.78378378378379,
+        "MSR_percent": 64.17846417846418
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 84.23423423423422,
+        "MSR_percent": 64.1784641784642
+      }
+    },
+    "mancrossandup": {
+      "frames": 337,
+      "sha256": {
+        "prediction": "c4d639af05dc61fc2e99a442e6fec43557f9b5370312e57d79b54e75321f751d",
+        "visible": "bcc336fcff2dcf907ce58f706e59faaec436ac8e28806c21108be4eb2fce978e",
+        "infrared": "67e1d0e86cbd937a948e063a12b06f57984f74270ce6c2f8294f66a62ab76dc3"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 70.41119118270454
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 70.52423343224531
+      }
+    },
+    "mandrivecar": {
+      "frames": 391,
+      "sha256": {
+        "prediction": "2c17bd544446786c5d3a792cdd41de344df5473186af126e16dbda9a7fa93002",
+        "visible": "d4d66c6010fcd568005a671d957afed1a25aaeacb0a89bdadbad4097fa6b9237",
+        "infrared": "b353d3c32afc60f89358ae6d7f38939aafbedf650af88facf6ee7eb6bf3f10bc"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 53.96419437340153,
+        "MSR_percent": 37.90037754232129
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 54.21994884910486,
+        "MSR_percent": 37.94909268055048
+      }
+    },
+    "manfaraway": {
+      "frames": 249,
+      "sha256": {
+        "prediction": "0d2726a1d8756e948ee93abf59fb66370b993c259d2c4ac68a5b7431a398e599",
+        "visible": "4a5500d166143b2164470c321b6c959154c8ad0ecd30234c48a65c801d4c44d4",
+        "infrared": "9d23cc1e5ccaffb9eb2888b12d9fa1fba86b325fa5417f5367925d6ef2b448c4"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.19678714859438,
+        "MSR_percent": 78.12201185695162
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.19678714859438,
+        "MSR_percent": 77.60566073819086
+      }
+    },
+    "maninblack": {
+      "frames": 177,
+      "sha256": {
+        "prediction": "72bfe6d54c77698e4fe9755b6281cfbcfe0d92a2457aef9d5175408e22737009",
+        "visible": "2901137471ed8d001b20df8064c46cfc3f0f480459f8a5cdc5fe19f80199d79e",
+        "infrared": "ab439d20f22c9fb2f9ecad57c15748d3e326e469f8a5870d47d13b623e5be098"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.87005649717514,
+        "MSR_percent": 76.43260694108152
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.87005649717514,
+        "MSR_percent": 76.35189669087976
+      }
+    },
+    "maninglass": {
+      "frames": 419,
+      "sha256": {
+        "prediction": "d72942483681cb5371770b04afb4683a0a0b78cf7d53c3f0d160dfd330b1f693",
+        "visible": "a756e041bfd027852ac1f3f6e5b54c555fbdcf0f4e84124dd6d117ec32c0eb92",
+        "infrared": "9dd54ab0c9e12117e98767c4ff737b6a859a0d0e4bfeb27c3df5cb0b783d0f27"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 16.467780429594274,
+        "MSR_percent": 10.171610410273894
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 16.467780429594274,
+        "MSR_percent": 10.171610410273894
+      }
+    },
+    "maningreen2": {
+      "frames": 126,
+      "sha256": {
+        "prediction": "dbe29f698f40bbcb968e3217a992f7edc707d0dd3dcd021711ccdc2ba3ad6c1b",
+        "visible": "a3ea730e8c3be4c0b8d5f5668c07c7cea9a9bd93ad293c076c0722ce7e9316cc",
+        "infrared": "026cb8caa7e2a9616304e9cb81238a0301b042ac302b1df35551d188a4d0e3bc"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 68.06500377928948
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 68.21617535903249
+      }
+    },
+    "maninred": {
+      "frames": 158,
+      "sha256": {
+        "prediction": "14f8de392934d499d96371870869fc9a8e4d79ea25abf17a3e2ac90ee5d854da",
+        "visible": "86352dea841edafa4ad1e1b05bceb3de0e0f1796a7b2b6beaf0376392f4878f4",
+        "infrared": "cf1ec58b7836f6fd9662d409375b74a07df4008671c233305412af340d3406a2"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.36708860759494,
+        "MSR_percent": 68.95720313441832
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.36708860759494,
+        "MSR_percent": 68.59553948161542
+      }
+    },
+    "manlight": {
+      "frames": 339,
+      "sha256": {
+        "prediction": "a9c1481322baca4188d5c2feb610e8401090c4a44f8ad7ba306e64cf4017f263",
+        "visible": "0fe04f2344a22e929e576ccdd7959082fcefc51f3a127c7fe0f78c1f2d00d2a0",
+        "infrared": "8985e6b7f36a3115e48ac0d69e8ffede9b1a72e7aa93d0cf81a2c30d19572f81"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.70501474926253,
+        "MSR_percent": 72.76302851524092
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.70501474926253,
+        "MSR_percent": 72.56637168141593
+      }
+    },
+    "manoccpart": {
+      "frames": 77,
+      "sha256": {
+        "prediction": "53c15606ead4f003eaa477507941f75668014a445589df0f8d40e57598e7e979",
+        "visible": "03ee8ae5703bb095652ea01ee7594c1db11989c1229a6430cc4b087f6cd50494",
+        "infrared": "bbb2fe2f9c59fdc89c9d25e3a9cca0577abf8383055188462f85e7ae32468f85"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.40259740259741,
+        "MSR_percent": 75.63388991960421
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.40259740259741,
+        "MSR_percent": 75.51020408163266
+      }
+    },
+    "manonboundary": {
+      "frames": 450,
+      "sha256": {
+        "prediction": "c15b40566cf426179d669a1c83e2503adb8a619dae78ba103b81c0ddc02023b6",
+        "visible": "b3fbb990443865d71cba3c5f6aa9341ca36ed41c74b02827411d7104e2f396af",
+        "infrared": "b42e9dec19a4b64523904e7b43f769a58305d1e32539a40c54e7b459a8cf07d0"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 85.96825396825398
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 85.8095238095238
+      }
+    },
+    "manonelecbike": {
+      "frames": 249,
+      "sha256": {
+        "prediction": "4d784c44fe0dad29c8bb732271b0ed7c20c8a28beb0524a15fca753f0f33c221",
+        "visible": "937a2b3f791ec4a2fc9b299d9a7b6f7db03df18b090f5fe1988b35e889c3d29a",
+        "infrared": "d6ec24759c726530cb7b53c64916e8ae5cb995ca785adcc474d9d58858641306"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 93.97590361445783,
+        "MSR_percent": 70.20462803595335
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 93.97590361445783,
+        "MSR_percent": 70.10900745840506
+      }
+    },
+    "manontricycle": {
+      "frames": 99,
+      "sha256": {
+        "prediction": "e604e0f5974462a52c91b9523d4f0c4c68aebb7b6bcf035af4c6d530688f1d87",
+        "visible": "3ee648891e59c73c5644197b5d3e4c3e2b1f96d234b45722dc76a3bd22ffac00",
+        "infrared": "208b6a8bd5998de832027d0467cf31770a7aa06f224b3732a9aa72ba13cde03c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 89.5141895141895
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 89.17748917748915
+      }
+    },
+    "manout2": {
+      "frames": 99,
+      "sha256": {
+        "prediction": "a209dde8ab6485c2484d2c728225375004471ce69bf4b96af0584661de9cc0a9",
+        "visible": "809007f9f17c2d9e42a6af59bd1213ccc3c63b9d8bcb216c788a7a83d3d4758a",
+        "infrared": "1d7f0f36ad9eddf65b9472953e7905f25583c57565aa0c60130353d3e28ea5cd"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 86.86868686868688,
+        "MSR_percent": 60.55796055796057
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 86.86868686868688,
+        "MSR_percent": 60.50986050986052
+      }
+    },
+    "manup": {
+      "frames": 334,
+      "sha256": {
+        "prediction": "d6377108e63a71e774c168cf67b56d295d959df9b6f076f91c7cd3e315bb89fc",
+        "visible": "4fd75a60f7e8396e1449a4598618f840a31d6495f1e2d2de13d91747404dc606",
+        "infrared": "1aebd757a3d1e1c8b0ea836df5eb41a89787a19196a62e2ab442f7a716f4968b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 47.13430282292557
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 46.97747362418021
+      }
+    },
+    "manwithbag": {
+      "frames": 387,
+      "sha256": {
+        "prediction": "ed0425c7a510f8e8cd1b417b0127ede43877e1c887ebb5666a1c02b8d42ad92a",
+        "visible": "d97ab06f59828f7992fa59d8f060ed32a67744dcbfeb76fc60143fc8f2d112fa",
+        "infrared": "2516da2501a97a3e876cdad4f2bd0181e38369426b52adf35edc50a1c74f8b5e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.59886797096097
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.5742586440261
+      }
+    },
+    "manwithbag4": {
+      "frames": 577,
+      "sha256": {
+        "prediction": "2fd8b31f261d96d9a3e9b6492b5d12c6d5fc2a6f5b3a52b440f3688fb4f41bad",
+        "visible": "5c7658e5191acaf689927ba4f7ec63aac5b8347d25318c9daf5053948c24ae61",
+        "infrared": "40af366b83d53d17bdc7f1fd826ffba3433c8f7f81c844531a12781940d5d3a3"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.44020797227037,
+        "MSR_percent": 79.61541635718412
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.44020797227037,
+        "MSR_percent": 79.66493356441363
+      }
+    },
+    "manwithbasketball": {
+      "frames": 80,
+      "sha256": {
+        "prediction": "b854e5123cc5c02f5bb0826cc749fa3e2698004a7442c07919aa22485a15d534",
+        "visible": "8d2f317d9958dd7e24d3cb96f71f4e7fe361428ec808d0a40e67a5535fde4b67",
+        "infrared": "f0b33db4fd35a7ee136a3c53755351273b48b80896e4636ac640ad9f1c9092be"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 36.25,
+        "MSR_percent": 26.428571428571423
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 36.25,
+        "MSR_percent": 26.36904761904762
+      }
+    },
+    "manwithluggage": {
+      "frames": 984,
+      "sha256": {
+        "prediction": "b401ecea468ff91a31b6c879b423b7d3482f49cbde2e8598b6e74f6639aca4ee",
+        "visible": "b1ca169b6067d8480239a4b13fe1ea98a4e14b5ce05abb429f6a119ee0d2623c",
+        "infrared": "5f1ca8a4c34a02710f9ad1b409de095b106248f5ebc3209d5ba553dc8784ceb9"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.96747967479675,
+        "MSR_percent": 59.857723577235774
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.06910569105692,
+        "MSR_percent": 59.82384823848239
+      }
+    },
+    "manwithumbrella": {
+      "frames": 504,
+      "sha256": {
+        "prediction": "5db35e028c2d721492e37abc59063f22da13882d8906f37111ccd21be027a3e6",
+        "visible": "00dc34119989381cf31c23075658d1662ef01e07a5c9494b2f6407c6079224f4",
+        "infrared": "dc726f077895ac9f7cfe00ec398e2dcc0b7bf62be8f9614c4af06678a1bd3418"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 88.29365079365078,
+        "MSR_percent": 66.43046107331821
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 88.29365079365078,
+        "MSR_percent": 66.4021164021164
+      }
+    },
+    "manypeople": {
+      "frames": 645,
+      "sha256": {
+        "prediction": "eaa451aa95f337402fa222ca38205d0e06213ee44f3138ab0098fcc5b1bb84e7",
+        "visible": "267aa7c96b915e13110d16bb08fc8e00dd041be2473055904585e39695f4f1c9",
+        "infrared": "1b7d9d7021144c4dbe2e3fd58a33c574f5f2dbdd1ca286e59e65a2d7c1ca5514"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 5.426356589147287,
+        "MSR_percent": 3.9202657807308974
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 5.426356589147287,
+        "MSR_percent": 3.8907345884090074
+      }
+    },
+    "manypeople1": {
+      "frames": 674,
+      "sha256": {
+        "prediction": "df32cd1976bf7df4338ebeae192848af3cd5b3a078878aea5acd824683f59300",
+        "visible": "79501dbd93a3a219f8b6de45493a5033d16ea7f3e7673bb4e346bd78f6d5bb03",
+        "infrared": "d988f0bffe65afccac2ce9cde7b69c7ad6b6d65ffbb203e87811df277ed7e49b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.3293768545994,
+        "MSR_percent": 67.9101314116151
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.3293768545994,
+        "MSR_percent": 67.92426169280769
+      }
+    },
+    "manypeople2": {
+      "frames": 453,
+      "sha256": {
+        "prediction": "b0a9ef83ece7fe5efbbab1aeae6399ed29ef1ac55a2d546d0cba234437cb3f9b",
+        "visible": "ae5a5c9f1e8f77a8a2a56e50c959c47e27f635961162ce662a99465eb0db5b6d",
+        "infrared": "1405c1eee91ad0b881518008c44a6c39b766075970f60856ffd4c28661b71827"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.89204246820141
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.99716177861875
+      }
+    },
+    "mobile": {
+      "frames": 900,
+      "sha256": {
+        "prediction": "65d6a843c6e3e3ce9778be1f77642ecc71cdcb1b94bdcae28f019733e451c64d",
+        "visible": "a6d14bee9a5d1859bb6f6cd9d706e4301fcbcf722afe400e83a7b09616d581c2",
+        "infrared": "445d9a4c7002e6f640784c16984548181deadb710c771707aa9e4bbbf68e24d7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 74.23809523809524
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 74.0952380952381
+      }
+    },
+    "night2": {
+      "frames": 68,
+      "sha256": {
+        "prediction": "b4f89f756f021bee72ac77d52b5fb2db571624f5ae38f53eb1cc7b4c774b0935",
+        "visible": "fb3091933085e86eb00c0df5cb12c8ac13ede24a6e49982048a3fbb844ac35aa",
+        "infrared": "183d9f98cb0716a3e2649894f9484055dcfc571d6cd22604ae1a351f9790e960"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 83.82352941176471,
+        "MSR_percent": 67.78711484593838
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 83.82352941176471,
+        "MSR_percent": 67.85714285714285
+      }
+    },
+    "nightcar": {
+      "frames": 199,
+      "sha256": {
+        "prediction": "2441ba6599891baec1af5c3aba77e22beff63586382de3a89568ca7367fa1c21",
+        "visible": "c6846fecd6c906d80abda69aaa854f3109bfad16192828a1f395b22b10380f1e",
+        "infrared": "550ba876220a42f9da464574c04ae7b785ffec8d4baece32c9a8236a619a9aef"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 84.27853553481694
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 84.13496051687007
+      }
+    },
+    "nightrun": {
+      "frames": 160,
+      "sha256": {
+        "prediction": "ec7acfc20ba04e3d418e86e2595c41deca90bac7fe72bbebbb37e191b750ae15",
+        "visible": "e3b27ea83cb6632bc5f0d600a1c7e31f4b4e7f2be5b9981ad7c3aded4176c8f3",
+        "infrared": "700c6d28760a1052e35f42713f53c0c035a02d66c4d35b5ecd7ff7591ef566db"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 89.375,
+        "MSR_percent": 71.60714285714288
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 89.375,
+        "MSR_percent": 71.63690476190474
+      }
+    },
+    "nightthreepeople": {
+      "frames": 286,
+      "sha256": {
+        "prediction": "d3607957e32a4a86aea15d5aaab7df9a6473a8141fd092badcedc1f7a49971c1",
+        "visible": "be97042c53ba61612941c725197dae154a9c8f2209a662efd6ea02a807c5774c",
+        "infrared": "a45f3acb654018d70f31fdc40cad9bd0751907ce83f65f356eb23a890a09e90f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 87.06293706293707,
+        "MSR_percent": 55.8108558108558
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 87.06293706293707,
+        "MSR_percent": 55.627705627705616
+      }
+    },
+    "notmove": {
+      "frames": 624,
+      "sha256": {
+        "prediction": "8e9515b77a297a15eaad761441c1a68d31728d97577b6d04ea2ba55fd006f3c6",
+        "visible": "4546229205427ede61c8dc5799c429d15abb5c0bcdcdb3d7609f09b0170e0e92",
+        "infrared": "e9f843007a7fb7d40da91c05a62521992631c2cad71204a63db4aaf89abd171d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.51282051282051,
+        "MSR_percent": 67.37637362637362
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 95.67307692307693,
+        "MSR_percent": 67.13980463980464
+      }
+    },
+    "oldman": {
+      "frames": 454,
+      "sha256": {
+        "prediction": "42653515644faa8fcf4336a861e89609a3e035cd205441fb255154b79de1cc2a",
+        "visible": "555df44f76c77aba390612953bfb9b302b24d5fe2bae0b9955b058b989d2f3cc",
+        "infrared": "f6fe49bf58be56fb87193006fdd794636bfce0fe6532f8739f0733bde95810c3"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 60.13215859030837,
+        "MSR_percent": 47.46171596391861
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 60.352422907488986,
+        "MSR_percent": 47.39878330186699
+      }
+    },
+    "oldman2": {
+      "frames": 103,
+      "sha256": {
+        "prediction": "6ab20d5caaaf4f50d9e77ae44a0a28a93c86cf7eb641f8d46bc4b6c38b100194",
+        "visible": "36c93622f130e95f76c64159445a652f4370ae7ce0586bf31b623b7abc79a46b",
+        "infrared": "9fbbe09ba62851ffa164abe177ccbd5b4315eed60be23de5a331afec8ca11ce9"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.02912621359224,
+        "MSR_percent": 76.46786870087841
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.02912621359224,
+        "MSR_percent": 75.8206195099399
+      }
+    },
+    "oldwoman": {
+      "frames": 234,
+      "sha256": {
+        "prediction": "e1143647acb25c070dedabccef05a69b5f0380c89083ea6df527bd81021965ae",
+        "visible": "b195bdbb0e410dcbbd720ebd845b68d68721c1565da7dffa46d8b5c11b599f11",
+        "infrared": "f7f09b4c16f5ea29e368e63504a13117a0dd9f56f04bf74ae11c77ab91a4e4a6"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 62.82051282051282,
+        "MSR_percent": 51.34310134310135
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 62.82051282051282,
+        "MSR_percent": 51.24135124135124
+      }
+    },
+    "orangeman1": {
+      "frames": 920,
+      "sha256": {
+        "prediction": "151525e4b3153500e66b978442d57e5e5f88219134978d0b1d0576ea21bea932",
+        "visible": "005f94c399f4370484295ca5e063d5b9c135faa567471f1f07ed7a7291aed722",
+        "infrared": "31b7b0ce18fb1ae4b4aa0b2a836f06fd9858f5958f524619edf8b64ff32f185f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 84.6583850931677
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 84.53416149068322
+      }
+    },
+    "people": {
+      "frames": 375,
+      "sha256": {
+        "prediction": "2e1d40b74e9e0ab74952675325d3f8c6d6d2c2120a064694031c855a8a481d78",
+        "visible": "8ccb4e3fca7589c705ae4ac0f4e4fc6a17b0435bd30e2765604659410723ad71",
+        "infrared": "8c8b31a9c5085315fb23f25ace154b735cd036c6b0255b93176d99ddd0032184"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 34.13333333333333,
+        "MSR_percent": 29.663492063492065
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 33.86666666666667,
+        "MSR_percent": 29.65079365079365
+      }
+    },
+    "people1": {
+      "frames": 1529,
+      "sha256": {
+        "prediction": "633be4e1e9263046803043a24d7ffbadd05c1e9f35ddb9c77ab2e01f6d0db9f1",
+        "visible": "32c11dcaf11909f0cf97d997081ed58de988b673f81a5801de191acc9e63d7b8",
+        "infrared": "6c6c7c2a97f9ecc00f3610b888988b1d6e372898ea72b358cda03efb25724858"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 55.461085676913015,
+        "MSR_percent": 39.207075897723385
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 55.52648790058862,
+        "MSR_percent": 39.20084711451617
+      }
+    },
+    "people3": {
+      "frames": 926,
+      "sha256": {
+        "prediction": "a60bc296518a33ca77df3cd724b398253989fa9b67fe1fa71f722243261a6084",
+        "visible": "b40783b6df86f59bd57e956c0fadaefcb2f2ca79f8d5da508f35bcbc3d2416e3",
+        "infrared": "2fea1964df756ff1ba326e7d0019f6946a3c2defd55a90e6edcdd7cd5764d1d3"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 71.17144914121157
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 71.09431245500359
+      }
+    },
+    "playsoccer": {
+      "frames": 1456,
+      "sha256": {
+        "prediction": "53c3ff6c78bdc1d813b4d3021d2af9695740444c25036d5310d93fae54e1eca2",
+        "visible": "cc4a484ff4abd9542b21db41d9e3af1283d87487716c77ee3248264b04ee369d",
+        "infrared": "438f387eabc9c71c4f3f6a69ac0f1207d532fae2d00520b46e86752ae7a5e51f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 73.59039769754057
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 73.57731554160127
+      }
+    },
+    "push": {
+      "frames": 329,
+      "sha256": {
+        "prediction": "84b44090358c88a7b61d47e4ea1febbfd6ca2f9227bef3a14a9de31883027273",
+        "visible": "d95a48d22ad4afee4efeeb55223285b9cdaba6b903b90ac951d26744caf04c80",
+        "infrared": "251cc5474ef9f6ec5d0b91ddca634cf1ae74959fa37b6c2186e998f1b5cd27a1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 74.46808510638297,
+        "MSR_percent": 31.712259371833838
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 74.16413373860182,
+        "MSR_percent": 31.697785497177595
+      }
+    },
+    "rainingwaliking": {
+      "frames": 1011,
+      "sha256": {
+        "prediction": "294cba9b7af8d3df4bf10556789ddca0f1fd87597e1333a7c4bab0ccd71a5dc8",
+        "visible": "c93cfe1bfb885e4ff0f5dbb896baad4afe5b65d65c9a39b5164ea9be3a78f110",
+        "infrared": "ed9acf2f0b1a0c8bf1ec7e39df1da7352061acfca669a612f4ea11015a649bdd"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 62.39932174650276
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 62.32867034053978
+      }
+    },
+    "raningcar": {
+      "frames": 109,
+      "sha256": {
+        "prediction": "c49e423b200fa2639ee56ae8be0672b55127d9dad36895dac3573bb7169c0a5d",
+        "visible": "50484d304e153436ac9960cb2df0cb788cdf03faf1dc18a1f636e3dc816b6508",
+        "infrared": "2b50fb48df317a8ee329b0a8b0c8f61e22b44049c58ab10b64ae48fa8789685a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 74.31192660550458,
+        "MSR_percent": 67.36566186107468
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 74.31192660550458,
+        "MSR_percent": 67.4093490607252
+      }
+    },
+    "redbag": {
+      "frames": 1390,
+      "sha256": {
+        "prediction": "1a7febd7171d75a5e3d1a4ca9d8853be7ab4cefa97187387b844deb72043e6c2",
+        "visible": "5a32e00805e1d0dfac17155ef07d189b8778a4556d389839b892f6eda81d98b6",
+        "infrared": "935e3415077569fe20b432c16127fee197e0d546f0a30f03f2c39b058524186e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.71223021582733,
+        "MSR_percent": 75.63206577595066
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.78417266187051,
+        "MSR_percent": 75.57382665296333
+      }
+    },
+    "redcar": {
+      "frames": 218,
+      "sha256": {
+        "prediction": "3c2e4e26c1ca09e8ee71301cbaf076012e1b93af065fb0ad21c40dde76df3007",
+        "visible": "26e2ec6f5297cf25283945a5263be7614d164b8bdf3f6a338a869f682cb722d7",
+        "infrared": "c721f34d5b155afa4e3235db8ff9e3ea0aeaf8ab9acacf0b226ec4c142530a61"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 93.57798165137615,
+        "MSR_percent": 75.4696373962429
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 93.57798165137615,
+        "MSR_percent": 75.2512013979904
+      }
+    },
+    "redcar2": {
+      "frames": 243,
+      "sha256": {
+        "prediction": "2b1c775bd157a4cff2de1fb062e114520371370f42e975671e5b56de4f896860",
+        "visible": "2ffe29a23fca2ecb3805ccb78cd1e47509c47e539560e9865a588115aaadfd19",
+        "infrared": "07f8fa7ff4ee31796c294ca8f2e0d20f8f7e818e8e24d7e0a05f9db165935f26"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 79.83539094650206,
+        "MSR_percent": 70.72310405643739
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 79.42386831275721,
+        "MSR_percent": 70.84068195179306
+      }
+    },
+    "redmanchange": {
+      "frames": 330,
+      "sha256": {
+        "prediction": "fa50f754899b09dc15223cb2900890235d3c85e8ca859a997e85b5371161ce3c",
+        "visible": "319ac8e869f341af42b30b2650a570fce66256d5cd8b4ea68e3c7d8d503c1feb",
+        "infrared": "8f0faf25d1088ed7bcb8e082a3ca5c6bd953246d3a666e27883a14b14784b8a9"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 81.80375180375181
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 81.65945165945165
+      }
+    },
+    "rmo": {
+      "frames": 657,
+      "sha256": {
+        "prediction": "6259b84c925e4f63d4cac9fe33488f3fa36ff0315749bd4cad25e06068bbe8bf",
+        "visible": "f178940e342eeb299fc58c1cf57e66c29c2337aee970887dac2d9d3cd65d7320",
+        "infrared": "c5d37904b20114feae40a8be77dad1ca767cdaffa46feaba3d9c0c8c07a028c1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 36.37747336377473,
+        "MSR_percent": 13.720373994346597
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 36.68188736681887,
+        "MSR_percent": 13.756613756613758
+      }
+    },
+    "run": {
+      "frames": 298,
+      "sha256": {
+        "prediction": "9843f133fa2654a7084200d7cc24a8ffafe4952d818a8ccfc4d10b6f3c8c2e8c",
+        "visible": "a027b85729c39aed0c02a11a8dedd0360973cfd108fa8ac487a1a77b0571bb76",
+        "infrared": "7297a759b6b59cb5dc2859a5f9c0c2e4053a8ba6a7ec76beff0ed47435f7939c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 31.20805369127517,
+        "MSR_percent": 24.240971556407796
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 31.20805369127517,
+        "MSR_percent": 24.240971556407796
+      }
+    },
+    "run1": {
+      "frames": 85,
+      "sha256": {
+        "prediction": "adad3bac38ed74419ef68d6a9f2081b55f9b3ac118e07a0bd9ca599cce3daeea",
+        "visible": "3ee51ae9117d609ebdd7e55a549fe1ca7bdab1078141161e14c8caff819ae140",
+        "infrared": "7297c526a045c5619f4624d80f19ab9bf8582ba63f96c115918cb0a9285705a3"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 55.294117647058826,
+        "MSR_percent": 39.43977591036414
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 55.294117647058826,
+        "MSR_percent": 38.87955182072829
+      }
+    },
+    "run2": {
+      "frames": 207,
+      "sha256": {
+        "prediction": "25dba4aa267cded6503377bbec61ee1762d5a2e81a7a92753074c0c5abf9cbbb",
+        "visible": "fb6d75f5c09b1c7b4bdba8a5acc66460e9dbf861f4c2acc9cbd940d89e2e2142",
+        "infrared": "de194bfff93b44184afd6b07d67cee2d24886df9c275495fe9b1de1c2ab27687"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.10144927536231,
+        "MSR_percent": 67.35679779158039
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.61835748792271,
+        "MSR_percent": 67.28778467908901
+      }
+    },
+    "scooter": {
+      "frames": 916,
+      "sha256": {
+        "prediction": "a36b0f53c52e28d32cbc29dcbbf8d3ca26d2db0540d596f4a9db1d5ad83d8662",
+        "visible": "975e7661c15da58ec9dea460ba27a7591314b7fcd4ef3f42d871ef8670b96d9d",
+        "infrared": "b09c54852b3bcb92ad3c0229ec3001807284eb8b48638fb4ef26931e49a5bb93"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 85.69868995633188,
+        "MSR_percent": 69.3231441048035
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 85.91703056768559,
+        "MSR_percent": 69.37512996464962
+      }
+    },
+    "shake": {
+      "frames": 847,
+      "sha256": {
+        "prediction": "b9b333ee69df840275c99f6aa5b001e905541ae0c758cd0381755d1d910bab93",
+        "visible": "61a98df4da91384a34caecbb32419581488d6db1df19a92581e69ac40ae95aad",
+        "infrared": "fc4ed1bd9cec6ae49fab893bc79361a087f9b997c2c3c8573b46ba54bf3b8217"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 75.5608028335301,
+        "MSR_percent": 49.62050936076909
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 75.5608028335301,
+        "MSR_percent": 49.50806768988586
+      }
+    },
+    "shoeslight": {
+      "frames": 234,
+      "sha256": {
+        "prediction": "38da5e598c3d3b5ff89f2bebba3bb83568442d2236eed1b72b01b42b77483eb4",
+        "visible": "770a07cc67d4653be3591b053503731d1e5daadd9216b41ba8c41bbf98b7c88e",
+        "infrared": "31c3cc6ca5689f2a3b9c21ee3063cd08e8913e1d3da24e728f27409eda244598"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.90313390313392
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.53683353683353
+      }
+    },
+    "single1": {
+      "frames": 488,
+      "sha256": {
+        "prediction": "f0775018aa8e562bb4b105f64c359a3a39dbd4fccb2d4f339fa4795508d64039",
+        "visible": "8e1d352263343e609e82e4feb9a6f364758d3c73e49e4318a311aafa9cbba1f2",
+        "infrared": "e031a9b0fa9049abb586741570698b170576c8869568cd3c9405c833749db467"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 72.62880562060892
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 72.59953161592506
+      }
+    },
+    "single3": {
+      "frames": 325,
+      "sha256": {
+        "prediction": "56bed62e315e0f8894cee47558beb276dbab7ea6cf1813f27ce9518cc47df8c5",
+        "visible": "28dac016c7823aba092b51f04b64a0c5cfa12331fd589183005e8e0c5ae6c2ad",
+        "infrared": "d175562348442c381f77465cac0c83b7c7b4e0cfd7adb4f135ecd61e61695e0e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 69.21611721611723
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 69.06959706959708
+      }
+    },
+    "soccer": {
+      "frames": 1326,
+      "sha256": {
+        "prediction": "178ba933d60b5eaf6208f3e562fc7bc0405073de9dc0a77152e02f147760261d",
+        "visible": "7324f80efd0535b796464c13206dfd92cc825f9832e8809ae5cb4af3b3bdaa61",
+        "infrared": "7deb74a41b530c2cff61705dbc6c2e8dc71728fcfc97762293752f5d65a34123"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.41628959276018,
+        "MSR_percent": 79.82115923292396
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.41628959276018,
+        "MSR_percent": 79.74215327156506
+      }
+    },
+    "soccer2": {
+      "frames": 379,
+      "sha256": {
+        "prediction": "75b7453f24c57d39e13343af6d01616eddad075e9066b938b6df8c2ed8a68754",
+        "visible": "3d1aba7a5bfa499d67a50793cc0f7010a65f00f8a6e02229276aa0693c2d2dd7",
+        "infrared": "c93a77d5470d369b98a4b4270cbd2c72cd248e6309e55c0b220c0da82b839152"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.8891820580475,
+        "MSR_percent": 73.43887423043097
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.8891820580475,
+        "MSR_percent": 73.36348787536122
+      }
+    },
+    "soccerinhand": {
+      "frames": 1168,
+      "sha256": {
+        "prediction": "05ddb33aaeadebb4cbe2a80d2dddbb5d93ff3aa51cbc08f48605db720dcbaede",
+        "visible": "726699dd93e83c1a40c050cee2fb1814b6db385e2c309697cff9826f987b13fd",
+        "infrared": "be8fbf7b9de58b5b65fe103a34b902d590807b40a1f5b0ad610da3291d6df415"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.6917808219178,
+        "MSR_percent": 62.26761252446183
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.6917808219178,
+        "MSR_percent": 62.52038486627527
+      }
+    },
+    "straw": {
+      "frames": 346,
+      "sha256": {
+        "prediction": "5af7057c1f2f90582ea4f36cc481941380125d4d33734fdf1199d8cf4fa9f480",
+        "visible": "90dc7f60e10806235afaa139773c1bb87904ecda5e5f1efb57be96db077dd7b7",
+        "infrared": "b855b3be270b42baf9a555f4f65dd11a5a4ac8c6955fa4cc81de6bec2e320a81"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 74.1811175337187
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 74.08477842003853
+      }
+    },
+    "stroller": {
+      "frames": 677,
+      "sha256": {
+        "prediction": "48529925ddc986c0496e9b324745343ec82694e8847349f4980137289f5ce400",
+        "visible": "a36a79c35362dd10be5293f28e9e8e33d2ea6267e865af9bd98bd1895c5b56e7",
+        "infrared": "ea0abe39818c4a71a298b66ad208e4564f2a299923f97e363fcc4035e0e97c00"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 89.80797636632201,
+        "MSR_percent": 79.01807695013012
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 89.95568685376661,
+        "MSR_percent": 78.96180628824648
+      }
+    },
+    "supbus": {
+      "frames": 230,
+      "sha256": {
+        "prediction": "61b7b3444061fd06cd01eaeb5567666cf6ed6ef89a6b096c7f0b320bf8b50c85",
+        "visible": "b6bb7e5663da4a569e6cb80a824778f790696c7921936c97604494d970ba4514",
+        "infrared": "093326f328557e76605d39b86dcee9fa59b21e190fe2ade84f62300d9e568044"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 89.56521739130436,
+        "MSR_percent": 80.72463768115942
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 90.0,
+        "MSR_percent": 80.53830227743272
+      }
+    },
+    "supbus2": {
+      "frames": 165,
+      "sha256": {
+        "prediction": "fa61b4e4759f791f758cd301ea0610835446d9735e396f53badedc09062b8997",
+        "visible": "5d996d1e8949a4447fadc2b09c2d8ec80081b0028925e043e559b168f975ed2e",
+        "infrared": "a410efebf85f716dc5b635ed440f21c5c5163505838235a6c7dc1770136c815f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.39393939393939,
+        "MSR_percent": 68.05194805194806
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.7878787878788,
+        "MSR_percent": 67.93650793650794
+      }
+    },
+    "takeout": {
+      "frames": 576,
+      "sha256": {
+        "prediction": "31a8d63a304c3eb1921aa2a6a24de68b5fb690f86788efc1784bcd95ef6045b5",
+        "visible": "410a3a68a8efe387c83e52b834268d413b4dd70d22fcd40c18551746a1a75afe",
+        "infrared": "4d28c4cb78d493f340bc19914188abfcdd510db8f670f962b16426099025c650"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.30555555555556,
+        "MSR_percent": 76.57903439153438
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.30555555555556,
+        "MSR_percent": 76.65343915343915
+      }
+    },
+    "tallman": {
+      "frames": 171,
+      "sha256": {
+        "prediction": "e0122ab7b36eef5f2922765786b1c241b4cfb3cbd506d79b7ea1d1ce22efba85",
+        "visible": "a1fbc77e3f2f96b75f114fe23d4d1502753980b61c5c5f33480f37d5bd03da7e",
+        "infrared": "6654a9b74f54a8240a64025954b47786389f50fa8543e50768ff5f2dd94d54b1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 72.51461988304094,
+        "MSR_percent": 53.55054302422724
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 72.51461988304094,
+        "MSR_percent": 53.467000835421885
+      }
+    },
+    "threeman": {
+      "frames": 254,
+      "sha256": {
+        "prediction": "702040d89518390bc325c332ab18fc8dc64831b066968e5dd0eac5f4a4069e2b",
+        "visible": "56d63f4927e198b37fbec021a0951efc6d063b91f5a4b66e6fe54ac189f9e8a2",
+        "infrared": "0d568ce43818cb106572e2096cb87996f371624ff608a4ec802cb3bd51f0eba5"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 92.1259842519685,
+        "MSR_percent": 69.04761904761905
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 92.1259842519685,
+        "MSR_percent": 69.1413573303337
+      }
+    },
+    "threeman2": {
+      "frames": 429,
+      "sha256": {
+        "prediction": "6d3b11cb217228b6df53e892902ce8d1a1ccf23e7077bd1167ba4d808352350d",
+        "visible": "af957361b5005316d87848a7d64a60c2aa190cbf2bbc7732fefd8c3d98f64894",
+        "infrared": "fe256a04249db99e74524a67d363f15e9c8d160bb93b22922743821bd5a36326"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 83.44988344988346,
+        "MSR_percent": 63.63636363636363
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 83.68298368298368,
+        "MSR_percent": 63.5919635919636
+      }
+    },
+    "threepeople": {
+      "frames": 593,
+      "sha256": {
+        "prediction": "bffc86484520734221ae677413d88fa9cedba839049097ce806d33288db7aa00",
+        "visible": "f0a3bef2ad39d561becfac718892b56990dadc1082cffba2a4d2f52f69bd89a0",
+        "infrared": "f002c9dd55a2db08f50657cae9d1860d9103d1dbad2fe27833811fc4501f4bab"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.79595278246205,
+        "MSR_percent": 79.98875772906128
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.79595278246205,
+        "MSR_percent": 79.69164056853771
+      }
+    },
+    "threewoman2": {
+      "frames": 229,
+      "sha256": {
+        "prediction": "0b31df2347cf353005d7552aeb2441b47c4628c35cf089798c2bc4ee22331b23",
+        "visible": "fcd88a6c605c6ac0e93429c317bf16a309cf2174b0067beb351637bc377507dc",
+        "infrared": "06f972b929301d7bd6ccf8d26b46cd47b12ab9c57dfe0ebb78737a0c64c0202d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 90.39301310043668,
+        "MSR_percent": 53.33749220212104
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 92.13973799126637,
+        "MSR_percent": 53.42066957787481
+      }
+    },
+    "together": {
+      "frames": 499,
+      "sha256": {
+        "prediction": "57916262185fb67d0024fd77a93cef686f590a4c5922c819fd97116767ee0e9e",
+        "visible": "ee58c1560f0c1e5c6eb436c2efd75dbfac9e3c4a5347155ba3719614fdb94650",
+        "infrared": "86bed29d75ae57ea16aa2034b2eeb860cd3368d51c0865d510f8491858a28456"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.99799599198397,
+        "MSR_percent": 74.95944269491363
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.19839679358718,
+        "MSR_percent": 74.77812768393932
+      }
+    },
+    "toy1": {
+      "frames": 1693,
+      "sha256": {
+        "prediction": "2bd42c5d8c03555f2d5c02cdfc128e07a4dbd43ada4deadae1b1b35a7bfe7a4d",
+        "visible": "d6192f9f44ae5419d2b2565db3602d5d3ba8a3ba21168beb887b320a65db7955",
+        "infrared": "f88d9a1c3089f461f7d2bb7b8b6ea9651fb87343c61c34b2b4d3de6d2a825981"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.88186650915534,
+        "MSR_percent": 80.75830450313617
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.88186650915534,
+        "MSR_percent": 80.73017748150649
+      }
+    },
+    "toy3": {
+      "frames": 1125,
+      "sha256": {
+        "prediction": "43cf21be344d43711e4591f2480b1c56edf92d8767136c25ec7ef293d93c7f20",
+        "visible": "e97606705598cc7b106dad400c3bf931a9bb85df2aa2936379a73fda75a68b1f",
+        "infrared": "cd1d20441f9d0bea7e3d2f40f50b244b13f1f85d258e837c1a2b1fe221dcf48d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.6888888888889,
+        "MSR_percent": 73.2021164021164
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.6888888888889,
+        "MSR_percent": 73.18941798941799
+      }
+    },
+    "toy4": {
+      "frames": 990,
+      "sha256": {
+        "prediction": "8f94b08aac406e979f860dfa0e4470f2b25bf07b72544fbc2cbd4515cedb6a1b",
+        "visible": "b3130c82009d6ae6a16a94ae1db998b5661747117ee7373e145c7ac4bf77fa9a",
+        "infrared": "94c24632d463d61df40bf1b15df21f114e5d73197acbd07e7225621547a9eda1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 70.58682058682058
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 70.75517075517075
+      }
+    },
+    "tree2": {
+      "frames": 1258,
+      "sha256": {
+        "prediction": "712800495f3dc666476c3dc9a53b1f6c9c1b76886c733ecc039ffbe088d3c3f8",
+        "visible": "b4433e95bcd1d925214a7c55398ce61a26480818fcbdbf79b3de685241ca8eff",
+        "infrared": "26c587e7d7ebee9cbb63430d730118aa49a19128d4d4783f11bf1c2e95f1e408"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.93322734499205,
+        "MSR_percent": 80.53978348095994
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.93322734499205,
+        "MSR_percent": 80.33159209629798
+      }
+    },
+    "tree3": {
+      "frames": 1903,
+      "sha256": {
+        "prediction": "1a4d7665bf64281242a9ba7560e26bfeaa149668f15be6cebbb8b9e97951a4d0",
+        "visible": "dc430018f2669b51b1661cab7a135ff3bd3a8bb92373ed10337560a5d370ad16",
+        "infrared": "df58d9ed67bab5fea659093b25c45b3a198aa17432298e24a717459a7edb6c30"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 44.87651077246453,
+        "MSR_percent": 37.12183769987239
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 44.82396216500263,
+        "MSR_percent": 37.13685158771864
+      }
+    },
+    "tree5": {
+      "frames": 2106,
+      "sha256": {
+        "prediction": "5c3233e347323b9599d268b408fcb73951fd03248e2ab3fd2607bea20717d6ab",
+        "visible": "d0ed0a8445a916a2c3a7501d444124d74cf4cacd9bf2187dcdbe3607fbd3ab64",
+        "infrared": "6678ad3973affce54c2b6219d35036bf6b9c5959af710d63a8dcd9450ba2b13e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 60.58879392212726,
+        "MSR_percent": 51.008456564012114
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 60.58879392212726,
+        "MSR_percent": 51.04915660471215
+      }
+    },
+    "trees": {
+      "frames": 218,
+      "sha256": {
+        "prediction": "e9e6fbb3596da231e4b17e8c506e4d36efbd0145f8c454ee0485ecd2244243bd",
+        "visible": "3cdd614355498e3825f9c3a9633afe3e846c2b5b1e239b1348d774a264108621",
+        "infrared": "edc6422ad57210b40ab0ada18c9d07cd08b85dda5dd5e36e4ef0b01239ed870b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.41284403669725,
+        "MSR_percent": 73.52555701179554
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 95.41284403669725,
+        "MSR_percent": 73.5474006116208
+      }
+    },
+    "tricycle": {
+      "frames": 225,
+      "sha256": {
+        "prediction": "b8644a4d20f1d91b630906541a1a7f01198826cbbe6ce771baa0ab3e2667cd92",
+        "visible": "4e6765cfb0ca092d3fc2709bf3e0783035ede1295970c5e93e8df84c2b3bd512",
+        "infrared": "a02d35713a9f4064ffa405583dfd9fc3f11a0183f33ff3033442156b13784234"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.21693121693123
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.11111111111113
+      }
+    },
+    "tricycle1": {
+      "frames": 321,
+      "sha256": {
+        "prediction": "5fcbd37816c4f26f3f69910481714c4ea60b0764dc83997b76670acb9338ab3f",
+        "visible": "b24b79713b9dab37ebb24a8455e5330a31f7800380fb1a645a42e193463869e5",
+        "infrared": "e176d9a63bbe6058c63357ea580bacfbc592af488aca274514d095d170827ec7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.4959204865747
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.43658210947932
+      }
+    },
+    "tricycle2": {
+      "frames": 235,
+      "sha256": {
+        "prediction": "4628662427edf3cce18f0ff310d7aebef2ae2a2b51127a1d4b1416ede8a4b28d",
+        "visible": "e631e0e66764b9724d361000847e9c602df27a436b7b390ce9f6d76e63fe7405",
+        "infrared": "c36aa7f1f8e6283f604f77133f3f6cc22a5720c2c0b91be15860d4fbed8b6781"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.85714285714286
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 82.93819655521784
+      }
+    },
+    "tricycle6": {
+      "frames": 469,
+      "sha256": {
+        "prediction": "e6e98888cfb67ebf197624eab7d9323214b0d4369dd760c42b3201d14646f41e",
+        "visible": "03fe55a5dc235bfd630a195993ee696057192bbe25ef84d85aab19922be1ad1c",
+        "infrared": "1a4acfff618f64929095513ef80bf6f6f42e82801aca533526ee0c92682f7c0f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.08102345415777,
+        "MSR_percent": 71.54025789420245
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.08102345415777,
+        "MSR_percent": 71.49964463397299
+      }
+    },
+    "tricycle9": {
+      "frames": 332,
+      "sha256": {
+        "prediction": "acd2ce899440e19028d36431701c0b2c8b25b456acc4156be6266e6524622db1",
+        "visible": "52bc1325d503a50fe47fe3a7e101e43fa3834e383a55848320dbaf258378e24f",
+        "infrared": "d248073ec65e0057d3ee77e8d4e7335e8c34299c7cfb5fae78bc7ebc075b08e6"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.09638554216868,
+        "MSR_percent": 77.26620768789442
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.79518072289156,
+        "MSR_percent": 77.46701090074585
+      }
+    },
+    "tricyclefaraway": {
+      "frames": 295,
+      "sha256": {
+        "prediction": "37e5fc90f801a74b24222b65e6e3821346beebbed72263081bdba4f3c9284899",
+        "visible": "955e68aa62ea1dab901df5751c8d43b162ee69f4b118ba2d499f81ed05c948ab",
+        "infrared": "ea316008b7373808bf886512ad561c80025053a2426e03ce3659c0ee7b63e1a7"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.35270379338178
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.67554479418887
+      }
+    },
+    "tricycletwo": {
+      "frames": 613,
+      "sha256": {
+        "prediction": "f9fcee04425aa55699a12e6d92ba49205ecdab9ef3be23298d7e32ddf3ec9bfa",
+        "visible": "3bc36c9db77e4cdcf6ac126e12e276164ccb2153848d5e128acf1576ad2beeae",
+        "infrared": "145e1fb88ad65f834edce281f0d78faa8250f575525be8672918f31505ac1b12"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.08482871125612,
+        "MSR_percent": 83.12747611279421
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.08482871125612,
+        "MSR_percent": 83.09640332478833
+      }
+    },
+    "twoelecbike": {
+      "frames": 84,
+      "sha256": {
+        "prediction": "58e10e6fb5266379c7c00deea2dcb1d4bce7b8d1ae8dba404bff45b8e8dfe18d",
+        "visible": "c33edf470ab9448c12e273082ef18fd2a27b7cd8283f400860ff621942ca5f62",
+        "infrared": "4cff762e32d551e18248e8a2e5223a673afd2a24cf8c2b17dba206ade8fae7bb"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 85.71428571428571
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 85.77097505668935
+      }
+    },
+    "twoelecbike1": {
+      "frames": 238,
+      "sha256": {
+        "prediction": "c6b79f5a09927afc72a87a22b9ff3ff53f9e68894298bfce1bd94f7a987bc674",
+        "visible": "6fcaeca8e24b898a2a2992b3a018074b07a5898c7e5d83803ae6594997a0e627",
+        "infrared": "49b7645692b6730366b9785e78147f058dbc5606771286f218a3cbb4d655e1a1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.47899159663865,
+        "MSR_percent": 73.84953981592636
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.47899159663865,
+        "MSR_percent": 73.98959583833533
+      }
+    },
+    "twoman": {
+      "frames": 1299,
+      "sha256": {
+        "prediction": "992668ad872c57a4c71192fad970e937ffde0d0fc9253440275352629fe3c078",
+        "visible": "0013802b98a8866725715d30c3bc8353c2c821c41a3686e52877faab5a2df009",
+        "infrared": "d78bf9aaef3a2c345ecbf0390ed83e37674ee9bedbd51e0b03eb3a8d5d478dd6"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.46112394149345,
+        "MSR_percent": 72.55031342791159
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.53810623556582,
+        "MSR_percent": 72.49899189853002
+      }
+    },
+    "twoman1": {
+      "frames": 1001,
+      "sha256": {
+        "prediction": "f805e3f37b690f81a68d624060e4423ade11e292677dd3715773cfe849f9d27c",
+        "visible": "e2b7b81fa0ace2e9cca0e91d2bf3dfdceb890615be65c6e9584521020b043b99",
+        "infrared": "a00840ed4b531f810308e4f3df9b1f28cea4cd9c3878908d62b9a2ec4ee03510"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.7052947052947,
+        "MSR_percent": 54.65962608819752
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.8051948051948,
+        "MSR_percent": 54.70244041672613
+      }
+    },
+    "twoman2": {
+      "frames": 392,
+      "sha256": {
+        "prediction": "bbff0e91bbd99338f34a309fe3037388e2ea206da42e741db44931668ba942eb",
+        "visible": "0c1458ae2e4311d6db256da353c49430acba4f2b4b5f3b0c181fda2372fa8f1e",
+        "infrared": "70f9380d8b60b383732eb073df15d01d782eb41f3c5f53d8af3a2db7c27d94d5"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 91.83673469387756,
+        "MSR_percent": 70.05587949465502
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 91.83673469387756,
+        "MSR_percent": 70.05587949465499
+      }
+    },
+    "twoperson": {
+      "frames": 867,
+      "sha256": {
+        "prediction": "67da5f42e65113828b3200e5e15c8adbdded2c8df109b69a9f7b78c033d5819d",
+        "visible": "97808f25d9860ebfd7ec83871d0c858c53f6c44aca720fcaca09a0a7563df70d",
+        "infrared": "27a4287a5befda4490b0974204a88386aa2e46af260ad91587b222a59bfa6a8a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 55.83017520733783
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 55.775251276981386
+      }
+    },
+    "twowoman": {
+      "frames": 161,
+      "sha256": {
+        "prediction": "9df6e60c84b51a8901a1446cae2cc66f0f49674b28481fd484a7243208842bc8",
+        "visible": "3aed83e1b7cc63eb2a35803b1fafc049845ab8dc76f51391b73344706540b2cc",
+        "infrared": "3d64fdf635f70820636c38f57a110066b5df6e3c8159e0a2f46ddcb4a78f994c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 73.8243123336291
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 73.70600414078675
+      }
+    },
+    "twowoman1": {
+      "frames": 684,
+      "sha256": {
+        "prediction": "b8292958e228ed40a266fde2e8309e086a3c6cdc53723a6185c6d3ea6c234225",
+        "visible": "f2271d044f8b475776122aa91b39d392655a5830e61a0f2b9890c6efead92518",
+        "infrared": "4f21b8ad2e5407e71f92a92d081444023a95b89dd2d268328f356222fed73104"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.32275132275133
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.30186577555
+      }
+    },
+    "walking40": {
+      "frames": 379,
+      "sha256": {
+        "prediction": "a4c8f091f3ef578554977ffd150e28cf16fab5d900370b9a3d8b2c642a165b01",
+        "visible": "c6e57fd9dcb28831110fec577bdf56c0a5fa5b63893bef2c51450bedfc5454f7",
+        "infrared": "fe69be1038a39f516f69a78e5923f706c46f09fa66b135ab8f34cf97006052f0"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 62.532981530343015,
+        "MSR_percent": 51.33810780248774
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 62.532981530343015,
+        "MSR_percent": 51.42605855006911
+      }
+    },
+    "walking41": {
+      "frames": 416,
+      "sha256": {
+        "prediction": "14f361c8e2a1e15b73edbcf4f9002189619815034e030b4d2ddb81964a76fc45",
+        "visible": "c8c11730e6b0f8078c8d1ca889ac428459d003041bf37d877b55cb7f775cbbdf",
+        "infrared": "6c19545ff674ed2b31cfd16509f812ce451bde31dc105b3daff48565fa2db5ed"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.03846153846155,
+        "MSR_percent": 55.311355311355314
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.27884615384616,
+        "MSR_percent": 55.29990842490843
+      }
+    },
+    "walkingman": {
+      "frames": 106,
+      "sha256": {
+        "prediction": "f0fd2b2ea2f896482f955028e74e364983c0237b7d22bb9d22c0d1564764f36d",
+        "visible": "82c33c197df5489a8ab31e5221ea0b713f8a243d4beabd563c464bfe648ba4cd",
+        "infrared": "90b66488fd9bb41306c8219f5448d4a961963efaa5a2d4ddcdb2f43d45dff98c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.03234501347708
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.76280323450135
+      }
+    },
+    "walkingman1": {
+      "frames": 648,
+      "sha256": {
+        "prediction": "108fa3505b1934f6b7b706582f7c1d848f4b280d90f17bea954e32ff7f0a09f4",
+        "visible": "b558e15c3d204a3a380f6d4f262c94b74f230b3c50b53f015079e299fd02a9d0",
+        "infrared": "664efc897246bf93611dce76afb81e4ce7941b13d03da7c91564ba42fc41ba26"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.35831863609641
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.19664902998237
+      }
+    },
+    "walkingman12": {
+      "frames": 508,
+      "sha256": {
+        "prediction": "8ac6db83565a0a8ee0e235901569af138362a8590e7f49f6c7c0ae008bbb93cf",
+        "visible": "fafe5f3750fbbb00e4760bea66a0a65457f0b415cb7110117199f9f7a6b639de",
+        "infrared": "08a4482f5e9ed56583b7e7e5abf252585774c2b3559a19b6b882273fbbf78443"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 82.8740157480315,
+        "MSR_percent": 42.46344206974128
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 82.48031496062993,
+        "MSR_percent": 42.43532058492689
+      }
+    },
+    "walkingman20": {
+      "frames": 569,
+      "sha256": {
+        "prediction": "75067b747fb43a0a6de3eecdc6c9aa8d8501e72fe3c27b45f89b143647711068",
+        "visible": "09b88a199b56b4e6f4e507a4ffa9bca728a335a67a12e55998dee1f055c5abbe",
+        "infrared": "42665d47efe4cb9f0fb917793e7fadbccf5872dbdeeaae1789f21c915e9ae24e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 45.16695957820738,
+        "MSR_percent": 24.46229810025944
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 45.16695957820738,
+        "MSR_percent": 24.495773704912548
+      }
+    },
+    "walkingman41": {
+      "frames": 502,
+      "sha256": {
+        "prediction": "fda8a746bc7810afa4cfc87447f142a53264552a4efbe7c656e3fce0c9374196",
+        "visible": "0fbebedab0c7546160aa8b8a2126160fcac6b986b84223325946fc7f0f157c1d",
+        "infrared": "5c6ac24bac681bb3408e8d46cf898ffc301673c4a3ab02d3dcc3e923f92d3c5e"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 65.13944223107569,
+        "MSR_percent": 49.45930563460443
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 65.13944223107569,
+        "MSR_percent": 49.45930563460445
+      }
+    },
+    "walkingmantiny": {
+      "frames": 83,
+      "sha256": {
+        "prediction": "4cbf28721970c32e5f7e13d94fdfe73105b52f6ef886e4960edab195c80f7689",
+        "visible": "45ec5920b5b40dffbd12c469e1da7ca6d5de87ec961d3ed43019c73babe7ae3e",
+        "infrared": "4cd1e5c8bc2cab0701d83968caab94cee09ff853eb00790c2fbfcc1a03ea0657"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 50.602409638554214,
+        "MSR_percent": 29.43201376936317
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 50.602409638554214,
+        "MSR_percent": 29.37464142283419
+      }
+    },
+    "walkingnight": {
+      "frames": 426,
+      "sha256": {
+        "prediction": "742d615f3748e46cbb5efe5fd9390bb3d69dafee2e4955875384c545b8089018",
+        "visible": "9f3b28ec5970bd75fafa6bef783d18e197cda3905d0c5c1e3112539c648a5590",
+        "infrared": "e4815b158de244c759a008effd0322b35844bc1a6373ead7987b71b2c2f35684"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 67.37089201877934,
+        "MSR_percent": 42.36530292868322
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 68.30985915492957,
+        "MSR_percent": 42.29823384752962
+      }
+    },
+    "walkingtogether": {
+      "frames": 1433,
+      "sha256": {
+        "prediction": "20d1d9a919d09323aa2a76ac2155772eeb2601bd0fece8b111ea8915da2b4bab",
+        "visible": "b18ea8959a4405320822140e4133ef7d984a2de2b2e58be48f0601c3a4c1a3aa",
+        "infrared": "abaa454f7a1c17701f018ce366faaec99d0639a83d09ea236bb4d73a2601dd64"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 66.22470341939986,
+        "MSR_percent": 51.78612966470608
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 66.22470341939986,
+        "MSR_percent": 51.543548333499466
+      }
+    },
+    "walkingtogether1": {
+      "frames": 387,
+      "sha256": {
+        "prediction": "f0480909fe488777d9a6e1d7a28695779153fa60ea61c80a5b7d84a0e66601d5",
+        "visible": "4fd446a7e83cf37b9285408110fa82ae2f0d8fa42b8fcf59ebbba30d1f9dd8e3",
+        "infrared": "1e01853bd0685ede2ca70ceb326979c54d2ed84311ec914da4f8b185f2b79779"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.48320413436691,
+        "MSR_percent": 69.29986464870187
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.48320413436691,
+        "MSR_percent": 69.25064599483206
+      }
+    },
+    "walkingtogetherright": {
+      "frames": 601,
+      "sha256": {
+        "prediction": "bc91e93f91bed6ba76a8ec5365d07a8ac1d0101e81ea2f7b8cd9ce7dc7bc296d",
+        "visible": "4496a61ff1d6562db5ef0f2843cc0d803f7dcd8e2c61364bac1c17c57c5df8c9",
+        "infrared": "7111d38e54c6e1ecb11618b14cc928ce92fd72dfdb34e91786bb1c911c25a077"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.1730449251248,
+        "MSR_percent": 66.9202123445052
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.1730449251248,
+        "MSR_percent": 66.89644243720784
+      }
+    },
+    "walkingwithbag1": {
+      "frames": 642,
+      "sha256": {
+        "prediction": "21d82ad1066be61e101e64686ba63635d77fffa8e44e8cf05a329b2ac96d70cd",
+        "visible": "3f2c5432eb1f4790d9a823658643c9514f4f667520fdb3f8972d3faccc9b7a9d",
+        "infrared": "59d4f29d5df278cb2aa2aa2bbfcedc1a4148ad40e175c613f87cb5cdcd9872d9"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.84423676012462,
+        "MSR_percent": 65.93235425011125
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.84423676012462,
+        "MSR_percent": 65.87301587301587
+      }
+    },
+    "walkingwithbag2": {
+      "frames": 1277,
+      "sha256": {
+        "prediction": "97e57f201beac63835f6366c0cdd3639ae1ce57b7a3ff9ee934cbe9de8ef8e2e",
+        "visible": "9fcd5acd6162d7255600f68937abb3bde31ee29a0c9b725569b0eb96039d1f77",
+        "infrared": "995692f6815f871cc1dc2a64839fc7033762d9df65eb8071d49ced6fefe09880"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.77133907595929,
+        "MSR_percent": 54.581049334377454
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 95.77133907595929,
+        "MSR_percent": 54.461722041988295
+      }
+    },
+    "walkingwoman": {
+      "frames": 348,
+      "sha256": {
+        "prediction": "6ab379410d210c9840a1c14c25e7a86baa5ac55828ec3e000fda973f32d44d27",
+        "visible": "f29c517eab948175d9d6720a74db4f772f9f5b2758d03e1814dd28f345a7708c",
+        "infrared": "5b602204df029d6f8a93b5e309ce621f81f23db3fcd69477770ba31c0f384453"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 48.09797482211275
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 48.04324028461958
+      }
+    },
+    "whitebag": {
+      "frames": 391,
+      "sha256": {
+        "prediction": "da70be245e986f62def2b0baaa0b52626b48ab5b92b7f5e1d3d0ccc7c6a9a620",
+        "visible": "92bf5f3716b861452ccbcf6ce99c7ef22dc9cc0d63c2a7bc4842aad35005dd8e",
+        "infrared": "63b65f3b229bda9bb0d47b5df5e7b894a21eb6e6a0d38b9aee945b613e51d063"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.9079283887468,
+        "MSR_percent": 71.98879551820728
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 95.9079283887468,
+        "MSR_percent": 71.78175618073317
+      }
+    },
+    "whitecar": {
+      "frames": 180,
+      "sha256": {
+        "prediction": "3719ab87e7de4b810bea783d84257a17907a280eca59d80406f7186e299c8339",
+        "visible": "60ae4b2de01788f645c9ca69bd23213ba3295996d0b1f638bd81e0e302f03bdd",
+        "infrared": "4d0ab28b4a5081a7356e3d0b0f07df64db6e05d7ea9964f3c3fd7a0db4358efe"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.14814814814815
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.25396825396825
+      }
+    },
+    "whitecar3": {
+      "frames": 448,
+      "sha256": {
+        "prediction": "d78e6c8709a9f97c45d40ebb9281d6b4a4d7ff1ccfe81d5dc56ecfc9b5d93ed4",
+        "visible": "96002c4ed772a5f10db2e17d76abdb1917edbc895312b0fff29200bda025ed4b",
+        "infrared": "cda6eb8dcfe92e2716aeafc931677d58a2aa1b66dc821e0678d535300444df13"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.88392857142857,
+        "MSR_percent": 82.06845238095238
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.66071428571429,
+        "MSR_percent": 81.94090136054419
+      }
+    },
+    "whitecar4": {
+      "frames": 148,
+      "sha256": {
+        "prediction": "18d682450a81672d3b349bce3ce461fe15586a50a820d09dedf38159c87c42fd",
+        "visible": "0210bc4539ea632a5d72e73710a1e8d7ff3d72513c92d7f9c0b827d68183ef72",
+        "infrared": "1b0e273a7e9a51d9c9b7f6f90cc721704421a68fffd8c784836d3a9314090a9f"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 74.32432432432432,
+        "MSR_percent": 76.83397683397685
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 74.32432432432432,
+        "MSR_percent": 76.8983268983269
+      }
+    },
+    "whitecarafterrain": {
+      "frames": 164,
+      "sha256": {
+        "prediction": "557b058e12c2d6ac8a5e7840ccd14908fd98d054fe5c67ca28ba0376a5baf9ac",
+        "visible": "838ba7dfe61200b941cccba2d2a805f6205dd4738693f81edbefb64c6d8a4aac",
+        "infrared": "66f6b2b97d897058ec933d63601a8abb2aa8dab97bc065a48dfec5ee12d0796d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 93.90243902439023,
+        "MSR_percent": 69.65737514518003
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 93.90243902439023,
+        "MSR_percent": 69.48315911730545
+      }
+    },
+    "whiteman1": {
+      "frames": 1143,
+      "sha256": {
+        "prediction": "0ce1b2e90963c7deb9cd6dcd257fcc7db341e4a6c90275c785df26e92edbc6d7",
+        "visible": "2b3fb28b438e8a5f3782b374019e7f3fd263ce385c4a9f4b4a576309df042450",
+        "infrared": "11e4f5dfcc61e9fd88809d1a10f5050438a84f22803dfe277b69481ff8c1eb2b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 97.02537182852143,
+        "MSR_percent": 69.82877140357456
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 97.02537182852143,
+        "MSR_percent": 69.81627296587928
+      }
+    },
+    "whitesuv": {
+      "frames": 578,
+      "sha256": {
+        "prediction": "eae5a25a0f748930f0bcd079dc208d12a8b51bb5aed078a3479bf38040d4d7f3",
+        "visible": "f0a7d973c14fa3b73f0d8058f34cdbc013303b58c4b94e8e63187b2b92b4583f",
+        "infrared": "d8535bdf69d7191586f3d08921b9158426c91c219423453807a300158ca0fac4"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 19.377162629757784,
+        "MSR_percent": 37.46910528917449
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 19.377162629757784,
+        "MSR_percent": 37.543252595155714
+      }
+    },
+    "woamn46": {
+      "frames": 272,
+      "sha256": {
+        "prediction": "978d97882d5691cb348dcd89389f1cebe153e0b86fd7335da58059f695e8d819",
+        "visible": "ad7f0393cb5d68b23615173cf9ab80dcf87e9a94f98e920810090cdfdde676fe",
+        "infrared": "cfe1f4797ba06826c1da1069bd07eb9a51e482ea116a26e49bd896f896dbac99"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 90.80882352941177,
+        "MSR_percent": 59.26120448179272
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 90.80882352941177,
+        "MSR_percent": 59.191176470588246
+      }
+    },
+    "woamnwithbike": {
+      "frames": 146,
+      "sha256": {
+        "prediction": "fef52a203fcbef61272cae5fb42adc28f28dc776c20dd5746c3b7f123a6a832b",
+        "visible": "44d96a5325f05bbf2949774b10d9cf5c4b481cfbcca85a8c8716a94bee4d841b",
+        "infrared": "c1349d6ead6283135f099eac36a188800cbbc6fa2f5e06673a1e89be57be48a2"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.31506849315068,
+        "MSR_percent": 79.87606001304631
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.31506849315068,
+        "MSR_percent": 79.97390737116764
+      }
+    },
+    "woman": {
+      "frames": 138,
+      "sha256": {
+        "prediction": "3eeeccffaf10a7ce34f1cf8efd1e9db37a271346332dd7f81dfd122fcec913ce",
+        "visible": "1dee8a960c409a10284fc5cc149b641b965b118d294f510f40bb1202c29da017",
+        "infrared": "b9fad5cb324171c60a75288d334305ed2b6a405dd1490863c6502d81e2594ecd"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.78191856452727
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 83.60938578329883
+      }
+    },
+    "woman1": {
+      "frames": 1009,
+      "sha256": {
+        "prediction": "56607f056c2eb5474bf821431c543b12c0daf8d820265fae95887a2facf5cac8",
+        "visible": "7d70b51dfd82a72cbe10d4ffef88c811e657d1fd6622328bf6c367d8b6c4c27f",
+        "infrared": "1f7c67f50502f5822babc3643dd89c0069e7c93e449cd89be2537e33bd43a739"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 65.51040634291377,
+        "MSR_percent": 51.74854877530796
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 65.41129831516352,
+        "MSR_percent": 51.73910991552221
+      }
+    },
+    "woman100": {
+      "frames": 688,
+      "sha256": {
+        "prediction": "0ec5e34119af3e2777ab86d35b0ed6eec10978099cc5a2ce22818a8699271e9e",
+        "visible": "6d0453860e3df0020f32c40c5a641a866770e9e5ed6503286cb89cd0cd652110",
+        "infrared": "f0ec15a4d73b297b3d9a83c627ba08dd529e29d8abfd5914afd775951ba5a31a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.65697674418605,
+        "MSR_percent": 71.20016611295681
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.65697674418605,
+        "MSR_percent": 71.16555924695459
+      }
+    },
+    "woman2": {
+      "frames": 288,
+      "sha256": {
+        "prediction": "79be599b23167d5fce486286f22c6f7e4d25865282607abb9fab81ccb911a46c",
+        "visible": "84170483a746c55b4a561459e571a5d055b866835373cdf70c82db64c48f511b",
+        "infrared": "e2ac327f6beceebd3ab6571a406e758f5ef18ee6be32e10b08948d5d5126278d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 63.72354497354497
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 63.70701058201058
+      }
+    },
+    "woman3": {
+      "frames": 230,
+      "sha256": {
+        "prediction": "4026204f4f2fadf3de11480dc7038b67e80ef79130f82974b84acaec53264dd2",
+        "visible": "0424fb93691c98734146f7dbfb0e9ffce96f8b4a4751856f1af1c8c95a14cb5c",
+        "infrared": "9ab4f343d3b9018e31ccdb17cdde1f95696997b241b1d4cc99dca17225948450"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 75.59006211180123
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 75.59006211180125
+      }
+    },
+    "woman4": {
+      "frames": 424,
+      "sha256": {
+        "prediction": "c38fc8db913ba1a8fa383661d13706697e8e1896c229f54d573c728705bac0dd",
+        "visible": "440c6dfde0ff65b218f511c6b491de2062ed575534d9e64a6eed687704021b3b",
+        "infrared": "1bc4b1d1536dfd92847fb2a8c67ede8fccc1e7c6607dd7a8f399a43288c30dca"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 96.22641509433963,
+        "MSR_percent": 52.96495956873315
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.69811320754717,
+        "MSR_percent": 52.92003593890387
+      }
+    },
+    "woman48": {
+      "frames": 348,
+      "sha256": {
+        "prediction": "8c954c511083fb8997612735cd31fbc351cfdc04222d11b4eab59eba4b3a1e73",
+        "visible": "005a256bc651fb23924ad4182533dc413882e8be933c708475e42e1dce5b8379",
+        "infrared": "fabd6d6df33a791719f7e5fbb5f4e642bdb5393772fb35bd8c574c9a579eeba6"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.28297755883963
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 79.14614121510672
+      }
+    },
+    "woman6": {
+      "frames": 77,
+      "sha256": {
+        "prediction": "60ff0931ac2062a74c7cfc85c0b63622bfe5707546db44d06d3c267b70bdceb7",
+        "visible": "c76cbe9c6de6ee7cc4fb24c034ea0a30eb136c74819e7c2f2fc001b795cf509b",
+        "infrared": "698023319d242b5c689dda5eff95444d7e7f41dcda73b39ca235240055c9a7d2"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 69.88249845392703
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 69.6969696969697
+      }
+    },
+    "woman89": {
+      "frames": 434,
+      "sha256": {
+        "prediction": "b7d11ccf0dc94fcd5953d765251bd2fb9ea55e60d50a8aec3d895e217fc6b61e",
+        "visible": "f628cf7954bd67546718926b0bcf8dc8e97f7fec857646acea9b19f20b85ee3c",
+        "infrared": "a1ab7a1b5d77a114362e997ea25ca5b6ab1da3a6e4e88cb9489aca28e3e6d8e9"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.38709677419355,
+        "MSR_percent": 81.81917928461706
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.38709677419355,
+        "MSR_percent": 81.75334649989028
+      }
+    },
+    "woman96": {
+      "frames": 94,
+      "sha256": {
+        "prediction": "5d2dfaf5698cde648497fa53ed5133be455a1e301e0dbd79dc67725f7c7db2c9",
+        "visible": "acf3a73f2b686efb76d0e45d8a8d4f39b87554b1e12a408c47dadc614fb70e19",
+        "infrared": "b963e5f2d3463b5e703c95dc7c681c4b460a661a448eeb6b8bb75380caed255c"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 98.93617021276596,
+        "MSR_percent": 74.51874366767983
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 98.93617021276596,
+        "MSR_percent": 74.26545086119555
+      }
+    },
+    "woman99": {
+      "frames": 546,
+      "sha256": {
+        "prediction": "a32921327513c35a54691014024ecc29aaaae90346fb92d60b3d7100fc2f9124",
+        "visible": "44b6e49850ed11d7ba29be83a310056e2b3e92575df4a73de1f8340324f46695",
+        "infrared": "7d0800b5ca58909e9f8c0e2e6a7f970587ecddfaa762d727e1944a00c755f4fd"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.08424908424908,
+        "MSR_percent": 80.59480202337346
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.08424908424908,
+        "MSR_percent": 80.38548752834468
+      }
+    },
+    "womancross": {
+      "frames": 602,
+      "sha256": {
+        "prediction": "83d9317ecf0d8d7113f68cf31b396a032a27693645a4d003c33091db86f46874",
+        "visible": "b50952c941e256ef7aa87e32cd5d536c1b6914aaf878dd760bd4a5232d28f582",
+        "infrared": "9f32c44b1cae33f31acb4581ea252e06928ee51ef94e3cfea43af6f6b4c3a2e1"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.01993355481729,
+        "MSR_percent": 72.18794494542003
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.18604651162791,
+        "MSR_percent": 72.06138269261194
+      }
+    },
+    "womanfaraway": {
+      "frames": 127,
+      "sha256": {
+        "prediction": "1634a36e680bc4edb471ad06cbc4ce9a4854275385f95fd3c7147d035d2bc537",
+        "visible": "1d577785e3ad15b87ac7eceee2d9b0b0382f7a7d68131945fa8ddceb8e7d3b29",
+        "infrared": "5070c04b61cfaba21917f88fec46e63f73afaae6d4905b3a40f7f18a4a1d2387"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 94.48818897637796,
+        "MSR_percent": 63.32958380202475
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 94.48818897637796,
+        "MSR_percent": 63.254593175853024
+      }
+    },
+    "womaninblackwithbike": {
+      "frames": 738,
+      "sha256": {
+        "prediction": "71d9bdb7bad398611a442800af3b771bc1b1196ca0da8a4cac5970c0a8718b6e",
+        "visible": "4fbeb77aba6a89afaca482f37c96126c2adc9fd58b7364b605cd6377165f0e7c",
+        "infrared": "35a1f1c8af6ead791c8f012d2640f8bef6aa7e2a1366339cd71c4969557b3c89"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 87.26287262872629,
+        "MSR_percent": 70.94463801780874
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 87.26287262872629,
+        "MSR_percent": 70.95754290876243
+      }
+    },
+    "womanleft": {
+      "frames": 578,
+      "sha256": {
+        "prediction": "025b998c33ad8881fd99c001df0d7e4b82e6e4ef899ac50c665545b13c9b474b",
+        "visible": "f3e68e1ce968231412391f70945b50fb5ae803ec4168d41a5fcdc4a6baec99f4",
+        "infrared": "5ff1a2579ca78b5d0d95727212a055ab3244d68ec211fa43d72fb11c0d2a1b0a"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.98335804910198
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 78.72796177294445
+      }
+    },
+    "womanpink": {
+      "frames": 112,
+      "sha256": {
+        "prediction": "d6fab4dcf5884902d1c1dc5691930d6492103937a0fef99f8b723eb84b4750ef",
+        "visible": "0411c7a269f73d212d77256001e5577fd689494b102a7b6ee1ad79c7a0d433ee",
+        "infrared": "ab7294924471b77445ef4ecd4a9230c54aa604d2ee3b06a08b1ab53c04772946"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 77.16836734693877
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 76.95578231292518
+      }
+    },
+    "womanred": {
+      "frames": 102,
+      "sha256": {
+        "prediction": "048a052f8337f7af79bc0c80be3609a2e267d1403abf7a2f5bd442463c11384e",
+        "visible": "e66fdf91b2d69206ca96e47a31b5396d9ddc833cfafbecc98f6e2a61bfdecd50",
+        "infrared": "052ac4c4d4be2a17f91ad591a405657ad0413535494880c6315753dbb89db25b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 80.57889822595705
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 100.0,
+        "MSR_percent": 80.3921568627451
+      }
+    },
+    "womanrun": {
+      "frames": 656,
+      "sha256": {
+        "prediction": "ee5dcde95be1afdf9674d876e508c0bd57ae8853c13d913ff4bd732b29347388",
+        "visible": "080b1d63ba563171963ecfd91e1de054c13932d50d2d9faa2f7b7dd16763049d",
+        "infrared": "e9e64c0d46215dee004f6756ca96c80bb794686a2c4a646ed1907120eb01a24d"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 83.53658536585365,
+        "MSR_percent": 61.14982578397213
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 83.38414634146342,
+        "MSR_percent": 61.07723577235772
+      }
+    },
+    "womanwithbag6": {
+      "frames": 169,
+      "sha256": {
+        "prediction": "a131d6c68cdf4a2f6127922f029eb6bbcdfb0eb809bf17139748ec45d78e2d1e",
+        "visible": "cbc47911e2dba9649adbb2448adb82c6e8795a2a2ccb6154f9a36824b75897f1",
+        "infrared": "83b0a468d33faf17c248fbc91f69cb1b1183c0ffa3e158732e9ef424bce3cdc6"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 95.85798816568047,
+        "MSR_percent": 62.327416173570015
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 96.44970414201184,
+        "MSR_percent": 62.214708368554525
+      }
+    },
+    "yellowcar": {
+      "frames": 597,
+      "sha256": {
+        "prediction": "eda5dfc4fe85dda074cc95d964a69b6fecd454e9f2adcfb9c4fc18085cc1069a",
+        "visible": "6933b73bc1df49341a6c944f76463f6207f49be21d7522788d5a06c19440bc43",
+        "infrared": "327a35ba856fcb817b9a4b2f1e5a0dc163d8a2d95fef00a07f51b114cbaa706b"
+      },
+      "rounded_reference_protocol": {
+        "MPR_percent": 99.49748743718592,
+        "MSR_percent": 83.22565206987316
+      },
+      "raw_float_diagnostic": {
+        "MPR_percent": 99.49748743718592,
+        "MSR_percent": 83.26553401930286
+      }
+    }
+  },
+  "frames": 116649,
+  "sequence_count": 234,
+  "rounded_reference_protocol": {
+    "MPR_percent": 86.96612782563948,
+    "MSR_percent": 64.0272802185178,
+    "precision_curve": [
+      0.014236839397862125,
+      0.118540342812221,
+      0.32363009173117824,
+      0.5083760910068427,
+      0.6183715930975822,
+      0.6896419839363181,
+      0.7303796051301421,
+      0.7606775895523376,
+      0.7809177055644713,
+      0.7969766795237369,
+      0.8097608950010136,
+      0.8205460916094838,
+      0.8287797885329484,
+      0.835957463493154,
+      0.841894272430997,
+      0.8479821594653798,
+      0.8531817491125887,
+      0.8577831587863812,
+      0.8624214721193986,
+      0.866348409470517,
+      0.8696612782563947,
+      0.8727108229683713,
+      0.8753085609012269,
+      0.8779586019098513,
+      0.8807246902608857,
+      0.8831004707762986,
+      0.8851880577446183,
+      0.8872772723153876,
+      0.8893516024735163,
+      0.8911672399526686,
+      0.8929327954596397,
+      0.8948136997466352,
+      0.8963102505312532,
+      0.8976504691672821,
+      0.8991044648514226,
+      0.900251253923564,
+      0.901470459366078,
+      0.9029049195437872,
+      0.9046454760371605,
+      0.9060922994002654,
+      0.9075868215956435,
+      0.9089504648324245,
+      0.9100285581292444,
+      0.9111130898061771,
+      0.9122840105056164,
+      0.913538817655314,
+      0.9147599744853322,
+      0.915805237153959,
+      0.9166946978950586,
+      0.9175362608035246,
+      0.9184947893817325
+    ],
+    "success_curve": [
+      0.9056237117144118,
+      0.899155926552577,
+      0.8928641190445321,
+      0.8860234129889158,
+      0.8791753919000479,
+      0.8726224304144887,
+      0.864006802518423,
+      0.8521372141308672,
+      0.8391467071982512,
+      0.8211109376147983,
+      0.7968414229444931,
+      0.7630426312331118,
+      0.7184651248981376,
+      0.6624188167477358,
+      0.5895262230032955,
+      0.49111051914428594,
+      0.36438819002216793,
+      0.22357588205499815,
+      0.10178417495561994,
+      0.022709206807579988,
+      0.0
+    ]
+  },
+  "raw_float_diagnostic": {
+    "MPR_percent": 86.9952499938756,
+    "MSR_percent": 63.96533954454746,
+    "precision_curve": [
+      0.0038449481948896985,
+      0.1191634603522083,
+      0.33664121685846454,
+      0.512791192304093,
+      0.6247282291582348,
+      0.6903690454291228,
+      0.7337205851314597,
+      0.7617151094396855,
+      0.7819283709491406,
+      0.7979361888157527,
+      0.8104470816194971,
+      0.8206961209370693,
+      0.8295001804201271,
+      0.8361676767404238,
+      0.8421568267158276,
+      0.8482044249959947,
+      0.8535478548056525,
+      0.8579926234297116,
+      0.8627390074823927,
+      0.8665415463079854,
+      0.869952499938756,
+      0.872896950466234,
+      0.8753612118805851,
+      0.8781409267967358,
+      0.880883689745153,
+      0.8832501223292388,
+      0.8852863336270462,
+      0.8873908884197512,
+      0.8895071647313881,
+      0.8912051587356702,
+      0.893130532888998,
+      0.8948828527472139,
+      0.8964479384796029,
+      0.8977413566011677,
+      0.8992505923910028,
+      0.9002530013654392,
+      0.9015428293273875,
+      0.9031673916306265,
+      0.9047074976253865,
+      0.9060996470219981,
+      0.9075393311453747,
+      0.908838639120526,
+      0.9101056424147609,
+      0.9110389703305132,
+      0.9122245411969215,
+      0.9135446447672311,
+      0.914877268500153,
+      0.9159328787587141,
+      0.9166928107921503,
+      0.9174757509953873,
+      0.918543486042745
+    ],
+    "success_curve": [
+      0.9064578307377635,
+      0.8991612453452797,
+      0.8928449847746639,
+      0.886011636855396,
+      0.8791028462448622,
+      0.8727140631625753,
+      0.8640088450631939,
+      0.8524387665476217,
+      0.8391101301059377,
+      0.8210045359667626,
+      0.7969294136095529,
+      0.7629610592040649,
+      0.7183378159064729,
+      0.6626668141127268,
+      0.5896448621844567,
+      0.49208129771948794,
+      0.3639786271208096,
+      0.2189135484746777,
+      0.09620492171855574,
+      0.01814805950010396,
+      0.0
+    ]
+  }
+}

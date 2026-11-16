@@ -1,4 +1,10 @@
-> 本地毕业设计改动：见 [SS 表征约束实现与改动说明](README_SS.md)。
+## 本地毕业设计改动索引
+
+- [仓库总 README](../README.md)：各阶段改动说明及实验资料入口。
+- [SS 初版：表征约束实现与改动说明](README_SS.md)。
+- [SS 消融：search-only、逐层验证与收敛日志](README_SS_ABLATION.md)。
+
+以下为原 SEATrack 项目说明。
 
 
 # 🌊 [CVPR 2026 Oral] SEATrack: Simple, Efficient, and Adaptive Multimodal Tracker

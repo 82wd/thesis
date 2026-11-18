@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280px" height="720px" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0,0 7,3.5 0,7" fill="#202629"/></marker></defs>
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF"/>
+<g id="title" data-pptx-bounds="60 38 1160 90" fill="#202629"><text x="60" y="62" font-size="16">想法 3 / 针对 SS 不稳定：缩小约束范围，定位有效层</text><text x="60" y="111" font-size="32">Search-only + 逐层消融：约束哪里、在哪层约束？</text></g>
+<g id="region" data-pptx-bounds="60 148 1160 190" fill="#202629"><text x="60" y="171" font-size="20" font-weight="bold">a  区域选择：只对搜索图像施加 SS，模板仍参与原跟踪前向</text>
+<g id="features"><rect x="60" y="197" width="225" height="114" fill="#F3F4F4"/><text x="172" y="227" font-size="20" text-anchor="middle">选定层两路入口特征</text><text x="172" y="260" font-size="16" text-anchor="middle">F_rgb / F_x：[B,320,768]</text><text x="172" y="288" font-size="16" text-anchor="middle">template 64 + search 256</text></g>
+<line x1="285" y1="223" x2="344" y2="223" stroke="#202629" marker-end="url(#a)"/><line x1="285" y1="286" x2="344" y2="286" stroke="#202629" marker-end="url(#a)"/>
+<g id="template"><rect x="354" y="197" width="258" height="51" fill="#F3F4F4"/><text x="483" y="228" font-size="16" text-anchor="middle">Template → 继续前向；SS 权重 0</text></g>
+<g id="search"><rect x="354" y="263" width="258" height="51" fill="#F3F4F4" stroke="#356E73"/><text x="483" y="295" font-size="20" text-anchor="middle">Search → 归一化 U</text></g>
+<line x1="612" y1="289" x2="664" y2="289" stroke="#202629" marker-end="url(#a)"/>
+<g id="ss"><rect x="674" y="263" width="258" height="51" fill="#F3F4F4" stroke="#356E73"/><text x="803" y="295" font-size="20" text-anchor="middle">S_rgb / S_x = U × Uᵀ</text></g>
+<line x1="932" y1="289" x2="984" y2="289" stroke="#202629" marker-end="url(#a)"/>
+<g id="mse"><rect x="994" y="263" width="226" height="51" fill="#F3F4F4" stroke="#356E73"/><text x="1107" y="295" font-size="20" text-anchor="middle">L_search = MSE</text></g>
+<text x="674" y="223" font-size="16">两路主干照常前向；下方仅展示训练辅助损失。</text>
+</g>
+<g id="layers" data-pptx-bounds="60 362 1160 130" fill="#202629"><text x="60" y="385" font-size="20" font-weight="bold">b  层位置选择：多层方案与单层方案分别训练、分别评估</text>
+<g id="l3"><rect x="60" y="409" width="150" height="49" fill="#F3F4F4" stroke="#356E73"/><text x="135" y="440" font-size="20" text-anchor="middle">block 3 入口</text></g>
+<line x1="210" y1="433" x2="272" y2="433" stroke="#202629" marker-end="url(#a)"/>
+<g id="l5"><rect x="282" y="409" width="150" height="49" fill="#F3F4F4" stroke="#356E73"/><text x="357" y="440" font-size="20" text-anchor="middle">block 5 入口</text></g>
+<line x1="432" y1="433" x2="494" y2="433" stroke="#202629" marker-end="url(#a)"/>
+<g id="l7"><rect x="504" y="409" width="150" height="49" fill="#F3F4F4" stroke="#356E73"/><text x="579" y="440" font-size="20" text-anchor="middle">block 7 入口</text></g>
+<line x1="654" y1="433" x2="716" y2="433" stroke="#202629" marker-end="url(#a)"/>
+<g id="l9"><rect x="726" y="409" width="150" height="49" fill="#F3F4F4" stroke="#356E73"/><text x="801" y="440" font-size="20" text-anchor="middle">block 9 入口</text></g>
+<line x1="876" y1="433" x2="938" y2="433" stroke="#202629" marker-end="url(#a)"/>
+<g id="l11"><rect x="948" y="409" width="160" height="49" fill="#F3F4F4" stroke="#356E73"/><text x="1028" y="440" font-size="20" text-anchor="middle">block 11 入口</text></g>
+<text x="60" y="486" font-size="16">零基索引；箭头表示编码器深度方向，中间层省略。多层：取五处损失均值；单层：每次只启用其中一处。</text></g>
+<g id="objective" data-pptx-bounds="60 522 550 129" fill="#202629"><text x="60" y="545" font-size="20" font-weight="bold">c  控制约束强度，避免混淆区域与权重</text><text x="60" y="579" font-size="20">L_total = L_tracking + 0.05 × mean(L_search)</text><text x="60" y="611" font-size="16">0.05 = 原总系数 0.1 × 原搜索权重 0.5；不把搜索项翻倍。</text><text x="60" y="640" font-size="16">补充半权重对照，区分“去掉区域”与“减弱总约束”的影响。</text></g>
+<g id="validation" data-pptx-bounds="660 522 560 129" fill="#202629"><text x="660" y="545" font-size="20" font-weight="bold">d  记录收敛动态，并用跟踪指标判断收益</text><text x="660" y="579" font-size="16">先在 LasHeR 验证：逐层 SS 的训练／验证曲线 + 跟踪指标。</text><text x="660" y="611" font-size="16">固定初始化、采样量和更新次数；用验证集选方案后统一测试。</text><text x="660" y="640" font-size="16">SS loss 下降只说明约束被满足，不能单独证明跟踪性能改善。</text></g>
+<g id="footer" data-pptx-bounds="60 668 1160 26" fill="#626C70" font-size="16"><text x="60" y="687">依据 11.12 想法与现有损失接入逻辑重绘 · 单层与 search-only 的最终效果待结果核验</text><text x="1170" y="687">05</text></g>
+</svg>

@@ -1,0 +1,643 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "efa0d01ffae79260dc6b2a6424f7eca18c16f32628b5d6b23b074dd61dbdaaca",
+    "file_count": 8,
+    "files": [
+      {
+        "file": "01_cover.svg",
+        "sha256": "651e117fe7457790ead9b8efa77fece5c25e5cc68de9d2a20e1fcea8060971da"
+      },
+      {
+        "file": "02_routes.svg",
+        "sha256": "e74d3f41036f23129c78b675cc72e5e7da79a7a26f11b302eda9a77dd189eba7"
+      },
+      {
+        "file": "03_ss.svg",
+        "sha256": "fec7e697a713004668f2b0f06abe0937cd5d5c1cbac74a785a3d050c630e90a6"
+      },
+      {
+        "file": "04_frequency.svg",
+        "sha256": "b99045e433f7e6abd6fa8e3831d043456e7540f430f02ba308cc5035ed61a5e9"
+      },
+      {
+        "file": "05_ss_ablation.svg",
+        "sha256": "5a3d0aaf2e486c281dd2ede42dc0825cfe39a60dde5998be658bf123ae8eeea3"
+      },
+      {
+        "file": "06_evidence.svg",
+        "sha256": "21f08f2edcd255b15a15e46be39dfd81cec1f90793c4b0543d74842121d76143"
+      },
+      {
+        "file": "07_remedies.svg",
+        "sha256": "d80a4968356cbcb050647fbaa7095d4389d3e200410f63ec03435b5873faa7f5"
+      },
+      {
+        "file": "08_next.svg",
+        "sha256": "92c770ac3040b713690825b1ef6062c97e7a583f66de09308425104c5597d873"
+      }
+    ]
+  },
+  "summary": {
+    "total": 8,
+    "passed": 4,
+    "warnings": 4,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 8,
+      "issues": [
+        {
+          "file": "02_routes.svg",
+          "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+        },
+        {
+          "file": "02_routes.svg",
+          "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+        },
+        {
+          "file": "03_ss.svg",
+          "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+        },
+        {
+          "file": "03_ss.svg",
+          "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+        },
+        {
+          "file": "04_frequency.svg",
+          "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+        },
+        {
+          "file": "04_frequency.svg",
+          "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+        },
+        {
+          "file": "05_ss_ablation.svg",
+          "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+        },
+        {
+          "file": "05_ss_ablation.svg",
+          "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+        }
+      ]
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {},
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 8,
+    "totals": {
+      "text_elements": 189,
+      "image_placements": 0,
+      "icons": 0,
+      "svg_geometry_elements": 85,
+      "preset_shapes": 0,
+      "page_frame_elements": 8,
+      "marker_uses": 30,
+      "inline_emphasis_runs": 0,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 0,
+      "icons": 0,
+      "presets": 0,
+      "charts": 0,
+      "tables": 0,
+      "formulas": 0,
+      "inline_emphasis_runs": 0,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "relationship_pages": 7,
+    "geometry_elements": {
+      "circle": 1,
+      "ellipse": 0,
+      "line": 35,
+      "path": 0,
+      "polygon": 0,
+      "polyline": 0,
+      "rect": 49
+    },
+    "preset_names": {},
+    "native_objects": {
+      "chart": 0,
+      "formula_block": 0,
+      "formula_inline": 0,
+      "other": 0,
+      "table": 0
+    },
+    "image_page_max_frame_share_range": []
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_cover.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/01_cover.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 10,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 10,
+        "tspan_elements": 4
+      },
+      "passed": true,
+      "source_sha256": "651e117fe7457790ead9b8efa77fece5c25e5cc68de9d2a20e1fcea8060971da"
+    },
+    {
+      "file": "02_routes.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/02_routes.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export.",
+        "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 31,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 14,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 8,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 1,
+              "mid": 0,
+              "end": 8
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 31,
+        "tspan_elements": 12
+      },
+      "passed": true,
+      "source_sha256": "e74d3f41036f23129c78b675cc72e5e7da79a7a26f11b302eda9a77dd189eba7"
+    },
+    {
+      "file": "03_ss.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/03_ss.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export.",
+        "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 29,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 8,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 7,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 7
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 29,
+        "tspan_elements": 6
+      },
+      "passed": true,
+      "source_sha256": "fec7e697a713004668f2b0f06abe0937cd5d5c1cbac74a785a3d050c630e90a6"
+    },
+    {
+      "file": "04_frequency.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/04_frequency.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export.",
+        "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 46,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 9,
+              "circle": 1,
+              "ellipse": 0,
+              "line": 7,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 6
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 46,
+        "tspan_elements": 5
+      },
+      "passed": true,
+      "source_sha256": "b99045e433f7e6abd6fa8e3831d043456e7540f430f02ba308cc5035ed61a5e9"
+    },
+    {
+      "file": "05_ss_ablation.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/05_ss_ablation.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export.",
+        "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 28,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 11,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 8,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 8
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 28,
+        "tspan_elements": 0
+      },
+      "passed": true,
+      "source_sha256": "5a3d0aaf2e486c281dd2ede42dc0825cfe39a60dde5998be658bf123ae8eeea3"
+    },
+    {
+      "file": "06_evidence.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/06_evidence.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 19,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 19,
+        "tspan_elements": 0
+      },
+      "passed": true,
+      "source_sha256": "21f08f2edcd255b15a15e46be39dfd81cec1f90793c4b0543d74842121d76143"
+    },
+    {
+      "file": "07_remedies.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/07_remedies.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 13,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 11
+      },
+      "passed": true,
+      "source_sha256": "d80a4968356cbcb050647fbaa7095d4389d3e200410f63ec03435b5873faa7f5"
+    },
+    {
+      "file": "08_next.svg",
+      "path": "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output/08_next.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 13,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial, PingFang SC, sans-serif"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 6
+      },
+      "passed": true,
+      "source_sha256": "92c770ac3040b713690825b1ef6062c97e7a583f66de09308425104c5597d873"
+    }
+  ]
+}

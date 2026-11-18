@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF" />
+<g id="title" data-pptx-bounds="60 43 1160 95"><text x="60" y="66" font-size="18" fill="#356E73">实现 / 想法 1</text><text x="60" y="119" font-size="38" fill="#202629">SS：对齐关系，而非逐元素特征</text></g>
+<g id="pipeline" data-pptx-bounds="60 175 1160 210"><line x1="310" y1="255" x2="350" y2="255" stroke="#356E73" stroke-width="3" /><line x1="600" y1="255" x2="640" y2="255" stroke="#356E73" stroke-width="3" /><line x1="890" y1="255" x2="930" y2="255" stroke="#356E73" stroke-width="3" />
+<rect x="60" y="187" width="250" height="145" fill="#F3F4F4" /><rect x="350" y="187" width="250" height="145" fill="#F3F4F4" /><rect x="640" y="187" width="250" height="145" fill="#F3F4F4" /><rect x="930" y="187" width="290" height="145" fill="#356E73" />
+<text x="80" y="224" font-size="18" fill="#626C70">01 两路区域特征</text><text x="80" y="271" font-size="24" fill="#202629">RGB / X</text><text x="80" y="310" font-size="18" fill="#626C70">template、search 分开</text>
+<text x="370" y="224" font-size="18" fill="#626C70">02 通道归一化</text><text x="370" y="271" font-size="24" fill="#202629">每个 patch → U</text><text x="370" y="310" font-size="18" fill="#626C70">FP32，保留梯度</text>
+<text x="660" y="224" font-size="18" fill="#626C70">03 两两余弦关系</text><text x="660" y="271" font-size="24" fill="#202629">S = U × Uᵀ</text><text x="660" y="310" font-size="18" fill="#626C70">每个模态内部各算一次</text>
+<text x="950" y="224" font-size="18" fill="#FFFFFF">04 跨模态对齐</text><text x="950" y="271" font-size="24" fill="#FFFFFF">MSE：S_rgb 与 S_x</text><text x="950" y="310" font-size="18" fill="#FFFFFF">加入原跟踪损失</text>
+<text x="60" y="373" font-size="18" fill="#626C70">完整 pairwise 矩阵：模板 64×64；搜索 256×256；不计算模板与搜索之间的 pair。</text></g>
+<g id="objective" data-pptx-bounds="60 409 690 202"><text x="60" y="442" font-size="28" font-weight="bold" fill="#202629">初版训练目标</text><text x="60" y="487" font-size="24" fill="#303638"><tspan x="60" dy="0">每层：0.5 × 模板 MSE + 0.5 × 搜索 MSE</tspan><tspan x="60" dy="37">选中层取平均，再乘总权重 0.1</tspan><tspan x="60" dy="37">L_total = L_tracking + 0.1 × L_ss</tspan></text></g>
+<g id="implementation" data-pptx-bounds="790 409 430 210"><text x="790" y="442" font-size="28" font-weight="bold" fill="#202629">接入与开销</text><text x="790" y="487" font-size="24" fill="#303638"><tspan x="790" dy="0">block 输入索引 3 / 5 / 7 / 9 / 11</tspan><tspan x="790" dy="37">无新增参数；优化上游 PEFT</tspan><tspan x="790" dy="37">普通推理不计算 SS</tspan></text><text x="790" y="609" font-size="18" fill="#626C70">索引从 0 开始；当前版本不使用 anchor</text></g>
+<g id="footer" data-pptx-bounds="60 665 1160 30" fill="#626C70" font-size="18"><text x="60" y="686">来源：README_SS.md；semantic_alignment.py；vit_ci.py</text><text x="1170" y="686">03</text></g>
+</svg>

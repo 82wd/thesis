@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><polygon points="0,0 8,4 0,8" fill="#626C70"/></marker></defs>
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF"/>
+<g id="title" data-pptx-bounds="60 40 1160 100"><text x="60" y="66" font-size="16" fill="#626C70">原论文图 2 / 简化重绘与改动定位</text><text x="60" y="119" font-size="32" fill="#202629">原模型：双流匹配、层内交互、末端相加</text></g>
+<g id="architecture" data-pptx-bounds="60 150 986 255"><g>
+<rect x="60.00" y="188.50" width="127.50" height="61.20" rx="6.80" fill="#F3F4F4" stroke="#356E73" stroke-width="1.70"/><text x="123.75" y="214.00" font-size="20" text-anchor="middle" fill="#356E73">RGB</text><text x="123.75" y="236.10" font-size="16" text-anchor="middle" fill="#303638">模板 + search</text>
+<rect x="60.00" y="307.50" width="127.50" height="61.20" rx="6.80" fill="#F3F4F4" stroke="#9A603E" stroke-width="1.70"/><text x="123.75" y="333.00" font-size="20" text-anchor="middle" fill="#9A603E">X 模态</text><text x="123.75" y="355.10" font-size="16" text-anchor="middle" fill="#303638">模板 + search</text>
+<line x1="189.20" y1="219.10" x2="225.75" y2="219.10" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/><line x1="189.20" y1="338.10" x2="225.75" y2="338.10" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/>
+<rect x="230.00" y="188.50" width="127.50" height="61.20" fill="#F3F4F4"/><rect x="230.00" y="307.50" width="127.50" height="61.20" fill="#F3F4F4"/><text x="293.75" y="214.00" font-size="16" text-anchor="middle" fill="#202629"><tspan x="293.75" dy="0.00">Patch Embedding</tspan><tspan x="293.75" dy="22.95">+ 拼接 tokens</tspan></text><text x="293.75" y="333.00" font-size="16" text-anchor="middle" fill="#202629"><tspan x="293.75" dy="0.00">Patch Embedding</tspan><tspan x="293.75" dy="22.95">+ 拼接 tokens</tspan></text><text x="293.75" y="283.70" font-size="16" text-anchor="middle" fill="#626C70">共享权重</text>
+<line x1="359.20" y1="219.10" x2="412.75" y2="219.10" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/><line x1="359.20" y1="338.10" x2="412.75" y2="338.10" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/>
+<rect x="417.00" y="163.00" width="238.00" height="225.25" rx="10.20" fill="#F3F4F4" stroke="#D7DDDF"/><text x="536.00" y="189.35" font-size="20" text-anchor="middle" fill="#202629">堆叠共享 ViT 编码器</text>
+<rect x="438.25" y="203.80" width="195.50" height="36.55" fill="#FFFFFF" stroke="#356E73"/><text x="536.00" y="228.45" font-size="16" text-anchor="middle" fill="#356E73">RGB tokens</text>
+<rect x="438.25" y="320.25" width="195.50" height="36.55" fill="#FFFFFF" stroke="#9A603E"/><text x="536.00" y="344.90" font-size="16" text-anchor="middle" fill="#9A603E">X tokens</text>
+<line x1="536.00" y1="244.60" x2="536.00" y2="311.75" stroke="#626C70" stroke-width="1.70" marker-start="url(#arrow)" marker-end="url(#arrow)"/><rect x="451.85" y="262.45" width="168.30" height="35.70" fill="#F3F4F4"/><text x="536.00" y="285.40" font-size="16" text-anchor="middle" fill="#202629">AMG-LoRA + HMoE</text><text x="536.00" y="378.90" font-size="16" text-anchor="middle" fill="#626C70">每隔 2 层嵌入增强模块</text>
+<line x1="656.70" y1="219.10" x2="693.25" y2="219.10" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/><line x1="656.70" y1="338.10" x2="693.25" y2="338.10" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/>
+<rect x="697.50" y="196.15" width="127.50" height="45.90" fill="#FFFFFF" stroke="#356E73"/><text x="761.25" y="225.90" font-size="16" text-anchor="middle" fill="#356E73">RGB search</text><rect x="697.50" y="315.15" width="127.50" height="45.90" fill="#FFFFFF" stroke="#9A603E"/><text x="761.25" y="344.90" font-size="16" text-anchor="middle" fill="#9A603E">X search</text>
+<line x1="827.55" y1="219.10" x2="870.90" y2="264.15" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/><line x1="827.55" y1="338.10" x2="870.90" y2="293.05" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/>
+<circle cx="888.75" cy="278.60" r="21.25" fill="#FFFFFF" stroke="#202629" stroke-width="1.70"/><text x="888.75" y="286.25" font-size="24" text-anchor="middle" fill="#202629">+</text><text x="888.75" y="400" font-size="16" text-anchor="middle" fill="#9A603E">频段融合替换处</text>
+<line x1="911.70" y1="278.60" x2="944.00" y2="278.60" stroke="#626C70" stroke-width="1.70" marker-end="url(#arrow)"/><rect x="948.25" y="248.85" width="97.75" height="59.50" fill="#202629"/><text x="996.70" y="273.50" font-size="16" text-anchor="middle" fill="#FFFFFF"><tspan x="996.70" dy="0.00">原预测头</tspan><tspan x="996.70" dy="22.95">输出目标框</tspan></text>
+<text x="689.00" y="171.50" font-size="16" fill="#626C70">仅保留末层 search</text>
+</g></g>
+<g id="parameter-legend" data-pptx-bounds="1070 160 150 245">
+<text x="1070" y="185" font-size="20" font-weight="bold" fill="#356E73">可训练部分</text><text x="1070" y="218" font-size="16" fill="#303638"><tspan x="1070" dy="0">K / V 的 LoRA</tspan><tspan x="1070" dy="28">AMG 引导系数</tspan><tspan x="1070" dy="28">HMoE 参数</tspan></text>
+<line x1="1070" y1="296" x2="1220" y2="296" stroke="#D7DDDF"/><text x="1070" y="328" font-size="20" font-weight="bold" fill="#202629">冻结的基础模型</text><text x="1070" y="360" font-size="16" fill="#303638"><tspan x="1070" dy="0">Patch Embedding</tspan><tspan x="1070" dy="25">基础 ViT / 预测头</tspan></text>
+</g>
+<g id="enhanced-block" data-pptx-bounds="60 422 570 230">
+<text x="60" y="449" font-size="24" font-weight="bold" fill="#202629">增强 block：四次子层残差更新</text>
+<rect x="60" y="477" width="120" height="77" fill="#F3F4F4"/><text x="120" y="503" font-size="16" text-anchor="middle" fill="#202629"><tspan x="120" dy="0">LN → Attention</tspan><tspan x="120" dy="22">+ AMG-LoRA</tspan><tspan x="120" dy="22">+ 输入残差</tspan></text>
+<line x1="183" y1="515" x2="203" y2="515" stroke="#626C70" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="210" y="477" width="120" height="77" fill="#F3F4F4"/><text x="270" y="512" font-size="16" text-anchor="middle" fill="#202629"><tspan x="270" dy="0">HMoE</tspan><tspan x="270" dy="24">+ 输入残差</tspan></text>
+<line x1="333" y1="515" x2="353" y2="515" stroke="#626C70" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="360" y="477" width="120" height="77" fill="#F3F4F4"/><text x="420" y="512" font-size="16" text-anchor="middle" fill="#202629"><tspan x="420" dy="0">LN → MLP</tspan><tspan x="420" dy="24">+ 输入残差</tspan></text>
+<line x1="483" y1="515" x2="503" y2="515" stroke="#626C70" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="510" y="477" width="120" height="77" fill="#F3F4F4"/><text x="570" y="512" font-size="16" text-anchor="middle" fill="#202629"><tspan x="570" dy="0">HMoE</tspan><tspan x="570" dy="24">+ 输入残差</tspan></text>
+<text x="60" y="589" font-size="16" fill="#303638"><tspan x="60" dy="0">两路独立匹配、共享基础权重；HMoE 是跨模态交互支路。</tspan><tspan x="60" dy="26">预测头输出中心分数图、尺寸图和偏移图，再解码为目标框。</tspan><tspan x="60" dy="26" fill="#356E73">SS 约束 block 入口；频段融合替换最后的两路相加。</tspan></text>
+</g>
+<g id="mechanisms" data-pptx-bounds="665 422 555 238">
+<text x="665" y="449" font-size="20" font-weight="bold" fill="#202629">AMG：在 softmax 前互相引导 logits</text>
+<text x="665" y="482" font-size="16" fill="#303638"><tspan x="665" dy="0">A′_rgb = A_rgb + w_X × (A_X − A_rgb)；X 路同理</tspan><tspan x="665" dy="25">softmax(A′) × 本路 V；不是跨模态 Q/K 直接交叉注意力。</tspan><tspan x="665" dy="25">w 是可训练标量，不是逐帧由另一个网络预测的权重。</tspan></text>
+<text x="665" y="571" font-size="20" font-weight="bold" fill="#202629">HMoE：分层软路由完成全局信息混合</text>
+<text x="665" y="601" font-size="16" fill="#303638"><tspan x="665" dy="0">跨模态同类 tokens 拼接 → 子 token 路由 → 低秩专家</tspan><tspan x="665" dy="24">→ token 聚合 → 拆回两路；template / search 分开处理。</tspan><tspan x="665" dy="24">代码：注意力后 4 专家、MLP 后 8 专家，两模块参数独立。</tspan></text>
+</g>
+<g id="footer" data-pptx-bounds="60 665 1160 30" font-size="16" fill="#626C70"><text x="60" y="686">依据 SEATrack 原论文 Fig. 2、§3.1–3.3 与本地实现重绘；本图不是原论文原图。</text><text x="1170" y="686">02</text></g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280px" height="720px" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0,0 7,3.5 0,7" fill="#202629" /></marker></defs>
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF" />
+<g id="title" data-pptx-bounds="60 38 1160 90" fill="#202629"><text x="60" y="62" font-size="16">想法 2 / 在最终搜索特征上替换原加法融合</text><text x="60" y="111" font-size="32">频段融合：按空间频率选择两种模态的信息</text></g>
+<g id="frequency-flow" data-pptx-bounds="60 145 1160 240" fill="#202629"><text x="60" y="168" font-size="20" font-weight="bold">a  双路频谱 → 分频混合 → 空间特征</text>
+<g id="rgb-feature"><rect x="60" y="193" width="185" height="65" fill="#F3F4F4" /><text x="152" y="220" font-size="20" text-anchor="middle">RGB 搜索特征</text><text x="152" y="245" font-size="16" text-anchor="middle">[B,768,16,16]</text></g>
+<g id="x-feature"><rect x="60" y="288" width="185" height="65" fill="#F3F4F4" /><text x="152" y="315" font-size="20" text-anchor="middle">X 搜索特征</text><text x="152" y="340" font-size="16" text-anchor="middle">[B,768,16,16]</text></g>
+<line x1="245" y1="225" x2="292" y2="225" stroke="#202629" marker-end="url(#a)" /><line x1="245" y1="320" x2="292" y2="320" stroke="#202629" marker-end="url(#a)" />
+<g id="rgb-fft"><rect x="302" y="193" width="170" height="65" fill="#F3F4F4" stroke="#356E73" /><text x="387" y="220" font-size="20" text-anchor="middle">rFFT2 → A</text><text x="387" y="245" font-size="16" text-anchor="middle">复数频谱</text></g>
+<g id="x-fft"><rect x="302" y="288" width="170" height="65" fill="#F3F4F4" stroke="#356E73" /><text x="387" y="315" font-size="20" text-anchor="middle">rFFT2 → B</text><text x="387" y="340" font-size="16" text-anchor="middle">复数频谱</text></g>
+<line x1="472" y1="225" x2="528" y2="225" stroke="#202629" marker-end="url(#a)" /><line x1="472" y1="320" x2="528" y2="320" stroke="#202629" marker-end="url(#a)" />
+<g id="band-mixture"><rect x="538" y="193" width="295" height="160" fill="#F3F4F4" stroke="#356E73" stroke-width="2" /><text x="685" y="222" font-size="20" text-anchor="middle">按频段设置 RGB 权重 w</text><text x="685" y="256" font-size="16" text-anchor="middle">低频：w_low；高频：w_high</text><text x="685" y="294" font-size="20" text-anchor="middle">C = w A + (1 − w) B</text><text x="685" y="329" font-size="16" text-anchor="middle">保留复数信息：幅度与相位共同混合</text></g>
+<line x1="833" y1="273" x2="878" y2="273" stroke="#202629" marker-end="url(#a)" />
+<g id="inverse"><rect x="888" y="193" width="150" height="160" fill="#F3F4F4" stroke="#356E73" /><text x="963" y="235" font-size="20" text-anchor="middle">irFFT2</text><text x="963" y="271" font-size="20" text-anchor="middle">× gain</text><text x="963" y="311" font-size="16" text-anchor="middle">还原空间特征</text><text x="963" y="337" font-size="16" text-anchor="middle">转回输入 dtype</text></g>
+<line x1="1038" y1="273" x2="1080" y2="273" stroke="#202629" marker-end="url(#a)" />
+<g id="head"><rect x="1090" y="222" width="130" height="103" fill="#F3F4F4" /><text x="1155" y="260" font-size="20" text-anchor="middle">原预测头</text><text x="1155" y="294" font-size="16" text-anchor="middle">中心·尺寸·偏移</text></g>
+<text x="60" y="376" font-size="16">入口：最终 norm 与 token 恢复之后；两模态特征已在编码器中交互，模板不直接参与此处融合。</text></g>
+<g id="mask" data-pptx-bounds="60 410 535 235" fill="#202629"><text x="60" y="432" font-size="20" font-weight="bold">b  低／高频划分</text>
+<g id="mask-diagram"><rect x="60" y="453" width="145" height="145" fill="#F3F4F4" stroke="#D7DDDF" /><circle cx="132.5" cy="525.5" r="37" fill="#FFFFFF" stroke="#356E73" stroke-width="2" /><text x="132.5" y="532" font-size="16" text-anchor="middle">低频</text><text x="132.5" y="582" font-size="16" text-anchor="middle">高频</text></g>
+<text font-size="16" x="230" y="475">径向阈值：√(fx² + fy²) ≤ 0.25</text><text font-size="16" x="230" y="504">单位：cycles / grid；高频为其补集</text><text font-size="16" x="230" y="533">rFFT 张量：[B,768,16,9]</text><text font-size="16" x="230" y="562">FP32 运算；可微；无新增可学习参数</text><text font-size="16" x="230" y="591">网格大小随 search size / stride 改变</text><text x="60" y="635" font-size="16">左图为中心化频率示意，并非 rFFT 的实际存储布局或测量结果。</text></g>
+<g id="controls" data-pptx-bounds="650 410 570 235" fill="#202629"><text x="650" y="432" font-size="20" font-weight="bold">c  四组对照与验证边界</text>
+<text x="650" y="471" font-size="16">融合方式</text><text x="940" y="471" font-size="16">w_low / w_high</text><text x="1155" y="471" font-size="16">gain</text>
+<line x1="650" y1="484" x2="1220" y2="484" stroke="#D7DDDF" />
+<text x="650" y="512" font-size="16">原相加（模块关闭）</text><text x="975" y="512" font-size="16">—</text><text x="1170" y="512" font-size="16">—</text>
+<text x="650" y="542" font-size="16">等权校验（代码直接相加）</text><text x="975" y="542" font-size="16">0.5 / 0.5</text><text x="1170" y="542" font-size="16">2</text>
+<text x="650" y="572" font-size="16">RGB 低频 + X 高频</text><text x="975" y="572" font-size="16">1 / 0</text><text x="1170" y="572" font-size="16">2</text>
+<text x="650" y="602" font-size="16">X 低频 + RGB 高频</text><text x="975" y="602" font-size="16">0 / 1</text><text x="1170" y="602" font-size="16">2</text>
+<text x="650" y="635" font-size="16">同一非 SS 权重先校验等权轨迹；gain = 2 不保证 RMS 相同。</text></g>
+<g id="footer" data-pptx-bounds="60 668 1160 26" fill="#626C70" font-size="16"><text x="60" y="687">依据当前实现重绘 · 主实验关闭 SS · 硬频率截断可能引入振铃，RMS 敏感性另作对照</text><text x="1170" y="687">04</text></g>
+</svg>

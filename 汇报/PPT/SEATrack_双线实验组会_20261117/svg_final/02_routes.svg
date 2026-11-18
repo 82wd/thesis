@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280px" height="720px" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto-start-reverse"><polygon points="0,0 7,3.5 0,7" fill="#202629" /></marker></defs>
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF" />
+<g id="title" data-pptx-bounds="60 38 1160 90" fill="#202629"><text x="60" y="62" font-size="16">SEATrack / 基于原论文 Fig. 2 与实现重绘</text><text x="60" y="111" font-size="32">先定位原模型中的匹配、交互与融合</text></g>
+<g id="overview" data-pptx-bounds="60 145 1160 243" fill="#202629">
+<text x="60" y="168" font-size="20" font-weight="bold">a  整体数据流</text>
+<g id="input-rgb"><rect x="60" y="197" width="155" height="59" rx="6" fill="#F3F4F4" stroke="#D7DDDF" /><text x="137" y="222" font-size="20" text-anchor="middle">RGB</text><text x="137" y="244" font-size="16" text-anchor="middle">template + search</text></g>
+<g id="input-x"><rect x="60" y="284" width="155" height="59" rx="6" fill="#F3F4F4" stroke="#D7DDDF" /><text x="137" y="309" font-size="20" text-anchor="middle">X 模态</text><text x="137" y="331" font-size="16" text-anchor="middle">template + search</text></g>
+<line x1="215" y1="226" x2="249" y2="226" stroke="#202629" stroke-width="2" marker-end="url(#a)" /><line x1="215" y1="313" x2="249" y2="313" stroke="#202629" stroke-width="2" marker-end="url(#a)" />
+<g id="patch-embedding"><rect x="255" y="197" width="170" height="146" rx="6" fill="#F3F4F4" stroke="#D7DDDF" /><text text-anchor="middle" font-size="20" x="340" y="239">Patch Embedding</text><text text-anchor="middle" font-size="20" x="340" y="268">+ tokens 拼接</text><text x="340" y="311" font-size="16" text-anchor="middle">两路共享权重</text></g>
+<line x1="425" y1="269" x2="469" y2="269" stroke="#202629" stroke-width="2" marker-end="url(#a)" />
+<g id="encoder"><rect x="475" y="190" width="316" height="160" rx="6" fill="#FFFFFF" stroke="#202629" /><text x="633" y="219" font-size="20" text-anchor="middle">堆叠共享 ViT 编码器</text><rect x="493" y="236" width="280" height="40" fill="#F3F4F4" /><text x="633" y="262" font-size="16" text-anchor="middle">AMG-LoRA：注意力 logits 互引导</text><rect x="493" y="286" width="280" height="40" fill="#F3F4F4" /><text x="633" y="312" font-size="16" text-anchor="middle">HMoE：跨模态全局信息混合</text></g>
+<line x1="791" y1="269" x2="834" y2="269" stroke="#202629" stroke-width="2" marker-end="url(#a)" />
+<g id="search-sum"><rect x="840" y="218" width="158" height="103" rx="6" fill="#F3F4F4" stroke="#D7DDDF" /><text x="919" y="247" font-size="16" text-anchor="middle">末层两路 search</text><text x="919" y="283" font-size="20" text-anchor="middle">RGB + X</text><text x="919" y="308" font-size="16" text-anchor="middle">逐元素相加</text></g>
+<line x1="998" y1="269" x2="1039" y2="269" stroke="#202629" stroke-width="2" marker-end="url(#a)" />
+<g id="prediction-head"><rect x="1045" y="218" width="175" height="103" rx="6" fill="#F3F4F4" stroke="#D7DDDF" /><text x="1132" y="248" font-size="20" text-anchor="middle">预测头</text><text text-anchor="middle" font-size="16" x="1132" y="278">中心分数 / 尺寸 / 偏移</text><text text-anchor="middle" font-size="16" x="1132" y="303">解码为目标框</text></g>
+<text x="475" y="378" font-size="16" fill="#356E73">SS：选定 block 入口取特征</text><text x="840" y="378" font-size="16" fill="#356E73">频段融合：替换此处相加</text>
+</g>
+<g id="amg-detail" data-pptx-bounds="60 410 560 234" fill="#202629">
+<text x="60" y="435" font-size="20" font-weight="bold">b  AMG-LoRA：关系互引导，本路 V 保留</text>
+<g id="rgb-logits"><rect x="60" y="459" width="155" height="50" fill="#F3F4F4" /><text x="137" y="490" font-size="16" text-anchor="middle">RGB logits：A_rgb</text></g>
+<g id="x-logits"><rect x="465" y="459" width="155" height="50" fill="#F3F4F4" /><text x="542" y="490" font-size="16" text-anchor="middle">X logits：A_X</text></g>
+<line x1="220" y1="484" x2="458" y2="484" stroke="#202629" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)" /><text x="340" y="469" font-size="16" text-anchor="middle">可训练标量 w，双向线性引导</text>
+<text font-size="16" x="60" y="548">A′_rgb = A_rgb + w_X × (A_X − A_rgb)；X 路同理</text><text font-size="16" x="60" y="575">softmax(A′) × 本路 V → 输出投影；K / V 使用共享 LoRA。</text><text font-size="16" x="60" y="602">不是 RGB 的 Q 与 X 的 K 直接做交叉注意力。</text><text font-size="16" x="60" y="629">w 是训练得到的标量，不是另一个网络逐帧预测的权重。</text></g>
+<g id="hmoe-detail" data-pptx-bounds="660 410 560 234" fill="#202629">
+<text x="660" y="435" font-size="20" font-weight="bold">c  HMoE：跨模态 tokens 的分层软路由</text>
+<rect x="660" y="459" width="150" height="50" fill="#F3F4F4" /><text x="735" y="490" font-size="16" text-anchor="middle">子 token 路由</text><line x1="811" y1="484" x2="854" y2="484" stroke="#202629" stroke-width="1.5" marker-end="url(#a)" /><rect x="860" y="459" width="150" height="50" fill="#F3F4F4" /><text x="935" y="490" font-size="16" text-anchor="middle">低秩专家</text><line x1="1011" y1="484" x2="1054" y2="484" stroke="#202629" stroke-width="1.5" marker-end="url(#a)" /><rect x="1060" y="459" width="160" height="50" fill="#F3F4F4" /><text x="1140" y="490" font-size="16" text-anchor="middle">token 聚合</text>
+<text font-size="16" x="660" y="548">两路 template 拼接、两路 search 拼接，分别融合后拆回。</text><text font-size="16" x="660" y="575">增强层：LN/Attention → HMoE → LN/MLP → HMoE。</text><text font-size="16" x="660" y="602">四个子层分别带残差；两处 HMoE 分别为 4 / 8 专家。</text><text font-size="16" x="660" y="629">基础 ViT 与头冻结；训练 LoRA、引导系数和 HMoE。</text></g>
+<g id="footer" data-pptx-bounds="60 668 1160 26" font-size="16" fill="#202629"><text x="60" y="688">原模型每隔 2 层加入增强模块；以上为结构示意，完整细节以论文与实现为准。</text><text x="1180" y="688">02</text></g>
+</svg>

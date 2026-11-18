@@ -1,0 +1,83 @@
+{
+  "roles": {
+    "body": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 20.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 4.7,
+      "latin_chars_per_100px": 10.1,
+      "caps_chars_per_100px": 7.9,
+      "digits_chars_per_100px": 8.5,
+      "citation_chars_per_100px": 9.8,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": {
+        "px": 854.9,
+        "slide": "P04",
+        "text": "输入[B,256,768]恢复[B,768,16,16]，实数FFT频谱[B,…"
+      }
+    },
+    "title": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 32.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 2.9,
+      "latin_chars_per_100px": 6.3,
+      "caps_chars_per_100px": 4.9,
+      "digits_chars_per_100px": 5.3,
+      "citation_chars_per_100px": 6.2,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": {
+        "px": 629.5,
+        "slide": "P04",
+        "text": "频段融合：在末层 search 特征上替换相加"
+      }
+    },
+    "subtitle": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 24.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 3.9,
+      "latin_chars_per_100px": 8.4,
+      "caps_chars_per_100px": 6.5,
+      "digits_chars_per_100px": 7.1,
+      "citation_chars_per_100px": 8.2,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": {
+        "px": 577.6,
+        "slide": "P01",
+        "text": "SS 与频段融合分线验证，先解释结果再设计验证。"
+      }
+    },
+    "annotation": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 16.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 5.9,
+      "latin_chars_per_100px": 12.6,
+      "caps_chars_per_100px": 9.8,
+      "digits_chars_per_100px": 10.6,
+      "citation_chars_per_100px": 12.3,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": null
+    },
+    "display": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 52.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 1.8,
+      "latin_chars_per_100px": 3.9,
+      "caps_chars_per_100px": 3.0,
+      "digits_chars_per_100px": 3.3,
+      "citation_chars_per_100px": 3.8,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": null
+    }
+  },
+  "script_samples": {},
+  "source": "spec_lock.md",
+  "generated_at": "2026-11-17T06:54:41Z",
+  "notes": [
+    "role display (52px, at least twice body) has no display_family and uses body_family; declare display_family if it is display type",
+    "every role is measured at normal weight; recalibrate a role realized as bold deck-wide with --role NAME:FAMILY:SIZE:bold: bold widens Latin and digits about 7%, while the bundled advance table gives CJK one width for both weights"
+  ]
+}

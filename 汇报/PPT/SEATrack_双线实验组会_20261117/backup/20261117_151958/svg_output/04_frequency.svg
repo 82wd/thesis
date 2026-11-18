@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><polygon points="0,0 8,4 0,8" fill="#626C70"/></marker></defs>
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF"/>
+<g id="title" data-pptx-bounds="60 40 1160 100"><text x="60" y="66" font-size="16" fill="#9A603E">想法 2 / 保留原编码器，替换末端相加</text><text x="60" y="119" font-size="32" fill="#202629">频段融合：两路频谱选频后重组，再送预测头</text></g>
+<g id="fusion-diagram" data-pptx-bounds="50 169 915 280"><g>
+<rect x="51" y="212.38" width="154" height="202.80" rx="7.80" fill="#F3F4F4" stroke="#D7DDDF"/><text x="129.00" y="237.34" font-size="20" text-anchor="middle" fill="#202629">原双流编码器</text><text x="129.00" y="262.30" font-size="16" text-anchor="middle" fill="#626C70">AMG-LoRA/HMoE</text><text x="129.00" y="291.16" font-size="16" text-anchor="middle" fill="#356E73">末层 RGB search</text><text x="129.00" y="363.70" font-size="16" text-anchor="middle" fill="#9A603E">末层 IR search</text><text x="129.00" y="398.02" font-size="16" text-anchor="middle" fill="#626C70">归一化并恢复顺序</text>
+<line x1="201.54" y1="285.70" x2="242.10" y2="285.70" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/><line x1="201.54" y1="359.80" x2="242.10" y2="359.80" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/>
+<rect x="246.00" y="256.06" width="136.50" height="58.50" fill="#F3F4F4"/><text x="313.86" y="278.68" font-size="20" text-anchor="middle" fill="#356E73">2D FFT</text><text x="313.86" y="300.52" font-size="16" text-anchor="middle" fill="#303638">逐通道 H×W 网格</text>
+<rect x="246.00" y="330.16" width="136.50" height="58.50" fill="#F3F4F4"/><text x="313.86" y="353.56" font-size="20" text-anchor="middle" fill="#9A603E">2D FFT</text><text x="313.86" y="375.40" font-size="16" text-anchor="middle" fill="#303638">逐通道 H×W 网格</text>
+<line x1="384.84" y1="285.70" x2="429.30" y2="254.50" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/><line x1="384.84" y1="359.80" x2="429.30" y2="376.18" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/>
+<text x="472.20" y="195.22" font-size="20" text-anchor="middle" fill="#202629">频段选择</text>
+<rect x="433.20" y="215.50" width="78.00" height="78.00" fill="#F3F4F4" stroke="#356E73" stroke-width="1.56"/><circle cx="472.20" cy="254.50" r="22.62" fill="#356E73"/><text x="472.20" y="313.00" font-size="16" text-anchor="middle" fill="#356E73">保留 RGB 低频</text>
+<rect x="433.20" y="337.18" width="78.00" height="78.00" fill="#9A603E" stroke="#9A603E" stroke-width="1.56"/><circle cx="472.20" cy="376.18" r="22.62" fill="#FFFFFF"/><text x="472.20" y="436.24" font-size="16" text-anchor="middle" fill="#9A603E">保留 IR 高频</text>
+<line x1="513.54" y1="254.50" x2="608.70" y2="302.86" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/><line x1="513.54" y1="376.18" x2="608.70" y2="328.60" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/>
+<circle cx="628.20" cy="316.12" r="21.84" fill="#FFFFFF" stroke="#202629" stroke-width="1.56"/><text x="628.20" y="323.14" font-size="24" text-anchor="middle" fill="#202629">+</text><text x="628.20" y="362.14" font-size="16" text-anchor="middle" fill="#626C70">复数系数相加</text>
+<line x1="651.60" y1="316.12" x2="692.16" y2="316.12" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/><rect x="698.40" y="282.58" width="136.50" height="66.30" fill="#F3F4F4" stroke="#9A603E"/><text x="766.26" y="308.32" font-size="20" text-anchor="middle" fill="#202629">逆 FFT</text><text x="766.26" y="334.84" font-size="16" text-anchor="middle" fill="#9A603E">× gain，恢复 dtype</text>
+<line x1="837.24" y1="316.12" x2="870.00" y2="316.12" stroke="#626C70" stroke-width="1.56" marker-end="url(#arrow)"/><rect x="873.90" y="282.58" width="89.70" height="66.30" fill="#202629"/><text x="918.36" y="308.32" font-size="16" text-anchor="middle" fill="#FFFFFF"><tspan x="918.36" dy="0.00">原预测头</tspan><tspan x="918.36" dy="22.62">目标框</tspan></text>
+<text x="694.50" y="401.92" font-size="16" fill="#626C70"><tspan x="694.50" dy="0.00">原来的 RGB + IR 相加</tspan><tspan x="694.50" dy="21.84">由这条频域路径替换</tspan></text>
+</g></g>
+<g id="frequency-tensors" data-pptx-bounds="1000 165 220 284">
+<text x="1000" y="190" font-size="20" font-weight="bold" fill="#9A603E">默认张量流</text>
+<text x="1000" y="225" font-size="16" fill="#303638"><tspan x="1000" dy="0">search：[B,256,768]</tspan><tspan x="1000" dy="28">恢复：[B,768,16,16]</tspan><tspan x="1000" dy="28">rFFT：[B,768,16,9]</tspan><tspan x="1000" dy="28">irFFT → [B,256,768]</tspan><tspan x="1000" dy="28">网格由搜索尺寸／stride推导</tspan><tspan x="1000" dy="28">逐通道 FFT，FP32 计算</tspan><tspan x="1000" dy="28">保留完整幅值与相位</tspan><tspan x="1000" dy="28">输出转回输入 dtype</tspan></text>
+</g>
+<g id="frequency-equation" data-pptx-bounds="60 469 570 184">
+<text x="60" y="495" font-size="20" font-weight="bold" fill="#202629">频域组合与四组对照</text>
+<text x="60" y="527" font-size="20" fill="#9A603E">Y = gain × irFFT2(w·A + (1−w)·B)</text>
+<text x="60" y="557" font-size="16" fill="#303638"><tspan x="60" dy="0">A / B：RGB / IR 的复数频谱；w 按低／高频取不同权重。</tspan><tspan x="60" dy="23">原始相加：不走频域；等权：w低 = w高 = 0.5，gain = 2。</tspan><tspan x="60" dy="23">RGB低 + IR高：w低 / w高 = 1 / 0；反向组合为 0 / 1。</tspan><tspan x="60" dy="23">等权组直接返回 RGB + IR；两种选频组默认 gain = 2。</tspan></text>
+</g>
+<g id="frequency-boundaries" data-pptx-bounds="665 469 555 184">
+<text x="665" y="495" font-size="20" font-weight="bold" fill="#202629">约束、解释边界与公平性</text>
+<text x="665" y="528" font-size="16" fill="#303638"><tspan x="665" dy="0">低频：径向频率 ≤ 0.25 周期／格；高频是其补集。</tspan><tspan x="665" dy="24">图中是中心化掩膜示意，不是真实频谱或 rFFT 半谱布局。</tspan><tspan x="665" dy="24">仅融合 search；关闭 SS；无新增参数，FFT 梯度可回传。</tspan><tspan x="665" dy="24">direct、无 CLS、CE 保留率 1；保留原预测头与框解码。</tspan><tspan x="665" dy="24">同一无 SS 权重评测；gain 不保证 RMS 相同，需幅值对照。</tspan></text>
+</g>
+<g id="footer" data-pptx-bounds="60 665 1160 30" font-size="16" fill="#626C70"><text x="60" y="686">基于原论文 Fig. 2 改绘；新增模块依据 frequency_fusion.py。保留幅值与相位，梯度可回传。</text><text x="1170" y="686">04</text></g>
+</svg>

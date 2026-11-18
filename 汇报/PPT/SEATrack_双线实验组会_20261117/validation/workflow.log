@@ -1,0 +1,551 @@
+
+=== 2026-11-17T06:24:39.374Z NOTE id=fe076c1a4540 ===
+Project initialized: profile=default; path=/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117
+
+=== 2026-11-17T06:24:56.026Z PYTHON run=d90a56001407 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/project_manager.py", "import-sources", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "师兄想法.md", "SEATrack-main/README_SS.md", "SEATrack-main/README_FREQUENCY_FUSION.md", "SEATrack-main/README_SS_ABLATION.md", "seatrack/实验日志.md", "汇报/结果/RGBT频段互换观察/实验记录.md"]
+stdout:
+  [OK] Imported sources into: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117
+=== 2026-11-17T06:24:56.354Z END run=d90a56001407 elapsed_ms=328 output_lines=15 retained=1 omitted=14 ===
+
+=== 2026-11-17T06:32:09.533Z PYTHON run=4e86dbc571b3 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/project_manager.py", "validate", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [WARN]
+  [OK] Project structure is valid, with warnings.
+=== 2026-11-17T06:32:09.885Z END run=4e86dbc571b3 elapsed_ms=352 output_lines=5 retained=2 omitted=3 ===
+
+=== 2026-11-17T06:32:09.975Z PYTHON run=9c34d949e3f2 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/text_measure.py", "calibrate", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--outline"]
+=== 2026-11-17T06:32:10.079Z END run=9c34d949e3f2 elapsed_ms=103 output_lines=15 retained=0 omitted=15 ===
+
+=== 2026-11-17T06:34:12.415Z PYTHON run=17094ffcb7f7 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "early", "--json"]
+stdout:
+  [WARN] 01_cover.svg - Passed (with warnings)
+     [WARN] Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (6 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): footer:fill None -> '#626C70'; footer:font-size None -> '18'; text[22]:fill '#626C70' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (6 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): footer:fill None -> '#626C70'; footer:font-size None -> '18'; text[33]:fill '#626C70' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)
+  [SUMMARY] Check Summary
+  Total files: 5
+    [OK] Fully passed: 0 (0%)
+    [WARN] With warnings: 5 (100%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 5        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 5 | text: 89 | images: 0 | icons: 0
+    Geometry: SVG elements 31 | native presets 0 | page-frame elements 5 | marker uses 0
+  [OK] spec_lock anchor comparison: no additional contextual colors/fonts or out-of-band font sizes
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_early_report.json
+=== 2026-11-17T06:34:13.022Z END run=17094ffcb7f7 elapsed_ms=606 output_lines=43 retained=19 omitted=24 ===
+
+=== 2026-11-17T06:35:16.675Z PYTHON run=81c32eb73112 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/project_manager.py", "validate", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Project structure is complete.
+=== 2026-11-17T06:35:17.030Z END run=81c32eb73112 elapsed_ms=354 output_lines=3 retained=1 omitted=2 ===
+
+=== 2026-11-17T06:36:06.389Z PYTHON run=807dfc4ffef2 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [WARN] 01_cover.svg - Passed (with warnings)
+     [WARN] Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (6 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): footer:fill None -> '#626C70'; footer:font-size None -> '18'; text[22]:fill '#626C70' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (6 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): footer:fill None -> '#626C70'; footer:font-size None -> '18'; text[33]:fill '#626C70' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 0 (0%)
+    [WARN] With warnings: 7 (100%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 7        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 115 | images: 0 | icons: 0
+    Geometry: SVG elements 37 | native presets 0 | page-frame elements 7 | marker uses 0
+  [OK] spec_lock anchor comparison: no additional contextual colors/fonts or out-of-band font sizes
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:36:07.016Z END run=807dfc4ffef2 elapsed_ms=626 output_lines=49 retained=19 omitted=30 ===
+
+=== 2026-11-17T06:37:30.607Z PYTHON run=f663620282d9 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/total_md_split.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] SVG files and notes have one-to-one correspondence
+  [Done] Successfully generated 7/7 file(s)
+  [Done] Notes splitting complete
+=== 2026-11-17T06:37:30.612Z END run=f663620282d9 elapsed_ms=4 output_lines=16 retained=3 omitted=13 ===
+
+=== 2026-11-17T06:37:43.564Z PYTHON run=38d0e4513e61 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/finalize_svg.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Done!
+=== 2026-11-17T06:37:43.784Z END run=38d0e4513e61 elapsed_ms=220 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-17T06:37:50.768Z PYTHON run=c6733511e7dc ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_to_pptx.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--no-animations"]
+stdout:
+  [Done] Saved: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_143754.pptx
+    [POSTFLIGHT] status=passed-with-warnings quality_gate=passed slides=7 warning_categories=1
+    [POSTFLIGHT][WARNING] quality_introduced_warnings=7
+    [PPTX] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_143754.pptx
+    [REPORT] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/SEATrack_双线实验组会_20261117_143754.report.json
+=== 2026-11-17T06:37:54.951Z END run=c6733511e7dc elapsed_ms=4183 output_lines=43 retained=5 omitted=38 ===
+
+=== 2026-11-17T06:38:10.151Z PYTHON run=cf67e8286249 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/compact_svg_styles.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/svg_output", "--inplace"]
+=== 2026-11-17T06:38:10.156Z END run=cf67e8286249 elapsed_ms=4 output_lines=1 retained=0 omitted=1 ===
+
+=== 2026-11-17T06:38:17.493Z PYTHON run=dade8fee58ee ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 7 (100%)
+    [WARN] With warnings: 0 (0%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 0        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 115 | images: 0 | icons: 0
+    Geometry: SVG elements 37 | native presets 0 | page-frame elements 7 | marker uses 0
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:38:18.134Z END run=dade8fee58ee elapsed_ms=640 output_lines=36 retained=15 omitted=21 ===
+
+=== 2026-11-17T06:38:27.565Z PYTHON run=21c92c9cfaef ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/finalize_svg.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Done!
+=== 2026-11-17T06:38:27.778Z END run=21c92c9cfaef elapsed_ms=212 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-17T06:38:36.753Z PYTHON run=385db40762ed ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_to_pptx.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--no-animations"]
+stdout:
+  [Done] Saved: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_143837.pptx
+    [POSTFLIGHT] status=passed quality_gate=passed slides=7 warning_categories=0
+    [PPTX] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_143837.pptx
+    [REPORT] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/SEATrack_双线实验组会_20261117_143837.report.json
+=== 2026-11-17T06:38:37.551Z END run=385db40762ed elapsed_ms=798 output_lines=42 retained=4 omitted=38 ===
+
+=== 2026-11-17T06:43:33.125Z PYTHON run=bac37b317771 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/project_manager.py", "validate", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Project structure is complete.
+=== 2026-11-17T06:43:33.487Z END run=bac37b317771 elapsed_ms=362 output_lines=3 retained=1 omitted=2 ===
+
+=== 2026-11-17T06:47:54.614Z PYTHON run=79faaef95ded ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/compact_svg_styles.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/svg_output", "--inplace"]
+=== 2026-11-17T06:47:54.621Z END run=79faaef95ded elapsed_ms=6 output_lines=1 retained=0 omitted=1 ===
+
+=== 2026-11-17T06:48:18.006Z PYTHON run=53e34bc82e06 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] <text> (x=60, y=623; text='SS 在选定 block 入口取特征，作…') exceeds <g id="block-detail"> data-pptx-bounds on the vertical axis: content (60.0, 607.7)-(723.5, 629.3), container (60.0, 480.0)-(1220.0, 625.0), overflow horizontal 0.0%, vertical 3.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+  [ERROR] 03_ss.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] <g id="backbone"> data-pptx-bounds overlaps <g id="ss-branch"> data-pptx-bounds by 1160.0px x 13.0px; keep ordinary direct-root module zones disjoint beyond the 1px tolerance
+     [ERROR] <text> (x=60, y=652; text='无新增参数；损失反传优化上游 PEFT，…') exceeds <g id="details"> data-pptx-bounds on the vertical axis: content (60.0, 636.7)-(798.3, 658.3), container (60.0, 600.0)-(1220.0, 655.0), overflow horizontal 0.0%, vertical 6.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+     [WARN] <text> (x=385, y=584; text='S = U × Uᵀ（关系矩阵示意）') exceeds <g id="ss-branch"> data-pptx-bounds on the vertical axis: content (385.0, 568.7)-(637.2, 590.3), container (60.0, 335.0)-(1220.0, 589.0), overflow horizontal 0.0%, vertical 0.5% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+  [OK] 04_frequency.svg - Passed
+     viewBox: 0 0 1280 720
+  [OK] 05_evidence.svg - Passed
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 5 (71%)
+    [WARN] With warnings: 1 (14%)
+    [ERROR] With errors: 1 (14%)
+  Provenance categories:
+    blocking: 2          hard findings; gate also requires exit 0
+    introduced: 2        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 134 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 7 | marker uses 28
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:48:18.704Z END run=53e34bc82e06 elapsed_ms=697 output_lines=48 retained=25 omitted=23 ===
+
+=== 2026-11-17T06:49:06.382Z PYTHON run=89729a03e92a ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 7 (100%)
+    [WARN] With warnings: 0 (0%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 0        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 134 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 7 | marker uses 28
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:49:07.033Z END run=89729a03e92a elapsed_ms=651 output_lines=36 retained=15 omitted=21 ===
+
+=== 2026-11-17T06:49:20.130Z PYTHON run=3ba9ac32b1ff ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/total_md_split.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] SVG files and notes have one-to-one correspondence
+  [Done] Successfully generated 7/7 file(s)
+  [Done] Notes splitting complete
+=== 2026-11-17T06:49:20.133Z END run=3ba9ac32b1ff elapsed_ms=3 output_lines=16 retained=3 omitted=13 ===
+
+=== 2026-11-17T06:49:29.547Z PYTHON run=fdc1780881aa ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/finalize_svg.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Done!
+=== 2026-11-17T06:49:29.767Z END run=fdc1780881aa elapsed_ms=219 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-17T06:49:39.172Z PYTHON run=c2a0c85a191f ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_to_pptx.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--no-animations"]
+stdout:
+  [Done] Saved: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_144939.pptx
+    [POSTFLIGHT] status=passed quality_gate=passed slides=7 warning_categories=0
+    [PPTX] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_144939.pptx
+    [REPORT] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/SEATrack_双线实验组会_20261117_144939.report.json
+=== 2026-11-17T06:49:39.994Z END run=c2a0c85a191f elapsed_ms=822 output_lines=42 retained=4 omitted=38 ===
+
+=== 2026-11-17T06:54:40.783Z PYTHON run=c4717c3a976a ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/project_manager.py", "validate", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Project structure is complete.
+=== 2026-11-17T06:54:41.143Z END run=c4717c3a976a elapsed_ms=359 output_lines=3 retained=1 omitted=2 ===
+
+=== 2026-11-17T06:54:41.216Z PYTHON run=3fb45a9d0807 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/text_measure.py", "calibrate", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--outline"]
+=== 2026-11-17T06:54:41.321Z END run=3fb45a9d0807 elapsed_ms=105 output_lines=15 retained=0 omitted=15 ===
+
+=== 2026-11-17T06:55:02.806Z PYTHON run=291563dcbed1 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/compact_svg_styles.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/svg_output", "--inplace"]
+=== 2026-11-17T06:55:02.809Z END run=291563dcbed1 elapsed_ms=3 output_lines=1 retained=0 omitted=1 ===
+
+=== 2026-11-17T06:55:02.856Z PYTHON run=2b0ad43ab536 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [ERROR] 02_routes.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] Invalid SVG transform: <g> contains text or another non-matrix visual; its transform must be a translate-only list or one rotate operation
+     [WARN] <text> (x=665, y=601; text='跨模态同类 tokens 拼接 → 子 …') exceeds <g id="mechanisms"> data-pptx-bounds on the vertical axis: content (665.0, 587.4)-(1117.7, 654.6), container (665.0, 422.0)-(1220.0, 652.0), overflow horizontal 0.0%, vertical 1.1% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+  [ERROR] 03_ss.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] Invalid SVG transform: <g> contains text or another non-matrix visual; its transform must be a translate-only list or one rotate operation
+     [WARN] <text> (x=60, y=583; text='L_region = 两路 SS 矩阵差…') exceeds <g id="ss-objectives"> data-pptx-bounds on the vertical axis: content (60.0, 569.4)-(549.5, 660.6), container (60.0, 527.0)-(630.0, 659.0), overflow horizontal 0.0%, vertical 1.2% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+     [WARN] <text> (x=665, y=583; text='L_ss 反传 → 两路上游可训练 PE…') exceeds <g id="ss-training"> data-pptx-bounds on the vertical axis: content (665.0, 569.4)-(1151.2, 660.6), container (665.0, 527.0)-(1220.0, 659.0), overflow horizontal 0.0%, vertical 1.2% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+  [ERROR] 04_frequency.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] Invalid SVG transform: <g> contains text or another non-matrix visual; its transform must be a translate-only list or one rotate operation
+  [OK] 05_evidence.svg - Passed
+     viewBox: 0 0 1280 720
+  [OK] 06_remedies.svg - Passed
+     viewBox: 0 0 1280 720
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 4 (57%)
+    [WARN] With warnings: 0 (0%)
+    [ERROR] With errors: 3 (42%)
+  Provenance categories:
+    blocking: 3          hard findings; gate also requires exit 0
+    introduced: 3        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 149 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 7 | marker uses 28
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:55:03.458Z END run=2b0ad43ab536 elapsed_ms=602 output_lines=50 retained=31 omitted=19 ===
+
+=== 2026-11-17T06:56:37.227Z PYTHON run=d3524edd5189 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 04_frequency.svg - Passed (with warnings)
+     [WARN] <text> (x=129.00, y=262.30; text='AMG-LoRA / HMoE') exceeds <g id="fusion-diagram"> data-pptx-bounds on the horizontal axis: content (51.6, 248.7)-(206.4, 267.9), container (59.0, 169.0)-(965.0, 449.0), overflow horizontal 0.8%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈11.9 px per Latin char at 16px incl. headroom; ≈76 chars fit in 906 px
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 6 (85%)
+    [WARN] With warnings: 1 (14%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 1        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 149 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 7 | marker uses 28
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:56:37.925Z END run=d3524edd5189 elapsed_ms=698 output_lines=43 retained=17 omitted=26 ===
+
+=== 2026-11-17T06:57:13.965Z PYTHON run=0580b1fc8e5e ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 04_frequency.svg - Passed (with warnings)
+     [WARN] <text> (x=129.00, y=262.30; text='AMG-LoRA/HMoE') exceeds <g id="fusion-diagram"> data-pptx-bounds on the horizontal axis: content (56.5, 248.7)-(201.5, 267.9), container (59.0, 169.0)-(965.0, 449.0), overflow horizontal 0.3%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈11.2 px per Latin char at 16px incl. headroom; ≈81 chars fit in 906 px
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 6 (85%)
+    [WARN] With warnings: 1 (14%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 1        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 149 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 7 | marker uses 28
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T06:57:14.631Z END run=0580b1fc8e5e elapsed_ms=665 output_lines=43 retained=17 omitted=26 ===
+
+=== 2026-11-17T07:19:28.222Z PYTHON run=c725c055635d ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 7 (100%)
+    [WARN] With warnings: 0 (0%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 0        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 149 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 7 | marker uses 28
+  [REPORT] JSON quality report exported: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T07:19:28.913Z END run=c725c055635d elapsed_ms=691 output_lines=36 retained=15 omitted=21 ===
+
+=== 2026-11-17T07:19:42.986Z PYTHON run=1daf1a10e8f6 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/total_md_split.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] SVG files and notes have one-to-one correspondence
+  [Done] Successfully generated 7/7 file(s)
+  [Done] Notes splitting complete
+=== 2026-11-17T07:19:42.991Z END run=1daf1a10e8f6 elapsed_ms=4 output_lines=16 retained=3 omitted=13 ===
+
+=== 2026-11-17T07:19:50.434Z PYTHON run=103aebc75cb3 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/finalize_svg.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Done!
+=== 2026-11-17T07:19:50.647Z END run=103aebc75cb3 elapsed_ms=213 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-17T07:19:57.753Z PYTHON run=f0dfbeb36a4b ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_to_pptx.py", "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117", "--no-animations"]
+stdout:
+  [Done] Saved: /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_151958.pptx
+    [POSTFLIGHT] status=passed quality_gate=passed slides=7 warning_categories=0
+    [PPTX] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_151958.pptx
+    [REPORT] /Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/validation/SEATrack_双线实验组会_20261117_151958.report.json
+=== 2026-11-17T07:19:58.583Z END run=f0dfbeb36a4b elapsed_ms=830 output_lines=42 retained=4 omitted=38 ===
+
+=== 2026-11-17T11:09:32.813Z PYTHON run=98e6310ac893 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/compact_svg_styles.py", "汇报/PPT/SEATrack_双线实验组会_20261117/svg_output", "--inplace"]
+=== 2026-11-17T11:09:32.818Z END run=98e6310ac893 elapsed_ms=4 output_lines=1 retained=0 omitted=1 ===
+
+=== 2026-11-17T11:09:43.549Z PYTHON run=5b27a4208a63 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height="720". No change is required for export.
+     [WARN] Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width="1280". No change is required for export.
+  [WARN] 03_ss.svg - Passed (with warnings)
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 4 (57%)
+    [WARN] With warnings: 3 (42%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 8        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 161 | images: 0 | icons: 0
+    Geometry: SVG elements 66 | native presets 0 | page-frame elements 7 | marker uses 22
+  [REPORT] JSON quality report exported: 汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T11:09:44.375Z END run=5b27a4208a63 elapsed_ms=826 output_lines=50 retained=19 omitted=31 ===
+
+=== 2026-11-17T11:10:17.874Z PYTHON run=590da3f638a3 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height="720". No change is required for export.
+     [WARN] Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width="1280". No change is required for export.
+  [WARN] 03_ss.svg - Passed (with warnings)
+  [SUMMARY] Check Summary
+  Total files: 7
+    [OK] Fully passed: 4 (57%)
+    [WARN] With warnings: 3 (42%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 6        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 7 | text: 161 | images: 0 | icons: 0
+    Geometry: SVG elements 66 | native presets 0 | page-frame elements 7 | marker uses 22
+  [REPORT] JSON quality report exported: 汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T11:10:18.542Z END run=590da3f638a3 elapsed_ms=667 output_lines=48 retained=19 omitted=29 ===
+
+=== 2026-11-17T11:10:24.238Z PYTHON run=ec7de72573d7 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/total_md_split.py", "汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] SVG files and notes have one-to-one correspondence
+  [Done] Successfully generated 7/7 file(s)
+  [Done] Notes splitting complete
+=== 2026-11-17T11:10:24.243Z END run=ec7de72573d7 elapsed_ms=4 output_lines=16 retained=3 omitted=13 ===
+
+=== 2026-11-17T11:10:33.585Z PYTHON run=8b465baf24e3 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/finalize_svg.py", "汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Done!
+=== 2026-11-17T11:10:33.806Z END run=8b465baf24e3 elapsed_ms=220 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-17T11:10:46.182Z PYTHON run=9f7f46b91778 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_to_pptx.py", "汇报/PPT/SEATrack_双线实验组会_20261117", "--no-animations"]
+stdout:
+  [Done] Saved: 汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_191046.pptx
+    [POSTFLIGHT] status=passed-with-warnings quality_gate=passed slides=7 warning_categories=1
+    [POSTFLIGHT][WARNING] quality_introduced_warnings=6
+    [PPTX] 汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_191046.pptx
+    [REPORT] 汇报/PPT/SEATrack_双线实验组会_20261117/validation/SEATrack_双线实验组会_20261117_191046.report.json
+=== 2026-11-17T11:10:47.080Z END run=9f7f46b91778 elapsed_ms=898 output_lines=43 retained=5 omitted=38 ===
+
+=== 2026-11-17T11:19:47.288Z PYTHON run=e719c2c75341 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height="720". No change is required for export.
+     [WARN] Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width="1280". No change is required for export.
+  [WARN] 03_ss.svg - Passed (with warnings)
+  [SUMMARY] Check Summary
+  Total files: 8
+    [OK] Fully passed: 4 (50%)
+    [WARN] With warnings: 4 (50%)
+    [ERROR] With errors: 1 (12%)
+  Provenance categories:
+    blocking: 1          hard findings; gate also requires exit 0
+    introduced: 8        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 8 | text: 189 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 8 | marker uses 30
+    [ERROR] Outline roster: design_spec.md §IX names 7 slide(s) but svg_output/ holds 8; no §IX block for page 08; renumber the outline, the lock page keys, and the sidecar together with the pages.
+    1. XML well-formedness: write typography as raw Unicode (—, ©, →, NBSP); escape XML reserved chars as &amp; &lt; &gt; &quot; &apos; — never use HTML named entities like &nbsp; &mdash; &copy;
+    2. viewBox issues: root viewBox is the canvas authority (see references/canvas-formats.md)
+    3. Paint recommendation: generated SVG prefers uppercase #RRGGBB plus channel-specific opacity; compatible alternatives remain non-blocking
+    4. foreignObject: Use <text> + <tspan> for manual line breaks
+  [REPORT] JSON quality report exported: 汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T11:19:48.082Z END run=e719c2c75341 elapsed_ms=793 output_lines=56 retained=24 omitted=32 ===
+
+=== 2026-11-17T11:20:13.095Z PYTHON run=82e20a561e6d ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_quality_checker.py", "汇报/PPT/SEATrack_双线实验组会_20261117", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [OK] 01_cover.svg - Passed
+  [WARN] 02_routes.svg - Passed (with warnings)
+     [WARN] Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height="720". No change is required for export.
+     [WARN] Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width="1280". No change is required for export.
+  [WARN] 03_ss.svg - Passed (with warnings)
+  [SUMMARY] Check Summary
+  Total files: 8
+    [OK] Fully passed: 4 (50%)
+    [WARN] With warnings: 4 (50%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 8        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 8 | text: 189 | images: 0 | icons: 0
+    Geometry: SVG elements 85 | native presets 0 | page-frame elements 8 | marker uses 30
+  [REPORT] JSON quality report exported: 汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json
+=== 2026-11-17T11:20:13.747Z END run=82e20a561e6d elapsed_ms=651 output_lines=52 retained=19 omitted=33 ===
+
+=== 2026-11-17T11:20:19.402Z PYTHON run=d642b5428ee7 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/total_md_split.py", "汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] SVG files and notes have one-to-one correspondence
+  [Done] Successfully generated 8/8 file(s)
+  [Done] Notes splitting complete
+=== 2026-11-17T11:20:19.406Z END run=d642b5428ee7 elapsed_ms=3 output_lines=17 retained=3 omitted=14 ===
+
+=== 2026-11-17T11:20:29.500Z PYTHON run=8cab59afc13b ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/finalize_svg.py", "汇报/PPT/SEATrack_双线实验组会_20261117"]
+stdout:
+  [OK] Done!
+=== 2026-11-17T11:20:29.714Z END run=8cab59afc13b elapsed_ms=214 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-17T11:20:35.128Z PYTHON run=b70873361a72 ===
+cwd: /Users/lzy/Desktop/毕设/thesis
+argv: ["/Users/lzy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12", "/Users/lzy/.codex/skills/ppt-master/scripts/svg_to_pptx.py", "汇报/PPT/SEATrack_双线实验组会_20261117", "--no-animations"]
+stdout:
+  [Done] Saved: 汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_192035.pptx
+    [POSTFLIGHT] status=passed-with-warnings quality_gate=passed slides=8 warning_categories=1
+    [POSTFLIGHT][WARNING] quality_introduced_warnings=8
+    [PPTX] 汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_192035.pptx
+    [REPORT] 汇报/PPT/SEATrack_双线实验组会_20261117/validation/SEATrack_双线实验组会_20261117_192035.report.json
+=== 2026-11-17T11:20:35.905Z END run=b70873361a72 elapsed_ms=777 output_lines=45 retained=5 omitted=40 ===

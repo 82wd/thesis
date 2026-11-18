@@ -1,0 +1,231 @@
+{
+  "schema": "ppt-master.pptx-postflight-report.v1",
+  "status": "passed-with-warnings",
+  "output": {
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/exports/SEATrack_双线实验组会_20261117_192035.pptx",
+    "bytes": 59025
+  },
+  "source": {
+    "svg_slide_count": 8,
+    "layout_definition_count": 0,
+    "fingerprint": {
+      "algorithm": "sha256",
+      "digest": "efa0d01ffae79260dc6b2a6424f7eca18c16f32628b5d6b23b074dd61dbdaaca",
+      "file_count": 8,
+      "files": [
+        {
+          "file": "01_cover.svg",
+          "sha256": "651e117fe7457790ead9b8efa77fece5c25e5cc68de9d2a20e1fcea8060971da"
+        },
+        {
+          "file": "02_routes.svg",
+          "sha256": "e74d3f41036f23129c78b675cc72e5e7da79a7a26f11b302eda9a77dd189eba7"
+        },
+        {
+          "file": "03_ss.svg",
+          "sha256": "fec7e697a713004668f2b0f06abe0937cd5d5c1cbac74a785a3d050c630e90a6"
+        },
+        {
+          "file": "04_frequency.svg",
+          "sha256": "b99045e433f7e6abd6fa8e3831d043456e7540f430f02ba308cc5035ed61a5e9"
+        },
+        {
+          "file": "05_ss_ablation.svg",
+          "sha256": "5a3d0aaf2e486c281dd2ede42dc0825cfe39a60dde5998be658bf123ae8eeea3"
+        },
+        {
+          "file": "06_evidence.svg",
+          "sha256": "21f08f2edcd255b15a15e46be39dfd81cec1f90793c4b0543d74842121d76143"
+        },
+        {
+          "file": "07_remedies.svg",
+          "sha256": "d80a4968356cbcb050647fbaa7095d4389d3e200410f63ec03435b5873faa7f5"
+        },
+        {
+          "file": "08_next.svg",
+          "sha256": "92c770ac3040b713690825b1ef6062c97e7a583f66de09308425104c5597d873"
+        }
+      ]
+    },
+    "authoring_roundtrip": null
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "slides": 8,
+    "notes": 8,
+    "masters": 1,
+    "layouts": 1
+  },
+  "checks": {
+    "zip_integrity": "passed",
+    "slide_count": "passed",
+    "internal_relationships": "enforced-at-build",
+    "structured_package": "not-applicable",
+    "transitions": "enforced-at-build",
+    "animations": "enforced-at-build",
+    "project_svg_contract": "enforced-at-build",
+    "compatibility_normalization": "not-applicable",
+    "authoring_roundtrip": "not-applicable",
+    "quality_gate": "passed",
+    "quality_warnings": "warning",
+    "template_tokens": "passed",
+    "external_images": "passed",
+    "font_portability": "passed"
+  },
+  "quality": {
+    "status": "loaded",
+    "path": "汇报/PPT/SEATrack_双线实验组会_20261117/validation/svg_quality_report.json",
+    "schema": "ppt-master.svg-quality-report.v1",
+    "stage": "final",
+    "source_match": "passed",
+    "source_fingerprint": {
+      "algorithm": "sha256",
+      "digest": "efa0d01ffae79260dc6b2a6424f7eca18c16f32628b5d6b23b074dd61dbdaaca",
+      "file_count": 8,
+      "files": [
+        {
+          "file": "01_cover.svg",
+          "sha256": "651e117fe7457790ead9b8efa77fece5c25e5cc68de9d2a20e1fcea8060971da"
+        },
+        {
+          "file": "02_routes.svg",
+          "sha256": "e74d3f41036f23129c78b675cc72e5e7da79a7a26f11b302eda9a77dd189eba7"
+        },
+        {
+          "file": "03_ss.svg",
+          "sha256": "fec7e697a713004668f2b0f06abe0937cd5d5c1cbac74a785a3d050c630e90a6"
+        },
+        {
+          "file": "04_frequency.svg",
+          "sha256": "b99045e433f7e6abd6fa8e3831d043456e7540f430f02ba308cc5035ed61a5e9"
+        },
+        {
+          "file": "05_ss_ablation.svg",
+          "sha256": "5a3d0aaf2e486c281dd2ede42dc0825cfe39a60dde5998be658bf123ae8eeea3"
+        },
+        {
+          "file": "06_evidence.svg",
+          "sha256": "21f08f2edcd255b15a15e46be39dfd81cec1f90793c4b0543d74842121d76143"
+        },
+        {
+          "file": "07_remedies.svg",
+          "sha256": "d80a4968356cbcb050647fbaa7095d4389d3e200410f63ec03435b5873faa7f5"
+        },
+        {
+          "file": "08_next.svg",
+          "sha256": "92c770ac3040b713690825b1ef6062c97e7a583f66de09308425104c5597d873"
+        }
+      ]
+    },
+    "summary": {
+      "total": 8,
+      "passed": 4,
+      "warnings": 4,
+      "errors": 0
+    },
+    "categories": {
+      "blocking": {
+        "count": 0,
+        "issues": []
+      },
+      "introduced": {
+        "count": 8,
+        "issues": [
+          {
+            "file": "02_routes.svg",
+            "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+          },
+          {
+            "file": "02_routes.svg",
+            "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+          },
+          {
+            "file": "03_ss.svg",
+            "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+          },
+          {
+            "file": "03_ss.svg",
+            "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+          },
+          {
+            "file": "04_frequency.svg",
+            "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+          },
+          {
+            "file": "04_frequency.svg",
+            "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+          },
+          {
+            "file": "05_ss_ablation.svg",
+            "message": "Recommendation: project geometry height='720px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling height=\"720\". No change is required for export."
+          },
+          {
+            "file": "05_ss_ablation.svg",
+            "message": "Recommendation: project geometry width='1280px' is converter-compatible in 1 location(s) (<svg> attribute); generated SVG should prefer the unitless px spelling width=\"1280\". No change is required for export."
+          }
+        ]
+      },
+      "inherited": {
+        "count": 0,
+        "issues": []
+      },
+      "source-import": {
+        "count": 0,
+        "summary": {
+          "warning_count": 0,
+          "by_code": {}
+        }
+      }
+    }
+  },
+  "resources": {
+    "unresolved_template_tokens": [],
+    "fonts": {
+      "stacks": [
+        "Arial, PingFang SC, sans-serif"
+      ],
+      "generic_only_stacks": [],
+      "unsafe_exported_faces": []
+    },
+    "images": {
+      "data_uri": 0,
+      "local": 0,
+      "external": 0,
+      "external_references": []
+    }
+  },
+  "export_policy": {
+    "project_svg_contract": "strict",
+    "dangerous_normalization_count": 0
+  },
+  "deck_motion": {
+    "transition": {
+      "effect": null,
+      "effect_options": {},
+      "duration": 0.4,
+      "auto_advance": null,
+      "sound": null
+    },
+    "animation": {
+      "effect": "none",
+      "effect_request": null,
+      "duration": 0.4,
+      "stagger": 0.5,
+      "trigger": "after-previous"
+    },
+    "cli_overrides": {
+      "transition": false,
+      "transition_duration": false,
+      "auto_advance": false,
+      "transition_sound": false,
+      "animation": false,
+      "animation_duration": false,
+      "animation_stagger": false,
+      "animation_trigger": false
+    },
+    "narration_timings": false
+  },
+  "backup_path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_双线实验组会_20261117/backup/20261117_192035/svg_output",
+  "conversion_trace_path": null
+}

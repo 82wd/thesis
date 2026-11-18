@@ -1,0 +1,36 @@
+{
+  "stage": "stage1",
+  "lang": "zh",
+  "primary_language": "zh-CN",
+  "recommend": {
+    "canvas": "ppt169"
+  },
+  "template_options": {
+    "schema_version": 1,
+    "phase": "template",
+    "lang": "zh",
+    "default_mode": "free_design",
+    "explicit_workspace_roots": []
+  },
+  "audience": {
+    "value": "导师、师兄及课题组成员"
+  },
+  "communication_intent": {
+    "value": "汇报 SS 与频段融合的实现、SS 效果不佳后的补救，以及双方向并行实验的组织方式"
+  },
+  "audience_outcome": {
+    "value": "理解两条技术路线的区别、已有证据和局限，并讨论下一步消融顺序"
+  },
+  "core_message": {
+    "value": "SS 关系对齐与频段融合分线验证；SS 补救尚未证明全面有效，采用独立代码和输出、共享只读数据推进实验"
+  },
+  "delivery_context": {
+    "value": "中文组会现场讲解，约 8–10 分钟"
+  },
+  "artifact_afterlife": {
+    "value": "会后查阅方法、实验依据与后续计划"
+  },
+  "content_divergence": {
+    "value": "可重组材料；SS、频段融合、SS 补救各用一页；区分已完成结果、历史状态与计划，不声称实时服务器进度"
+  }
+}

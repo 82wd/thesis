@@ -1,0 +1,74 @@
+{
+  "ss": {
+    "datasets": [
+      "LasHeR / SR",
+      "RGBT234 / MSR",
+      "VisEvent / SR",
+      "DepthTrack / F"
+    ],
+    "baseline": [
+      57.51,
+      63.73,
+      60.26,
+      63.23
+    ],
+    "ss": [
+      56.71,
+      64.67,
+      59.63,
+      60.97
+    ]
+  },
+  "ab": {
+    "methods": [
+      "Baseline",
+      "Original SS",
+      "Template-only",
+      "Target-aware"
+    ],
+    "LasHeR": [
+      57.51,
+      56.71,
+      57.31,
+      57.29
+    ],
+    "RGBT234": [
+      63.73,
+      64.67,
+      64.03,
+      64.06
+    ]
+  },
+  "frequency": {
+    "methods": [
+      "Sum",
+      "R-low",
+      "I-low",
+      "R-low\nRMS",
+      "I-low\nRMS"
+    ],
+    "white_face_stable": [
+      [
+        0,
+        0,
+        0.8111,
+        0,
+        0.8253
+      ],
+      [
+        0.0138,
+        0.0066,
+        0.02,
+        0.0091,
+        0.0224
+      ],
+      [
+        0.8016,
+        0.768,
+        0.7713,
+        0.7771,
+        0.7779
+      ]
+    ]
+  }
+}

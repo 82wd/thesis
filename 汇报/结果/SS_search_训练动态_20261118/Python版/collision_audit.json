@@ -1,0 +1,23 @@
+{
+  "pdf": "汇报/结果/SS_search_训练动态_20261118/Python版/SS_search_dynamics_python.pdf",
+  "auditable": true,
+  "verdict": "PASS",
+  "page_count": 10,
+  "visible_text_box_count": 201,
+  "text_trace_count": 201,
+  "stroke_path_count": 376,
+  "filled_region_count": 324,
+  "image_region_count": 0,
+  "summary": {
+    "fail": 0,
+    "warn": 0,
+    "contained_fill_overlays": 0,
+    "contained_image_overlays": 0
+  },
+  "thresholds": {
+    "text_inset_pt": 0.6,
+    "min_overlap_ratio": 0.05,
+    "clipping_tolerance_pt": 0.5
+  },
+  "findings": []
+}

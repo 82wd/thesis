@@ -1,0 +1,83 @@
+{
+  "roles": {
+    "body": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 20.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 4.7,
+      "latin_chars_per_100px": 10.1,
+      "caps_chars_per_100px": 7.9,
+      "digits_chars_per_100px": 8.5,
+      "citation_chars_per_100px": 9.8,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": {
+        "px": 507.9,
+        "slide": "P02",
+        "text": "两路区域特征归一化、pairwise矩阵、MSE、五层平均"
+      }
+    },
+    "title": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 32.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 2.9,
+      "latin_chars_per_100px": 6.3,
+      "caps_chars_per_100px": 4.9,
+      "digits_chars_per_100px": 5.3,
+      "citation_chars_per_100px": 6.2,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": {
+        "px": 654.1,
+        "slide": "P06",
+        "text": "A/B 恢复部分 LasHeR 性能，但仍低于基线"
+      }
+    },
+    "subtitle": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 24.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 3.9,
+      "latin_chars_per_100px": 8.4,
+      "caps_chars_per_100px": 6.5,
+      "digits_chars_per_100px": 7.1,
+      "citation_chars_per_100px": 8.2,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": {
+        "px": 609.5,
+        "slide": "P02",
+        "text": "两路区域特征归一化、pairwise矩阵、MSE、五层平均"
+      }
+    },
+    "annotation": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 16.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 5.9,
+      "latin_chars_per_100px": 12.6,
+      "caps_chars_per_100px": 9.8,
+      "digits_chars_per_100px": 10.6,
+      "citation_chars_per_100px": 12.3,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": null
+    },
+    "display": {
+      "family": "Arial, PingFang SC, sans-serif",
+      "size": 52.0,
+      "weight": "normal",
+      "cjk_chars_per_100px": 1.8,
+      "latin_chars_per_100px": 3.9,
+      "caps_chars_per_100px": 3.0,
+      "digits_chars_per_100px": 3.3,
+      "citation_chars_per_100px": 3.8,
+      "script_clusters_per_100px": {},
+      "longest_planned_line": null
+    }
+  },
+  "script_samples": {},
+  "source": "spec_lock.md",
+  "generated_at": "2026-11-18T11:28:29Z",
+  "notes": [
+    "role display (52px, at least twice body) has no display_family and uses body_family; declare display_family if it is display type",
+    "every role is measured at normal weight; recalibrate a role realized as bold deck-wide with --role NAME:FAMILY:SIZE:bold: bold widens Latin and digits about 7%, while the bundled advance table gives CJK one width for both weights"
+  ]
+}

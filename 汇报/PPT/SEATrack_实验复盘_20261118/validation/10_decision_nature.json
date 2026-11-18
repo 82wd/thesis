@@ -1,0 +1,21 @@
+{
+  "svg": "汇报/PPT/SEATrack_实验复盘_20261118/svg_output/10_decision.svg",
+  "verdict": "PASS WITH WARNINGS",
+  "auditable": true,
+  "width_mm": 338.6666666666667,
+  "text_count": 28,
+  "minimum_found_pt": 12.0,
+  "maximum_found_pt": 24.0,
+  "thresholds": {
+    "min_pt": 12.0,
+    "max_pt": 24.0,
+    "max_width_mm": 339.0
+  },
+  "findings": [
+    {
+      "severity": "WARN",
+      "kind": "canvas.width",
+      "message": "width 338.7 mm is not 89 mm or 183 mm"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280px" height="720px" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content">
+<defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0,0 7,3.5 0,7" fill="#202629" /></marker></defs>
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF" />
+<g id="title" data-pptx-bounds="60 38 1160 90" fill="#202629"><text x="60" y="62" font-size="16">想法 1 / SS：跨模态空间关系一致性</text><text x="60" y="111" font-size="32">对齐 patch 之间的关系，作为额外训练约束</text></g>
+<g id="forward" data-pptx-bounds="60 145 1160 119" fill="#202629">
+<text x="60" y="166" font-size="20" font-weight="bold">a  原跟踪前向</text>
+<g id="input"><rect x="60" y="184" width="275" height="72" fill="#F3F4F4" /><text x="197" y="212" font-size="20" text-anchor="middle">F_rgb 与 F_x</text><text x="197" y="239" font-size="16" text-anchor="middle">选定 block 入口 · 各 [B,320,768]</text></g>
+<line x1="335" y1="220" x2="400" y2="220" stroke="#202629" marker-end="url(#a)" />
+<g id="encoder"><rect x="410" y="184" width="330" height="72" fill="#F3F4F4" /><text x="575" y="212" font-size="20" text-anchor="middle">AMG-LoRA → HMoE → MLP</text><text x="575" y="239" font-size="16" text-anchor="middle">原编码器继续前向，SS 不替换中间特征</text></g>
+<line x1="740" y1="220" x2="800" y2="220" stroke="#202629" marker-end="url(#a)" />
+<g id="tracking"><rect x="810" y="184" width="410" height="72" fill="#F3F4F4" /><text x="1015" y="212" font-size="20" text-anchor="middle">搜索特征相加 → 预测头 → L_tracking</text><text x="1015" y="239" font-size="16" text-anchor="middle">默认：2 × GIoU + 5 × L1 + Focal</text></g>
+</g>
+<g id="ss-flow" data-pptx-bounds="60 265 1160 242" fill="#202629">
+<line x1="197" y1="265" x2="197" y2="319" stroke="#202629" stroke-dasharray="5 4" marker-end="url(#a)" /><text x="230" y="292" font-size="16">虚线：仅训练计算的 SS 支路；保留梯度</text>
+<text x="60" y="318" font-size="20" font-weight="bold">b</text>
+<g id="region-split"><rect x="60" y="331" width="275" height="153" fill="#F3F4F4" stroke="#356E73" /><text x="197" y="363" font-size="20" text-anchor="middle">按空间区域拆分</text><text x="197" y="397" font-size="16" text-anchor="middle">Template：64 tokens</text><text x="197" y="426" font-size="16" text-anchor="middle">Search：256 tokens</text><text x="197" y="460" font-size="16" text-anchor="middle">两路分别沿通道归一化得到 U</text></g>
+<line x1="335" y1="379" x2="400" y2="379" stroke="#202629" marker-end="url(#a)" /><line x1="335" y1="451" x2="400" y2="451" stroke="#202629" marker-end="url(#a)" />
+<g id="template-ss"><rect x="410" y="331" width="365" height="65" fill="#F3F4F4" stroke="#356E73" /><text x="592" y="357" font-size="20" text-anchor="middle">模板关系：S_rgb ↔ S_x</text><text x="592" y="383" font-size="16" text-anchor="middle">S = U × Uᵀ → [B,64,64] → MSE</text></g>
+<g id="search-ss"><rect x="410" y="419" width="365" height="65" fill="#F3F4F4" stroke="#356E73" /><text x="592" y="445" font-size="20" text-anchor="middle">搜索关系：S_rgb ↔ S_x</text><text x="592" y="471" font-size="16" text-anchor="middle">S = U × Uᵀ → [B,256,256] → MSE</text></g>
+<line x1="775" y1="364" x2="855" y2="364" stroke="#202629" marker-end="url(#a)" /><line x1="775" y1="452" x2="855" y2="452" stroke="#202629" marker-end="url(#a)" />
+<g id="aggregate"><rect x="865" y="331" width="355" height="153" fill="#F3F4F4" stroke="#356E73" stroke-width="2" /><text x="1042" y="363" font-size="20" text-anchor="middle">区域加权 → 层平均</text><text x="1042" y="397" font-size="16" text-anchor="middle">L_layer = 0.5 L_template + 0.5 L_search</text><text x="1042" y="426" font-size="16" text-anchor="middle">L_ss = mean(L_layer)</text><text x="1042" y="460" font-size="20" text-anchor="middle">L_total = L_tracking + 0.1 L_ss</text></g>
+</g>
+<g id="implementation" data-pptx-bounds="60 524 570 129" fill="#202629"><text x="60" y="546" font-size="20" font-weight="bold">c  关系矩阵究竟约束什么</text><text font-size="16" x="60" y="580">比较同一区域内任意两个 patch 的余弦相似度；不是特征逐点相等。</text><text font-size="16" x="60" y="607">MSE 包含对角线和上下三角，不包含 template–search 交叉项。</text><text font-size="16" x="60" y="634">FP32；归一化 eps = 1e−6；不 detach，也不增加可学习参数。</text></g>
+<g id="ablation" data-pptx-bounds="665 524 555 129" fill="#202629"><text x="665" y="546" font-size="20" font-weight="bold">d  插入位置与补救实验接口</text><text font-size="16" x="665" y="580">索引 3 / 5 / 7 / 9 / 11（从 0 开始），位于 Q/K/V 与 AMG 之前。</text><text font-size="16" x="665" y="607">梯度回到上游可训练 PEFT；常规推理跳过这条辅助支路。</text><text font-size="16" x="665" y="634">模板／搜索可独立消融；search-only 保留 0.5 权重，合计 0.05。</text></g>
+<g id="footer" data-pptx-bounds="60 668 1160 26" fill="#626C70" font-size="16"><text x="60" y="687">依据原论文与当前实现重绘 · 前提：direct 布局、无 CLS、CE 保留率 1，空间位置对应</text><text x="1170" y="687">02</text></g>
+</svg>

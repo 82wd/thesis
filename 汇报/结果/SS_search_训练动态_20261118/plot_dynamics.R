@@ -13,11 +13,11 @@ lcols <- c('#356E73','#557CA5','#9071A8','#B58A46','#616A73')
 # Separate single-panel figures: panel alignment is not applicable.
 # 9 x 5.5 inch slide/report output; ordinary text at least 10 pt.
 setup <- function(title,yl,ylim){
- par(mar=c(4.5,5.2,4.7,1.3),mgp=c(3.1,.8,0),family='Arial',cex=1,
+ par(mar=c(4.5,5.2,4.7,1.3),mgp=c(3.1,.8,0),family='Helvetica',cex=1,
      cex.axis=.9,cex.lab=1,lwd=1,bty='l',las=1)
  plot(NA,xlim=c(1,60),ylim=ylim,xlab='Epoch',ylab=yl,xaxt='n')
  axis(1,at=c(1,10,20,30,40,50,60))
- abline(h=axTicks(2),col='#E8ECEE',lwd=.6)
+
  title(main=title,adj=0,line=2.8,cex.main=1.2)
  mtext('Search-only SS ; seed 0; epoch averages; no smoothing',side=3,line=1.2,adj=0,cex=.8,col='#626C70')
 }
@@ -48,10 +48,13 @@ plots<-list(
  '09_location'=function()pair('Loss/location','Location loss during training','Location loss'),
  '10_weighted_ss'=function()pair('Loss/ss_weighted','Weighted SS during training','Weighted SS loss'))
 for(n in names(plots)){
- cairo_pdf(file.path(out,paste0(n,'.pdf')),width=9,height=5.5,pointsize=12,family='Arial');plots[[n]]();dev.off()
- if(requireNamespace('svglite',quietly=TRUE)){svglite::svglite(file.path(out,paste0(n,'.svg')),width=9,height=5.5,pointsize=12);plots[[n]]();dev.off()}
+ pdf(file.path(out,paste0(n,'.pdf')),width=9,height=5.5,pointsize=12,family='Helvetica');plots[[n]]();dev.off()
+ svglite::svglite(file.path(out,paste0(n,'.svg')),width=9,height=5.5,pointsize=12);plots[[n]]();dev.off()
  png(file.path(out,paste0(n,'.png')),width=2700,height=1650,res=300,type='cairo',pointsize=12);plots[[n]]();dev.off()
 }
-cairo_pdf(file.path(out,'SS_search_dynamics.pdf'),width=9,height=5.5,pointsize=12)
+pdf(file.path(out,'SS_search_dynamics.pdf'),width=9,height=5.5,pointsize=12,family='Helvetica')
 for(f in plots) f()
 dev.off()
+
+# Small QA previews drawn in R using the identical plot functions.
+for(n in names(plots)){png(file.path(out,paste0(n,'_preview.png')),width=900,height=550,res=100,type='cairo',pointsize=12);plots[[n]]();dev.off()}

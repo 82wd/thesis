@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280px" height="720px" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="content"><defs><marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0,0 7,3.5 0,7" fill="#202629"/></marker></defs><rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF"/>
+<g id="title" data-pptx-bounds="60 38 1160 90" fill="#202629"><text x="60" y="62" font-size="16">想法 3 / 补救原理与实验矩阵</text><text x="60" y="111" font-size="32">逐步拆解：约束哪个区域、哪些关系、哪些层？</text></g>
+<g id="regions" data-pptx-bounds="60 145 1160 123" fill="#202629"><text x="60" y="168" font-size="20" font-weight="bold">共用 SS 接口：两模态各自归一化 → S = U × Uᵀ → 跨模态 MSE</text>
+<rect x="60" y="191" width="300" height="65" fill="#F3F4F4"/><text x="78" y="218" font-size="20">模板 64 tokens → L_t</text><text x="78" y="243" font-size="16">Template-only 保留；Search-only 去掉</text>
+<rect x="400" y="191" width="300" height="65" fill="#F3F4F4"/><text x="418" y="218" font-size="20">搜索 256 tokens → L_s</text><text x="418" y="243" font-size="16">Search-only 保留全部搜索位置对</text>
+<line x1="700" y1="223" x2="750" y2="223" stroke="#202629" marker-end="url(#a)"/>
+<rect x="760" y="191" width="460" height="65" fill="#F3F4F4" stroke="#356E73"/><text x="780" y="218" font-size="20">Target-aware：GT 框 → patch 覆盖率</text><text x="780" y="243" font-size="16">保留 FG–FG、双向 FG–BG；去掉 BG–BG</text></g>
+<g id="experiment-table" data-pptx-bounds="60 289 1160 247" fill="#303638" font-size="16">
+<rect x="60" y="289" width="1160" height="35" fill="#F3F4F4"/><text x="70" y="313" font-weight="bold">方案</text><text x="270" y="313" font-weight="bold">目的</text><text x="610" y="313" font-weight="bold">做法：加到跟踪损失的项</text><text x="1000" y="313" font-weight="bold">效果／状态</text>
+<text x="70" y="351">A · Template-only</text><text x="270" y="351">搜索区域约束是否带来干扰？</text><text x="610" y="351">0.05 × mean(L_t)</text><text x="1000" y="351">60 轮 + 全量已完成</text>
+<line x1="60" y1="367" x2="1220" y2="367" stroke="#D7DDDF"/>
+<text x="70" y="394">B · Target-aware</text><text x="270" y="394">背景–背景关系是否不利？</text><text x="610" y="394">0.05 × mean(L_t + L_s,target)</text><text x="1000" y="394">60 轮 + 全量已完成</text>
+<line x1="60" y1="410" x2="1220" y2="410" stroke="#D7DDDF"/>
+<text x="70" y="437">Search-only</text><text x="270" y="437">只约束 query/search 是否有效？</text><text x="610" y="437">0.05 × mean(L_s)，仍取五层</text><text x="1000" y="437">60 轮训练完成</text>
+<line x1="60" y1="453" x2="1220" y2="453" stroke="#D7DDDF"/>
+<text x="70" y="480">Half-weight</text><text x="270" y="480">收益是否仅来自总约束变弱？</text><text x="610" y="480">0.025 × mean(L_t + L_s)</text><text x="1000" y="480">已启动，末轮未核验</text>
+<line x1="60" y1="496" x2="1220" y2="496" stroke="#D7DDDF"/>
+<text x="70" y="523">逐层 Search-only</text><text x="270" y="523">多层干扰，还是某一层有效？</text><text x="610" y="523">分别仅在索引 3 / 5 / 7 / 9 / 11</text><text x="1000" y="523">配置已写，结果待做</text></g>
+<g id="mechanism-note" data-pptx-bounds="60 557 1160 94" fill="#303638"><text x="60" y="581" font-size="20" font-weight="bold">Target-aware 的关键：用训练 GT 给关系加权，而不是新增预测目标的网络。</text><text x="60" y="614" font-size="16">每个样本内，前景–前景、前景–背景、背景–前景分别按权重质量归一，再平均有效组；模板 SS 保留。</text><text x="60" y="643" font-size="16">A 同时减少区域与总强度，不能只凭 A 的提升就归因于搜索 SS；半权重对照正是为排除这个混淆。</text></g>
+<g id="footer" data-pptx-bounds="60 668 1160 26" fill="#626C70" font-size="16"><text x="60" y="687">mean 均指选定层平均；索引从 0 开始，即第 4 / 6 / 8 / 10 / 12 层之前取特征。</text><text x="1170" y="687">05</text></g></svg>

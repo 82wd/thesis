@@ -1,0 +1,8 @@
+Prepared Python figure verification (4 objects, source values and final PNG/PDF inspected)
+P03 result-plot: paired horizontal differences, domain [-2.6,1.5] pp, zero origin, values [-0.80,+0.94,-0.63,-2.26]. Four source pairs matched. EAO excluded from percentage plot and shown separately.
+P06 result-plot: two point panels, explicit nonzero x domains [56.5,57.9] and [63.5,65.1], exact values displayed in row-aligned numeric columns; no magnitude bars. Baseline vertical reference correctly located. Both panels aligned.
+P07 result-plot: 60 train / 12 validation points, epoch x domain [0,61]; unweighted search MSE and crop IoU separate y axes. No smoothing, no dropped observations. Panels aligned.
+P09 result-plot: three IoU panels share y [0,1], all five methods included, exact source values bound to Matplotlib bars; samples 1 / 1 / 66 distinct. Panels aligned.
+These are prepared raster chart assets in SVG slides, not hand-mapped SVG marks. No SVG-coordinate recalculation needed. Reproducible source and editable SVG/PDF accompany the slide images.
+All four final figure collision audits pass; min glyph 10 pt; no multi-seed uncertainty available, no invented error bars. 300 dpi and slide-sized width intentional; no journal TIFF required.
+Schematic visual inspection: 02/04/05/08/10 complete, no clipped labels or crossing node text. Sources support every method and number; GT only training/diagnostic, not inference.

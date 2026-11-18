@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280px" height="720px" viewBox="0 0 1280 720" font-family="Arial, PingFang SC, sans-serif" data-pptx-page-role="cover">
+<rect id="bg" data-pptx-role="background" width="1280" height="720" fill="#FFFFFF"/>
+<g id="title" data-pptx-bounds="60 50 1160 210" fill="#202629"><text x="60" y="77" font-size="20" fill="#626C70">SEATrack · 组会实验复盘 · 2026.11.18</text><text x="60" y="159" font-size="52" font-weight="bold">SS、补救与频段融合</text><text x="60" y="220" font-size="24">从“关系对齐能否帮助跟踪”到“哪些干预真正有效”</text></g>
+<g id="main" data-pptx-bounds="60 285 1160 298" fill="#303638"><line x1="60" y1="285" x2="1220" y2="285" stroke="#B9D4E5"/>
+<text x="60" y="333" font-size="24" fill="#4A8FBD" font-weight="bold">01  SS：先检验表征约束</text><text x="500" y="333" font-size="20">原理 → 多数据集结果 → 逐序列失败分析</text>
+<line x1="60" y1="366" x2="1220" y2="366" stroke="#B9D4E5"/>
+<text x="60" y="413" font-size="24" fill="#4A8FBD" font-weight="bold">03  SS 补救：定位干扰来源</text><text x="500" y="413" font-size="20">搜索框交换 → 区域／目标／层消融 → 收敛动态</text>
+<line x1="60" y1="446" x2="1220" y2="446" stroke="#B9D4E5"/>
+<text x="60" y="493" font-size="24" fill="#BC8E53" font-weight="bold">02  频段融合：检验模态互补</text><text x="500" y="493" font-size="20">固定特征融合 → 两参数决策图融合 → 闭环验证</text>
+<text x="60" y="566" font-size="20" font-weight="bold">汇报重点：每项实验为什么做、具体改了什么、结果支持什么结论。</text></g>
+<g id="footer" data-pptx-bounds="60 631 1160 63" fill="#626C70" font-size="16"><text x="60" y="653">已完成全量评测、已完成训练与诊断性回放分别标注；不将单帧改善当作总体收益。</text><text x="60" y="686">编号对应师兄想法；汇报按“SS → 补救 → 频段”展开。</text><text x="1170" y="686">01</text></g></svg>

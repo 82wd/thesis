@@ -92,6 +92,30 @@ python -m unittest discover -s tests -v
 ```bash
 ssh -i ~/.ssh/id_ed25519_82wd -p 10343 liziyan103@10.68.240.49
 ```
+登陆服务器
+
+在校园网里：
+
+直接按快捷键。脚本会自动直连服务器，不需要启动 Docker 或 EasyConnect。
+
+用手机热点、家里网络时：
+
+1. 开启 Clash Verge，让 Codex、ChatGPT 正常联网。
+2. 打开 Docker Desktop，终端执行：
+
+   docker start nwpu-vpn
+3. Finder 按 ⌘K，连接：
+
+   vnc://127.0.0.1:15901
+   屏幕共享密码：ecLocal7。
+4. 在 EasyConnect 中登录学校账号。登录成功后可以关闭屏幕共享窗口。
+5. 按 iTerm 快捷键，脚本会在约 3 秒的直连检测后自动走 VPN。
+
+注意：启动容器不等于 VPN 已登录。 使用期间保持 Docker 运行、EasyConnect 在线；如果提示 Connection closed by UNKNOWN port 65535，优先检查 VPN 是否掉线。
+
+不用快捷键时，也可以直接在终端运行：
+
+/Users/lzy/.local/bin/nwpu-ssh
 
 在服务器使用已确认的实验解释器检查环境：
 

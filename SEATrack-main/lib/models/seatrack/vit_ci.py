@@ -33,7 +33,7 @@ class VisionTransformerCE(VisionTransformer):
                  num_heads=12, mlp_ratio=4., qkv_bias=True, representation_size=None, distilled=False,
                  drop_rate=0., attn_drop_rate=0., drop_path_rate=0., embed_layer=PatchEmbed, norm_layer=None,
                  act_layer=None, weight_init='', ce_loc=None, ce_keep_ratio=None, search_size=None, template_size=None,
-                 new_patch_size=None, amglora_rank=None, hmoe_rank=None, ss_cfg=None, frequency_cfg=None):
+                 new_patch_size=None, amglora_rank=None, hmoe_rank=None, ss_cfg=None, frequency_cfg=None, register_cfg=None):
         """
         Args:
             img_size (int, tuple): input image size
@@ -111,6 +111,28 @@ class VisionTransformerCE(VisionTransformer):
         # self.add_cls_token = True   
         self.init_weights(weight_init)
 
+        self.register_tokens = None
+        self.register_insert_layer = 0
+        self.register_guidance_scale = 0.0
+        if register_cfg is not None and register_cfg.ENABLED:
+            if ((ss_cfg is not None and ss_cfg.ENABLED)
+                    or (frequency_cfg is not None and frequency_cfg.ENABLED)):
+                raise ValueError("Registers require an independent no-SS/no-frequency baseline")
+            if any(r != 1.0 for r in (ce_keep_ratio or [])):
+                raise ValueError("Registers require CE_KEEP_RATIO=1")
+            count, layer = register_cfg.NUM_TOKENS, register_cfg.INSERT_LAYER
+            scale = register_cfg.GUIDANCE_SCALE
+            if type(count) is not int or count < 1:
+                raise ValueError("REGISTER.NUM_TOKENS must be a positive integer")
+            if type(layer) is not int or not 0 <= layer < depth:
+                raise ValueError("REGISTER.INSERT_LAYER must be a block input in [0, depth)")
+            if not math.isfinite(scale) or scale < 0:
+                raise ValueError("REGISTER.GUIDANCE_SCALE must be finite and nonnegative")
+            self.register_tokens = nn.Parameter(torch.empty(1, count, embed_dim))
+            nn.init.normal_(self.register_tokens, std=0.02)
+            self.register_insert_layer = layer
+            self.register_guidance_scale = float(scale)
+
         self.frequency_fusion = None
         if frequency_cfg is not None and frequency_cfg.ENABLED:
             if any(r != 1.0 for r in (ce_keep_ratio or [])):
@@ -133,9 +155,17 @@ class VisionTransformerCE(VisionTransformer):
 
     def forward_features(self, z, x, mask_z=None, mask_x=None,
                          ce_template_mask=None, ce_keep_rate=None,
-                         return_last_attn=False, compute_ss=None):
+                         return_last_attn=False, compute_ss=None, use_registers=True):
 
         B, H, W = x.shape[0], x.shape[2], x.shape[3]
+        registers_active = use_registers and self.register_tokens is not None
+        if self.register_tokens is not None:
+            if self.cat_mode != "direct" or self.add_cls_token or self.add_sep_seg:
+                raise ValueError("Registers require direct tokens without CLS/segment embeddings")
+            if ce_keep_rate is not None and ce_keep_rate != 1:
+                raise ValueError("Registers require ce_keep_rate=1")
+            if mask_z is not None or mask_x is not None:
+                raise ValueError("Register branch does not support padding masks")
         if self.frequency_fusion is not None:
             if self.cat_mode != "direct" or self.add_cls_token:
                 raise ValueError("Frequency fusion requires direct tokens without CLS")
@@ -231,6 +261,10 @@ class VisionTransformerCE(VisionTransformer):
             if ce_keep_rate is not None and ce_keep_rate != 1.0:
                 raise ValueError("SS requires ce_keep_rate=1")
         for i, blk in enumerate(self.blocks):
+            if registers_active and i == self.register_insert_layer:
+                # Append without spatial positions; keep template/search offsets intact.
+                registers = self.register_tokens.expand(B, -1, -1)
+                x = [torch.cat([stream, registers], dim=1) for stream in x]
             # Capture features BEFORE this block computes Q/K/V and AMG.
             if self.ss_alignment is not None and compute_ss and i in self.ss_layers:
                 ss_losses.append(self.ss_alignment(x[0], x[1], lens_z))
@@ -243,6 +277,17 @@ class VisionTransformerCE(VisionTransformer):
             x_dtes = x_dtes[:, 1:, 1:]
         # 【最后一层之后】再做 LayerNorm，然后将前 64 个模板 token 与后 256 个搜索 token 分开。
         # 模板已通过注意力影响搜索特征；预测头只需要搜索网格，不再直接接收模板。
+        # Measure pre-LayerNorm magnitudes; high register norms are a hypothesis, not forced.
+        register_stats = {}
+        if registers_active:
+            visual_count = lens_z + lens_x
+            register_stats = {
+                'register_norm': torch.stack([stream[:, visual_count:].detach().norm(dim=-1).mean()
+                                               for stream in x]).mean(),
+                'patch_norm': torch.stack([stream[:, :visual_count].detach().norm(dim=-1).mean()
+                                            for stream in x]).mean(),
+            }
+            x = [stream[:, :visual_count] for stream in x]
         # 归一化
         x_rgbs = self.norm(x[0])
         x_dtes = self.norm(x[1])
@@ -282,6 +327,7 @@ class VisionTransformerCE(VisionTransformer):
             'attns': attns
                     }
 
+        aux_dict.update(register_stats)
         if ss_losses:
             for key in ss_losses[0]:
                 aux_dict[key] = torch.stack([item[key] for item in ss_losses]).mean()
@@ -296,9 +342,17 @@ class VisionTransformerCE(VisionTransformer):
                 tnc_keep_rate=None,
                 return_last_attn=False, compute_ss=None):
 
-        x, aux_dict = self.forward_features(z, x, ce_template_mask=ce_template_mask, ce_keep_rate=ce_keep_rate, compute_ss=compute_ss)
-
-        return x, aux_dict
+        features, aux_dict = self.forward_features(
+            z, x, ce_template_mask=ce_template_mask, ce_keep_rate=ce_keep_rate,
+            compute_ss=compute_ss)
+        # Tracking adaptation of JVT Eq. (4): extrapolate search features before the head.
+        # Same images and weights; removing registers is not the separately trained baseline.
+        if not self.training and self.register_tokens is not None and self.register_guidance_scale > 0:
+            without, _ = self.forward_features(
+                z, x, ce_template_mask=ce_template_mask, ce_keep_rate=ce_keep_rate,
+                compute_ss=False, use_registers=False)
+            features = features + self.register_guidance_scale * (features - without)
+        return features, aux_dict
 
 def _create_vision_transformer(pretrained=False, **kwargs):
     model = VisionTransformerCE(**kwargs)

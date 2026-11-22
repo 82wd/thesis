@@ -167,6 +167,9 @@ class SEATrackActor(BaseActor):
                                "Loss/ss_template": pred_dict["ss_template"].mean().item(),
                                "Loss/ss_search": pred_dict["ss_search"].mean().item(),
                                "Loss/ss_weighted": self.cfg.TRAIN.SS_WEIGHT * ss_loss.item()})
+            for key in ('register_norm', 'patch_norm'):
+                if key in pred_dict:
+                    status[f"Register/{key}"] = pred_dict[key].detach().mean().item()
             return loss, status
         else:
             return loss

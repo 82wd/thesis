@@ -110,6 +110,12 @@ def build_seatrack(cfg, training=True):
     if cfg.MODEL.SS.ENABLED and (cfg.MODEL.BACKBONE.CAT_MODE != "direct"
                                  or cfg.MODEL.BACKBONE.ADD_CLS_TOKEN):
         raise ValueError("SS requires direct [template; search] tokens without CLS")
+    if cfg.MODEL.REGISTER.ENABLED:
+        if cfg.MODEL.SS.ENABLED or cfg.MODEL.FREQUENCY.ENABLED:
+            raise ValueError("Register experiments must use the baseline without SS/frequency fusion")
+        if (cfg.MODEL.BACKBONE.CAT_MODE != "direct" or cfg.MODEL.BACKBONE.ADD_CLS_TOKEN
+                or cfg.MODEL.BACKBONE.SEP_SEG):
+            raise ValueError("Registers require direct tokens without CLS/segment embeddings")
     current_dir = os.path.dirname(os.path.abspath(__file__))  # This is your Project Root
     pretrained_path = os.path.join(current_dir, '../../../pretrained_models')  # use pretrained OSTrack as initialization
     if cfg.MODEL.PRETRAIN_FILE and ('OSTrack' not in cfg.MODEL.PRETRAIN_FILE) and training:
@@ -127,7 +133,8 @@ def build_seatrack(cfg, training=True):
                                            amglora_rank = cfg.MODEL.AMGLORA_RANK,
                                            hmoe_rank = cfg.MODEL.HMOE_RANK,
                                            ss_cfg=cfg.MODEL.SS,
-                                           frequency_cfg=cfg.MODEL.FREQUENCY
+                                           frequency_cfg=cfg.MODEL.FREQUENCY,
+                                           register_cfg=cfg.MODEL.REGISTER
                                            )
         hidden_dim = backbone.embed_dim
 

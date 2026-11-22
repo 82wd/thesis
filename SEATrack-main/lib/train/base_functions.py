@@ -174,7 +174,7 @@ def get_optimizer_scheduler(net, cfg):
         # 因父模块名字含moe，也会被训练，不仅是其低秩矩阵。
         # 新加模块若名字不含这些词会被冻住；改结构必须核对named_parameters和优化器组。
         # requires_grad=False只冻结权重，不能阻断梯度对上游输入的传播。
-        trainable_params = ['moe', 'scaling', 'lora']
+        trainable_params = ['moe', 'scaling', 'lora', 'register_tokens']
         param_dicts = [
             {"params": [p for n, p in net.named_parameters() if p.requires_grad and any([param in n for param in trainable_params])]}
         ]

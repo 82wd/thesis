@@ -216,12 +216,14 @@ class CEBlock_AP(nn.Module):
             # 两路模板拼成 [B,128,768]；两路搜索拼成 [B,512,768]，分别进入同一个 HMoE。
             # 这里不是模板和搜索一起跨模态拼接；mode 目前未在 HMoE 内参与运算。
             mix_z = self.attn_moe(torch.cat([x[0][:, :lens_t], x[1][:, :lens_t]], dim=1), mode = 'template')
-            mix_x = self.attn_moe(torch.cat([x[0][:, lens_t:], x[1][:, lens_t:]], dim=1), mode = 'search')
+            mix_x = self.attn_moe(torch.cat([x[0][:, lens_t:lens_t + lens_x], x[1][:, lens_t:lens_t + lens_x]], dim=1), mode = 'search')
             # HMoE 输出维度与输入相同，前半对应 RGB、后半对应 X。
             # 取各自模板/搜索片段重新接成 [B,320,768]，作为增量加入原特征。
             # 这是残差连接，既保留原信息，也允许融合分支学习修正；DropPath 在 eval 下关闭。
-            x[0] = x[0] + self.drop_path(torch.cat([mix_z[:, :lens_t], mix_x[:, :lens_x]], dim=1))
-            x[1] = x[1] + self.drop_path(torch.cat([mix_z[:, lens_t:], mix_x[:, lens_x:]], dim=1))
+            x[0] = x[0] + self.drop_path(F.pad(torch.cat([mix_z[:, :lens_t], mix_x[:, :lens_x]], dim=1),
+                                            (0, 0, 0, x[0].shape[1] - lens_t - lens_x)))
+            x[1] = x[1] + self.drop_path(F.pad(torch.cat([mix_z[:, lens_t:], mix_x[:, lens_x:]], dim=1),
+                                            (0, 0, 0, x[1].shape[1] - lens_t - lens_x)))
         
         removed_rgbsearch_idx = None
         removed_dtesearch_idx = None
@@ -245,9 +247,11 @@ class CEBlock_AP(nn.Module):
         # HMoE for cross template and search region fusion
         if self.layer in self.moe_layers:
             mix_z = self.ffn_moe(torch.cat([x[0][:, :lens_t], x[1][:, :lens_t]], dim=1), mode = 'template')
-            mix_x = self.ffn_moe(torch.cat([x[0][:, lens_t:], x[1][:, lens_t:]], dim=1), mode = 'search')
-            x[0] = x[0] + self.drop_path(torch.cat([mix_z[:, :lens_t], mix_x[:, :lens_x]], dim=1))
-            x[1] = x[1] + self.drop_path(torch.cat([mix_z[:, lens_t:], mix_x[:, lens_x:]], dim=1))
+            mix_x = self.ffn_moe(torch.cat([x[0][:, lens_t:lens_t + lens_x], x[1][:, lens_t:lens_t + lens_x]], dim=1), mode = 'search')
+            x[0] = x[0] + self.drop_path(F.pad(torch.cat([mix_z[:, :lens_t], mix_x[:, :lens_x]], dim=1),
+                                            (0, 0, 0, x[0].shape[1] - lens_t - lens_x)))
+            x[1] = x[1] + self.drop_path(F.pad(torch.cat([mix_z[:, lens_t:], mix_x[:, lens_x:]], dim=1),
+                                            (0, 0, 0, x[1].shape[1] - lens_t - lens_x)))
 
         return x, global_index_template, global_search_idx, [removed_rgbsearch_idx, removed_dtesearch_idx]
 

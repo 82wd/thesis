@@ -25,7 +25,13 @@ def parameters(yaml_name: str, epoch=None, variants=None):
     # Network checkpoint path
     frequency_experiment = yaml_name in {
         'rgbt_freq_baseline', 'rgbt_freq_equal', 'rgbt_freq_rgb_low', 'rgbt_freq_ir_low'}
-    if frequency_experiment:
+    register_experiment = config.MODEL.REGISTER.ENABLED
+    if register_experiment:
+        checkpoint = os.environ.get('SEATRACK_CHECKPOINT')
+        if not checkpoint or not os.path.isfile(checkpoint):
+            raise ValueError('Set SEATRACK_CHECKPOINT to the trained register checkpoint')
+        params.checkpoint = os.path.abspath(checkpoint)
+    elif frequency_experiment:
         checkpoint = os.environ.get('SEATRACK_CHECKPOINT')
         if not checkpoint or not os.path.isfile(checkpoint):
             raise ValueError('Set SEATRACK_CHECKPOINT to an existing non-SS RGB-T checkpoint')
@@ -48,5 +54,5 @@ def parameters(yaml_name: str, epoch=None, variants=None):
     # whether to save boxes from all queries
     params.save_all_boxes = False
     # params.debug = 1
-    params.task = 'rgbt' if frequency_experiment else yaml_name
+    params.task = 'rgbt' if frequency_experiment or register_experiment else yaml_name
     return params

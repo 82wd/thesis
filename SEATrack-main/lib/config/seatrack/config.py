@@ -30,6 +30,13 @@ cfg.MODEL.FREQUENCY.LOW_RGB_WEIGHT = 1.0
 cfg.MODEL.FREQUENCY.HIGH_RGB_WEIGHT = 0.0
 cfg.MODEL.FREQUENCY.GAIN = 2.0
 
+# Independent 11.18 architecture experiment; no SS or frequency fusion.
+cfg.MODEL.REGISTER = edict()
+cfg.MODEL.REGISTER.ENABLED = False
+cfg.MODEL.REGISTER.NUM_TOKENS = 4
+cfg.MODEL.REGISTER.INSERT_LAYER = 9  # zero-based block input, after nine blocks
+cfg.MODEL.REGISTER.GUIDANCE_SCALE = 0.0  # eval-only feature extrapolation
+
 # MODEL.BACKBONE
 cfg.MODEL.BACKBONE = edict()
 cfg.MODEL.BACKBONE.TYPE = "vit_base_patch16_224"

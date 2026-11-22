@@ -1,5 +1,7 @@
 # SEATrack 频段融合实验（不使用 SS）
 
+> 新 agent 接手请先读 [项目交接.md](项目交接.md)，项目协作约定见 [AGENTS.md](AGENTS.md)。下文主要介绍历史频域分支；实际检出分支请用 `git branch --show-current` 确认，训练进度以交接文件注明的核验时间及服务器最新日志为准。
+
 分支：`experiment/frequency-fusion`。
 
 本分支验证师兄的第二个想法：**在未加 SS 的 SEATrack 基线上，用 RGB 与红外的不同频段组合替代最终特征相加，观察是否改善跟踪。** 第一步采用固定权重、无需训练的即插即用融合。

@@ -1,0 +1,26 @@
+{
+  "ratio": {
+    "median": 0.00042569402195453195,
+    "min": 0.00013108579505407227,
+    "max": 0.001212797966649995
+  },
+  "cosine": {
+    "median": 0.011548052360839337,
+    "min": -0.06904734516995295,
+    "max": 0.08519637326485363
+  },
+  "tracking_grad_norm": {
+    "median": 1.9892569233821678,
+    "min": 0.6654780888306752,
+    "max": 6.286613324750565
+  },
+  "ss_grad_norm": {
+    "median": 0.000665675265816504,
+    "min": 0.0003330858081158859,
+    "max": 0.0012645348305645244
+  },
+  "batches": 48,
+  "samples": 192,
+  "negative_cosine_batches": 20,
+  "scope": "ep60 local multi-batch diagnosis; not historical training gradients; before clipping and Adam preconditioning"
+}

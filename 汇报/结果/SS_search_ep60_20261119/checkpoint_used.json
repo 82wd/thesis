@@ -1,0 +1,5 @@
+{
+  "epoch": 60,
+  "sha256": "154b63de2ff8a2307101ff2810226c2328a1efc3ab06e03e3fc1ad2024b71f5b",
+  "checkpoint": "/nas/liziyan103/seatrack/training_runs/20261116_ss_search/output/checkpoints/rgbt_ss_search/SEATrack_ep0060.pth.tar"
+}

@@ -133,19 +133,23 @@ def training_epochs(root, config):
     return int(match.group(1)) if match else 60
 
 
-def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300):
+def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300, log_path=None):
     now = time.time() if now is None else now
-    log = run / 'train.log'
-    text = tail(log)
+    log = log_path or run / 'train.log'
+    text = tail(log, limit=4194304)
     state = parse(text)
     train, validation, last = state['train'], state['val'], state['last']
     saved = snapshots(run, config)
     highest = max(saved, default=0)
     exitcode = read_exit(run)
-    done = exitcode == 0 and state['finished'] and highest >= epochs
+    pipeline_done = 'HALF_TRAIN_AND_EVAL_COMPLETE' in text
+    evaluation = list(re.finditer(r'^PROGRESS (LasHeR|RGBT234) (\d+) (\d+)', text, re.M))
+    done = (exitcode == 0 and state['finished'] and highest >= epochs) or pipeline_done
     metrics_invalid = last and any(v is not None and not math.isfinite(v) for v in last['metrics'].values())
     if exitcode is not None and exitcode != 0:
         label = '失败 / 已退出，退出码：{}'.format(exitcode)
+    elif pipeline_done:
+        label = '训练与两套全量测评均已完成（完成标记）'
     elif done:
         label = '已完成（退出码 0，末轮权重文件存在）'
     elif exitcode == 0:
@@ -154,6 +158,8 @@ def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300):
         label = '日志出现错误，等待退出状态'
     elif metrics_invalid:
         label = '日志出现非有限指标，请检查训练窗口'
+    elif evaluation:
+        label = '正在全量测评（最近进度记录）'
     elif state['finished']:
         label = '训练已报告结束，等待退出码'
     elif last:
@@ -165,7 +171,7 @@ def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300):
     except FileNotFoundError:
         age = None
     stale = age is not None and age > stale_seconds and exitcode is None
-    if stale and not state['error_after_progress'] and not state['finished']:
+    if stale and not state['error_after_progress'] and not done:
         label = '警告：日志长期未更新，疑似停滞（也可能在加载/保存）'
     queue_status = tail(run / 'status').strip()
     if not last and queue_status.startswith('WAITING_GPU'):
@@ -181,7 +187,7 @@ def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300):
     remaining = None
     if speed is not None and math.isfinite(speed) and speed > 0 and train:
         remaining = max(0, epochs - completed) * train['batches'] * speed
-    if exitcode is not None or state['error_after_progress'] or metrics_invalid or stale:
+    if exitcode is not None or state['error_after_progress'] or metrics_invalid or stale or evaluation or pipeline_done:
         remaining = None
     lines = [
         'SEATrack · 训练进度监控',
@@ -218,6 +224,12 @@ def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300):
         if template is not None and search is not None:
             lines.append('  模板 SS {:.5f}  |  搜索 SS {:.5f}'.format(template, search))
     lines.append('已保存权重：{} 份；最高第 {} 轮（仅检查非空文件，不加载权重）'.format(len(saved), highest))
+    if evaluation:
+        for dataset in ('LasHeR', 'RGBT234'):
+            records = [m for m in evaluation if m.group(1) == dataset]
+            if records:
+                item = records[-1]
+                lines.append('全量测评 {}：{}/{} 条序列'.format(dataset, item.group(2), item.group(3)))
     if gpu is not None:
         lines += ['-' * 72, gpu]
     lines += ['-' * 72,
@@ -234,6 +246,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=ROOT)
     parser.add_argument('--run-dir', type=Path)
+    parser.add_argument('--log', type=Path, help='Override training/pipeline log path')
     parser.add_argument('--config', default='rgbt_ss_search')
     parser.add_argument('--epochs', type=int)
     parser.add_argument('--session', default='ss_search_20261116', help='Display only; never controls tmux')
@@ -254,7 +267,7 @@ def main():
                 output = '尚未发现正式 full_* 实验目录：{}\n等待训练启动；不会读取 smoke 试跑。'.format(args.root)
             else:
                 gpu = gpu_status(args.gpu) if args.gpu >= 0 else None
-                output = screen(run, epochs, args.config, args.session, gpu, stale_seconds=args.stale_seconds)
+                output = screen(run, epochs, args.config, args.session, gpu, stale_seconds=args.stale_seconds, log_path=args.log)
             if sys.stdout.isatty() and not args.once:
                 sys.stdout.write('\033[2J\033[H')
             print(output, flush=True)

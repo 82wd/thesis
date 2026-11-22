@@ -1,0 +1,11 @@
+{
+  "source_harness": "/nas/liziyan103/seatrack/training_runs/20261112_ss_template-only/full/pairwise_eval60.py",
+  "source_harness_sha256": "1fa3e51c8c98b524167f77c4a7db2970a8b9d1864f4f6d4681b9ec17e6bb78b5",
+  "runner_sha256": "c5a3cf88a907174756e4ab8a3f9c624231dcee56d4bbdb529ddb72ae91dbaeff",
+  "config_sha256": "10983cb786565933a0d8c7058495c1e1d82a6c6d23f5616fe4b5b31084cbc88a",
+  "gpu": 1,
+  "datasets": {
+    "LasHeR": 245,
+    "RGBT234": 234
+  }
+}

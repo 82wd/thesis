@@ -38,6 +38,30 @@ class MonitorTests(unittest.TestCase):
             (checkpoints / 'SEATrack_ep0060.pth.tar').write_bytes(b'placeholder')
             self.assertIn('已完成（', monitor.screen(run, 60, 'cfg', 'test'))
 
+    def test_register_run_layout_and_completion(self):
+        with tempfile.TemporaryDirectory() as folder:
+            run = Path(folder)
+            row = ROW.rstrip() + ' , Register/register_norm: 150.1 , Register/patch_norm: 270.2\n'
+            (run / 'train.log').write_text(row + 'Finished training!\nREGISTER_TRAIN_COMPLETE\n')
+            (run / 'status').write_text('TRAIN_COMPLETE\n')
+            self.assertNotIn('已完成（', monitor.screen(run, 60, 'rgbt_register', 'test'))
+            checkpoints = run / 'full/checkpoints/rgbt_register'
+            checkpoints.mkdir(parents=True)
+            (checkpoints / 'SEATrack_ep0060.pth.tar').write_bytes(b'placeholder')
+            output = monitor.screen(run, 60, 'rgbt_register', 'test')
+            self.assertIn('已完成（', output)
+            self.assertIn('寄存器范数 150.10000', output)
+            self.assertIn('patch 范数 270.20000', output)
+
+    def test_register_failure_status_suppresses_eta(self):
+        with tempfile.TemporaryDirectory() as folder:
+            run = Path(folder)
+            (run / 'train.log').write_text(ROW)
+            (run / 'status').write_text('FAILED exit=1\n')
+            output = monitor.screen(run, 60, 'rgbt_register', 'test')
+            self.assertIn('失败 / 已退出', output)
+            self.assertIn('时间估算：暂无', output)
+
     def test_crash_not_success(self):
         with tempfile.TemporaryDirectory() as folder:
             run = Path(folder)

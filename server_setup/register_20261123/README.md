@@ -24,3 +24,13 @@ Python：`/nas/liziyan103/anaconda3/envs/seatrack/bin/python`。
 `TRAINING` 仅表示已进入启动流程；必须结合实时日志推进和进程判断是否正在训练。`TRAIN_COMPLETE` 也需核对 ep60 checkpoint。
 
 启动预检查曾依次发现并修复参数顺序、多进程入口路径／主函数保护、单进程验证 timeout 三处启动适配问题；失败日志和对应输出均保留为服务器 `*.attempt1/2/3*`，不是正式训练结果。
+
+2026-11-23 11:39北京时间核验：预检查完成，寄存器最大参数变化0.00080054、峰值分配2397.05MiB；正式训练已到第1/60轮480/15000微批次，状态TRAINING。此为快照，后续查询真实日志。
+
+## 进度面板（已部署并核验）
+
+2026-11-23 14:18：VPN路径恢复，监控已部署到 `register_20261123` 的窗口1 `progress`，确认每10秒刷新且训练进程存活。此前握手失败的具体原因未确定，不能据此认定用户未登录。
+
+`server_setup/training_monitor.py` 与本目录 `monitor.sh` 已放到服务器实验根目录，`bash monitor.sh --once` 可查看单次状态；`bash monitor.sh` 每10秒刷新，300秒日志停更提示。展示轮次、批次、训练阶段剩余时间估算、loss、IoU、寄存器与patch范数、权重文件及整卡GPU状态。完成判断需退出状态、训练完成日志和末轮非空权重共同支持。
+
+查看：`tmux attach -t register_20261123`，按 Ctrl+B 再按1进入progress；按 Ctrl+B 再按D离开。窗口已存在，不要重复创建。面板只读，不重启训练，也不自动发送消息。

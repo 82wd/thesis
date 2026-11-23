@@ -31,7 +31,7 @@
 python tracking/train.py --script seatrack --config rgbt_register --save_dir /absolute/new/register_run --mode single
 ```
 
-默认继承 `rgbt.yaml` 的 OSTrack 初始化文件、LasHeR 数据和 60 轮设置；运行前配置已有环境中的数据与权重路径。不得把 SS checkpoint 当作无 SS 初始化。公平比较应使用相同初始化、采样量、优化器、随机种子及评测协议。先查共享 GPU 占用，再在服务器独立代码快照中启动；此实现没有启动训练。
+默认继承 `rgbt.yaml` 的 OSTrack 初始化文件、LasHeR 数据和 60 轮设置；运行前配置已有环境中的数据与权重路径。不得把 SS checkpoint 当作无 SS 初始化。公平比较应使用相同初始化、采样量、优化器、随机种子及评测协议。先查共享 GPU 占用，再在服务器独立代码快照中启动；2026-11-23 已按后续指令在独立服务器快照启动训练，入口见 `../server_setup/register_20261123/README.md`。
 
 评测通过 `lib.test.parameter.seatrack.parameters('rgbt_register')` 或 `parameters('rgbt_register_guidance')` 接入现有 Tracker，均要求：
 
@@ -55,4 +55,4 @@ python -m unittest discover -s tests -p 'test_register_guidance.py'
 
 本地测试环境为临时虚拟环境（Python 3.9、PyTorch 2.8.0、timm 0.6.13）；评测模块导入还需项目原有的 easydict、tensorboardX、lmdb、jpeg4py、pandas、pycocotools 等依赖。没有修改服务器环境。
 
-服务器训练、真实 checkpoint 初始化核验、CUDA 验证与全量跟踪评测待做。本地随机输入测试不能证明性能提升；范数均值也不足以证明 patch 更平滑，后续还需固定样本特征图与空间差分诊断。
+2026-11-23 服务器 OSTrack 初始化加载及 CUDA 小批训练／验证已通过，正式60轮训练运行中。全量跟踪评测仍待做。本地随机输入测试不能证明性能提升；范数均值也不足以证明 patch 更平滑，后续还需固定样本特征图与空间差分诊断。

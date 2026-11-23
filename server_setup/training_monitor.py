@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Read-only pairwise SS dashboard. Standard library only; no torch imports."""
+"""Read-only SEATrack training dashboard. Standard library only; no torch imports."""
 import argparse
 import csv
 from datetime import datetime, timedelta, timezone
@@ -39,7 +39,8 @@ def parse(text):
                'batches': int(batches), 'position': match.start(),
                'metrics': {key: metric(values, key) for key in (
                    'Loss/total', 'IoU', 'Loss/ss', 'Loss/ss_weighted',
-                   'Loss/ss_template', 'Loss/ss_search', 'FPS', 'TotalTime')}}
+                   'Loss/ss_template', 'Loss/ss_search', 'Register/register_norm',
+                   'Register/patch_norm', 'FPS', 'TotalTime')}}
         result[phase] = result['last'] = row
     error_positions = [text.rfind(token) for token in
                        ('Traceback (most recent call last):', 'Training crashed at epoch',
@@ -85,7 +86,9 @@ def read_exit(run):
     path = run / 'exitcode.txt'
     if not path.exists():
         status = tail(run / 'status')
-        match = re.search(r'FINISHED exit=(-?\d+)', status)
+        if status.strip() == 'TRAIN_COMPLETE':
+            return 0
+        match = re.search(r'(?:FINISHED|FAILED) exit=(-?\d+)', status)
         return int(match.group(1)) if match else None
     value = path.read_text().strip()
     try:
@@ -99,6 +102,8 @@ def snapshots(run, config):
     directory = run / 'output' / 'checkpoints' / config
     if not directory.exists():
         directory = run / 'checkpoints' / config
+    if not directory.exists():
+        directory = run / 'full' / 'checkpoints' / config
     for path in directory.glob('SEATrack_ep*.pth.tar'):
         match = re.fullmatch(r'SEATrack_ep(\d+)\.pth\.tar', path.name)
         try:
@@ -223,6 +228,10 @@ def screen(run, epochs, config, session, gpu=None, now=None, stale_seconds=300, 
         template, search = row['metrics']['Loss/ss_template'], row['metrics']['Loss/ss_search']
         if template is not None and search is not None:
             lines.append('  模板 SS {:.5f}  |  搜索 SS {:.5f}'.format(template, search))
+        register = row['metrics']['Register/register_norm']
+        patch = row['metrics']['Register/patch_norm']
+        if register is not None and patch is not None:
+            lines.append('  寄存器范数 {:.5f}  |  patch 范数 {:.5f}（LayerNorm前）'.format(register, patch))
     lines.append('已保存权重：{} 份；最高第 {} 轮（仅检查非空文件，不加载权重）'.format(len(saved), highest))
     if evaluation:
         for dataset in ('LasHeR', 'RGBT234'):

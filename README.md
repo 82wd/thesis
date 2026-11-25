@@ -1,172 +1,203 @@
-# SEATrack 频段融合实验（不使用 SS）
+# 基于 SEATrack 的 RGB-T 跟踪毕业设计
 
-> 新 agent 接手请先读 [项目交接.md](项目交接.md)，项目协作约定见 [AGENTS.md](AGENTS.md)。下文主要介绍历史频域分支；实际检出分支请用 `git branch --show-current` 确认，训练进度以交接文件注明的核验时间及服务器最新日志为准。
+本项目以 SEATrack 为基线，研究 RGB 与热红外信息如何更有效地协同完成目标跟踪。工作包括基线复现、跨模态空间自相似约束（SS）、SS 消融与退化诊断、频域融合，以及寄存器 token 与 Register Guidance。仓库同时保留早期 RGB-D、RGB-E 实验和毕业设计汇报材料。
 
-分支：`experiment/frequency-fusion`。
+**本 README 是整个项目的总入口。** 各方向的代码与资料已汇集于当前 `main`；历史实验分支名称不代表当前工作区分支。详细实现进入专项说明，实时任务状态以真实日志为准。
 
-本分支验证师兄的第二个想法：**在未加 SS 的 SEATrack 基线上，用 RGB 与红外的不同频段组合替代最终特征相加，观察是否改善跟踪。** 第一步采用固定权重、无需训练的即插即用融合。
-
-**完整实现、公式、配置参数与运行说明：[README_FREQUENCY_FUSION.md](SEATrack-main/README_FREQUENCY_FUSION.md)。**
-
-## 本分支做了什么
-
-- 在两路最后的搜索特征上做二维 FFT，按径向频率分为低频和高频，组合后逆变换回空间域，再送入原预测头。
-- 新增四组频段实验配置，均设置 `MODEL.SS.ENABLED: false` 和 `TRAIN.SS_WEIGHT: 0`。
-- 保留原始相加及等权对照，支持两种相反的模态频段组合。
-- 无新增可学习参数，默认截止频率为 0.25 周期/token；频段组合的输出倍率为 2，幅值影响需单独分析。
-- 评测时显式指定 checkpoint，避免默认加载其他实验权重。
-
-旧 SS 代码和配置保留用于历史追溯；本分支的四组频段配置不启用 SS。关闭 SS 配置并不能消除已训练权重中的 SS 影响，**必须使用确认未加 SS 的基线权重**。
-
-## 实验分组
-
-| 配置 | 用途 |
+| 阅读目的 | 入口 |
 |---|---|
-| `rgbt_freq_baseline` | 原始 SEATrack 特征相加，基线 |
-| `rgbt_freq_equal` | 等权对照，与原始相加精确一致 |
-| `rgbt_freq_rgb_low` | RGB 低频＋红外高频 |
-| `rgbt_freq_ir_low` | 红外低频＋RGB 高频 |
+| 理解项目原理、方法与主要结论 | 本文 |
+| 接手工作、查当前任务和服务器查询命令 | [项目交接](项目交接.md) |
+| 查找专题解释、原始结果、部署和汇报材料 | [完整资料索引](PROJECT_GUIDE.md) |
+| 追溯研究要求与逐日过程 | [师兄想法](师兄想法.md) · [实验日记](diary.md) |
+| 安装与了解原始 SEATrack | [上游项目说明](SEATrack-main/README.md) |
 
-四组应先使用同一份无 SS 权重、相同数据及计分协议评测。先核验 baseline/equal 的轨迹一致性，再比较两种频段组合。
+## 1. 基线做什么，本项目改什么
 
-## 开始运行
+给定首帧目标框，跟踪器从 RGB／热红外图像中裁出目标模板；随后依据上一帧预测框裁出搜索区域，在其中预测当前目标位置。因此，表征质量、跨模态融合和搜索区域是否覆盖目标都会影响最终跟踪结果。
 
-环境安装见 [原项目说明](SEATrack-main/README.md)。先配置本机项目路径和评测器中的数据集路径，然后从仓库根目录执行：
+默认 RGB-T 配置的主要流程：
 
-```bash
-cd SEATrack-main
-export SEATRACK_CHECKPOINT=/absolute/path/to/non_ss/SEATrack_ep0060.pth.tar
-CUDA_VISIBLE_DEVICES=0 python RGBT_workspace/test_rgbt_mgpus.py \
-  --script_name seatrack --yaml_name rgbt_freq_baseline \
-  --dataset_name LasHeR --mode sequential --num_gpus 1 \
-  --variants freq_baseline
+```text
+RGB + 热红外：模板 128×128、搜索区域 256×256
+    ↓ 两模态分别使用共享 patch embedding，patch 大小 16×16
+每个模态：64 个模板 token + 256 个搜索 token，特征维度 768
+    ↓ 12 层 ViT，AMG-LoRA 跨模态注意力引导 + HMoE 特征交互
+末层 RGB 与热红外搜索特征相加
+    ↓ CENTER 预测头：目标分数、尺寸、偏移
+窗口约束与框解码 → 当前预测框 → 下一帧搜索区域
 ```
 
-其他组同时更换 `--yaml_name` 与 `--variants`，使用独立的新输出目录。该命令生成跟踪轨迹，指标还需按统一协议计分。参数说明、训练入口与注意事项见 [频段融合实验 README](SEATrack-main/README_FREQUENCY_FUSION.md)。
+基线采用参数高效微调，主要训练 `lora/moe/scaling` 参数，冻结主干的大部分参数及预测头。本项目沿用这套基础框架，分别探索训练约束、融合方式和 token 架构；它们不是默认同时开启的一套模型。
 
-## 验证状态
+| 方向 | 研究问题 | 改动位置 |
+|---|---|---|
+| SS（10.18） | 两模态的空间关系对齐，能否改善跟踪？ | 中间层表征上的辅助训练损失 |
+| SS 消融（11.12） | 模板、搜索背景、层次和约束强度，谁影响效果？ | SS 区域、系数和层选择，配合诊断 |
+| 频域融合（11.9） | 两模态低频／高频互补，能否改善融合？ | 末层搜索特征；历史上也探索过决策图 |
+| 寄存器与 RG（11.18） | 增加非空间 token 并作特征外推，能否改善表征？ | 后段 Transformer token 与推理特征 |
 
-2026-11-16：15 项 CPU 测试通过，覆盖频段选择、FFT 梯度、等权一致性、骨干权重兼容及原 SS 回归。**尚未进行本分支的 CUDA 试跑和完整 benchmark 评测，暂无精度提升结论。**
+## 2. 各方向的目的、做法与结果
 
-```bash
-# 在 SEATrack-main 目录执行
-python -m unittest discover -s tests -v
+### 2.1 空间自相似约束（SS）
+
+**目的：** 不要求 RGB 与热红外逐点特征值相同，而是约束它们在同一区域内的空间关系一致。
+
+**做法：** 对 token 特征归一化，计算区域内所有 token 两两余弦相似度矩阵 `S = U Uᵀ`，以两模态相似度矩阵的 MSE 作为 SS 损失。模板与搜索分别计算，在从 0 编号的 block 3、5、7、9、11 的**输入处**取特征，跨层平均：
+
+```text
+总损失 = 跟踪损失 + SS_WEIGHT × mean_layers(
+    TEMPLATE_WEIGHT × 模板SS + SEARCH_WEIGHT × 搜索SS)
 ```
 
-## 代码与文档入口
+初版外层系数为 0.1、两区域系数各 0.5，因此每项有效系数为 0.05。SS 不引入可训练参数，普通跟踪推理不计算该损失，但训练后的权重仍受 SS 影响。关闭 SS 开关不能把一份 SS 权重变回独立基线。
 
-| 文档 | 用途 |
-|---|---|
-| [实验日志](seatrack/实验日志.md) | 按阶段整合过程、结果及证据，是实验记录的主要入口 |
-| [复现日志](seatrack/复现日志.md) | 早期复现、环境排障、权重核查及 SS 接入的原始过程记录 |
-| [实验日记](diary.md) | 后续逐日记录、完整指标和报告链接 |
-| [LasHeR 旧基线说明](汇报/结果/LasHeR_旧基线_20261104/README.md) | 基线指标来源、权重身份和核验边界 |
-| [第 20 轮可视化说明](汇报/结果/SS_vs_baseline_ep20_20261104/README.md) | 查看视频、关键帧与 SS 热力图的方法及解释边界 |
-| [搜索区域交叉回放](汇报/结果/搜索区域对照/实验记录.md) | 控制前一帧框后的失败案例分析 |
-| [频段互换观察](汇报/结果/RGBT频段互换观察/实验记录.md) | 历史频段实验的方法、局部结果与限制 |
-| [template-only / target-aware 对比](汇报/结果/RGBT_SS_AB_ep60/20261112_ss_target-aware/full/comparison.md) | A/B 消融结果及逐序列统计 |
-| [DepthTrack 退步诊断](汇报/PPT/SEATrack_SS_20261111/sources/DepthTrack_退步诊断.md) | 汇报使用的序列级诊断，注意其与正式 F 分数的区别 |
+**结果：** 初版在 RGBT234 上提升，在 LasHeR 及历史 RGB-D／RGB-E 指标上下降，不能概括为普遍有效或全部退步。当前实现是完整 pairwise SS；[早期理解笔记](理解.md)中的语义 anchor 是设想，不是已实现模块。
 
-## 部署、数据与验证说明
+详细机制、代码与配置见 [SS 实现说明](SEATrack-main/README_SS.md)。
 
-### 服务器环境与连接
+### 2.2 SS 消融、搜索漂移与优化诊断
 
-以下信息整理于 2026-11-17，来源为 [复现日志](seatrack/复现日志.md)中的环境摸底、目录确认、环境验证和连接记录，以及 [实验日记](diary.md)中的后续实验目录。**这是已有记录的汇总，本次未连接服务器核验；GPU 占用、剩余空间和连接端口需使用前确认。**
+**目的：** 判断退化来自搜索背景约束、约束总强度、作用层次，还是跟踪误差积累。
 
-| 项目 | 已有记录 |
-|---|---|
-| SSH 地址与用户 | `liziyan103@10.68.240.49` |
-| SSH 端口 | 早期传输记录为 `10358`；2026-11-03 准备记录改用 `10343`，该条未实际连接验证 |
-| 本地 SSH 密钥路径 | `~/.ssh/id_ed25519_82wd`（仅记录路径） |
-| GPU | 7 张 NVIDIA GeForce RTX 4090，每张约 24 GB 显存；共享服务器 |
-| 驱动 | 2026-10-10 记录为 `580.126.09`，驱动报告 CUDA `13.0`；此数值不代表 PyTorch 使用的 CUDA 运行时版本 |
-| 用户家目录 | `/nas/liziyan103` |
-| 项目根目录 | `/nas/liziyan103/seatrack` |
-| 原始主代码目录 | `/nas/liziyan103/seatrack/SEATrack`；其内部 `SEATrack-main/` 被记录为重复旧副本，不作为运行入口 |
-| 数据集根目录 | `/nas/liziyan103/seatrack/datasets`，早期记录含 `lasher/`、`depthtrack/`、`visevent/` |
-| Conda 环境 | `/nas/liziyan103/anaconda3/envs/seatrack` |
-| 实验环境版本 | Python `3.8.20`、PyTorch `2.2.2`，历史验证 CUDA 可用；最初摸底的 Python `3.12.2` 不是这里确认的实验环境 |
-| 独立训练实验 | `/nas/liziyan103/seatrack/training_runs/`，各实验保存独立代码、配置、日志和 checkpoint |
-| 独立评测实验 | `/nas/liziyan103/seatrack/evaluation_runs/`，具体运行目录见实验日记 |
+- **template-only：** 仅保留模板 SS，有效系数 0.05。
+- **target-aware：** 保留模板 SS，搜索区域利用训练标注约束前景—前景和双向前景—背景关系。
+- **half-weight：** 同时保留模板与搜索，两项有效系数各降为 0.025。
+- **search-only：** 仅保留搜索 SS，多层有效系数 0.05；另有单层 l3／l5／l7／l9／l11 配置。
 
-确认当前端口后连接（以下采用较晚记录中的 `10343`）：
+**结果：** template-only 和 target-aware 只恢复部分 LasHeR 表现；search-only 多层全量测试已完成，未恢复成功率。单层配置存在，但尚无五组完整重训及评测完成证据。半权重状态见下表。
 
-```bash
-ssh -i ~/.ssh/id_ed25519_82wd -p 10343 liziyan103@10.68.240.49
-```
-登陆服务器
+两个诊断解释了问题的一部分：
 
-在校园网里：
+- [搜索区域交叉回放](汇报/结果/搜索区域对照/实验记录.md)：在 5 个已知失败案例中固定模板、交换上一帧框，发现搜索区域漂移能解释部分退化。这是单步回放，不是闭环恢复率或全量因果结论。
+- [训练动态](汇报/结果/SS_search_训练动态_20261118/Python版/读图说明.md)与[梯度诊断数据](汇报/结果/SS_优化动态_20261121)：SS 持续下降，但验证 IoU 约第 25 轮后趋于平台。ep60 的 48 批局部诊断中，加权 SS／跟踪梯度范数比中位数仅 0.04257%，梯度余弦中位数 0.01155，20/48 批为负。这不是全程梯度分析，也不是三次独立重训，不能仅据此决定增大系数。
 
-直接按快捷键。脚本会自动直连服务器，不需要启动 Docker 或 EasyConnect。
+配置及逐层日志见 [SS 消融说明](SEATrack-main/README_SS_ABLATION.md)。
 
-用手机热点、家里网络时：
+### 2.3 频域融合
 
-1. 开启 Clash Verge，让 Codex、ChatGPT 正常联网。
-2. 打开 Docker Desktop，终端执行：
+**目的：** 检查 RGB 与热红外在低频结构、高频细节上的互补性。
 
-   docker start nwpu-vpn
-3. Finder 按 ⌘K，连接：
+**当前实现：** 在末层归一化后的搜索特征上做二维 FFT，按径向截止频率 0.25 分离低／高频，混合完整复数频谱后逆变换。提供原始相加、等权、RGB 低频＋IR 高频、IR 低频＋RGB 高频四组对照，均关闭 SS。固定融合没有新增可训练参数；等权配置结合增益 2 与原始相加等价。
 
-   vnc://127.0.0.1:15901
-   屏幕共享密码：ecLocal7。
-4. 在 EasyConnect 中登录学校账号。登录成功后可以关闭屏幕共享窗口。
-5. 按 iTerm 快捷键，脚本会在约 3 秒的直连检测后自动走 VPN。
+**已有结果来自另外两类历史诊断，不能直接当作当前无 SS 配置的全量结果：**
 
-注意：启动容器不等于 VPN 已登录。 使用期间保持 Docker 运行、EasyConnect 在线；如果提示 Connection closed by UNKNOWN port 65535，优先检查 VPN 是否掉线。
+| 历史实验 | 做法 | 结果与边界 |
+|---|---|---|
+| 特征频段互换 | 在基线及初版 SS 上回放 8 个选定片段，共 88 帧、880 次预测 | SS 的 whitesuvturn 关键帧 IoU 从 0 到 0.8111，但稳定 66 帧均值从 0.8016 降至 0.7713；局部能救回，也会损伤稳定片段 |
+| 可学习决策图融合 | 冻结初版 SS，仅学习低／高频两个全局权重；训练 384 帧、验证 128 帧 | 验证交叉熵 2.72052→2.69162，局部序列改善有限；没有全量收益结论 |
 
-不用快捷键时，也可以直接在终端运行：
+当前未核实到频域方案的最终全量评测结果。复现实验必须核对权重来源，不能将冻结初版 SS 的诊断与无 SS 基线实验混用。
 
-/Users/lzy/.local/bin/nwpu-ssh
+详见 [当前频域模块](SEATrack-main/README_FREQUENCY_FUSION.md)、[历史特征观察](汇报/结果/RGBT频段互换观察/实验记录.md)、[决策图实验数据](汇报/结果/RGBT决策图频段融合)。
 
-在服务器使用已确认的实验解释器检查环境：
+### 2.4 寄存器 token 与 Register Guidance
 
-```bash
-nvidia-smi
-/nas/liziyan103/anaconda3/envs/seatrack/bin/python -c 'import sys, torch; print(sys.version); print(torch.__version__, torch.version.cuda, torch.cuda.is_available())'
+**目的：** 在无 SS、无频域融合的基线上，独立检验寄存器是否改善特征及跟踪表现。
+
+**做法：** 在 block 9 输入处（从 0 编号，前 9 层之后）插入 4 个可学习寄存器，两模态共享初始参数、随后分别演化，共新增 3072 个参数。寄存器参与后续注意力、AMG 和 MLP，不进入空间 HMoE 分组；最终 LayerNorm 前移除，保留原搜索特征尺寸与预测头。
+
+训练始终使用寄存器。推理时可对同一训练权重的有／无寄存器搜索特征作外推：
+
+```text
+F_RG = F_reg + w × (F_reg − F_no_reg)
 ```
 
-运行约定与历史问题：
+`w=0` 只执行一次骨干前向；`w>0` 执行两次，再运行一次预测头。这里是对参考方法的跟踪特征层适配，不是扩散采样复现；同权重的无寄存器前向也不是独立训练基线。
 
-- 长任务使用 `tmux`；每次启动前重新检查 GPU，按实际空闲情况设置 `CUDA_VISIBLE_DEVICES`，不沿用日志中的旧 GPU 分配。
-- Conda 曾出现 `conda-libmamba-solver` / `QueryFormat` 插件错误，日志使用 `CONDA_NO_PLUGINS=true` 绕过；已有环境中的 Python、PyTorch 和 CUDA 验证正常。
-- 后续训练使用 `training_runs/` 下的独立代码副本，其中包含服务器适配和梯度累积等修改；仅检出历史 Git 标签不足以复现实训，具体差异见实验日记 2026-11-12 条目。
-- 权重需按实验配置和来源清单选择。早期日志中对“官方权重”的称呼后来有来源疑问，不能仅凭目录名判断，也不能将经过 SS 训练的权重当作无 SS 基线。
+**状态：** 已实现并完成本地回归测试、服务器 CUDA 小批训练验证；正式训练已启动。最后现场核验为 **2026-11-25 13:48（北京时间）**：第 55/60 轮、11840/15000 微批次，最高已保存 ep50；尚无全量 SR／MSR 结果。此处是带时间快照，不代表阅读时的实时进度。范数变化、空间平滑和精度提升仍需实验检验。
 
-### 部署与验证资料
+详见 [寄存器实现说明](SEATrack-main/README_REGISTER_GUIDANCE.md)、[部署说明](server_setup/register_20261123/README.md)与[当前交接](项目交接.md)。
 
-| 文档 | 用途与适用范围 |
+## 3. 已归档的主要跟踪结果
+
+下表单位为百分比，SR 与 MSR 属于不同数据集，不能横向当作同一指标。数值展示保留两位小数，原始精度及协议见证据文件。
+
+| 实验 | LasHeR SR ↑ | RGBT234 MSR ↑ | 证据／状态 |
+|---|---:|---:|---|
+| 未加 SS 基线 | 57.51 | 63.73 | [基线身份说明](汇报/结果/LasHeR_旧基线_20261104/README.md)、[对照表](汇报/结果/RGBT_SS_AB_ep60/20261112_ss_target-aware/full/comparison.md) |
+| 初版 SS | 56.71 | 64.67 | 同上对照表 |
+| template-only | 57.31 | 64.03 | 同上对照表 |
+| target-aware | 57.29 | 64.06 | 同上对照表 |
+| search-only 多层 ep60 | 56.70 | 63.60 | [两套全量评测记录](汇报/结果/SS_search_ep60_20261119/评测记录.md) |
+| half-weight ep60 | 56.95 | 待核验 | [归档结果](汇报/结果/SS_half_ep60_20261123)；11月23日11:44核验时 RGBT234 为 89/234 条 |
+| 频域／寄存器／寄存器＋RG | — | — | 尚无已核实的全量结果，不填入局部 IoU 或训练指标 |
+
+search-only 全量覆盖 LasHeR 245 条、220703 帧和 RGBT234 234 条、116649 帧，沿用 Python 评测协议，尚未与官方 MATLAB 交叉验证。旧 A/B 每轮 937 次更新，search-only 每轮 1875 次更新，训练预算并未完全对齐，不能把差异全部归因于 SS 区域选择。
+
+历史跨模态复现中，基线→初版 SS：VisEvent SR 60.26→59.63，DepthTrack F 63.23→60.97，VOT22RGBD EAO 0.73760→0.72659。详见[阶段实验日志](seatrack/实验日志.md)及[复现日志](seatrack/复现日志.md)；其中部分历史权重来源仍需追溯，不统一称为“官方基线”。
+
+**报告结论时区分三层证据：** 训练／验证 IoU 描述采样批次表现；单帧与短片段回放用于诊断；完整测试集 SR／MSR 才用于比较对应协议下的跟踪性能。SS 损失下降、代码测试通过、任务启动成功均不等于精度提升。
+
+## 4. 代码与配置入口
+
+```text
+thesis/
+├── README.md / PROJECT_GUIDE.md     项目总览 / 专题资料索引
+├── 项目交接.md / AGENTS.md           当前任务与证据 / 协作约定
+├── 师兄想法.md / diary.md            原始研究要求 / 逐日实验记录
+├── SEATrack-main/                   模型、训练、评测与专项 README
+│   ├── experiments/seatrack/        各方向 YAML 配置
+│   ├── lib/models/                  主干、融合与辅助模块
+│   ├── lib/train/                   数据、损失、优化器与训练器
+│   ├── lib/test/                    跟踪器、参数与评测支持
+│   └── tests/                      SS、频域、寄存器测试
+├── server_setup/                    独立部署、诊断与监控脚本
+├── seatrack/                        历史复现日志、阶段日志与日记存档
+└── 汇报/
+    ├── 结果/                       原始指标、诊断数据、图片与说明
+    ├── 项目梳理/                   带日期的项目解释材料
+    └── PPT/                        演示文稿、讲稿与制作工作区
+```
+
+| 代码入口（相对 `SEATrack-main/`） | 作用 |
 |---|---|
-| [SS 初版部署包 README](server_setup/pairwise_ss_20261103/README.md) | 2026-11-03 历史安装包、独立实验副本及监控工具说明；不是当前 search-only 的部署快照 |
-| [可视化工具说明](server_setup/pairwise_ss_20261103/可视化说明.md) | 第 20 轮可视化生成、核验与查看方式 |
-| [数据划分文件说明](SEATrack-main/lib/train/data_specs/README.md) | 上游数据名单文件的含义 |
-| [pairwise SS 改动日志](SEATrack-main/logs/2026-11-03_pairwise_ss.md) | 从 anchor 改为完整 pairwise SS 的实现过程与验证记录 |
-| [初次测试输出](SEATrack-main/logs/2026-11-03_pairwise_ss_tests_initial.txt) · [后续测试输出](SEATrack-main/logs/2026-11-03_pairwise_ss_tests.txt) | 历史测试证据，不代表当前版本已重新运行 |
-| [安装验证](server_setup/pairwise_ss_20261103/LOCAL_VALIDATION.txt) · [PatchEmbed 兼容验证](server_setup/pairwise_ss_20261103/PATCH_EMBED_VALIDATION.txt) · [进度面板验证](server_setup/pairwise_ss_20261103/PROGRESS_VALIDATION.txt) | 历史部署包的本地核验输出 |
+| [lib/models/seatrack/vit_ci.py](SEATrack-main/lib/models/seatrack/vit_ci.py) | 双模态 ViT、SS 取特征位置、寄存器、RG 与搜索特征融合 |
+| [lib/models/seatrack/seatrack.py](SEATrack-main/lib/models/seatrack/seatrack.py) | 骨干与预测头组装、搜索特征到目标框的预测 |
+| [lib/train/actors/seatrack.py](SEATrack-main/lib/train/actors/seatrack.py) | 跟踪损失、SS 加权与日志 |
+| [lib/train/base_functions.py](SEATrack-main/lib/train/base_functions.py) | 数据加载、可训练参数及优化器 |
+| [lib/test/parameter/seatrack.py](SEATrack-main/lib/test/parameter/seatrack.py) | 配置、checkpoint 与任务映射 |
+| [lib/test/tracker/seatrack.py](SEATrack-main/lib/test/tracker/seatrack.py) | 逐帧裁剪、前向与预测框更新 |
 
-## 汇报材料
+[配置目录](SEATrack-main/experiments/seatrack)中的主要入口：
 
-| 文档 | 用途 |
+| 配置名 | 用途 |
 |---|---|
-| [2026-11-05 导师汇报提纲](汇报/2026-11-05_导师汇报提纲.md) | 当时的汇报结构与待办 |
-| [2026-11-05 一页工作汇报](汇报/2026-11-05_一页工作汇报.md) | 当时的阶段成果摘要 |
-| [2026-11-11 组会材料 README](汇报/PPT/SEATrack_SS_20261111/README.md) | PPT 工作区说明与产物入口 |
-| [设计规范](汇报/PPT/SEATrack_SS_20261111/design_spec.md) · [制作规格](汇报/PPT/SEATrack_SS_20261111/spec_lock.md) · [逐页讲稿](汇报/PPT/SEATrack_SS_20261111/notes/) | PPT 制作与讲解资料 |
+| `rgbt` / `rgbd` / `rgbe` | 原基线与历史多模态复现 |
+| `rgbt_ss` / `rgbd_ss` / `rgbe_ss` | 初版 SS |
+| `rgbt_ss_search` / `rgbt_ss_search_l3,l5,l7,l9,l11` | 搜索区域多层／单层 SS；后者表示五个独立配置名 |
+| `rgbt_freq_baseline` / `rgbt_freq_equal` | 无 SS 原始相加／等权频域对照 |
+| `rgbt_freq_rgb_low` / `rgbt_freq_ir_low` | 无 SS 的两种低／高频互换 |
+| `rgbt_register` / `rgbt_register_guidance` | 寄存器训练与 w=0 评测／同权重 RG 评测 |
 
-汇报材料中的训练轮次和“下一步”属于当时快照；查实验结论优先阅读实验日志。
+template-only、target-aware、half-weight 的历史部署设置见 [A/B 结果说明](汇报/结果/RGBT_SS_AB_ep60/20261112_ss_target-aware/full/comparison.md)和[交接](项目交接.md)，不能仅用本地默认 YAML 代替服务器实际配置。
 
-## 历史副本与占位文件
+## 5. 环境、运行与核验
 
-以下文件保留供追溯，不作为当前代码说明的首选入口：
+1. 按[上游 README](SEATrack-main/README.md)准备环境、预训练权重和数据；训练数据路径在 `lib/train/admin/local.py`，测试路径在 `lib/test/evaluation/local.py` 配置。数据划分见[说明](SEATrack-main/lib/train/data_specs/README.md)。本机主要用于开发和材料整理，正式训练在服务器进行。
+2. 选择一个研究方向，核对实际配置、初始化权重、训练预算和输出目录。频域／寄存器评测按专项说明设置 `SEATRACK_CHECKPOINT`；核对 checkpoint 来源和 LoRA 合并状态。旧 RGB-T 评测脚本有硬编码路径，必须按实际数据位置配置。
+3. 服务器在 `training_runs/<实验>/code` 中使用独立代码快照，数据共用 `datasets/`，评测产物保留在独立目录。本地代码修改不会自动进入正在运行的任务。共享 GPU 启动前检查占用，不重复启动已有任务。
+4. 使用对应部署说明运行。寄存器当前入口为 [register_20261123](server_setup/register_20261123/README.md)；已有任务的日志、tmux、权重路径统一查[项目交接](项目交接.md)，不根据本 README 的旧快照重启。
+5. 完成后同时核对进程退出、最终权重、完整轨迹、指标文件及序列／帧数。生成轨迹和计算指标是两个步骤，tmux 存在或 checkpoint 写出都不能单独证明全量评测完成。
 
-- [部署包内的 SS README](server_setup/pairwise_ss_20261103/payload/README_SS.md)、[部署包改动日志](server_setup/pairwise_ss_20261103/payload/logs/2026-11-03_pairwise_ss.md)及其 [测试记录目录](server_setup/pairwise_ss_20261103/payload/logs/)：打包时的历史副本。
-- [第 20 轮可视化另一份 README](<汇报/结果/SS_vs_baseline_ep20_20261104 2/README.md>)：本次核对 README 内容与主要目录一致，未据此认定整个目录完全相同；日常查看使用上方主要入口。
-- [git.md](git.md)：目前为空，尚无 Git 操作说明。
+服务器已确认的 Python 为 `/nas/liziyan103/anaconda3/envs/seatrack/bin/python`，项目根为 `/nas/liziyan103/seatrack`。本机可用已有 `nwpu-ssh` 脚本连接（先直连、后 VPN），或用 SSH 别名 `nwpu-server`。校外连接依赖 `nwpu-vpn` 容器和 EasyConnect 登录；容器启动不代表已登录。连接细节与故障判断见[交接](项目交接.md)，此处不存储凭据。
 
-后续新增实验或代码改动时，将说明链接补入对应表格；总 README 只保留导航和简要结果，细节写入专项 README 或实验日志。
-- [频段融合模块](SEATrack-main/lib/models/layers/frequency_fusion.py)
-- [模型接入位置](SEATrack-main/lib/models/seatrack/vit_ci.py)
-- [实验配置目录](SEATrack-main/experiments/seatrack/)
-- [频段融合测试](SEATrack-main/tests/test_frequency_fusion.py)
-- [项目文档与历史实验导航](PROJECT_GUIDE.md)：原总 README 的文档索引与历史进展。
-- [实验日志](seatrack/实验日志.md)：历史实验记录；此前频段观察不等于本分支新实现的评测结果。
+监控脚本本地检查：
+
+```bash
+python3 -m unittest discover -s server_setup/tests -p test_training_monitor.py
+```
+
+模型专项检查见各方向 README；本次总览整理未重新运行训练或模型测试。
+
+## 6. 文档与证据如何使用
+
+- **README：** 项目定位、方法、主要结果与入口。
+- **[PROJECT_GUIDE](PROJECT_GUIDE.md)：** 按主题查找解释文档、诊断记录、部署包和汇报材料。
+- **[项目交接](项目交接.md)：** 当前任务、最后核验时间、实际运行路径与下一步。
+- **[diary](diary.md)及历史日志：** 保留当时过程；早期“未完成”可能被后续结果覆盖。
+- **[汇报/结果](汇报/结果)：** 原始数字与协议；PPT 是带日期的表达材料，不替代实验产物。
+
+遇到冲突，优先核查真实日志、实际加载的代码／配置／权重及原始结果，再参考带日期记录。原 SEATrack 的论文、引用、安装与公开结果保留在[上游说明](SEATrack-main/README.md)；上游宣称的性能不等于本项目改动后的实测性能。
+
+文档整合日期：2026-11-25。本次仅核对本地代码与归档资料，服务器状态沿用各自注明的最后现场核验时间。

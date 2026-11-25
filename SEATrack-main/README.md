@@ -4,6 +4,7 @@
 - [SS 初版：表征约束实现与改动说明](README_SS.md)。
 - [SS 消融：search-only、逐层验证与收敛日志](README_SS_ABLATION.md)。
 - [频段融合：无 SS 的特征频域融合与对照](README_FREQUENCY_FUSION.md)。
+- [寄存器 token 与 Register Guidance：11.18 架构方案](README_REGISTER_GUIDANCE.md)。
 
 以下为原 SEATrack 项目说明。
 

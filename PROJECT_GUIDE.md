@@ -1,86 +1,77 @@
-# 项目文档与历史实验导航
+# 项目文档与证据索引
 
-本仓库包含 SEATrack 源码、SS 改动、实验记录和汇报材料。源码位于 `SEATrack-main/`，已包含本项目改动；下表按用途提供文档入口。详细实现和实验指标保留在对应文档中。
+整体原理与主要结果见 [README](README.md)，当前任务与最后核验状态见 [项目交接](项目交接.md)。本页负责资料导航，不另外维护一份运行进度表。以下历史材料保留其原始日期；旧待办与旧分支描述不能替代当前代码及后续结果。
 
-## 从这里开始
+## 研究要求与实现解释
 
-| 想了解什么 | 阅读入口 |
+| 入口 | 内容与阅读边界 |
 |---|---|
-| 安装环境、准备数据、了解原项目训练评测流程 | [SEATrack 项目 README](SEATrack-main/README.md) |
-| 师兄的三个研究想法 | [师兄想法](师兄想法.md) |
-| 最初对表征约束的理解 | [理解笔记（早期思路）](理解.md) |
-| 实验做到了哪一步、结果如何 | [实验日志（整合入口）](seatrack/实验日志.md) |
-| SS 具体怎么实现、如何做消融 | 下方“代码改动说明” |
+| [师兄想法](师兄想法.md) | 10.18 SS、11.9 频域、11.12 消融和11.18寄存器等原始要求；提出不代表实现 |
+| [早期理解](理解.md) | 表征约束与 anchor 的早期设想；当前 SS 已采用完整 pairwise 矩阵 |
+| [原 SEATrack README](SEATrack-main/README.md) | 原模型、安装、数据准备、训练评测与引用 |
+| [SS 实现](SEATrack-main/README_SS.md) | 数学定义、损失系数、接入点和代码说明 |
+| [SS 消融](SEATrack-main/README_SS_ABLATION.md) | search-only、逐层配置、训练日志；配置存在不代表全量实验已完成 |
+| [频域融合](SEATrack-main/README_FREQUENCY_FUSION.md) | 当前无 SS 的固定特征融合与四组对照 |
+| [寄存器与 RG](SEATrack-main/README_REGISTER_GUIDANCE.md) | token 位置、参数、特征外推、测试与评测边界 |
+| [11月17日项目梳理](汇报/项目梳理/SEATrack_三个想法_已完成与下一步_20261117.md) | 当时三个方向的详细解释；不含随后完成的全部结果与寄存器进展 |
 
-`理解.md` 中的 anchor 等设想不等于当前实现；以代码改动说明为准。SS 消融是 SS 方向的深化，频段融合是另一条实验方向，历史观察结果见下方索引。
+## 实验过程与完整结果
 
-## 代码改动说明
-
-按改动阶段查阅对应 README：
-
-| 阶段 | 改动内容 | 详细说明 |
-|---|---|---|
-| SS 初版 | 在 SEATrack 上增加 template/search 空间自相似性约束 | [README_SS.md](SEATrack-main/README_SS.md) |
-| SS 消融 | search-only、单层与多层对照、逐层损失日志 | [README_SS_ABLATION.md](SEATrack-main/README_SS_ABLATION.md) |
-| 频段融合（无 SS） | 搜索特征频域融合、原始相加及等权对照 | [README_FREQUENCY_FUSION.md](SEATrack-main/README_FREQUENCY_FUSION.md) |
-
-本分支新增频段融合入口，四组频段实验配置均关闭 SS；原 SS 配置保留供独立实验使用。后续每次新增改动说明 README 时，在此表追加链接和简要描述。
-
-## 实验进展
-
-| 时间 | 做了什么 | 结果概况 |
-|---|---|---|
-| 2026-10-10～10-23 | 打通基线训练与多模态评测流程 | 报告完成归档核验，部分权重来源仍需追溯 |
-| 2026-11-03～11-05 | 接入 SS、确认基线并制作中期可视化 | 短测通过；中期相似度改善不代表最终精度提升 |
-| 2026-11-07～11-11 | 完成 SS 初版三模态、五测试集评测 | RGBT234 提升，其余四项下降 |
-| 2026-11-12 | 探索频段互换和决策图融合 | 局部案例有改善，尚无总体收益结论；实验代码已移除 |
-| 2026-11-12～11-16 | 完成 template-only / target-aware 消融 | 恢复部分 LasHeR 表现，但仍略低于基线；半权重结果待核验 |
-| 2026-11-15～11-16 | 新增 search-only、逐层配置并部署服务器 | 9 项测试通过；最近核验为等待 GPU，暂无精度结果 |
-
-详细设置、指标、证据链接和后续状态统一见 [实验日志](seatrack/实验日志.md)。以上为记录时的状态，不是服务器实时进度。
-
-## 实验过程与结果索引
-
-| 文档 | 用途 |
+| 入口 | 内容与阅读边界 |
 |---|---|
-| [实验日志](seatrack/实验日志.md) | 按阶段整合过程、结果及证据，是实验记录的主要入口 |
-| [复现日志](seatrack/复现日志.md) | 早期复现、环境排障、权重核查及 SS 接入的原始过程记录 |
-| [实验日记](diary.md) | 后续逐日记录、完整指标和报告链接 |
-| [LasHeR 旧基线说明](汇报/结果/LasHeR_旧基线_20261104/README.md) | 基线指标来源、权重身份和核验边界 |
-| [第 20 轮可视化说明](汇报/结果/SS_vs_baseline_ep20_20261104/README.md) | 查看视频、关键帧与 SS 热力图的方法及解释边界 |
-| [搜索区域交叉回放](汇报/结果/搜索区域对照/实验记录.md) | 控制前一帧框后的失败案例分析 |
-| [频段互换观察](汇报/结果/RGBT频段互换观察/实验记录.md) | 历史频段实验的方法、局部结果与限制 |
-| [template-only / target-aware 对比](汇报/结果/RGBT_SS_AB_ep60/20261112_ss_target-aware/full/comparison.md) | A/B 消融结果及逐序列统计 |
-| [DepthTrack 退步诊断](汇报/PPT/SEATrack_SS_20261111/sources/DepthTrack_退步诊断.md) | 汇报使用的序列级诊断，注意其与正式 F 分数的区别 |
+| [实验日记](diary.md) | 按日期记录目的、做法与结果 |
+| [阶段实验日志](seatrack/实验日志.md) | 早期复现、初版 SS 与消融的阶段总结；进展以记录截止日期为界 |
+| [复现日志](seatrack/复现日志.md) | 环境排障、权重核查、多模态评测和 SS 接入原始记录 |
+| [LasHeR 旧基线](汇报/结果/LasHeR_旧基线_20261104/README.md) | 指标来源、权重身份和核验边界 |
+| [template-only／target-aware 对比](汇报/结果/RGBT_SS_AB_ep60/20261112_ss_target-aware/full/comparison.md) | A/B 消融指标及逐序列统计 |
+| [search-only ep60](汇报/结果/SS_search_ep60_20261119/评测记录.md) | LasHeR、RGBT234 两套全量结果、样本数及评测协议 |
+| [half-weight ep60 归档](汇报/结果/SS_half_ep60_20261123) | 已下载的原始结果；尚未核验的任务状态查交接，不根据目录名推断完成 |
 
-## 部署、数据与验证说明
+## 可视化、失败案例与优化分析
 
-| 文档 | 用途与适用范围 |
+| 入口 | 内容与阅读边界 |
 |---|---|
-| [SS 初版部署包 README](server_setup/pairwise_ss_20261103/README.md) | 2026-11-03 历史安装包、独立实验副本及监控工具说明；不是当前 search-only 的部署快照 |
-| [可视化工具说明](server_setup/pairwise_ss_20261103/可视化说明.md) | 第 20 轮可视化生成、核验与查看方式 |
-| [数据划分文件说明](SEATrack-main/lib/train/data_specs/README.md) | 上游数据名单文件的含义 |
-| [pairwise SS 改动日志](SEATrack-main/logs/2026-11-03_pairwise_ss.md) | 从 anchor 改为完整 pairwise SS 的实现过程与验证记录 |
-| [初次测试输出](SEATrack-main/logs/2026-11-03_pairwise_ss_tests_initial.txt) · [后续测试输出](SEATrack-main/logs/2026-11-03_pairwise_ss_tests.txt) | 历史测试证据，不代表当前版本已重新运行 |
-| [安装验证](server_setup/pairwise_ss_20261103/LOCAL_VALIDATION.txt) · [PatchEmbed 兼容验证](server_setup/pairwise_ss_20261103/PATCH_EMBED_VALIDATION.txt) · [进度面板验证](server_setup/pairwise_ss_20261103/PROGRESS_VALIDATION.txt) | 历史部署包的本地核验输出 |
+| [ep20 可视化](汇报/结果/SS_vs_baseline_ep20_20261104/README.md) | 视频、关键帧、SS 热力图及查看方式；中期表征改善不等于最终精度提升 |
+| [搜索区域交叉回放](汇报/结果/搜索区域对照/实验记录.md) | 控制上一帧框后的 5 个失败案例分析；单步回放而非闭环全量测试 |
+| [频段互换观察](汇报/结果/RGBT频段互换观察/实验记录.md) | 选定失败与稳定片段上的频域诊断、RMS 匹配及限制 |
+| [决策图融合数据](汇报/结果/RGBT决策图频段融合) | 冻结初版 SS 后学习两个频段权重的历史实验；区别于当前无 SS 特征融合 |
+| [search-only 训练动态图说明](汇报/结果/SS_search_训练动态_20261118/读图说明.md) · [Python 版](汇报/结果/SS_search_训练动态_20261118/Python版/读图说明.md) | 总损失、逐层 SS 与 IoU 曲线的解释 |
+| [SS 优化动态](汇报/结果/SS_优化动态_20261121) | 末轮权重上的梯度范数、方向与原始数据；不是全程或多次独立训练结果 |
+| [DepthTrack 退步诊断](汇报/PPT/SEATrack_SS_20261111/sources/DepthTrack_退步诊断.md) | 汇报使用的序列级分析，注意与正式 F 分数的区别 |
 
-## 汇报材料
+## 部署、数据与检查
 
-| 文档 | 用途 |
+| 入口 | 内容与适用范围 |
 |---|---|
-| [2026-11-05 导师汇报提纲](汇报/2026-11-05_导师汇报提纲.md) | 当时的汇报结构与待办 |
-| [2026-11-05 一页工作汇报](汇报/2026-11-05_一页工作汇报.md) | 当时的阶段成果摘要 |
-| [2026-11-11 组会材料 README](汇报/PPT/SEATrack_SS_20261111/README.md) | PPT 工作区说明与产物入口 |
-| [设计规范](汇报/PPT/SEATrack_SS_20261111/design_spec.md) · [制作规格](汇报/PPT/SEATrack_SS_20261111/spec_lock.md) · [逐页讲稿](汇报/PPT/SEATrack_SS_20261111/notes/) | PPT 制作与讲解资料 |
+| [项目交接](项目交接.md) | 连接方式、当前日志、权重与监控入口；状态必须结合核验时间 |
+| [寄存器部署](server_setup/register_20261123/README.md) | 独立代码快照、小批验证、正式训练设置与监控 |
+| [SS 初版部署包](server_setup/pairwise_ss_20261103/README.md) | 11月3日历史部署，不能当作当前 search-only 或寄存器快照 |
+| [可视化工具说明](server_setup/pairwise_ss_20261103/可视化说明.md) | ep20 可视化的生成与核验方式 |
+| [数据划分说明](SEATrack-main/lib/train/data_specs/README.md) | 上游数据名单文件的含义 |
+| [pairwise SS 改动日志](SEATrack-main/logs/2026-11-03_pairwise_ss.md) | 从 anchor 改为完整 pairwise SS 的过程 |
+| [初次测试](SEATrack-main/logs/2026-11-03_pairwise_ss_tests_initial.txt) · [后续测试](SEATrack-main/logs/2026-11-03_pairwise_ss_tests.txt) | 历史测试证据，不代表当前版本重新运行过 |
+| [安装验证](server_setup/pairwise_ss_20261103/LOCAL_VALIDATION.txt) · [PatchEmbed 验证](server_setup/pairwise_ss_20261103/PATCH_EMBED_VALIDATION.txt) · [进度面板验证](server_setup/pairwise_ss_20261103/PROGRESS_VALIDATION.txt) | 历史部署包本地检查记录 |
 
-汇报材料中的训练轮次和“下一步”属于当时快照；查实验结论优先阅读实验日志。
+[server_setup](server_setup) 下其他按日期命名的脚本用于具体实验恢复、诊断和评测。运行前先核对其路径、权重和配置，不能把历史脚本直接当作通用启动入口。
 
-## 历史副本与占位文件
+## 汇报与讲解材料
 
-以下文件保留供追溯，不作为当前代码说明的首选入口：
+| 入口 | 用途 |
+|---|---|
+| [11月5日导师汇报提纲](汇报/2026-11-05_导师汇报提纲.md) · [一页工作汇报](汇报/2026-11-05_一页工作汇报.md) | 早期阶段成果与汇报结构 |
+| [11月11日 SS 组会工作区](汇报/PPT/SEATrack_SS_20261111/README.md) | SS 机制、结果和退化分析 |
+| [11月17日双线实验工作区](汇报/PPT/SEATrack_双线实验组会_20261117) | SS 与频域方向的阶段解释 |
+| [11月18日实验复盘工作区](汇报/PPT/SEATrack_实验复盘_20261118) | 实验方法、结果与复盘材料 |
+| [11月19日论文图风格工作区](汇报/PPT/SEATrack_论文图风格_20261119) | 图表、PPT、讲稿与排版产物 |
 
-- [部署包内的 SS README](server_setup/pairwise_ss_20261103/payload/README_SS.md)、[部署包改动日志](server_setup/pairwise_ss_20261103/payload/logs/2026-11-03_pairwise_ss.md)及其 [测试记录目录](server_setup/pairwise_ss_20261103/payload/logs/)：打包时的历史副本。
-- [第 20 轮可视化另一份 README](<汇报/结果/SS_vs_baseline_ep20_20261104 2/README.md>)：本次核对 README 内容与主要目录一致，未据此认定整个目录完全相同；日常查看使用上方主要入口。
-- [git.md](git.md)：目前为空，尚无 Git 操作说明。
+各 PPT 工作区中的 README、`sources/`、`notes/`、设计规范与制作规格分别服务于该次汇报。复用前更新过时的实验状态；精度结论回到原始结果，不能以讲稿代替证据。
 
-后续新增实验或代码改动时，将说明链接补入对应表格；总 README 只保留导航和简要结果，细节写入专项 README 或实验日志。
+## 历史副本与协作规则
+
+- [AGENTS.md](AGENTS.md)：项目协作约定和接手入口。
+- [日记重写前存档](seatrack/日记存档/diary_重写前_20261123.md)：历史追溯，不与现行日记并行维护。
+- [部署包 SS README](server_setup/pairwise_ss_20261103/payload/README_SS.md)与[部署包日志](server_setup/pairwise_ss_20261103/payload/logs/)：打包时的代码说明副本，不代表当前源码。
+- [另一份 ep20 可视化 README](<汇报/结果/SS_vs_baseline_ep20_20261104 2/README.md>)：历史副本，日常查看使用上方主要入口；未据此认定整个目录相同。
+- [git.md](git.md)：当前为空，不作为 Git 操作说明。
+
+维护时将新说明链接加入对应类别，实时进度只在交接维护，具体过程写入日记，原始结果保存在结果目录。本页整合日期：2026-11-25；未改写历史实验材料或清理副本。

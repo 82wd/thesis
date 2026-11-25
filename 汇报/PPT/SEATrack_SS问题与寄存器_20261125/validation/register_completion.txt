@@ -1,0 +1,2 @@
+
+2026-11-25 19:17 北京时间现场核验：寄存器60轮训练完成。train.log以Finished training!和REGISTER_TRAIN_COMPLETE结束，status为TRAIN_COMPLETE；ep60权重存在，369 MB（本次未加载）。末轮验证15000/15000批，loss=1.13785，IoU=0.75034，register_norm=279.31620，patch_norm=487.19638。平均范数不支持寄存器高于patch的说法；平滑度、全量SR/MSR仍待验证。本次未启动新训练或评测。

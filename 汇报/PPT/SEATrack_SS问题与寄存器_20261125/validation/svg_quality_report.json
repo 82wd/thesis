@@ -1,0 +1,876 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "77939d4a7454edf2ba55b763fe1332158177241ee4f452aa0c7e1b8475b805d8",
+    "file_count": 13,
+    "files": [
+      {
+        "file": "authoring-svg-flat/slide_01.svg",
+        "sha256": "033698fba404b42a89aab81e8b95c929319c0d95ce6a065c7eb5b498b97394d9"
+      },
+      {
+        "file": "authoring-svg-flat/slide_02.svg",
+        "sha256": "1485df259948495e79cea708806d9131c840683acac3c618d5f4a2e747e564c8"
+      },
+      {
+        "file": "authoring-svg-flat/slide_03.svg",
+        "sha256": "51f3c0aaf1b5a6837510cf95dde605b9ca7b8db68435e8d73ba154f765242897"
+      },
+      {
+        "file": "authoring-svg-flat/slide_04.svg",
+        "sha256": "78db3a74ba39600c2ba3ea0cf10fab46d8188747b2082c4194de17b4682c161e"
+      },
+      {
+        "file": "authoring-svg-flat/slide_05.svg",
+        "sha256": "2735ed6d0abdad2c983a90dc085cd2081833bbab71d544cd601387ce3695a35b"
+      },
+      {
+        "file": "authoring-svg-flat/slide_06.svg",
+        "sha256": "e3ed8012b7fa9d721d2081113e33d3c7e3b5a658ee1201af2e859c0cb52a40fd"
+      },
+      {
+        "file": "authoring-svg-flat/slide_07.svg",
+        "sha256": "a1ecc17b31744270f22972d4aa5ec15ac3c10a16a161fc0784f0a091cf3209ef"
+      },
+      {
+        "file": "authoring-svg-flat/slide_08.svg",
+        "sha256": "04d7328f0abac341fc7adabb9ef99948bdff0e5ed0aa9fc32f879b24f82fb096"
+      },
+      {
+        "file": "authoring-svg-flat/slide_09.svg",
+        "sha256": "ae9aea87cb466019682e235b3154f954cbc4a115501136415a719e82d49dd098"
+      },
+      {
+        "file": "authoring-svg-flat/slide_10.svg",
+        "sha256": "5979ab84d2e9375d2eb97f6bea30994e266a9de01c9dcab074384373d500db84"
+      },
+      {
+        "file": "authoring-svg-flat/slide_11.svg",
+        "sha256": "4d8f1bc8be6243e210736780236bb2f96cc1147b065b292e01fac3ecd9f3e9a9"
+      },
+      {
+        "file": "authoring-svg-flat/slide_12.svg",
+        "sha256": "72d3317e057266077f1d3cdb536735953c61438309737954e519946524be7be9"
+      },
+      {
+        "file": "page_plan.json",
+        "sha256": "f9b3ec855587de9cd26dd81914006101ce288247a7b2e726c5baa40c28ea2436"
+      }
+    ]
+  },
+  "summary": {
+    "total": 8,
+    "passed": 3,
+    "warnings": 5,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 111,
+      "issues": [
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 3 · 已有实验效果'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='消融只部分缓解退化，尚未找到稳定解法'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='LasHeR SR（%）'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='基线 57.51 ｜ 初版 SS 56.…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='Template-only 57.31 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='Search-only 56.70 ｜ …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='RGBT234 MSR（%）'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='基线 63.73 ｜ 初版 SS 64.…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='Template-only 64.03 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='Search-only 63.60 ｜ …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='结论'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='Template-only、Target…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=532; text='Search-only 两套全量结果已完…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=82, y=563; text='训练更新预算不完全匹配，不能将差异完全归…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_06.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='结果说明：现有消融界定了问题边界，还未证…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 从损失约束走向架构改动'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='寄存器：为特征交互增加可学习的计算位置'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=218; text='空间 patch'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=260; text='模板与搜索 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=290; text='承载局部视觉信息'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=218; text='追加 registers'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=260; text='4 个非空间 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=290; text='可学习初始参数'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=218; text='注意力交互'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=260; text='与 patch 共同计算'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=290; text='容纳额外信息'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=218; text='保留视觉输出'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=260; text='移除 registers'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=290; text='搜索特征进入预测头'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=432; text='动机与预期'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=470; text='提供额外的信息交互位置'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=501; text='期望 patch 更平滑、结构更清晰'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=532; text='高范数与精度收益仍需实测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=432; text='与 SS 的关系'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=470; text='在无 SS 基线上独立训练'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=501; text='损失仍为原跟踪损失'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=532; text='不将架构收益与 SS 约束混合'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=640; text='增加计算槽位 → 改变特征交互 → 再检…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_08.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · token 布局与双模态路…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='插入位置：前 9 层之后，后 3 层共同…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=218; text='两模态输入'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=260; text='每路 64 template'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=290; text='+ 256 search'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=218; text='blocks 0–8'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=260; text='原始视觉 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=290; text='共 320 个位置'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=218; text='blocks 9–11'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=260; text='追加 4 registers'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=290; text='320 → 324 tokens'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=218; text='移除寄存器'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=260; text='LayerNorm 前移除'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=290; text='256×768 搜索输出'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=432; text='共享初值，分别演化'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=470; text='RGB / IR 共享 4×768 初始…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=501; text='两路随后各自进行注意力计算'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=532; text='新增参数总数为 3,072'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=432; text='保留空间接口'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=470; text='顺序：[template; search…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=501; text='registers 不进入 HMoE 空…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=532; text='原 RGB+IR 融合及 CENTER …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=640; text='新增 token 参与计算，但不直接作为…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_09.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 可训练参数与反向传播'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='训练机制：通过跟踪损失学习寄存器'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=218; text='前向输入'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=260; text='模板与搜索图像'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=290; text='训练始终保留寄存器'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=218; text='特征交互'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=260; text='Self-attention / AMG'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=290; text='MLP 更新全部 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=218; text='目标预测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=260; text='搜索特征融合'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=290; text='CENTER 原预测头'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=218; text='反向传播'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=260; text='2 GIoU + 5 L1'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=290; text='+ Focal loss'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=432; text='更新什么'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=470; text='训练 lora / moe / scal…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=501; text='同时更新 register_tokens'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=532; text='主干大部分参数和预测头冻结'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=432; text='怎样验证机制'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=470; text='观察 register / patch …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=501; text='固定样本比较空间特征与平滑度'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=532; text='范数变大本身不等于跟踪更准'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=640; text='当前不做 register dropou…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_10.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 相同输入、相同权重，推理时…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='Register Guidance：外推…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=218; text='同一模型'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=260; text='有寄存器：F_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=290; text='无寄存器：F_no_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=218; text='求特征差'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=260; text='ΔF = F_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=378, y=290; text='− F_no_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=218; text='指导外推'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=260; text='F_RG = F_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=678, y=290; text='+ w × ΔF'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=218; text='一次预测头'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=260; text='CENTER → bbox'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=978, y=290; text='Hann 与原框解码'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=432; text='推理代价与含义'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=470; text='w=0：仅有寄存器的一次前向'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=501; text='w>0：骨干两次前向、预测头一次'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=532; text='无寄存器分支不是独立训练基线'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=432; text='当前证据与评测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=470; text='已通过本地与 CUDA 小批验证'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=501; text='11月25日13:48快照：训练至ep5…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=668, y=532; text='全量基线 / Register / RG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=78, y=640; text='跟踪特征层的 RG 适配；不是对参考论文…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        },
+        {
+          "file": "slide_11.svg",
+          "message": "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+        }
+      ]
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {},
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 0,
+    "totals": {
+      "text_elements": 0,
+      "image_placements": 0,
+      "icons": 0,
+      "svg_geometry_elements": 0,
+      "preset_shapes": 0,
+      "page_frame_elements": 0,
+      "marker_uses": 0,
+      "inline_emphasis_runs": 0,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 0,
+      "icons": 0,
+      "presets": 0,
+      "charts": 0,
+      "tables": 0,
+      "formulas": 0,
+      "inline_emphasis_runs": 0,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "relationship_pages": null,
+    "geometry_elements": {},
+    "preset_names": {},
+    "native_objects": {},
+    "image_page_max_frame_share_range": []
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "slide_02.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_02.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 1,
+        "source_slide": 2,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 39,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "1485df259948495e79cea708806d9131c840683acac3c618d5f4a2e747e564c8"
+    },
+    {
+      "file": "slide_04.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_04.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 2,
+        "source_slide": 4,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 0,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 28,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "78db3a74ba39600c2ba3ea0cf10fab46d8188747b2082c4194de17b4682c161e"
+    },
+    {
+      "file": "slide_05.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_05.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "output_page": 3,
+        "source_slide": 5,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 2,
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 46,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "2735ed6d0abdad2c983a90dc085cd2081833bbab71d544cd601387ce3695a35b"
+    },
+    {
+      "file": "slide_06.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_06.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 3 · 已有实验效果'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=105; text='消融只部分缓解退化，尚未找到稳定解法'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=70, y=165; text='LasHeR SR（%）'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=203; text='基线 57.51 ｜ 初版 SS 56.…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=234; text='Template-only 57.31 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=265; text='Search-only 56.70 ｜ …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=70, y=314; text='RGBT234 MSR（%）'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=352; text='基线 63.73 ｜ 初版 SS 64.…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=383; text='Template-only 64.03 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=414; text='Search-only 63.60 ｜ …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=70, y=463; text='结论'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=501; text='Template-only、Target…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=532; text='Search-only 两套全量结果已完…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=82, y=563; text='训练更新预算不完全匹配，不能将差异完全归…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=65, y=654; text='结果说明：现有消融界定了问题边界，还未证…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+      ],
+      "info": {
+        "output_page": 4,
+        "source_slide": 6,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 15,
+        "fonts": [
+          "Hiragino Sans GB"
+        ],
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 0,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "e3ed8012b7fa9d721d2081113e33d3c7e3b5a658ee1201af2e859c0cb52a40fd"
+    },
+    {
+      "file": "slide_08.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_08.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 从损失约束走向架构改动'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=105; text='寄存器：为特征交互增加可学习的计算位置'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=218; text='空间 patch'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=260; text='模板与搜索 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=290; text='承载局部视觉信息'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=218; text='追加 registers'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=260; text='4 个非空间 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=290; text='可学习初始参数'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=218; text='注意力交互'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=260; text='与 patch 共同计算'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=290; text='容纳额外信息'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=218; text='保留视觉输出'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=260; text='移除 registers'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=290; text='搜索特征进入预测头'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=432; text='动机与预期'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=470; text='提供额外的信息交互位置'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=501; text='期望 patch 更平滑、结构更清晰'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=532; text='高范数与精度收益仍需实测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=432; text='与 SS 的关系'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=470; text='在无 SS 基线上独立训练'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=501; text='损失仍为原跟踪损失'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=532; text='不将架构收益与 SS 约束混合'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=640; text='增加计算槽位 → 改变特征交互 → 再检…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+      ],
+      "info": {
+        "output_page": 5,
+        "source_slide": 8,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 24,
+        "fonts": [
+          "Arial, Microsoft YaHei"
+        ],
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 0,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "04d7328f0abac341fc7adabb9ef99948bdff0e5ed0aa9fc32f879b24f82fb096"
+    },
+    {
+      "file": "slide_09.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_09.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · token 布局与双模态路…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=105; text='插入位置：前 9 层之后，后 3 层共同…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=218; text='两模态输入'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=260; text='每路 64 template'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=290; text='+ 256 search'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=218; text='blocks 0–8'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=260; text='原始视觉 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=290; text='共 320 个位置'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=218; text='blocks 9–11'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=260; text='追加 4 registers'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=290; text='320 → 324 tokens'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=218; text='移除寄存器'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=260; text='LayerNorm 前移除'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=290; text='256×768 搜索输出'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=432; text='共享初值，分别演化'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=470; text='RGB / IR 共享 4×768 初始…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=501; text='两路随后各自进行注意力计算'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=532; text='新增参数总数为 3,072'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=432; text='保留空间接口'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=470; text='顺序：[template; search…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=501; text='registers 不进入 HMoE 空…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=532; text='原 RGB+IR 融合及 CENTER …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=640; text='新增 token 参与计算，但不直接作为…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+      ],
+      "info": {
+        "output_page": 6,
+        "source_slide": 9,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 24,
+        "fonts": [
+          "Arial, Microsoft YaHei"
+        ],
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 0,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "ae9aea87cb466019682e235b3154f954cbc4a115501136415a719e82d49dd098"
+    },
+    {
+      "file": "slide_10.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_10.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 可训练参数与反向传播'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=105; text='训练机制：通过跟踪损失学习寄存器'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=218; text='前向输入'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=260; text='模板与搜索图像'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=290; text='训练始终保留寄存器'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=218; text='特征交互'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=260; text='Self-attention / AMG'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=290; text='MLP 更新全部 token'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=218; text='目标预测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=260; text='搜索特征融合'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=290; text='CENTER 原预测头'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=218; text='反向传播'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=260; text='2 GIoU + 5 L1'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=290; text='+ Focal loss'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=432; text='更新什么'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=470; text='训练 lora / moe / scal…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=501; text='同时更新 register_tokens'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=532; text='主干大部分参数和预测头冻结'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=432; text='怎样验证机制'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=470; text='观察 register / patch …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=501; text='固定样本比较空间特征与平滑度'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=532; text='范数变大本身不等于跟踪更准'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=640; text='当前不做 register dropou…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+      ],
+      "info": {
+        "output_page": 7,
+        "source_slide": 10,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 24,
+        "fonts": [
+          "Arial, Microsoft YaHei"
+        ],
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 0,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "5979ab84d2e9375d2eb97f6bea30994e266a9de01c9dcab074384373d500db84"
+    },
+    {
+      "file": "slide_11.svg",
+      "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat/slide_11.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 相同输入、相同权重，推理时…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=105; text='Register Guidance：外推…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=218; text='同一模型'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=260; text='有寄存器：F_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=290; text='无寄存器：F_no_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=218; text='求特征差'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=260; text='ΔF = F_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=378, y=290; text='− F_no_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=218; text='指导外推'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=260; text='F_RG = F_reg'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=678, y=290; text='+ w × ΔF'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=218; text='一次预测头'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=260; text='CENTER → bbox'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=978, y=290; text='Hann 与原框解码'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=432; text='推理代价与含义'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=470; text='w=0：仅有寄存器的一次前向'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=501; text='w>0：骨干两次前向、预测头一次'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=532; text='无寄存器分支不是独立训练基线'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=432; text='当前证据与评测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=470; text='已通过本地与 CUDA 小批验证'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=501; text='11月25日13:48快照：训练至ep5…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=668, y=532; text='全量基线 / Register / RG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=78, y=640; text='跟踪特征层的 RG 适配；不是对参考论文…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames",
+        "Cannot verify owning frame for edited <text> (x=60, y=691; text='机制示意；实现依据 README_REG…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+      ],
+      "info": {
+        "output_page": 8,
+        "source_slide": 11,
+        "viewbox": "0 0 1280 720",
+        "edited_text_elements": 24,
+        "fonts": [
+          "Arial, Microsoft YaHei"
+        ],
+        "roundtrip_text_calibration": {
+          "factor": 0.0,
+          "measured_unchanged": 0,
+          "positive_unchanged": 0
+        }
+      },
+      "passed": true,
+      "source_sha256": "4d8f1bc8be6243e210736780236bb2f96cc1147b065b292e01fac3ecd9f3e9a9"
+    }
+  ]
+}

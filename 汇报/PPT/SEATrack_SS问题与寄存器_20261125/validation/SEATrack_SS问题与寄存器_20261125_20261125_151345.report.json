@@ -1,0 +1,1668 @@
+{
+  "schema": "ppt-master.pptx-postflight-report.v1",
+  "status": "passed-with-warnings",
+  "output": {
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/exports/SEATrack_SS问题与寄存器_20261125_20261125_151345.pptx",
+    "bytes": 46090
+  },
+  "source": {
+    "svg_slide_count": 8,
+    "layout_definition_count": 0,
+    "fingerprint": {
+      "algorithm": "sha256",
+      "digest": "9182d18667a7e85d0e08b082d410f5972d1d2ff12a67004c7241566d1fe5248b",
+      "file_count": 13,
+      "files": [
+        {
+          "file": "authoring-svg-flat/slide_01.svg",
+          "sha256": "033698fba404b42a89aab81e8b95c929319c0d95ce6a065c7eb5b498b97394d9"
+        },
+        {
+          "file": "authoring-svg-flat/slide_02.svg",
+          "sha256": "4e15fcf89b041e9684630a9ed9bf0d1c8d11811ac92776943bd45fccd2f57b05"
+        },
+        {
+          "file": "authoring-svg-flat/slide_03.svg",
+          "sha256": "51f3c0aaf1b5a6837510cf95dde605b9ca7b8db68435e8d73ba154f765242897"
+        },
+        {
+          "file": "authoring-svg-flat/slide_04.svg",
+          "sha256": "e3ed8012b7fa9d721d2081113e33d3c7e3b5a658ee1201af2e859c0cb52a40fd"
+        },
+        {
+          "file": "authoring-svg-flat/slide_05.svg",
+          "sha256": "a27ffe4e389a577e05c448e067d7c04956f5c6e444a8ca0d3cfc4bf1b9a6cd20"
+        },
+        {
+          "file": "authoring-svg-flat/slide_06.svg",
+          "sha256": "c7d9cb859e691f11ff076a35f53228041adb47bce3bdefbe7dd4998743dafbb8"
+        },
+        {
+          "file": "authoring-svg-flat/slide_07.svg",
+          "sha256": "a1ecc17b31744270f22972d4aa5ec15ac3c10a16a161fc0784f0a091cf3209ef"
+        },
+        {
+          "file": "authoring-svg-flat/slide_08.svg",
+          "sha256": "9649ab3fd42573e3d9cd7023430f172b74aa34278869c4ad2163b85ff803746f"
+        },
+        {
+          "file": "authoring-svg-flat/slide_09.svg",
+          "sha256": "bfa01679bce4c47eaf0d6e605361a92437f3960be31ab30e479133430f6461ba"
+        },
+        {
+          "file": "authoring-svg-flat/slide_10.svg",
+          "sha256": "b66110b68887a58c5e7ea124a45923bc5580346634b40af4cb2038f480339e19"
+        },
+        {
+          "file": "authoring-svg-flat/slide_11.svg",
+          "sha256": "e6a76794b27ea90be710122aba97ff8003a8d7f76e6264c82a429dd564ab2847"
+        },
+        {
+          "file": "authoring-svg-flat/slide_12.svg",
+          "sha256": "72d3317e057266077f1d3cdb536735953c61438309737954e519946524be7be9"
+        },
+        {
+          "file": "page_plan.json",
+          "sha256": "f059ff6ae4901be5fc11a6eb82af687e920620c26c4e2be3b5b4bc4eae2d61ff"
+        }
+      ]
+    },
+    "authoring_roundtrip": {
+      "schema": "ppt-master.authoring-roundtrip-materialization.v1",
+      "authoring_root": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/authoring-svg-flat",
+      "manifest_schema": "ppt-master.svg-authoring-ir.v1",
+      "projection_kind": "flat",
+      "materialized_slide_count": 8,
+      "page_plan": {
+        "schema": "ppt-master.roundtrip-page-plan.v1",
+        "output_pages": 8,
+        "pages": [
+          {
+            "output_index": 1,
+            "source_slide": 1,
+            "svg": "slide_01.svg"
+          },
+          {
+            "output_index": 2,
+            "source_slide": 2,
+            "svg": "slide_02.svg"
+          },
+          {
+            "output_index": 3,
+            "source_slide": 3,
+            "svg": "slide_03.svg"
+          },
+          {
+            "output_index": 4,
+            "source_slide": 4,
+            "svg": "slide_04.svg"
+          },
+          {
+            "output_index": 5,
+            "source_slide": 5,
+            "svg": "slide_05.svg"
+          },
+          {
+            "output_index": 6,
+            "source_slide": 6,
+            "svg": "slide_06.svg"
+          },
+          {
+            "output_index": 7,
+            "source_slide": 7,
+            "svg": "slide_07.svg"
+          },
+          {
+            "output_index": 8,
+            "source_slide": 8,
+            "svg": "slide_08.svg"
+          }
+        ]
+      },
+      "totals": {
+        "source_ref_count": 382,
+        "unchanged_refs": 0,
+        "edited_refs": 0,
+        "deleted_refs": 382,
+        "authored_unreferenced": 108,
+        "expanded_vector_uses": 0
+      },
+      "documents": [
+        {
+          "file": "slide_01.svg",
+          "source_file": "slide_01.svg",
+          "source_slide": 1,
+          "document_unchanged": false,
+          "source_ref_count": 19,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 19,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "authored_unreferenced": 14,
+          "expanded_vector_uses": 0,
+          "defs_changed": false,
+          "warnings": []
+        },
+        {
+          "file": "slide_02.svg",
+          "source_file": "slide_02.svg",
+          "source_slide": 2,
+          "document_unchanged": false,
+          "source_ref_count": 96,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:45",
+            "slide:46",
+            "slide:47",
+            "slide:48",
+            "slide:49",
+            "slide:5",
+            "slide:50",
+            "slide:51",
+            "slide:52",
+            "slide:53",
+            "slide:54",
+            "slide:55",
+            "slide:56",
+            "slide:57",
+            "slide:58",
+            "slide:59",
+            "slide:6",
+            "slide:60",
+            "slide:61",
+            "slide:62",
+            "slide:63",
+            "slide:64",
+            "slide:65",
+            "slide:66",
+            "slide:67",
+            "slide:68",
+            "slide:69",
+            "slide:7",
+            "slide:70",
+            "slide:71",
+            "slide:72",
+            "slide:73",
+            "slide:74",
+            "slide:75",
+            "slide:76",
+            "slide:77",
+            "slide:78",
+            "slide:79",
+            "slide:8",
+            "slide:80",
+            "slide:81",
+            "slide:82",
+            "slide:83",
+            "slide:84",
+            "slide:85",
+            "slide:86",
+            "slide:87",
+            "slide:88",
+            "slide:89",
+            "slide:9",
+            "slide:90",
+            "slide:91",
+            "slide:92",
+            "slide:93",
+            "slide:94",
+            "slide:95",
+            "slide:96",
+            "slide:97"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 96,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:45",
+            "slide:46",
+            "slide:47",
+            "slide:48",
+            "slide:49",
+            "slide:5",
+            "slide:50",
+            "slide:51",
+            "slide:52",
+            "slide:53",
+            "slide:54",
+            "slide:55",
+            "slide:56",
+            "slide:57",
+            "slide:58",
+            "slide:59",
+            "slide:6",
+            "slide:60",
+            "slide:61",
+            "slide:62",
+            "slide:63",
+            "slide:64",
+            "slide:65",
+            "slide:66",
+            "slide:67",
+            "slide:68",
+            "slide:69",
+            "slide:7",
+            "slide:70",
+            "slide:71",
+            "slide:72",
+            "slide:73",
+            "slide:74",
+            "slide:75",
+            "slide:76",
+            "slide:77",
+            "slide:78",
+            "slide:79",
+            "slide:8",
+            "slide:80",
+            "slide:81",
+            "slide:82",
+            "slide:83",
+            "slide:84",
+            "slide:85",
+            "slide:86",
+            "slide:87",
+            "slide:88",
+            "slide:89",
+            "slide:9",
+            "slide:90",
+            "slide:91",
+            "slide:92",
+            "slide:93",
+            "slide:94",
+            "slide:95",
+            "slide:96",
+            "slide:97"
+          ],
+          "authored_unreferenced": 13,
+          "expanded_vector_uses": 0,
+          "defs_changed": true,
+          "warnings": []
+        },
+        {
+          "file": "slide_03.svg",
+          "source_file": "slide_03.svg",
+          "source_slide": 3,
+          "document_unchanged": false,
+          "source_ref_count": 24,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 24,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "authored_unreferenced": 14,
+          "expanded_vector_uses": 0,
+          "defs_changed": false,
+          "warnings": []
+        },
+        {
+          "file": "slide_04.svg",
+          "source_file": "slide_04.svg",
+          "source_slide": 4,
+          "document_unchanged": false,
+          "source_ref_count": 43,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 43,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "authored_unreferenced": 15,
+          "expanded_vector_uses": 0,
+          "defs_changed": true,
+          "warnings": []
+        },
+        {
+          "file": "slide_05.svg",
+          "source_file": "slide_05.svg",
+          "source_slide": 5,
+          "document_unchanged": false,
+          "source_ref_count": 82,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:45",
+            "slide:46",
+            "slide:47",
+            "slide:48",
+            "slide:49",
+            "slide:5",
+            "slide:50",
+            "slide:51",
+            "slide:52",
+            "slide:53",
+            "slide:54",
+            "slide:55",
+            "slide:56",
+            "slide:57",
+            "slide:58",
+            "slide:59",
+            "slide:6",
+            "slide:60",
+            "slide:61",
+            "slide:62",
+            "slide:63",
+            "slide:64",
+            "slide:65",
+            "slide:66",
+            "slide:67",
+            "slide:68",
+            "slide:69",
+            "slide:7",
+            "slide:70",
+            "slide:71",
+            "slide:72",
+            "slide:73",
+            "slide:74",
+            "slide:75",
+            "slide:76",
+            "slide:77",
+            "slide:78",
+            "slide:79",
+            "slide:8",
+            "slide:80",
+            "slide:81",
+            "slide:82",
+            "slide:83",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 82,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:45",
+            "slide:46",
+            "slide:47",
+            "slide:48",
+            "slide:49",
+            "slide:5",
+            "slide:50",
+            "slide:51",
+            "slide:52",
+            "slide:53",
+            "slide:54",
+            "slide:55",
+            "slide:56",
+            "slide:57",
+            "slide:58",
+            "slide:59",
+            "slide:6",
+            "slide:60",
+            "slide:61",
+            "slide:62",
+            "slide:63",
+            "slide:64",
+            "slide:65",
+            "slide:66",
+            "slide:67",
+            "slide:68",
+            "slide:69",
+            "slide:7",
+            "slide:70",
+            "slide:71",
+            "slide:72",
+            "slide:73",
+            "slide:74",
+            "slide:75",
+            "slide:76",
+            "slide:77",
+            "slide:78",
+            "slide:79",
+            "slide:8",
+            "slide:80",
+            "slide:81",
+            "slide:82",
+            "slide:83",
+            "slide:9"
+          ],
+          "authored_unreferenced": 11,
+          "expanded_vector_uses": 0,
+          "defs_changed": true,
+          "warnings": []
+        },
+        {
+          "file": "slide_06.svg",
+          "source_file": "slide_06.svg",
+          "source_slide": 6,
+          "document_unchanged": false,
+          "source_ref_count": 24,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 24,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "authored_unreferenced": 14,
+          "expanded_vector_uses": 0,
+          "defs_changed": false,
+          "warnings": []
+        },
+        {
+          "file": "slide_07.svg",
+          "source_file": "slide_07.svg",
+          "source_slide": 7,
+          "document_unchanged": false,
+          "source_ref_count": 15,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:2",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 15,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:2",
+            "slide:3",
+            "slide:4",
+            "slide:5",
+            "slide:6",
+            "slide:7",
+            "slide:8",
+            "slide:9"
+          ],
+          "authored_unreferenced": 13,
+          "expanded_vector_uses": 0,
+          "defs_changed": false,
+          "warnings": []
+        },
+        {
+          "file": "slide_08.svg",
+          "source_file": "slide_08.svg",
+          "source_slide": 8,
+          "document_unchanged": false,
+          "source_ref_count": 79,
+          "source_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:45",
+            "slide:46",
+            "slide:47",
+            "slide:48",
+            "slide:49",
+            "slide:5",
+            "slide:50",
+            "slide:51",
+            "slide:52",
+            "slide:53",
+            "slide:54",
+            "slide:55",
+            "slide:56",
+            "slide:57",
+            "slide:58",
+            "slide:59",
+            "slide:6",
+            "slide:60",
+            "slide:61",
+            "slide:62",
+            "slide:63",
+            "slide:64",
+            "slide:65",
+            "slide:66",
+            "slide:67",
+            "slide:68",
+            "slide:69",
+            "slide:7",
+            "slide:70",
+            "slide:71",
+            "slide:72",
+            "slide:73",
+            "slide:74",
+            "slide:75",
+            "slide:76",
+            "slide:77",
+            "slide:78",
+            "slide:79",
+            "slide:8",
+            "slide:80",
+            "slide:9"
+          ],
+          "unchanged_refs": 0,
+          "unchanged_ref_ids": [],
+          "edited_refs": 0,
+          "edited_ref_ids": [],
+          "deleted_refs": 79,
+          "deleted_ref_ids": [
+            "slide:10",
+            "slide:11",
+            "slide:12",
+            "slide:13",
+            "slide:14",
+            "slide:15",
+            "slide:16",
+            "slide:17",
+            "slide:18",
+            "slide:19",
+            "slide:2",
+            "slide:20",
+            "slide:21",
+            "slide:22",
+            "slide:23",
+            "slide:24",
+            "slide:25",
+            "slide:26",
+            "slide:27",
+            "slide:28",
+            "slide:29",
+            "slide:3",
+            "slide:30",
+            "slide:31",
+            "slide:32",
+            "slide:33",
+            "slide:34",
+            "slide:35",
+            "slide:36",
+            "slide:37",
+            "slide:38",
+            "slide:39",
+            "slide:4",
+            "slide:40",
+            "slide:41",
+            "slide:42",
+            "slide:43",
+            "slide:44",
+            "slide:45",
+            "slide:46",
+            "slide:47",
+            "slide:48",
+            "slide:49",
+            "slide:5",
+            "slide:50",
+            "slide:51",
+            "slide:52",
+            "slide:53",
+            "slide:54",
+            "slide:55",
+            "slide:56",
+            "slide:57",
+            "slide:58",
+            "slide:59",
+            "slide:6",
+            "slide:60",
+            "slide:61",
+            "slide:62",
+            "slide:63",
+            "slide:64",
+            "slide:65",
+            "slide:66",
+            "slide:67",
+            "slide:68",
+            "slide:69",
+            "slide:7",
+            "slide:70",
+            "slide:71",
+            "slide:72",
+            "slide:73",
+            "slide:74",
+            "slide:75",
+            "slide:76",
+            "slide:77",
+            "slide:78",
+            "slide:79",
+            "slide:8",
+            "slide:80",
+            "slide:9"
+          ],
+          "authored_unreferenced": 14,
+          "expanded_vector_uses": 0,
+          "defs_changed": true,
+          "warnings": []
+        }
+      ],
+      "source_slide_passthrough": {
+        "count": 0,
+        "slides": []
+      },
+      "export_summary": {
+        "output_pages": 8,
+        "passthrough": 0,
+        "cloned_passthrough": 0,
+        "patched": 0,
+        "rebuilt": 8
+      }
+    }
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "slides": 8,
+    "notes": 8,
+    "masters": 1,
+    "layouts": 1
+  },
+  "checks": {
+    "zip_integrity": "passed",
+    "slide_count": "passed",
+    "internal_relationships": "enforced-at-build",
+    "structured_package": "not-applicable",
+    "transitions": "enforced-at-build",
+    "animations": "enforced-at-build",
+    "project_svg_contract": "enforced-at-build",
+    "compatibility_normalization": "not-applicable",
+    "authoring_roundtrip": "materialized-from-flat-authoring",
+    "quality_gate": "stale",
+    "quality_warnings": "warning",
+    "template_tokens": "passed",
+    "external_images": "passed",
+    "font_portability": "passed"
+  },
+  "quality": {
+    "status": "loaded",
+    "path": "汇报/PPT/SEATrack_SS问题与寄存器_20261125/validation/svg_quality_report.json",
+    "schema": "ppt-master.svg-quality-report.v1",
+    "stage": "final",
+    "source_match": "mismatch",
+    "source_fingerprint": {
+      "algorithm": "sha256",
+      "digest": "81964768c99f91ccaa89ee0a70fa9b646554c92e3b6c7e2fd19107452cf35f9f",
+      "file_count": 13,
+      "files": [
+        {
+          "file": "authoring-svg-flat/slide_01.svg",
+          "sha256": "0da611f299c3a75597023dc18d96ed661a7112a7c1d2c4318d4fc3257c0bfb96"
+        },
+        {
+          "file": "authoring-svg-flat/slide_02.svg",
+          "sha256": "02fceb506c681ffb0cdc333ff2ba9388d3d9f67ba2190224bcc05b7e8ae1c36a"
+        },
+        {
+          "file": "authoring-svg-flat/slide_03.svg",
+          "sha256": "f222f87df5945ee18475e9e820dea933e5718546aee9cd2112822fc44e133eac"
+        },
+        {
+          "file": "authoring-svg-flat/slide_04.svg",
+          "sha256": "009b2fef040e90fd73dd0b1193eaec11b5e03748ad7462958c1eb1734ad05adc"
+        },
+        {
+          "file": "authoring-svg-flat/slide_05.svg",
+          "sha256": "ec03008fa6c8755f35a66f41f0fd016bfa59713e8102f05ab580407f86146e1d"
+        },
+        {
+          "file": "authoring-svg-flat/slide_06.svg",
+          "sha256": "42f5fe117e118d371a08d99933b71ba0ac793f68b688ddaef6a43ffe94b6958a"
+        },
+        {
+          "file": "authoring-svg-flat/slide_07.svg",
+          "sha256": "893ea9e1d1fc6629a51aec267447a5f6783ce78da04d342706a55469a27d8cae"
+        },
+        {
+          "file": "authoring-svg-flat/slide_08.svg",
+          "sha256": "c3200b25b9ca09be0ddb2c0c714967e4a311ea52ca94c77d01445ceea05093b0"
+        },
+        {
+          "file": "authoring-svg-flat/slide_09.svg",
+          "sha256": "bfa01679bce4c47eaf0d6e605361a92437f3960be31ab30e479133430f6461ba"
+        },
+        {
+          "file": "authoring-svg-flat/slide_10.svg",
+          "sha256": "b66110b68887a58c5e7ea124a45923bc5580346634b40af4cb2038f480339e19"
+        },
+        {
+          "file": "authoring-svg-flat/slide_11.svg",
+          "sha256": "e6a76794b27ea90be710122aba97ff8003a8d7f76e6264c82a429dd564ab2847"
+        },
+        {
+          "file": "authoring-svg-flat/slide_12.svg",
+          "sha256": "72d3317e057266077f1d3cdb536735953c61438309737954e519946524be7be9"
+        },
+        {
+          "file": "page_plan.json",
+          "sha256": "f059ff6ae4901be5fc11a6eb82af687e920620c26c4e2be3b5b4bc4eae2d61ff"
+        }
+      ]
+    },
+    "summary": {
+      "total": 8,
+      "passed": 0,
+      "warnings": 8,
+      "errors": 0
+    },
+    "categories": {
+      "blocking": {
+        "count": 0,
+        "issues": []
+      },
+      "introduced": {
+        "count": 108,
+        "issues": [
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 1 · 跨模态空间关系校准'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='SS：约束两种模态的空间结构关系'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='特征关系'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='RGB 与热红外特征分别按通道归一化：U…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='计算 token 两两余弦相似度：S =…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='以两模态关系矩阵的 MSE 作为辅助损失'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='区域与层'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='模板 64 tokens → 64×64…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='模板、搜索分别计算，不构造跨区域位置对'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='在 block 3 / 5 / 7 / …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='优化目标'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='L = L_tracking + 0.1…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=532; text='SS 不增加参数；梯度回传至 PEFT …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_01.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='目标：让模态间关系结构一致，而非强迫特征…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='问题诊断 · 多数据集结果与失败回放'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='关系对齐没有带来稳定的跟踪收益'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='数据集表现'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='LasHeR SR：57.51% → 5…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='VisEvent SR：60.26% →…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='收益方向随数据集变化，SS loss 下…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='失败机制线索'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='5 条失败序列交换上一帧搜索框，固定首帧…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='白车关键帧：SS 用自身前框 IoU=0…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='同一搜索框下模型仍可能选错目标；区域漂移…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='解释边界'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='回放是诊断实验，不是闭环恢复率，也不能单…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_02.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='问题线索：关系约束、目标判别与误差累积共…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 3 · query/search …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='从“约束全部关系”转向“选择约束对象”'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='区域选择'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='Template-only：只保留模板关…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='Search-only：只对 query…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='Target-aware：训练时用 GT…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='定位与强度'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='逐层配置：分别检验 block 3 / …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='Half-weight：模板、搜索 SS…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='记录逐层 SS、跟踪 IoU 与训练动态…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='总损失示意'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='Template-only：0.05 ×…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=532; text='Half-weight：0.025 × …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_03.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='核心原则：逐项改变约束的位置、区域与强度'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 3 · 已有实验效果'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='消融只部分缓解退化，尚未找到稳定解法'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='LasHeR SR（%）'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='基线 57.51 ｜ 初版 SS 56.…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='Template-only 57.31 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='Search-only 56.70 ｜ …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='RGBT234 MSR（%）'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='基线 63.73 ｜ 初版 SS 64.…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='Template-only 64.03 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='Search-only 63.60 ｜ …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='结论'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='Template-only、Target…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=532; text='Search-only 两套全量结果已完…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=563; text='训练更新预算不完全匹配，不能将差异完全归…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_04.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='结果说明：现有消融界定了问题边界，还未证…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 寄存器 token 的作用…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='给 Transformer 增加非空间的…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='寄存器机制'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='在中间层追加可学习 token，作为额外…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='寄存器与 patch 一起参与后续 se…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='寄存器不属于模板／搜索空间网格，因此不进…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='本项目假设'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='寄存器可能承载特征交互压力，使 patc…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='随后通过 Register Guidan…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='高范数、平滑性及跟踪精度收益都需要实测验…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_05.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='这是待检验的架构假设，不把预期写成实验结…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='寄存器架构 · 插入与信息流'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='在第 9 个 block 输入处插入 4…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='输入与插入'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='RGB / IR template to…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='末尾追加 4×768 可学习寄存器： […'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='两模态共享初始寄存器参数，之后在各自模态…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='后续计算'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='寄存器参与剩余 3 层注意力与 AMG；…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='最终 LayerNorm 前移除寄存器，…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='原 RGB + IR 融合及 CENTE…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='实现规模'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='新增参数：4×768 = 3,072；正…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=532; text='训练配置关闭 SS 与频域融合，单独检验…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_06.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='寄存器只改变中间特征计算路径，原预测接口…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='Register Guidance · …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='同一权重做有／无寄存器两次前向'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='有寄存器分支'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='同一输入 → backbone(regi…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=252; text='无寄存器分支'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=290; text='相同输入与相同权重 → backbone…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=339; text='特征指导'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=377; text='F_RG = F_reg + w × (…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=408; text='w=0：仅一次骨干前向；w>0：两次骨干…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=439; text='移除寄存器的特征来自同一训练模型，不是独…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=488; text='训练方式'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=526; text='训练始终保留寄存器，只计算跟踪损失；当前…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_07.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='将寄存器带来的特征差异显式加入最终搜索表…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=55; text='想法 4 · 当前验证与下一步'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=60, y=105; text='实现和训练检查已过，跟踪收益等待全量评测'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=165; text='已完成验证'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=203; text='20 项寄存器／回归测试通过；完整模型随…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=234; text='服务器 CUDA 小批 smoke 完成…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=265; text='正式训练快照：11月25日核验至第55/…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=314; text='待回答的问题'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=352; text='寄存器是否改变 patch 空间平滑度与…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=383; text='无 RG 与不同 w 的跟踪效果、速度和…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=414; text='相对同初始化、同训练预算的独立无寄存器基…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=70, y=463; text='评测对照'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=501; text='独立基线 ｜ Register w=0 …'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=82, y=532; text='统一 checkpoint 来源、采样预…'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          },
+          {
+            "file": "slide_08.svg",
+            "message": "Cannot verify owning frame for edited <text> (x=65, y=654; text='目前结论：机制已实现，性能假设尚未验证'); set data-pptx-bounds on the authored text group or group the text with its containing rect; preserve existing imported frames"
+          }
+        ]
+      },
+      "inherited": {
+        "count": 0,
+        "issues": []
+      },
+      "source-import": {
+        "count": 0,
+        "summary": {
+          "warning_count": 0,
+          "by_code": {}
+        }
+      }
+    }
+  },
+  "resources": {
+    "unresolved_template_tokens": [],
+    "fonts": {
+      "stacks": [
+        "Hiragino Sans GB"
+      ],
+      "generic_only_stacks": [],
+      "unsafe_exported_faces": []
+    },
+    "images": {
+      "data_uri": 0,
+      "local": 0,
+      "external": 0,
+      "external_references": []
+    }
+  },
+  "export_policy": {
+    "project_svg_contract": "strict",
+    "dangerous_normalization_count": 0
+  },
+  "deck_motion": {
+    "transition": {
+      "effect": null,
+      "effect_options": {},
+      "duration": 0.0,
+      "auto_advance": null,
+      "sound": null
+    },
+    "animation": {
+      "effect": "none",
+      "effect_request": null,
+      "duration": 0.4,
+      "stagger": 0.5,
+      "trigger": "after-previous"
+    },
+    "cli_overrides": {
+      "transition": false,
+      "transition_duration": false,
+      "auto_advance": false,
+      "transition_sound": false,
+      "animation": false,
+      "animation_duration": false,
+      "animation_stagger": false,
+      "animation_trigger": false
+    },
+    "narration_timings": false
+  },
+  "backup_path": null,
+  "conversion_trace_path": null
+}

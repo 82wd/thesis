@@ -1,0 +1,28 @@
+{
+  "schema": "ppt-master.source_to_md.profile.v1",
+  "converter": "ppt_to_md.py",
+  "conversion_type": "pptx",
+  "source": {
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_SS问题与寄存器_20261125/sources/source.pptx",
+    "name": "source.pptx",
+    "suffix": ".pptx",
+    "kind": "file",
+    "exists": true,
+    "size_bytes": 661280
+  },
+  "outputs": {
+    "markdown": "source_readback.md",
+    "asset_dir": "source_readback_files",
+    "image_manifest": "source_readback_files/image_manifest.json",
+    "image_count": 4
+  },
+  "markdown": {
+    "line_count": 750,
+    "char_count": 12908,
+    "heading_count": 25,
+    "table_count": 0,
+    "image_ref_count": 4,
+    "link_count": 0
+  },
+  "warnings": []
+}

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Microsoft YaHei&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-4" data-pptx-object="group" data-pptx-frame="58.72 46 680.96 83.61" data-pptx-source-ref="slide:4">
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="59.36 46 185.01 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 59.36 46 L 244.37 46 L 244.37 70.64 L 59.36 70.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="59.36" y="62" text-anchor="start" xml:space="preserve" font-size="16" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">结论 / 已有证据与下一步</tspan></text>
+</g>
+<g id="shape-3" data-pptx-object="shape" data-pptx-frame="58.72 80.33 680.96 49.28" data-pptx-prst="rect" data-pptx-source-ref="slide:3" data-pptx-semantic-object="shape">
+<path d="M 58.72 80.33 L 739.68 80.33 L 739.68 129.61 L 58.72 129.61 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="58.72" y="111" text-anchor="start" xml:space="preserve" font-size="32" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">先证明可复现的跟踪收益，再扩大或组合方法</tspan></text>
+</g>
+</g>
+<g id="shape-10" data-pptx-object="group" data-pptx-frame="59.04 155.33 1004.16 125.31" data-pptx-source-ref="slide:10">
+<g id="shape-5" data-pptx-object="shape" data-pptx-frame="59.04 155.33 134.96 36.96" data-pptx-prst="rect" data-pptx-source-ref="slide:5" data-pptx-semantic-object="shape">
+<path d="M 59.04 155.33 L 194 155.33 L 194 192.29 L 59.04 192.29 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="59.04" y="178" text-anchor="start" xml:space="preserve" font-size="24" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">想法 1 · SS</tspan></text>
+</g>
+<g id="shape-6" data-pptx-object="shape" data-pptx-frame="314.2 159.33 383.2 30.8" data-pptx-prst="rect" data-pptx-source-ref="slide:6" data-pptx-semantic-object="shape">
+<path d="M 314.2 159.33 L 697.4 159.33 L 697.4 190.13 L 314.2 190.13 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.2" y="178" text-anchor="start" xml:space="preserve" font-size="20" fill="#303638" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">实现了关系约束，但没有获得普遍增益。</tspan></text>
+</g>
+<g id="shape-7" data-pptx-object="shape" data-pptx-frame="314.36 196 571.49 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:7" data-pptx-semantic-object="shape">
+<path d="M 314.36 196 L 885.85 196 L 885.85 220.64 L 314.36 220.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="212" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">已做：五层 pairwise SS、三类模态训练、五数据集结果与逐序列失败分析。</tspan></text>
+</g>
+<g id="shape-8" data-pptx-object="shape" data-pptx-frame="314.36 226 748.84 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:8" data-pptx-semantic-object="shape">
+<path d="M 314.36 226 L 1063.2 226 L 1063.2 250.64 L 314.36 250.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="242" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">证据：RGBT234 改善，LasHeR / VisEvent / RGB-D 退化；关系损失下降不能直接说明跟踪更好。</tspan></text>
+</g>
+<g id="shape-9" data-pptx-object="shape" data-pptx-frame="314.36 256 725.05 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:9" data-pptx-semantic-object="shape">
+<path d="M 314.36 256 L 1039.41 256 L 1039.41 280.64 L 314.36 280.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="272" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">当前为 patch–patch 关系矩阵；师兄提出的平均池化／可学习 query 语义 anchor 版本尚未实现。</tspan></text>
+</g>
+</g>
+<g id="shape-11" data-pptx-object="shape" data-pptx-frame="60 300 1160 1" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:11" data-pptx-semantic-object="shape">
+<path d="M 60 300 L 1220 300" data-pptx-part="geometry" fill="none" stroke-width="1" stroke="#B9D4E5" />
+</g>
+<g id="shape-17" data-pptx-object="group" data-pptx-frame="59.04 324.33 889.12 125.31" data-pptx-source-ref="slide:17">
+<g id="shape-12" data-pptx-object="shape" data-pptx-frame="59.04 324.33 147.5 36.96" data-pptx-prst="rect" data-pptx-source-ref="slide:12" data-pptx-semantic-object="shape">
+<path d="M 59.04 324.33 L 206.54 324.33 L 206.54 361.29 L 59.04 361.29 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="59.04" y="347" text-anchor="start" xml:space="preserve" font-size="24" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">想法 3 · 补救</tspan></text>
+</g>
+<g id="shape-13" data-pptx-object="shape" data-pptx-frame="314.2 328.33 489.29 30.8" data-pptx-prst="rect" data-pptx-source-ref="slide:13" data-pptx-semantic-object="shape">
+<path d="M 314.2 328.33 L 803.49 328.33 L 803.49 359.13 L 314.2 359.13 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.2" y="347" text-anchor="start" xml:space="preserve" font-size="20" fill="#303638" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">A/B 部分恢复；search-only 收敛，跟踪效果待测。</tspan></text>
+</g>
+<g id="shape-14" data-pptx-object="shape" data-pptx-frame="314.36 365 558.14 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:14" data-pptx-semantic-object="shape">
+<path d="M 314.36 365 L 872.5 365 L 872.5 389.64 L 314.36 389.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="381" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">已做：搜索框交换、A/B 重训与全量测评、search-only 60 轮及训练动态。</tspan></text>
+</g>
+<g id="shape-15" data-pptx-object="shape" data-pptx-frame="314.36 395 602.46 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:15" data-pptx-semantic-object="shape">
+<path d="M 314.36 395 L 916.82 395 L 916.82 419.64 L 314.36 419.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="411" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">优先：search-only 全量测评；核验半权重末轮，匹配更新次数，再做单层消融。</tspan></text>
+</g>
+<g id="shape-16" data-pptx-object="shape" data-pptx-frame="314.36 425 633.8 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:16" data-pptx-semantic-object="shape">
+<path d="M 314.36 425 L 948.16 425 L 948.16 449.64 L 314.36 449.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="441" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">补记录：同一可训练参数上的 tracking / SS 梯度范数与夹角，判断尺度及优化冲突。</tspan></text>
+</g>
+</g>
+<g id="shape-18" data-pptx-object="shape" data-pptx-frame="60 473 1160 1" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:18" data-pptx-semantic-object="shape">
+<path d="M 60 473 L 1220 473" data-pptx-part="geometry" fill="none" stroke-width="1" stroke="#B9D4E5" />
+</g>
+<g id="shape-24" data-pptx-object="group" data-pptx-frame="59.04 497.33 943.52 125.31" data-pptx-source-ref="slide:24">
+<g id="shape-19" data-pptx-object="shape" data-pptx-frame="59.04 497.33 147.5 36.96" data-pptx-prst="rect" data-pptx-source-ref="slide:19" data-pptx-semantic-object="shape">
+<path d="M 59.04 497.33 L 206.54 497.33 L 206.54 534.29 L 59.04 534.29 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="59.04" y="520" text-anchor="start" xml:space="preserve" font-size="24" fill="#BC8E53" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">想法 2 · 频段</tspan></text>
+</g>
+<g id="shape-20" data-pptx-object="shape" data-pptx-frame="314.2 501.33 510.4 30.8" data-pptx-prst="rect" data-pptx-source-ref="slide:20" data-pptx-semantic-object="shape">
+<path d="M 314.2 501.33 L 824.6 501.33 L 824.6 532.13 L 314.2 532.13 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.2" y="520" text-anchor="start" xml:space="preserve" font-size="20" fill="#303638" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">存在局部互补，但固定分工不稳，闭环收益尚未建立。</tspan></text>
+</g>
+<g id="shape-21" data-pptx-object="shape" data-pptx-frame="314.36 538 541.38 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:21" data-pptx-semantic-object="shape">
+<path d="M 314.36 538 L 855.74 538 L 855.74 562.64 L 314.36 562.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="554" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">已做：固定特征互换 + RMS 对照、两参数决策图拟合、两条序列闭环。</tspan></text>
+</g>
+<g id="shape-22" data-pptx-object="shape" data-pptx-frame="314.36 568 659.36 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:22" data-pptx-semantic-object="shape">
+<path d="M 314.36 568 L 973.72 568 L 973.72 592.64 L 314.36 592.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="584" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">优先：同一无 SS 权重下核验“原相加 = 等权”轨迹，再比较两方向频段并完成全量测评。</tspan></text>
+</g>
+<g id="shape-23" data-pptx-object="shape" data-pptx-frame="314.36 598 688.2 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:23" data-pptx-semantic-object="shape">
+<path d="M 314.36 598 L 1002.56 598 L 1002.56 622.64 L 314.36 622.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="314.36" y="614" text-anchor="start" xml:space="preserve" font-size="16" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">先在一个 benchmark 上筛选有效设置，再扩展数据集；不以挑选的失败帧决定方法有效性。</tspan></text>
+</g>
+</g>
+<g id="shape-27" data-pptx-object="group" data-pptx-frame="59.36 671 1130.15 24.64" data-pptx-source-ref="slide:27">
+<g id="shape-25" data-pptx-object="shape" data-pptx-frame="59.36 671 646.67 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:25" data-pptx-semantic-object="shape">
+<path d="M 59.36 671 L 706.03 671 L 706.03 695.64 L 59.36 695.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="59.36" y="687" text-anchor="start" xml:space="preserve" font-size="16" fill="#626C70" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">目前可以说“找到了退化现象和部分边界”，还不能说“SS 补救或频段融合已解决问题”。</tspan></text>
+</g>
+<g id="shape-26" data-pptx-object="shape" data-pptx-frame="1169.36 671 20.15 24.64" data-pptx-prst="rect" data-pptx-source-ref="slide:26" data-pptx-semantic-object="shape">
+<path d="M 1169.36 671 L 1189.51 671 L 1189.51 695.64 L 1169.36 695.64 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="1169.36" y="687" text-anchor="start" xml:space="preserve" font-size="16" fill="#626C70" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">12</tspan></text>
+</g>
+</g></svg>

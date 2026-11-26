@@ -1,0 +1,169 @@
+{
+  "schema": "ppt-master.pptx-delivery-check.v1",
+  "status": "passed-with-advisories",
+  "file": {
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_目的与做法补充_20261125/exports/SEATrack_SS与寄存器_组会汇报_目的与做法补充版.pptx",
+    "bytes": 91264
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "duplicate_parts": [],
+    "canonical_part_collisions": [],
+    "parts": {
+      "entries": 51,
+      "unique": 51,
+      "slides": 8,
+      "notes": 8,
+      "masters": 1,
+      "layouts": 1,
+      "media": 0
+    },
+    "relationships": {
+      "problems": []
+    }
+  },
+  "slides": {
+    "count": 8,
+    "hidden_count": 0,
+    "hidden": []
+  },
+  "fonts": {
+    "theme": {
+      "title": {
+        "latin": "Arial",
+        "ea": "Microsoft YaHei",
+        "cs": "Arial",
+        "scripts": {
+          "Jpan": "Microsoft YaHei",
+          "Hang": "Microsoft YaHei",
+          "Hans": "Microsoft YaHei",
+          "Hant": "Microsoft YaHei"
+        }
+      },
+      "body": {
+        "latin": "Arial",
+        "ea": "Microsoft YaHei",
+        "cs": "Arial",
+        "scripts": {
+          "Jpan": "Microsoft YaHei",
+          "Hang": "Microsoft YaHei",
+          "Hans": "Microsoft YaHei",
+          "Hant": "Microsoft YaHei"
+        }
+      }
+    },
+    "declared": {
+      "latin": [
+        {
+          "value": "+mn-lt",
+          "count": 243
+        },
+        {
+          "value": "Arial",
+          "count": 180
+        },
+        {
+          "value": "微软雅黑",
+          "count": 30
+        },
+        {
+          "value": "Microsoft YaHei",
+          "count": 9
+        },
+        {
+          "value": "+mj-lt",
+          "count": 1
+        }
+      ],
+      "ea": [
+        {
+          "value": "+mn-ea",
+          "count": 243
+        },
+        {
+          "value": "微软雅黑",
+          "count": 150
+        },
+        {
+          "value": "Microsoft YaHei",
+          "count": 43
+        },
+        {
+          "value": "Arial",
+          "count": 26
+        },
+        {
+          "value": "+mj-ea",
+          "count": 1
+        }
+      ],
+      "cs": [
+        {
+          "value": "+mn-cs",
+          "count": 243
+        },
+        {
+          "value": "Arial",
+          "count": 180
+        },
+        {
+          "value": "微软雅黑",
+          "count": 30
+        },
+        {
+          "value": "Microsoft YaHei",
+          "count": 9
+        },
+        {
+          "value": "+mj-cs",
+          "count": 1
+        }
+      ]
+    },
+    "embedded_parts": [],
+    "portability_advisory_faces": [
+      "微软雅黑"
+    ]
+  },
+  "media": {
+    "embedded_count": 0,
+    "external_count": 0,
+    "embedded": [],
+    "external": [],
+    "uncompressed_bytes": 0,
+    "archive_compressed_bytes": 0,
+    "share_of_archive": 0.0,
+    "share_of_uncompressed_parts": 0.0,
+    "top_contributors": []
+  },
+  "motion": {
+    "transitions": {
+      "carrier_slide_count": 0,
+      "visual_effect_slide_count": 0,
+      "timed_advance_slide_count": 0,
+      "carrier_slides": [],
+      "visual_effect_slides": [],
+      "timed_advance_slides": [],
+      "effects": {}
+    },
+    "object_animations": {
+      "timing_slide_count": 0,
+      "object_animation_slide_count": 0,
+      "audio_timing_slide_count": 0,
+      "timing_slides": [],
+      "object_animation_slides": [],
+      "audio_timing_slides": []
+    }
+  },
+  "errors": [],
+  "advisories": [
+    {
+      "code": "font_portability",
+      "message": "Some fonts declared or referenced by the presentation are outside the common Office/OS portability set; target-system availability was not verified.",
+      "faces": [
+        "微软雅黑"
+      ]
+    }
+  ]
+}

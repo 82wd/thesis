@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;微软雅黑&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="59.36 39 1150 19.33" data-pptx-prst="rect" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 59.36 39 h 1150 v 19.33 h -1150 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="59.36" y="55" text-anchor="start" xml:space="preserve" font-size="16" fill="#4A8FBD" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">token 布局与双模态路径</tspan></text>
+</g>
+<g id="shape-3" data-pptx-object="shape" data-pptx-frame="58.76 75.67 1150 47.74" data-pptx-prst="rect" data-pptx-source-ref="slide:3" data-pptx-semantic-object="shape">
+<path d="M 58.76 75.67 h 1150 v 47.74 h -1150 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="58.76" y="105" text-anchor="start" xml:space="preserve" font-size="30.93" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">插入位置：前 9 层之后，后 3 层共同计算</tspan></text>
+</g>
+<g id="shape-4" data-pptx-object="shape" data-pptx-frame="60 180 260 175" data-pptx-prst="roundRect" data-pptx-av-adj="val 5714" data-pptx-source-ref="slide:4" data-pptx-semantic-object="shape">
+<path d="M 60 190 A 10 10 0 0 1 70 180 L 310 180 A 10 10 0 0 1 320 190 L 320 345 A 10 10 0 0 1 310 355 L 70 355 A 10 10 0 0 1 60 345 Z" fill="#EDF5FA" stroke-width="1.29995" stroke="#4A8FBD" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-5" data-pptx-object="shape" data-pptx-frame="77.08 195.33 185.08 35.42" data-pptx-prst="rect" data-pptx-source-ref="slide:5" data-pptx-semantic-object="shape">
+<path d="M 77.08 195.33 L 262.16 195.33 L 262.16 230.75 L 77.08 230.75 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.08" y="218" text-anchor="start" xml:space="preserve" font-size="22.93" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">两模态输入</tspan></text>
+</g>
+<g id="shape-6" data-pptx-object="shape" data-pptx-frame="77.28 242.67 216.91 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:6" data-pptx-semantic-object="shape">
+<path d="M 77.28 242.67 L 294.19 242.67 L 294.19 270.39 L 77.28 270.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.28" y="260" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">每路 64 template</tspan></text>
+</g>
+<g id="shape-7" data-pptx-object="shape" data-pptx-frame="77.28 272.67 168.44 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:7" data-pptx-semantic-object="shape">
+<path d="M 77.28 272.67 L 245.72 272.67 L 245.72 300.39 L 77.28 300.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.28" y="290" text-anchor="start" xml:space="preserve" font-family="Arial, sans-serif" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">+ 256 search</tspan></text>
+</g>
+<g id="shape-8" data-pptx-object="shape" data-pptx-frame="324 265 29 1" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:8" data-pptx-semantic-object="shape">
+<path d="M 324 265 L 353 265" data-pptx-part="geometry" fill="none" stroke-width="2" stroke="#4A8FBD"/>
+</g>
+<g id="shape-9" data-pptx-object="shape" data-pptx-frame="343 259 10 12" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:9" data-pptx-semantic-object="shape">
+<path d="M 353 265 L 343 259 L 343 271 Z" data-pptx-part="geometry" fill="#4A8FBD" stroke="none"/>
+</g>
+<g id="shape-10" data-pptx-object="shape" data-pptx-frame="360 180 260 175" data-pptx-prst="roundRect" data-pptx-av-adj="val 5714" data-pptx-source-ref="slide:10" data-pptx-semantic-object="shape">
+<path d="M 360 190 A 10 10 0 0 1 370 180 L 610 180 A 10 10 0 0 1 620 190 L 620 345 A 10 10 0 0 1 610 355 L 370 355 A 10 10 0 0 1 360 345 Z" fill="#EDF5FA" stroke-width="1.29995" stroke="#4A8FBD" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-11" data-pptx-object="shape" data-pptx-frame="377.08 195.33 189.25 35.42" data-pptx-prst="rect" data-pptx-source-ref="slide:11" data-pptx-semantic-object="shape">
+<path d="M 377.08 195.33 L 566.33 195.33 L 566.33 230.75 L 377.08 230.75 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="377.08" y="218" text-anchor="start" xml:space="preserve" font-family="Arial, sans-serif" font-size="22.93" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">blocks 0–8</tspan></text>
+</g>
+<g id="shape-12" data-pptx-object="shape" data-pptx-frame="377.28 242.67 194.61 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:12" data-pptx-semantic-object="shape">
+<path d="M 377.28 242.67 L 571.89 242.67 L 571.89 270.39 L 377.28 270.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="377.28" y="260" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">原始视觉 token</tspan></text>
+</g>
+<g id="shape-13" data-pptx-object="shape" data-pptx-frame="377.28 272.67 180.3 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:13" data-pptx-semantic-object="shape">
+<path d="M 377.28 272.67 L 557.58 272.67 L 557.58 300.39 L 377.28 300.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="377.28" y="290" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">共 320 个位置</tspan></text>
+</g>
+<g id="shape-14" data-pptx-object="shape" data-pptx-frame="624 265 29 1" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:14" data-pptx-semantic-object="shape">
+<path d="M 624 265 L 653 265" data-pptx-part="geometry" fill="none" stroke-width="2" stroke="#4A8FBD"/>
+</g>
+<g id="shape-15" data-pptx-object="shape" data-pptx-frame="643 259 10 12" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:15" data-pptx-semantic-object="shape">
+<path d="M 653 265 L 643 259 L 643 271 Z" data-pptx-part="geometry" fill="#4A8FBD" stroke="none"/>
+</g>
+<g id="shape-16" data-pptx-object="shape" data-pptx-frame="660 180 260 175" data-pptx-prst="roundRect" data-pptx-av-adj="val 5714" data-pptx-source-ref="slide:16" data-pptx-semantic-object="shape">
+<path d="M 660 190 A 10 10 0 0 1 670 180 L 910 180 A 10 10 0 0 1 920 190 L 920 345 A 10 10 0 0 1 910 355 L 670 355 A 10 10 0 0 1 660 345 Z" fill="#EDF5FA" stroke-width="1.29995" stroke="#4A8FBD" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-17" data-pptx-object="shape" data-pptx-frame="677.08 195.33 209.53 35.42" data-pptx-prst="rect" data-pptx-source-ref="slide:17" data-pptx-semantic-object="shape">
+<path d="M 677.08 195.33 L 886.61 195.33 L 886.61 230.75 L 677.08 230.75 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="677.08" y="218" text-anchor="start" xml:space="preserve" font-family="Arial, sans-serif" font-size="22.93" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">blocks 9–11</tspan></text>
+</g>
+<g id="shape-18" data-pptx-object="shape" data-pptx-frame="677.28 242.67 200.97 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:18" data-pptx-semantic-object="shape">
+<path d="M 677.28 242.67 L 878.25 242.67 L 878.25 270.39 L 677.28 270.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="677.28" y="260" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">追加 4 registers</tspan></text>
+</g>
+<g id="shape-19" data-pptx-object="shape" data-pptx-frame="677.28 272.67 234.47 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:19" data-pptx-semantic-object="shape">
+<path d="M 677.28 272.67 L 911.75 272.67 L 911.75 300.39 L 677.28 300.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="677.28" y="290" text-anchor="start" xml:space="preserve" font-family="Arial, sans-serif" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">320 → 324 tokens</tspan></text>
+</g>
+<g id="shape-20" data-pptx-object="shape" data-pptx-frame="924 265 29 1" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:20" data-pptx-semantic-object="shape">
+<path d="M 924 265 L 953 265" data-pptx-part="geometry" fill="none" stroke-width="2" stroke="#4A8FBD"/>
+</g>
+<g id="shape-21" data-pptx-object="shape" data-pptx-frame="943 259 10 12" data-pptx-geometry-kind="custom" data-pptx-source-ref="slide:21" data-pptx-semantic-object="shape">
+<path d="M 953 265 L 943 259 L 943 271 Z" data-pptx-part="geometry" fill="#4A8FBD" stroke="none"/>
+</g>
+<g id="shape-22" data-pptx-object="shape" data-pptx-frame="960 180 260 175" data-pptx-prst="roundRect" data-pptx-av-adj="val 5714" data-pptx-source-ref="slide:22" data-pptx-semantic-object="shape">
+<path d="M 960 190 A 10 10 0 0 1 970 180 L 1210 180 A 10 10 0 0 1 1220 190 L 1220 345 A 10 10 0 0 1 1210 355 L 970 355 A 10 10 0 0 1 960 345 Z" fill="#EDF5FA" stroke-width="1.29995" stroke="#4A8FBD" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-23" data-pptx-object="shape" data-pptx-frame="977.08 195.33 185.08 35.42" data-pptx-prst="rect" data-pptx-source-ref="slide:23" data-pptx-semantic-object="shape">
+<path d="M 977.08 195.33 L 1162.16 195.33 L 1162.16 230.75 L 977.08 230.75 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="977.08" y="218" text-anchor="start" xml:space="preserve" font-size="22.93" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">移除寄存器</tspan></text>
+</g>
+<g id="shape-24" data-pptx-object="shape" data-pptx-frame="977.28 242.67 239.41 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:24" data-pptx-semantic-object="shape">
+<path d="M 977.28 242.67 L 1216.69 242.67 L 1216.69 270.39 L 977.28 270.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="977.28" y="260" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">LayerNorm 前移除</tspan></text>
+</g>
+<g id="shape-25" data-pptx-object="shape" data-pptx-frame="977.28 272.67 236.82 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:25" data-pptx-semantic-object="shape">
+<path d="M 977.28 272.67 L 1214.1 272.67 L 1214.1 300.39 L 977.28 300.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="977.28" y="290" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">256×768 搜索输出</tspan></text>
+</g>
+<g id="shape-26" data-pptx-object="shape" data-pptx-frame="60 398 565 180" data-pptx-prst="roundRect" data-pptx-av-adj="val 5000" data-pptx-source-ref="slide:26" data-pptx-semantic-object="shape">
+<path d="M 60 407 A 9 9 0 0 1 69 398 L 616 398 A 9 9 0 0 1 625 407 L 625 569 A 9 9 0 0 1 616 578 L 69 578 A 9 9 0 0 1 60 569 Z" fill="#FFFFFF" stroke-width="1" stroke="#B9D4E5" stroke-dasharray="4 4" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-27" data-pptx-object="shape" data-pptx-frame="77.16 412 303.98 32.44" data-pptx-prst="rect" data-pptx-source-ref="slide:27" data-pptx-semantic-object="shape">
+<path d="M 77.16 412 L 381.14 412 L 381.14 444.44 L 77.16 444.44 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.16" y="432" text-anchor="start" xml:space="preserve" font-size="21.07" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">共享初值，分别演化</tspan></text>
+</g>
+<g id="shape-28" data-pptx-object="shape" data-pptx-frame="77.28 452.67 428.16 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:28" data-pptx-semantic-object="shape">
+<path d="M 77.28 452.67 L 505.44 452.67 L 505.44 480.39 L 77.28 480.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.28" y="470" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">RGB / IR 共享 4×768 初始寄存器</tspan></text>
+</g>
+<g id="shape-29" data-pptx-object="shape" data-pptx-frame="77.28 483.0 540 27.0" data-pptx-prst="rect" data-pptx-source-ref="slide:29" data-pptx-semantic-object="shape">
+<path d="M 77.28 483.0 h 540 v 27.0 h -540 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.28" y="501" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1">相同初值随各自 RGB / IR 特征分别更新</text>
+</g>
+<g id="shape-30" data-pptx-object="shape" data-pptx-frame="77.28 514.0 540 27.0" data-pptx-prst="rect" data-pptx-source-ref="slide:30" data-pptx-semantic-object="shape">
+<path d="M 77.28 514.0 h 540 v 27.0 h -540 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.28" y="532" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1">标准差 0.02 初始化；新增 3,072 个参数</text>
+</g>
+<g id="shape-31" data-pptx-object="shape" data-pptx-frame="650 398 565 180" data-pptx-prst="roundRect" data-pptx-av-adj="val 5000" data-pptx-source-ref="slide:31" data-pptx-semantic-object="shape">
+<path d="M 650 407 A 9 9 0 0 1 659 398 L 1206 398 A 9 9 0 0 1 1215 407 L 1215 569 A 9 9 0 0 1 1206 578 L 659 578 A 9 9 0 0 1 650 569 Z" fill="#FFFFFF" stroke-width="1" stroke="#B9D4E5" stroke-dasharray="4 4" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-32" data-pptx-object="shape" data-pptx-frame="667.16 412 203.5 32.44" data-pptx-prst="rect" data-pptx-source-ref="slide:32" data-pptx-semantic-object="shape">
+<path d="M 667.16 412 L 870.66 412 L 870.66 444.44 L 667.16 444.44 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="667.16" y="432" text-anchor="start" xml:space="preserve" font-size="21.07" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">保留空间接口</tspan></text>
+</g>
+<g id="shape-33" data-pptx-object="shape" data-pptx-frame="667.28 452.67 441.15 27.72" data-pptx-prst="rect" data-pptx-source-ref="slide:33" data-pptx-semantic-object="shape">
+<path d="M 667.28 452.67 L 1108.43 452.67 L 1108.43 480.39 L 667.28 480.39 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="667.28" y="470" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">顺序：[template; search; registers]</tspan></text>
+</g>
+<g id="shape-34" data-pptx-object="shape" data-pptx-frame="667.28 483.0 550 27.0" data-pptx-prst="rect" data-pptx-source-ref="slide:34" data-pptx-semantic-object="shape">
+<path d="M 667.28 483.0 h 550 v 27.0 h -550 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="667.28" y="501" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1">参与 Self-attention / AMG / MLP，绕过 HMoE</text>
+</g>
+<g id="shape-35" data-pptx-object="shape" data-pptx-frame="667.28 514.0 550 27.0" data-pptx-prst="rect" data-pptx-source-ref="slide:35" data-pptx-semantic-object="shape">
+<path d="M 667.28 514.0 h 550 v 27.0 h -550 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="667.28" y="532" text-anchor="start" xml:space="preserve" font-size="18" fill="#202629" data-pptx-text-baseline="metrics-v1">移除后仍用 RGB+IR 融合与原 CENTER 头</text>
+</g>
+<g id="shape-36" data-pptx-object="shape" data-pptx-frame="60 604 1160 58" data-pptx-prst="roundRect" data-pptx-av-adj="val 15517" data-pptx-source-ref="slide:36" data-pptx-semantic-object="shape">
+<path d="M 60 613 A 9 9 0 0 1 69 604 L 1211 604 A 9 9 0 0 1 1220 613 L 1220 653 A 9 9 0 0 1 1211 662 L 69 662 A 9 9 0 0 1 60 653 Z" fill="#EDF5FA" stroke="none" data-pptx-part="geometry"/>
+
+</g>
+<g id="shape-37" data-pptx-object="shape" data-pptx-frame="77.2 621.33 740.88 30.8" data-pptx-prst="rect" data-pptx-source-ref="slide:37" data-pptx-semantic-object="shape">
+<path d="M 77.2 621.33 L 818.08 621.33 L 818.08 652.13 L 77.2 652.13 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="77.2" y="640" text-anchor="start" xml:space="preserve" font-size="20" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">新增 token 参与计算，但不直接作为目标框预测输出</tspan></text>
+</g>
+<g id="shape-38" data-pptx-object="shape" data-pptx-frame="59.44 677.67 950.97 21.56" data-pptx-prst="rect" data-pptx-source-ref="slide:38" data-pptx-semantic-object="shape">
+<path d="M 59.44 677.67 L 1010.41 677.67 L 1010.41 699.23 L 59.44 699.23 Z" fill="none" stroke="none" data-pptx-part="geometry"/>
+
+
+<text x="59.44" y="691" text-anchor="start" xml:space="preserve" font-size="14" fill="#626C70" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">机制示意；实现依据 README_REGISTER_GUIDANCE.md，状态采用注明日期的核验记录。</tspan></text>
+</g><g id="purpose-detail-0" data-pptx-bounds="59 132 1161 28.8"><text x="59" y="150" font-family="Microsoft YaHei" font-size="18" fill="#303638">做法：只在后段引入寄存器参与特征交互，保留原有 patch 坐标和预测接口。</text></g><g id="purpose-detail-1" data-pptx-bounds="77 551 1143 27.200000000000003"><text x="77" y="568" font-family="Microsoft YaHei" font-size="17" fill="#303638">不加位置编码；共享的是可学习初值，两路中间状态并不强制一致。</text></g></svg>

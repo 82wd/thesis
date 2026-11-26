@@ -1,0 +1,28 @@
+{
+  "schema": "ppt-master.source_to_md.profile.v1",
+  "converter": "ppt_to_md.py",
+  "conversion_type": "pptx",
+  "source": {
+    "path": "/Users/lzy/Desktop/毕设/thesis/汇报/PPT/SEATrack_目的与做法补充_20261125/exports/SEATrack_SS与寄存器_组会汇报_目的与做法补充版.pptx",
+    "name": "SEATrack_SS与寄存器_组会汇报_目的与做法补充版.pptx",
+    "suffix": ".pptx",
+    "kind": "file",
+    "exists": true,
+    "size_bytes": 90851
+  },
+  "outputs": {
+    "markdown": "readback.md",
+    "asset_dir": "",
+    "image_manifest": "",
+    "image_count": 0
+  },
+  "markdown": {
+    "line_count": 502,
+    "char_count": 5137,
+    "heading_count": 13,
+    "table_count": 0,
+    "image_ref_count": 0,
+    "link_count": 0
+  },
+  "warnings": []
+}

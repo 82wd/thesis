@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="&quot;微软雅黑&quot;, sans-serif"><rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" />
+<g id="shape-2" data-pptx-object="shape" data-pptx-frame="59.32 39 102.4 20.67" data-pptx-prst="rect" data-pptx-source-ref="slide:2" data-pptx-semantic-object="shape">
+<path d="M 59.32 39 L 161.72 39 L 161.72 59.67 L 59.32 59.67 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="59.32" y="55" text-anchor="start" xml:space="preserve" font-size="17.07" fill="#4A8FBD" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">已有实验效果</tspan></text>
+</g>
+<g id="shape-3" data-pptx-object="shape" data-pptx-frame="58.76 75.67 889.03 47.74" data-pptx-prst="rect" data-pptx-source-ref="slide:3" data-pptx-semantic-object="shape">
+<path d="M 58.76 75.67 L 947.79 75.67 L 947.79 123.41 L 58.76 123.41 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="58.76" y="105" text-anchor="start" xml:space="preserve" font-size="30.93" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">消融只部分缓解退化，尚未找到稳定解法</tspan></text>
+</g>
+<g id="shape-4" data-pptx-object="shape" data-pptx-frame="69.12 143.67 278.88 33.88" data-pptx-prst="rect" data-pptx-source-ref="slide:4" data-pptx-semantic-object="shape">
+<path d="M 69.12 143.67 L 348 143.67 L 348 177.55 L 69.12 177.55 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="69.12" y="165" text-anchor="start" xml:space="preserve" font-size="22" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">LasHeR SR（%）</tspan></text>
+</g>
+<g id="shape-5" data-pptx-object="shape" data-pptx-frame="81.24 184.33 404.23 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:5" data-pptx-semantic-object="shape">
+<path d="M 81.24 184.33 L 485.47 184.33 L 485.47 213.59 L 81.24 213.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="203" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">基线 57.51 ｜ 初版 SS 56.71</tspan></text>
+</g>
+<g id="shape-6" data-pptx-object="shape" data-pptx-frame="81.24 215.33 648.02 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:6" data-pptx-semantic-object="shape">
+<path d="M 81.24 215.33 L 729.26 215.33 L 729.26 244.59 L 81.24 244.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="234" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">Template-only 57.31 ｜ Target-aware 57.29</tspan></text>
+</g>
+<g id="shape-7" data-pptx-object="shape" data-pptx-frame="81.24 246.33 584.89 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:7" data-pptx-semantic-object="shape">
+<path d="M 81.24 246.33 L 666.13 246.33 L 666.13 275.59 L 81.24 275.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="265" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">Search-only 56.70 ｜ Half-weight 56.95</tspan></text>
+</g>
+<g id="shape-8" data-pptx-object="shape" data-pptx-frame="69.12 292.67 332.99 33.88" data-pptx-prst="rect" data-pptx-source-ref="slide:8" data-pptx-semantic-object="shape">
+<path d="M 69.12 292.67 L 402.11 292.67 L 402.11 326.55 L 69.12 326.55 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="69.12" y="314" text-anchor="start" xml:space="preserve" font-size="22" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">RGBT234 MSR（%）</tspan></text>
+</g>
+<g id="shape-9" data-pptx-object="shape" data-pptx-frame="81.24 333.33 404.23 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:9" data-pptx-semantic-object="shape">
+<path d="M 81.24 333.33 L 485.47 333.33 L 485.47 362.59 L 81.24 362.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="352" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">基线 63.73 ｜ 初版 SS 64.67</tspan></text>
+</g>
+<g id="shape-10" data-pptx-object="shape" data-pptx-frame="81.24 364.33 648.02 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:10" data-pptx-semantic-object="shape">
+<path d="M 81.24 364.33 L 729.26 364.33 L 729.26 393.59 L 81.24 393.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="383" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">Template-only 64.03 ｜ Target-aware 64.06</tspan></text>
+</g>
+<g id="shape-11" data-pptx-object="shape" data-pptx-frame="81.24 395.33 652.16 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:11" data-pptx-semantic-object="shape">
+<path d="M 81.24 395.33 L 733.4 395.33 L 733.4 424.59 L 81.24 424.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="414" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">Search-only 63.60 ｜ Half-weight 待最终核验</tspan></text>
+</g>
+<g id="shape-12" data-pptx-object="shape" data-pptx-frame="69.12 441.67 72.6 33.88" data-pptx-prst="rect" data-pptx-source-ref="slide:12" data-pptx-semantic-object="shape">
+<path d="M 69.12 441.67 L 141.72 441.67 L 141.72 475.55 L 69.12 475.55 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="69.12" y="463" text-anchor="start" xml:space="preserve" font-size="22" fill="#202629" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">结论</tspan></text>
+</g>
+<g id="shape-13" data-pptx-object="shape" data-pptx-frame="81.24 482.33 1158.73 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:13" data-pptx-semantic-object="shape">
+<path d="M 81.24 482.33 L 1239.97 482.33 L 1239.97 511.59 L 81.24 511.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="501" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">Template-only、Target-aware 与 Half-weight 对 LasHeR 有部分恢复，仍低于基线</tspan></text>
+</g>
+<g id="shape-14" data-pptx-object="shape" data-pptx-frame="81.24 513.33 1090.07 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:14" data-pptx-semantic-object="shape">
+<path d="M 81.24 513.33 L 1171.31 513.33 L 1171.31 542.59 L 81.24 542.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="532" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">Search-only 两套全量结果已完成，未恢复成功率；单层配置未完成独立重训评测</tspan></text>
+</g>
+<g id="shape-15" data-pptx-object="shape" data-pptx-frame="81.24 544.33 839.06 29.26" data-pptx-prst="rect" data-pptx-source-ref="slide:15" data-pptx-semantic-object="shape">
+<path d="M 81.24 544.33 L 920.3 544.33 L 920.3 573.59 L 81.24 573.59 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="81.24" y="563" text-anchor="start" xml:space="preserve" font-size="18.93" fill="#303638" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-weight="normal" font-style="normal" text-decoration="none">训练更新预算不完全匹配，不能将差异完全归因于 SS 区域选择</tspan></text>
+</g>
+<g id="shape-16" data-pptx-object="shape" data-pptx-frame="64.12 632.67 877.14 33.88" data-pptx-prst="rect" data-pptx-source-ref="slide:16" data-pptx-semantic-object="shape">
+<path d="M 64.12 632.67 L 941.26 632.67 L 941.26 666.55 L 64.12 666.55 Z" fill="none" stroke="none" data-pptx-part="geometry" />
+
+
+<text x="64.12" y="654" text-anchor="start" xml:space="preserve" font-size="22" fill="#4A8FBD" font-weight="bold" data-pptx-text-baseline="metrics-v1"><tspan fill-opacity="1" font-style="normal" text-decoration="none">结果说明：现有消融界定了问题边界，还未证明有效补救</tspan></text>
+</g></svg>

@@ -1,0 +1,1 @@
+保留原8页和顺序。1、2、4页不变；3页补SS消融目的；5–8页补寄存器/RG目的与实现细节。依据师兄想法.md、README_SS_ABLATION.md、README_REGISTER_GUIDANCE.md。保留源备注、动画和转场；不新增配音。用户已明确授权上述内容补充，不加页面。
